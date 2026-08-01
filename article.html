@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Guide | Closer to Korea</title>
+  <meta name="description" content="A Closer to Korea guide explaining Korean products and everyday life with real context.">
+  <meta name="theme-color" content="#FFF9FC">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Closer to Korea">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="cursor-sparkle" aria-hidden="true">✦</div>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
+      <nav class="desktop-nav" aria-label="Primary">
+        <a href="index.html#newly-added">Newly Added</a>
+        <a href="index.html#trending">Trending</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#shop">Product Guide</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="header-actions"><a class="round-button text-button" href="index.html">Home</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="data-article-page">
+    <nav class="article-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#guides">Guides</a><span aria-hidden="true">/</span><span data-article-breadcrumb>Loading…</span>
+    </nav>
+
+    <div data-article-loading class="empty-state">
+      <h1>Loading guide…</h1>
+    </div>
+
+    <article data-article hidden>
+      <header class="data-article-header">
+        <p class="eyebrow" data-article-category></p>
+        <h1 data-article-title></h1>
+        <p class="legal-lede" data-article-excerpt></p>
+        <p class="article-dates"><span data-article-published></span><span data-article-updated></span></p>
+      </header>
+      <img class="data-article-hero" data-article-image width="1200" height="760" fetchpriority="high" alt="">
+      <div class="data-article-layout">
+        <div class="data-article-body" data-article-body></div>
+        <aside class="data-article-sidebar">
+          <section>
+            <h2>Related products</h2>
+            <div data-related-products></div>
+          </section>
+          <section>
+            <h2>Sources</h2>
+            <div data-article-sources></div>
+          </section>
+          <button class="round-button" type="button" data-share-page>Share guide</button>
+          <button class="round-button" type="button" data-copy-link>Copy link</button>
+          <p data-share-status aria-live="polite"></p>
+        </aside>
+      </div>
+    </article>
+
+    <div data-article-error class="error-state" hidden>
+      <h1>Guide not found.</h1>
+      <p>This guide may still be a draft, or the link may be incorrect.</p>
+      <a class="jelly-button secondary" href="index.html">Return to the homepage</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div><a class="brand" href="index.html">Closer <span>to</span> Korea</a></div>
+    <nav><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy</a></nav>
+  </footer>
+  <script src="data/content-data-v2.js?v=2"></script>
+  <script src="js/main.js"></script>
+  <script src="js/article-v2.js?v=2"></script>
+</body>
+</html>

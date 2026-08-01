@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-labelledby="t d">
+<title id="t">Korean charm collector collage</title><desc id="d">Original editorial product illustration</desc>
+<defs><linearGradient id="pearl" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".45" stop-color="#f2edff"/><stop offset="1" stop-color="#cdeaff"/></linearGradient></defs>
+<rect width="800" height="800" rx="72" fill="#fff9fc"/>
+<circle cx="655" cy="145" r="90" fill="url(#pearl)" opacity=".88"/>
+<rect x="70" y="90" width="260" height="360" rx="42" fill="#29272d"/><rect x="90" y="120" width="220" height="285" rx="26" fill="#cdebff"/>
+<path d="M345 180h260l-24 220H370z" fill="#ffb8d8" stroke="#29272d" stroke-width="9"/>
+<circle cx="610" cy="510" r="125" fill="#dccbff"/><path d="M515 510c40-90 150-90 190 0-55 78-135 78-190 0z" fill="#fff" stroke="#29272d" stroke-width="9"/>
+<g stroke="#fff" stroke-width="5"><circle cx="340" cy="500" r="28" fill="#ff385c"/><circle cx="390" cy="540" r="25" fill="#dfff68"/><circle cx="445" cy="560" r="26" fill="#cdebff"/><circle cx="500" cy="550" r="24" fill="#ffb8d8"/></g>
+<rect x="90" y="500" width="180" height="110" rx="18" fill="#f8f7ff" stroke="#29272d" stroke-width="8"/><path d="M120 540h120M120 575h90" stroke="#dccbff" stroke-width="14" stroke-linecap="round"/>
+<text x="60" y="710" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#29272d">Korean Charm Collector</text>
+<text x="60" y="755" font-family="Arial,sans-serif" font-size="20" fill="#625f6b">Original editorial illustration</text>
+</svg>

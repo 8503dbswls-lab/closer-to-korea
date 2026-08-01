@@ -1,0 +1,147 @@
+{
+  "site": {
+    "name": "Closer to Korea",
+    "tagline": "Checked from Korea, explained with context.",
+    "defaultTitle": "Get Closer to What Korea Is Into Right Now | Closer to Korea",
+    "defaultDescription": "Discover the products, small habits, and current trends found in everyday life in Korea—with clear product matches and U.S. alternatives when available."
+  },
+  "navigation": [
+    {
+      "label": "Newly Added",
+      "href": "#newly-added"
+    },
+    {
+      "label": "Trending",
+      "href": "#trending"
+    },
+    {
+      "label": "Actually Used",
+      "href": "#actually-used"
+    },
+    {
+      "label": "Categories",
+      "href": "#categories"
+    },
+    {
+      "label": "Product Guide",
+      "href": "#shop"
+    },
+    {
+      "label": "About",
+      "href": "about.html"
+    }
+  ],
+  "hero": {
+    "badge": "Checked from Korea, explained with context.",
+    "eyebrow": "Products, habits, and current signals from everyday life in Korea.",
+    "title": "Get Closer to What Korea Is Into Right Now",
+    "description": "Discover the products, small habits, and current trends found in everyday life in Korea—with clear product matches and U.S. alternatives when available.",
+    "primaryCta": {
+      "label": "Explore Korea Finds",
+      "href": "#shop"
+    },
+    "secondaryCta": {
+      "label": "See What’s Trending",
+      "href": "#trending"
+    },
+    "trustItems": [
+      "Checked from Korea, explained with context.",
+      "Product matches labeled clearly",
+      "U.S. alternatives when available"
+    ],
+    "image": "assets/images/korean-everyday-hero.svg",
+    "imageAlt": "Glossy collage of Korean home, beauty, kitchen, stationery, fashion, and technology products",
+    "cameraStamp": "KOREA_0728.JPG",
+    "notes": [
+      "HOME · BEAUTY · TECH",
+      "REAL-LIFE CONTEXT"
+    ]
+  },
+  "ticker": [
+    "WHAT KOREA IS INTO RIGHT NOW ✦",
+    "DAILY LIFE IN KOREA •",
+    "KOREAN HOME & KITCHEN ◇",
+    "SMALL HABITS, REAL CONTEXT *",
+    "SEEN IN KOREAN DAILY LIFE ⌁",
+    "NEW FINDS AS THEY ARE VERIFIED ✦",
+    "PRODUCT MATCHES EXPLAINED •",
+    "U.S. ALTERNATIVES WHEN AVAILABLE ♡"
+  ],
+  "sections": {
+    "newlyAdded": {
+      "eyebrow": "Weekly update",
+      "title": "Newly added",
+      "description": "Fresh Korean finds, recently researched and added to the guide.",
+      "emptyTitle": "This collection is still growing.",
+      "emptyText": "New finds are added as they are verified."
+    },
+    "trending": {
+      "eyebrow": "Current signal",
+      "title": "Trending in Korea",
+      "description": "Products and categories receiving meaningful attention in Korean life, retail, work, beauty, food, and social media.",
+      "emptyTitle": "No verified trend is ready to publish yet.",
+      "emptyText": "New Korea finds are being researched and added over time."
+    },
+    "actuallyUsed": {
+      "eyebrow": "What Koreans actually use",
+      "title": "Daily-life context comes first.",
+      "description": "This filter shows products verified through Korean daily-life use, not products chosen only for appearance or novelty.",
+      "button": "Show actually-used products"
+    },
+    "categories": {
+      "eyebrow": "Browse by category",
+      "title": "A wider view of Korean products",
+      "description": "From home storage and cooking tools to beauty, fashion, stationery, electronics, and cultural design."
+    },
+    "productGuide": {
+      "eyebrow": "Curated product guide",
+      "title": "Products with Korean context",
+      "loading": "Loading curated products…",
+      "emptyTitle": "No verified matches are available in this category yet.",
+      "emptyText": "Try another filter or check back after the next update.",
+      "errorTitle": "Product data could not load.",
+      "errorText": "Open this project through a local server or deployed URL, then try again."
+    },
+    "guides": {
+      "eyebrow": "Latest guides",
+      "title": "Understanding products through Korean life",
+      "emptyTitle": "New guides are on the way.",
+      "emptyText": "Articles added to data/articles.json will appear here automatically."
+    },
+    "curator": {
+      "eyebrow": "About the curator",
+      "title": "Checked from Korea, explained with context.",
+      "paragraphs": [
+        "Products are published only when their Korean-life context, match status, verification record, image status, and public claims are ready.",
+        "Direct experience, product identity, trend status, category, and U.S. availability are treated as separate facts."
+      ],
+      "cta": "Read the selection standards"
+    },
+    "disclosure": {
+      "eyebrow": "Amazon affiliate disclosure",
+      "title": "Amazon is an optional next step, not the point of the story.",
+      "text": "Closer to Korea may earn a commission from qualifying purchases. Links are added only after the listing and product match are reviewed. Prices and availability can change.",
+      "cta": "Read the full disclosure"
+    },
+    "newsletter": {
+      "eyebrow": "Weekly updates",
+      "title": "New Korean finds, added every week.",
+      "text": "Get new products, guides, and link updates when the newsletter is connected.",
+      "button": "Join weekly updates",
+      "demoMessage": "Demo only — your email was not sent or stored."
+    }
+  },
+  "productCard": {
+    "detailsLabel": "More Korean context",
+    "seenLabel": "Where you see it in Korea",
+    "usedByLabel": "Who commonly uses it",
+    "whyLabel": "Why it is used or trending",
+    "statusLabel": "Korean product status",
+    "inactiveAffiliateText": "Amazon availability is currently being checked.",
+    "activeAffiliateText": "Paid link: Closer to Korea may earn a commission. Price and availability can change."
+  },
+  "footer": {
+    "shareButton": "Share this guide",
+    "copyButton": "Copy link"
+  }
+}

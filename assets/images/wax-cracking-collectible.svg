@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Pastel tactile collectible trend artwork</title>
+<desc id="desc">Stylized glossy pastel balls, charms, sparkles, and gift-shop display shapes. Replace with original or licensed product photography.</desc>
+<defs>
+  <radialGradient id="peach" cx="35%" cy="25%"><stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#ffd8cb"/><stop offset=".72" stop-color="#f1a9ad"/><stop offset="1" stop-color="#bb6a89"/></radialGradient>
+  <radialGradient id="blue" cx="35%" cy="25%"><stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#cfeeff"/><stop offset=".72" stop-color="#88b9ee"/><stop offset="1" stop-color="#4e63a5"/></radialGradient>
+  <radialGradient id="lav" cx="35%" cy="25%"><stop offset="0" stop-color="#fff"/><stop offset=".2" stop-color="#eee6ff"/><stop offset=".72" stop-color="#c0a7ee"/><stop offset="1" stop-color="#725f9d"/></radialGradient>
+  <linearGradient id="night" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#22213f"/><stop offset=".55" stop-color="#414a86"/><stop offset="1" stop-color="#896da7"/></linearGradient>
+  <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-opacity=".24"/></filter>
+</defs>
+<rect width="1200" height="760" fill="url(#night)"/>
+<circle cx="120" cy="110" r="3" fill="#fff"/><circle cx="1040" cy="140" r="5" fill="#fff"/><circle cx="970" cy="620" r="4" fill="#fff"/>
+<path d="M130 210l10 25 25 10-25 10-10 25-10-25-25-10 25-10z" fill="#fff4bd"/>
+<path d="M1010 310l8 20 20 8-20 8-8 20-8-20-20-8 20-8z" fill="#fff"/>
+<g filter="url(#shadow)">
+  <circle cx="350" cy="405" r="180" fill="url(#peach)"/>
+  <circle cx="650" cy="330" r="155" fill="url(#lav)"/>
+  <circle cx="890" cy="460" r="145" fill="url(#blue)"/>
+</g>
+<path d="M285 350c55-38 118-28 150 16-26 5-53 24-72 52-20-31-44-52-78-68z" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" opacity=".75"/>
+<path d="M600 285c42-29 91-21 116 12-20 5-41 19-56 40-15-23-34-39-60-52z" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" opacity=".72"/>
+<path d="M835 425c38-27 81-19 104 11-18 4-37 17-51 36-14-21-30-35-53-47z" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity=".72"/>
+<rect x="86" y="642" width="1028" height="72" rx="36" fill="#fffdf8" opacity=".95"/>
+<text x="120" y="688" font-family="Arial, sans-serif" font-weight="700" font-size="27" fill="#26243a">TREND WATCH · ADD ORIGINAL OR LICENSED CLOSE-UP PHOTO</text>
+</svg>

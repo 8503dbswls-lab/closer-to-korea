@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Content Manager | Closer to Korea</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="css/content-admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <div>
+      <p class="eyebrow">Closer to Korea</p>
+      <h1>Content Manager</h1>
+      <p class="lede">Add or edit products and articles without touching JSON by hand.</p>
+    </div>
+    <div class="header-actions">
+      <button type="button" class="button secondary" data-save-browser>Save draft in browser</button>
+      <button type="button" class="button ghost" data-reset-browser>Reset browser draft</button>
+    </div>
+  </header>
+
+  <div class="notice" role="note">
+    <strong>Local tool:</strong> Nothing is uploaded anywhere. This page edits an in-browser working copy and exports replacement data files.
+  </div>
+
+  <nav class="tabs" aria-label="Content manager sections">
+    <button type="button" class="tab active" data-tab-button="products" aria-selected="true">Products</button>
+    <button type="button" class="tab" data-tab-button="articles" aria-selected="false">Articles</button>
+    <button type="button" class="tab" data-tab-button="export" aria-selected="false">Export &amp; publish</button>
+  </nav>
+
+  <main>
+    <section class="tab-panel active" data-tab-panel="products">
+      <div class="workspace">
+        <aside class="item-sidebar">
+          <div class="sidebar-head">
+            <h2>Products</h2>
+            <button type="button" class="button small" data-new-product>New product</button>
+          </div>
+          <label class="search-label">
+            <span>Find a product</span>
+            <input type="search" data-product-search placeholder="Search name or ID">
+          </label>
+          <div class="item-list" data-product-list></div>
+        </aside>
+
+        <form class="editor" data-product-form novalidate>
+          <div class="editor-head">
+            <div>
+              <p class="eyebrow">Product editor</p>
+              <h2 data-product-editor-title>New product</h2>
+            </div>
+            <div class="editor-actions">
+              <button type="button" class="button ghost" data-duplicate-product>Duplicate</button>
+              <button type="button" class="button danger" data-delete-product>Delete</button>
+              <button type="submit" class="button primary">Save product</button>
+            </div>
+          </div>
+
+          <div class="status" data-product-status aria-live="polite"></div>
+
+          <fieldset>
+            <legend>Identity</legend>
+            <div class="grid two">
+              <label><span>ID *</span><input name="id" required placeholder="daiso-egg-cooker"></label>
+              <label><span>Slug *</span><input name="slug" required placeholder="daiso-egg-cooker"></label>
+              <label class="wide"><span>Product name *</span><input name="name" required></label>
+              <label class="wide"><span>Short summary *</span><textarea name="summary" rows="3" required></textarea></label>
+              <label><span>Category *</span><select name="categoryKey" required></select></label>
+              <label><span>Tags</span><input name="tags" placeholder="kitchen, Daiso, gyeran-jjim"></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Image</legend>
+            <div class="grid two">
+              <label class="wide"><span>Image path *</span><input name="image" required placeholder="assets/images/product.jpg"></label>
+              <label class="wide"><span>Image alt text *</span><textarea name="imageAlt" rows="2" required></textarea></label>
+              <label><span>Image status</span><select name="publicImageStatus">
+                <option value="original-photo">Original photo</option>
+                <option value="licensed">Licensed</option>
+                <option value="amazon-compliant">Amazon-compliant</option>
+                <option value="original-illustration">Original illustration</option>
+                <option value="placeholder">Placeholder</option>
+              </select></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Korean-life context</legend>
+            <div class="grid two">
+              <label class="wide"><span>Where it is seen in Korea *</span><textarea name="seenInKorea" rows="3" required></textarea></label>
+              <label class="wide"><span>Who uses it *</span><textarea name="usedBy" rows="3" required></textarea></label>
+              <label class="wide"><span>Why it matters *</span><textarea name="whyItMatters" rows="3" required></textarea></label>
+              <label class="wide"><span>Korean product status</span><textarea name="koreanProductStatus" rows="3"></textarea></label>
+              <label class="wide"><span>Personal-use notes</span><textarea name="personalUseNotes" rows="3"></textarea></label>
+              <label class="wide"><span>Safety notes</span><textarea name="safetyNotes" rows="3"></textarea></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Match &amp; verification</legend>
+            <div class="grid two">
+              <label><span>Product Match *</span><select name="productMatchType" required></select></label>
+              <label><span>Trend status</span><select name="trendStatus"></select></label>
+              <label><span>Brand</span><input name="brand"></label>
+              <label><span>Model / product number</span><input name="modelNumber"></label>
+              <label class="wide"><span>Model evidence</span><textarea name="modelEvidence" rows="3"></textarea></label>
+              <label class="wide"><span>Source URLs</span><textarea name="sourceUrls" rows="3" placeholder="One HTTPS URL per line"></textarea></label>
+              <label class="wide"><span>U.S. product difference</span><textarea name="usDifference" rows="3"></textarea></label>
+            </div>
+            <div class="checkbox-grid" data-verification-options></div>
+            <label class="check"><input type="checkbox" name="personallyUsed"> <span>Personally used by the site owner</span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Amazon</legend>
+            <div class="grid two">
+              <label class="wide"><span>Original Amazon URL</span><input name="amazonUrl" type="url"></label>
+              <label class="wide"><span>Affiliate URL</span><input name="affiliateUrl" type="url"></label>
+              <label><span>Amazon status</span><select name="amazonAvailability">
+                <option value="under-review">Under review</option>
+                <option value="available">Available</option>
+                <option value="sold-out">Sold out</option>
+                <option value="unavailable">Unavailable</option>
+                <option value="">Unspecified</option>
+              </select></label>
+              <label><span>Button/status label</span><input name="amazonLabel"></label>
+              <label><span>Link last checked</span><input name="linkLastCheckedAt" type="date"></label>
+              <label><span>CTA text</span><input name="cta" placeholder="View Product Details"></label>
+            </div>
+            <label class="check"><input type="checkbox" name="activePurchaseCta"> <span>Enable active purchase CTA</span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Publishing</legend>
+            <div class="grid three">
+              <label><span>Published date *</span><input name="publishedAt" type="date" required></label>
+              <label><span>Last checked *</span><input name="lastCheckedAt" type="date" required></label>
+              <label><span>Trend label</span><input name="trendLabel"></label>
+            </div>
+            <div class="checkbox-grid flags">
+              <label class="check"><input type="checkbox" name="featured"> <span>Featured</span></label>
+              <label class="check"><input type="checkbox" name="newlyAdded"> <span>Newly Added</span></label>
+              <label class="check"><input type="checkbox" name="soldOut"> <span>Sold out</span></label>
+              <label class="check"><input type="checkbox" name="draft"> <span>Draft</span></label>
+              <label class="check"><input type="checkbox" name="hidden"> <span>Hidden</span></label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="tab-panel" data-tab-panel="articles">
+      <div class="workspace">
+        <aside class="item-sidebar">
+          <div class="sidebar-head">
+            <h2>Articles</h2>
+            <button type="button" class="button small" data-new-article>New article</button>
+          </div>
+          <label class="search-label">
+            <span>Find an article</span>
+            <input type="search" data-article-search placeholder="Search title or slug">
+          </label>
+          <div class="item-list" data-article-list></div>
+        </aside>
+
+        <form class="editor" data-article-form novalidate>
+          <div class="editor-head">
+            <div>
+              <p class="eyebrow">Article editor</p>
+              <h2 data-article-editor-title>New article</h2>
+            </div>
+            <div class="editor-actions">
+              <button type="button" class="button ghost" data-duplicate-article>Duplicate</button>
+              <button type="button" class="button danger" data-delete-article>Delete</button>
+              <button type="submit" class="button primary">Save article</button>
+            </div>
+          </div>
+
+          <div class="status" data-article-status aria-live="polite"></div>
+
+          <fieldset>
+            <legend>SEO &amp; identity</legend>
+            <div class="grid two">
+              <label><span>ID *</span><input name="id" required></label>
+              <label><span>Slug *</span><input name="slug" required></label>
+              <label class="wide"><span>Title *</span><input name="title" required></label>
+              <label class="wide"><span>SEO title</span><input name="seoTitle"></label>
+              <label class="wide"><span>Excerpt *</span><textarea name="excerpt" rows="3" required></textarea></label>
+              <label class="wide"><span>Meta description</span><textarea name="metaDescription" rows="3"></textarea></label>
+              <label><span>Primary keyword</span><input name="primaryKeyword"></label>
+              <label><span>Category *</span><select name="categoryKey" required></select></label>
+              <label class="wide"><span>Tags</span><input name="tags" placeholder="kitchen, Daiso, gyeran-jjim"></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Hero image</legend>
+            <div class="grid two">
+              <label class="wide"><span>Hero image path *</span><input name="heroImage" required></label>
+              <label class="wide"><span>Hero image alt *</span><textarea name="heroImageAlt" rows="2" required></textarea></label>
+              <label class="wide"><span>Hero caption</span><input name="heroImageCaption"></label>
+              <label><span>Width</span><input name="heroImageWidth" type="number" min="1"></label>
+              <label><span>Height</span><input name="heroImageHeight" type="number" min="1"></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Article body</legend>
+            <p class="help">Build the article with blocks. No JSON editing required.</p>
+            <div class="block-toolbar">
+              <button type="button" class="button small" data-add-block="paragraph">Paragraph</button>
+              <button type="button" class="button small" data-add-block="heading">Heading</button>
+              <button type="button" class="button small" data-add-block="list">List</button>
+              <button type="button" class="button small" data-add-block="quote">Quote</button>
+              <button type="button" class="button small" data-add-block="image">Image</button>
+              <button type="button" class="button small" data-add-block="definition-list">Definition list</button>
+            </div>
+            <div class="body-blocks" data-body-blocks></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Related content &amp; sources</legend>
+            <div class="grid two">
+              <label class="wide"><span>Related product IDs</span><input name="relatedProductIds" placeholder="egg-steamer, another-product"></label>
+              <label><span>Source requirement</span><select name="sourceRequirement">
+                <option value="required">Required</option>
+                <option value="optional">Optional</option>
+                <option value="not-applicable">Not applicable</option>
+              </select></label>
+              <label class="wide"><span>Sources</span><textarea name="sources" rows="5" placeholder="One source per line. Use Label | https://url for linked sources."></textarea></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Publishing</legend>
+            <div class="grid two">
+              <label><span>Published date *</span><input name="publishedAt" type="date" required></label>
+              <label><span>Updated date *</span><input name="updatedAt" type="date" required></label>
+            </div>
+            <div class="checkbox-grid flags">
+              <label class="check"><input type="checkbox" name="featured"> <span>Featured</span></label>
+              <label class="check"><input type="checkbox" name="draft"> <span>Draft</span></label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
+    <section class="tab-panel" data-tab-panel="export">
+      <div class="export-layout">
+        <section class="export-card">
+          <p class="eyebrow">Step 1</p>
+          <h2>Validate the working copy</h2>
+          <p>Check IDs, required fields, draft status, links, and image paths before exporting.</p>
+          <button type="button" class="button primary" data-run-validation>Run browser validation</button>
+          <pre class="validation-output" data-validation-output aria-live="polite"></pre>
+        </section>
+
+        <section class="export-card">
+          <p class="eyebrow">Step 2</p>
+          <h2>Download replacement files</h2>
+          <p>Replace the matching files inside the website project.</p>
+          <div class="download-grid">
+            <button type="button" class="button secondary" data-download-products>Download products.json</button>
+            <button type="button" class="button secondary" data-download-articles>Download articles.json</button>
+            <button type="button" class="button secondary" data-download-bundle>Download content-data.js</button>
+            <button type="button" class="button secondary" data-download-bundle-v2>Download content-data-v2.js</button>
+            <button type="button" class="button ghost" data-download-backup>Download full content backup</button>
+          </div>
+        </section>
+
+        <section class="export-card">
+          <p class="eyebrow">Optional</p>
+          <h2>Import existing files</h2>
+          <p>Use this if another editor sends you updated JSON files.</p>
+          <div class="import-grid">
+            <label class="file-input"><span>Import products.json</span><input type="file" accept=".json,application/json" data-import-products></label>
+            <label class="file-input"><span>Import articles.json</span><input type="file" accept=".json,application/json" data-import-articles></label>
+          </div>
+        </section>
+
+        <section class="export-card guide">
+          <p class="eyebrow">Publish checklist</p>
+          <h2>After downloading</h2>
+          <ol>
+            <li>Replace <code>data/products.json</code> and/or <code>data/articles.json</code>.</li>
+            <li>Replace <code>data/content-data.js</code> and <code>data/content-data-v2.js</code>.</li>
+            <li>Copy new photos into <code>assets/images/</code>.</li>
+            <li>Run <code>node scripts/validate-content.mjs</code>.</li>
+            <li>Preview the site before uploading it.</li>
+          </ol>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <template id="body-block-template">
+    <article class="body-block">
+      <header>
+        <strong data-block-title>Block</strong>
+        <div>
+          <button type="button" class="icon-button" data-block-up aria-label="Move block up">↑</button>
+          <button type="button" class="icon-button" data-block-down aria-label="Move block down">↓</button>
+          <button type="button" class="icon-button danger" data-block-delete aria-label="Delete block">×</button>
+        </div>
+      </header>
+      <div data-block-fields></div>
+    </article>
+  </template>
+
+  <script src="data/content-data-v2.js"></script>
+  <script src="js/content-admin.js"></script>
+</body>
+</html>

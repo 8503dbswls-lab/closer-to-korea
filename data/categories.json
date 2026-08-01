@@ -1,0 +1,189 @@
+{
+  "categories": [
+    {
+      "key": "home-kitchen",
+      "label": "Korean Home & Kitchen",
+      "shortLabel": "Home & Kitchen",
+      "description": "Storage, cleaning, cooking, and apartment essentials.",
+      "order": 1,
+      "active": true
+    },
+    {
+      "key": "food",
+      "label": "Food & Kitchen Culture",
+      "shortLabel": "Food Culture",
+      "description": "Tools and products connected to Korean eating and cooking routines.",
+      "order": 2,
+      "active": true
+    },
+    {
+      "key": "beauty",
+      "label": "Beauty & Personal Care",
+      "shortLabel": "Beauty & Care",
+      "description": "Beauty tools, grooming products, and everyday self-care.",
+      "order": 3,
+      "active": true
+    },
+    {
+      "key": "tech",
+      "label": "Tech & Everyday Gear",
+      "shortLabel": "Tech & Gear",
+      "description": "Portable electronics, accessories, and practical daily technology.",
+      "order": 4,
+      "active": true
+    },
+    {
+      "key": "work",
+      "label": "Stationery & Work Life",
+      "shortLabel": "Work & Study",
+      "description": "Desk tools, study products, and office-life essentials.",
+      "order": 5,
+      "active": true
+    },
+    {
+      "key": "fashion",
+      "label": "Fashion & Accessories",
+      "shortLabel": "Fashion",
+      "description": "Practical accessories and products seen in Korean daily life.",
+      "order": 6,
+      "active": true
+    },
+    {
+      "key": "culture",
+      "label": "Korean Culture Finds",
+      "shortLabel": "Culture Finds",
+      "description": "Objects connected to Korean design, tradition, and cultural habits.",
+      "order": 7,
+      "active": true
+    },
+    {
+      "key": "trending",
+      "label": "Trending in Korea",
+      "shortLabel": "Trending",
+      "description": "Products receiving meaningful current attention in Korea.",
+      "order": 8,
+      "active": true
+    }
+  ],
+  "curationFilters": [
+    {
+      "key": "actually-used",
+      "label": "What Koreans Actually Use",
+      "description": "Products verified through daily-life use or direct use.",
+      "order": 1,
+      "active": true
+    },
+    {
+      "key": "trending",
+      "label": "Trending in Korea",
+      "description": "Products marked Rising or Trending.",
+      "order": 2,
+      "active": true
+    },
+    {
+      "key": "seen-everywhere",
+      "label": "Seen Everywhere in Korea",
+      "description": "Products broadly visible in Korean daily life.",
+      "order": 3,
+      "active": true
+    }
+  ],
+  "matchTypes": [
+    {
+      "key": "confirmed",
+      "label": "Confirmed Match",
+      "description": "The exact brand, product, and model or unique identifying information have been verified.",
+      "uiClass": "exact"
+    },
+    {
+      "key": "likely",
+      "label": "Likely Match",
+      "description": "The item appears to be the same or highly likely to match, but the exact model is not fully confirmed.",
+      "uiClass": "similar"
+    },
+    {
+      "key": "similar",
+      "label": "Similar Alternative",
+      "description": "A different product with a similar use, form, or function.",
+      "uiClass": "alternative"
+    },
+    {
+      "key": "culture-inspired",
+      "label": "Korean Culture-Inspired Pick",
+      "description": "Not the same product, but connected to Korean culture, daily life, or a current Korean trend.",
+      "uiClass": "trend"
+    }
+  ],
+  "verificationOptions": [
+    {
+      "key": "personally-used",
+      "label": "Personally Used",
+      "description": "The site owner has directly used the product."
+    },
+    {
+      "key": "personally-photographed",
+      "label": "Personally Photographed",
+      "description": "The site owner directly photographed the product."
+    },
+    {
+      "key": "personally-purchased-in-korea",
+      "label": "Personally Purchased in Korea",
+      "description": "The site owner directly purchased the product in Korea."
+    },
+    {
+      "key": "seen-in-daily-life",
+      "label": "Seen in Korean Daily Life",
+      "description": "Repeatedly observed in real Korean homes, schools, workplaces, or other daily-life settings."
+    },
+    {
+      "key": "seen-in-store",
+      "label": "Seen in a Korean Store",
+      "description": "Directly observed in an offline store in Korea."
+    },
+    {
+      "key": "trend-verified",
+      "label": "Trend Verified",
+      "description": "Evidence supporting the product as a current Korean trend has been checked."
+    },
+    {
+      "key": "research-based",
+      "label": "Research-Based",
+      "description": "Information is based on research rather than direct use."
+    },
+    {
+      "key": "model-unverified",
+      "label": "Exact Model Unverified",
+      "description": "The form or product type appears to match, but the exact model has not been confirmed."
+    }
+  ],
+  "trendStatuses": [
+    {
+      "key": "rising",
+      "label": "Rising"
+    },
+    {
+      "key": "trending",
+      "label": "Trending"
+    },
+    {
+      "key": "established",
+      "label": "Established"
+    },
+    {
+      "key": "everyday-standard",
+      "label": "Everyday Standard"
+    },
+    {
+      "key": "fading",
+      "label": "Fading"
+    },
+    {
+      "key": "archive",
+      "label": "Archive"
+    },
+    {
+      "key": "",
+      "label": "Unclassified"
+    }
+  ]
+}
