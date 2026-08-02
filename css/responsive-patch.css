@@ -575,3 +575,230 @@ td {
     display: none !important;
   }
 }
+
+
+/* Conversion, trust, and monetization refinements */
+.hero {
+  min-height: auto;
+  padding-block: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.hero-copy {
+  padding: clamp(1.4rem, 4vw, 3.1rem);
+}
+
+.hero h1 {
+  max-width: 10ch;
+  line-height: 0.94;
+}
+
+.hero-collage {
+  min-height: clamp(25rem, 48vw, 32rem);
+}
+
+.hero-collage::before,
+.hero-collage::after {
+  opacity: 0.82;
+}
+
+.hero-actions .primary {
+  box-shadow: 0 12px 30px rgba(255, 77, 148, 0.2);
+}
+
+.hero-actions .secondary {
+  background: transparent;
+  border-color: rgba(41, 39, 45, 0.22);
+}
+
+.trust-row {
+  margin-top: 1rem;
+}
+
+.quick-categories {
+  width: min(var(--max, 1180px), calc(100% - (var(--responsive-gutter) * 2)));
+  margin: clamp(0.5rem, 2vw, 1.5rem) auto clamp(2.25rem, 5vw, 4.5rem);
+  padding: clamp(1.2rem, 3vw, 2rem);
+  border: 1px solid rgba(41, 39, 45, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 45px rgba(92, 70, 85, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.quick-categories__head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.quick-categories__head h2 {
+  margin: 0;
+  max-width: 18ch;
+  font-size: clamp(1.55rem, 4vw, 2.4rem);
+}
+
+.quick-category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.quick-category-grid a {
+  display: grid;
+  align-content: center;
+  min-height: 128px;
+  padding: 1rem;
+  border: 1px solid rgba(41, 39, 45, 0.1);
+  border-radius: 22px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.quick-category-grid a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 77, 148, 0.35);
+  box-shadow: 0 14px 28px rgba(92, 70, 85, 0.1);
+}
+
+.quick-category-grid a:focus-visible {
+  outline: 3px solid #29272d;
+  outline-offset: 3px;
+}
+
+.quick-category-grid span {
+  margin-bottom: 0.55rem;
+  font-size: 1.7rem;
+}
+
+.quick-category-grid strong {
+  font-size: 1rem;
+}
+
+.quick-category-grid small {
+  margin-top: 0.25rem;
+  color: rgba(41, 39, 45, 0.66);
+}
+
+.ad-slot {
+  display: none;
+  width: min(970px, calc(100% - (var(--responsive-gutter) * 2)));
+  min-height: 120px;
+  margin: clamp(1.5rem, 4vw, 3rem) auto;
+  place-items: center;
+  border-top: 1px solid rgba(41, 39, 45, 0.08);
+  border-bottom: 1px solid rgba(41, 39, 45, 0.08);
+  background: rgba(255,255,255,0.42);
+  color: rgba(41, 39, 45, 0.48);
+}
+
+.ads-enabled .ad-slot {
+  display: grid;
+}
+
+.ad-slot > span {
+  align-self: start;
+  margin-top: 0.6rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ad-slot__mount {
+  width: 100%;
+  min-height: 90px;
+}
+
+.site-footer nav {
+  max-width: 34rem;
+}
+
+.site-footer nav a {
+  min-height: 44px;
+}
+
+.legal-page {
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+.legal-page .legal-card {
+  max-width: 780px;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid rgba(41, 39, 45, 0.1);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(92, 70, 85, 0.08);
+}
+
+.legal-page h1 {
+  max-width: 15ch;
+  font-size: clamp(2.4rem, 7vw, 4.8rem);
+  line-height: 0.98;
+}
+
+.legal-page h2 {
+  margin-top: 2rem;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+}
+
+.legal-page li + li {
+  margin-top: 0.55rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 799px) {
+  .quick-category-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0.6rem;
+    overscroll-behavior-inline: contain;
+  }
+
+  .quick-category-grid a {
+    flex: 0 0 min(75vw, 230px);
+    min-height: 112px;
+    scroll-snap-align: start;
+  }
+
+  .hero-collage {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-copy {
+    padding: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.4rem, 13vw, 3.65rem);
+  }
+
+  .quick-categories {
+    border-radius: 22px;
+    padding: 1rem;
+  }
+
+  .quick-categories__head {
+    display: block;
+  }
+
+  .quick-categories__head .eyebrow {
+    margin-bottom: 0.35rem;
+  }
+
+  .quick-category-grid a {
+    flex-basis: min(82vw, 215px);
+  }
+}

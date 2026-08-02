@@ -1,29 +1,25 @@
 {
   "site": {
     "name": "Closer to Korea",
-    "tagline": "Checked from Korea, explained with context.",
-    "defaultTitle": "Get Closer to What Korea Is Into Right Now | Closer to Korea",
-    "defaultDescription": "Discover the products, small habits, and current trends found in everyday life in Korea—with clear product matches and U.S. alternatives when available."
+    "tagline": "Real Korean products, explained with local context.",
+    "defaultTitle": "See What Koreans Actually Use | Closer to Korea",
+    "defaultDescription": "Discover real Korean products, trends, and everyday finds with clear local context and U.S. buying options when available."
   },
   "navigation": [
     {
-      "label": "Newly Added",
-      "href": "#newly-added"
+      "label": "Explore",
+      "href": "#categories-quick"
     },
     {
       "label": "Trending",
       "href": "#trending"
     },
     {
-      "label": "Actually Used",
-      "href": "#actually-used"
+      "label": "Latest Articles",
+      "href": "#guides"
     },
     {
-      "label": "Categories",
-      "href": "#categories"
-    },
-    {
-      "label": "Product Guide",
+      "label": "Products",
       "href": "#shop"
     },
     {
@@ -32,22 +28,22 @@
     }
   ],
   "hero": {
-    "badge": "Checked from Korea, explained with context.",
-    "eyebrow": "Products, habits, and current signals from everyday life in Korea.",
-    "title": "Get Closer to What Korea Is Into Right Now",
-    "description": "Discover the products, small habits, and current trends found in everyday life in Korea—with clear product matches and U.S. alternatives when available.",
+    "badge": "Real Korea · Clear Context",
+    "eyebrow": "Real products used in Korea. Explained with local context.",
+    "title": "See What Koreans Actually Use",
+    "description": "Discover real Korean products, trends, and everyday finds—with clear context on what they are and where to buy them.",
     "primaryCta": {
-      "label": "Explore Korea Finds",
-      "href": "#shop"
+      "label": "Explore Korea",
+      "href": "#categories-quick"
     },
     "secondaryCta": {
-      "label": "See What’s Trending",
-      "href": "#trending"
+      "label": "Latest Articles →",
+      "href": "#guides"
     },
     "trustItems": [
-      "Checked from Korea, explained with context.",
-      "Product matches labeled clearly",
-      "U.S. alternatives when available"
+      "Real Korean products",
+      "Match status labeled clearly",
+      "U.S. buying options when available"
     ],
     "image": "assets/images/korean-everyday-hero.svg",
     "imageAlt": "Glossy collage of Korean home, beauty, kitchen, stationery, fashion, and technology products",
@@ -103,14 +99,14 @@
       "errorText": "Open this project through a local server or deployed URL, then try again."
     },
     "guides": {
-      "eyebrow": "Latest guides",
-      "title": "Understanding products through Korean life",
+      "eyebrow": "Fresh from Korea",
+      "title": "Latest Articles",
       "emptyTitle": "New guides are on the way.",
       "emptyText": "Articles added to data/articles.json will appear here automatically."
     },
     "curator": {
       "eyebrow": "About the curator",
-      "title": "Checked from Korea, explained with context.",
+      "title": "Real products. Clear Korean context.",
       "paragraphs": [
         "Products are published only when their Korean-life context, match status, verification record, image status, and public claims are ready.",
         "Direct experience, product identity, trend status, category, and U.S. availability are treated as separate facts."
@@ -143,5 +139,8 @@
   "footer": {
     "shareButton": "Share this guide",
     "copyButton": "Copy link"
+  },
+  "ads": {
+    "enabled": false
   }
 }

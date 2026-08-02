@@ -120,6 +120,9 @@ function applySiteCopy(){
   }
 
   const title=getPath(state.copy,'site.defaultTitle');
+  const adsEnabled=Boolean(getPath(state.copy,'ads.enabled'));
+  document.body.classList.toggle('ads-enabled',adsEnabled);
+
   const description=getPath(state.copy,'site.defaultDescription');
   if(title)document.title=title;
   const metaDescription=qs('meta[name="description"]');
