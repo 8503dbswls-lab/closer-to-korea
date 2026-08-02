@@ -116,69 +116,6 @@
     "sourceRequirement": "optional"
   },
   {
-    "id": "daiso-microwave-egg-cooker-personal-use",
-    "slug": "daiso-microwave-egg-cooker-personal-use",
-    "title": "A Daiso Microwave Egg Cooker I’ve Actually Used in Korea",
-    "excerpt": "A personal-use note about a matching-looking Daiso microwave egg cooker, what has been confirmed, and what still needs model-level verification.",
-    "body": [
-      {
-        "type": "paragraph",
-        "text": "The site owner purchased a matching-looking Daiso microwave egg cooker in Korea and has used it at least five times to prepare small portions of gyeran-jjim."
-      },
-      {
-        "type": "heading",
-        "text": "What direct use confirms"
-      },
-      {
-        "type": "paragraph",
-        "text": "The owner has personally used the item for small portions of steamed egg. This supports the personal-use description, but it does not confirm the exact manufacturer, product number, material, heat-resistance rating, or current product listing."
-      },
-      {
-        "type": "heading",
-        "text": "What remains unverified"
-      },
-      {
-        "type": "paragraph",
-        "text": "The exact model, manufacturer, product number, packaging, and product markings have not yet been fully compared. An exact Amazon US match has also not been confirmed."
-      },
-      {
-        "type": "heading",
-        "text": "Dishwasher experience versus official safety information"
-      },
-      {
-        "type": "paragraph",
-        "text": "The owner has cleaned the item in a dishwasher without noticing a problem. However, the exact model’s official dishwasher-safe marking has not yet been verified. This personal experience should not be treated as an official dishwasher-safety claim."
-      },
-      {
-        "type": "heading",
-        "text": "How Amazon alternatives will be labeled"
-      },
-      {
-        "type": "paragraph",
-        "text": "Any future Amazon US link must be labeled as a Similar Alternative unless the exact brand and model are verified."
-      }
-    ],
-    "categoryKey": "food",
-    "tags": [
-      "daiso",
-      "gyeran-jjim",
-      "microwave egg cooker",
-      "personally used",
-      "model unverified"
-    ],
-    "heroImage": "assets/images/daiso-egg-maker.svg",
-    "heroImageAlt": "Development placeholder illustration representing a Daiso microwave egg cooker personally used in Korea",
-    "relatedProductIds": [
-      "egg-steamer"
-    ],
-    "sources": [],
-    "sourceRequirement": "optional",
-    "publishedAt": "2026-07-28",
-    "updatedAt": "2026-07-28",
-    "featured": false,
-    "draft": true
-  },
-  {
     "id": "korean-microwave-steamed-egg-cooker",
     "slug": "korean-microwave-steamed-egg-cooker",
     "seoTitle": "What Is a Korean Microwave Steamed Egg Cooker?",
