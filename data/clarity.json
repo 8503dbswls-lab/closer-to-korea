@@ -1,0 +1,10 @@
+{
+  "microsoftClarity": {
+    "enabled": true,
+    "projectId": "y37qppo4d2",
+    "excludePages": [
+      "admin.html",
+      "article-daiso-egg-maker.html"
+    ]
+  }
+}
