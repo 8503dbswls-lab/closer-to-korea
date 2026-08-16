@@ -561,7 +561,6 @@ The visual manager edits an in-browser working copy and exports:
 - `products.json`
 - `articles.json`
 - `content-data.js`
-- `content-data-v2.js`
 
 Read `CONTENT_MANAGER_GUIDE.md` for the complete workflow.
 

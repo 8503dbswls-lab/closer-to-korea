@@ -9,23 +9,111 @@ function articleDate(value){
   const parsed=new Date(`${value}T00:00:00`);
   return Number.isNaN(parsed.getTime())?value:parsed.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
 }
-function bodyMarkup(blocks=[]){
-  return blocks.map(block=>{
-    if(block.type==='heading')return `<h2>${articleSafe(block.text)}</h2>`;
-    if(block.type==='list'&&Array.isArray(block.items))return `<ul>${block.items.map(item=>`<li>${articleSafe(item)}</li>`).join('')}</ul>`;
-    if(block.type==='quote')return `<blockquote>${articleSafe(block.text)}</blockquote>`;
-    if(block.type==='image')return `<figure class="data-article-inline-image">
-      <img src="${articleSafe(block.src)}" width="${Number(block.width)||1200}" height="${Number(block.height)||800}" loading="lazy" decoding="async" alt="${articleSafe(block.alt)}">
-      ${block.caption?`<figcaption>${articleSafe(block.caption)}</figcaption>`:''}
-    </figure>`;
-    if(block.type==='definition-list'&&Array.isArray(block.items))return `<dl class="article-definition-list">${block.items.map(item=>`<div><dt>${articleSafe(item.term)}</dt><dd>${articleSafe(item.description)}</dd></div>`).join('')}</dl>`;
-    return `<p>${articleSafe(block.text||'')}</p>`;
-  }).join('');
+function createArticleAdSlot(slotName){
+  const helper=window.CTKMonetization;
+  if(!helper?.manualAdSlotConfigured(slotName))return null;
+  const wrapper=document.createElement('aside');
+  wrapper.className='ad-slot article-ad-slot is-active';
+  wrapper.dataset.adSlot='';
+  wrapper.dataset.adConfigured='true';
+  wrapper.setAttribute('aria-label','Advertisement');
+
+  const label=document.createElement('span');
+  label.textContent='Advertisement';
+  const mount=document.createElement('div');
+  mount.className='ad-slot__mount';
+  mount.dataset.adMount=slotName;
+  wrapper.append(label,mount);
+  return wrapper;
 }
+
+function renderArticleBody(container,blocks=[],article=null){
+  container.replaceChildren();
+  const helper=window.CTKMonetization;
+  const placements=helper?.automaticArticlePlacements(article,blocks)||[];
+  const autoByIndex=new Map(placements.map(item=>[item.afterIndex,item.slotName]));
+
+  blocks.forEach((block,index)=>{
+    if(block.type==='ad-break'){
+      if(helper?.customArticleBreakAllowed(article,block)){
+        const adNode=createArticleAdSlot(block.slot);
+        if(adNode){
+          container.appendChild(adNode);
+          helper?.renderManualAdMount(adNode.querySelector('[data-ad-mount]'),block.slot);
+        }
+      }
+      return;
+    }
+
+    let node;
+
+    if(block.type==='heading'){
+      node=document.createElement('h2');
+      node.textContent=block.text||'';
+    }else if(block.type==='list'&&Array.isArray(block.items)){
+      node=document.createElement('ul');
+      block.items.forEach(item=>{
+        const li=document.createElement('li');
+        li.textContent=item;
+        node.appendChild(li);
+      });
+    }else if(block.type==='quote'){
+      node=document.createElement('blockquote');
+      node.textContent=block.text||'';
+    }else if(block.type==='image'){
+      node=document.createElement('figure');
+      node.className='data-article-inline-image';
+
+      const image=document.createElement('img');
+      image.src=block.src;
+      image.alt=block.alt||'';
+      image.width=Number(block.width)||1200;
+      image.height=Number(block.height)||800;
+      image.loading='lazy';
+      image.decoding='async';
+      image.style.display='block';
+      image.style.width='100%';
+      image.style.height='auto';
+      node.appendChild(image);
+
+      if(block.caption){
+        const caption=document.createElement('figcaption');
+        caption.textContent=block.caption;
+        node.appendChild(caption);
+      }
+    }else if(block.type==='definition-list'&&Array.isArray(block.items)){
+      node=document.createElement('dl');
+      node.className='article-definition-list';
+      block.items.forEach(item=>{
+        const row=document.createElement('div');
+        const term=document.createElement('dt');
+        const description=document.createElement('dd');
+        term.textContent=item.term||'';
+        description.textContent=item.description||'';
+        row.append(term,description);
+        node.appendChild(row);
+      });
+    }else{
+      node=document.createElement('p');
+      node.textContent=block.text||'';
+    }
+
+    container.appendChild(node);
+    const autoSlot=autoByIndex.get(index);
+    if(autoSlot){
+      const adNode=createArticleAdSlot(autoSlot);
+      if(adNode){
+        container.appendChild(adNode);
+        helper?.renderManualAdMount(adNode.querySelector('[data-ad-mount]'),autoSlot);
+      }
+    }
+  });
+}
+
 function relatedMarkup(ids,products){
   const related=products.filter(product=>ids.includes(product.id)&&!product.draft&&!product.hidden);
   if(!related.length)return'<p>No related products are published yet.</p>';
-  return related.map(product=>`<a class="related-product" href="index.html?product=${encodeURIComponent(product.id)}#shop">
+  return related.map(product=>`<a class="related-product" href="product.html?slug=${encodeURIComponent(product.slug||product.id)}">
     <img src="${articleSafe(product.image)}" width="160" height="160" loading="lazy" alt="${articleSafe(product.imageAlt||product.name)}">
     <span>${articleSafe(product.name)}</span>
   </a>`).join('');
@@ -74,9 +162,11 @@ async function loadArticle(){
       }
       element.setAttribute(attribute,value);
     };
+    const canonicalUrl=`https://closertokorea.com/article.html?slug=${encodeURIComponent(article.slug)}`;
     setMeta('meta[property="og:title"]','content',article.seoTitle||article.title);
     setMeta('meta[property="og:description"]','content',description);
     setMeta('meta[property="og:image"]','content',new URL(article.heroImage,location.href).href);
+    setMeta('meta[property="og:url"]','content',canonicalUrl);
     setMeta('meta[name="twitter:title"]','content',article.seoTitle||article.title);
     setMeta('meta[name="twitter:description"]','content',description);
     setMeta('meta[name="twitter:image"]','content',new URL(article.heroImage,location.href).href);
@@ -86,7 +176,7 @@ async function loadArticle(){
       canonical.rel='canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href=new URL(`article.html?slug=${encodeURIComponent(article.slug)}`,location.href).href;
+    canonical.href=canonicalUrl;
 
     document.querySelector('[data-article-breadcrumb]').textContent=article.title;
     document.querySelector('[data-article-category]').textContent=article.categoryLabel||article.categoryKey.replace(/-/g,' ');
@@ -107,7 +197,30 @@ async function loadArticle(){
       image.insertAdjacentElement('afterend',caption);
     }
 
-    document.querySelector('[data-article-body]').innerHTML=bodyMarkup(article.body);
+    renderArticleBody(document.querySelector('[data-article-body]'),article.body,article);
+    const bodyContainer=document.querySelector('[data-article-body]');
+    const expectedInlineImages=(article.body||[]).filter(block=>block.type==='image');
+    if(expectedInlineImages.length&&!bodyContainer.querySelector('.data-article-inline-image')){
+      expectedInlineImages.forEach(block=>{
+        const figure=document.createElement('figure');
+        figure.className='data-article-inline-image';
+        const img=document.createElement('img');
+        img.src=block.src;
+        img.alt=block.alt||'';
+        img.width=Number(block.width)||1200;
+        img.height=Number(block.height)||800;
+        img.loading='lazy';
+        img.decoding='async';
+        figure.appendChild(img);
+        if(block.caption){
+          const caption=document.createElement('figcaption');
+          caption.textContent=block.caption;
+          figure.appendChild(caption);
+        }
+        bodyContainer.appendChild(figure);
+      });
+    }
+
     document.querySelector('[data-related-products]').innerHTML=relatedMarkup(article.relatedProductIds||[],products);
     document.querySelector('[data-article-sources]').innerHTML=sourceMarkup(article.sources);
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Product Guide | Closer to Korea</title>
-  <meta name="description" content="A Korean product guide with daily-life context, verification status, and Amazon US match information.">
+  <meta name="description" content="A Korean product guide with daily-life context, verification status, and U.S. match and availability information.">
   <meta name="theme-color" content="#FFF9FC">
   <meta property="og:type" content="product">
   <meta property="og:site_name" content="Closer to Korea">
@@ -17,22 +17,20 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html#newly-added">Newly Added</a>
-        <a href="index.html#trending">Trending</a>
-        <a href="index.html#categories">Categories</a>
-        <a href="index.html#shop">Product Guide</a>
-        <a href="about.html">About</a>
-      </nav>
-      <div class="header-actions"><a class="round-button text-button" href="index.html">Home</a></div>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
+    <nav class="desktop-nav" aria-label="Primary" data-navigation></nav>
+    <div class="header-actions actions">
+      <a class="round-button site-search-link" href="search.html" aria-label="Search Closer to Korea">Search</a>
+      <button class="round-button menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-toggle>Menu</button>
     </div>
-  </header>
+  </div>
+  <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu data-mobile-navigation id="mobile-menu"></nav>
+</header>
 
   <main id="main" class="data-product-page">
     <nav class="article-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#shop">Products</a><span aria-hidden="true">/</span><span data-product-breadcrumb>Loading…</span>
+      <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="product-guides.html">Product Guides</a><span aria-hidden="true">/</span><span data-product-breadcrumb>Loading…</span>
     </nav>
 
     <div data-product-loading class="empty-state"><h1>Loading product…</h1></div>
@@ -50,7 +48,7 @@
           <div class="verification-row" data-product-verification></div>
           <p data-product-checked></p>
           <div data-product-cta></div>
-          <p class="affiliate-note" data-product-affiliate-note></p>
+          <p class="affiliate-note" data-product-affiliate-note hidden></p>
         </div>
       </div>
 
@@ -73,7 +71,7 @@
               <div><dt>Published</dt><dd data-product-published></dd></div>
               <div><dt>Last checked</dt><dd data-product-last-checked></dd></div>
               <div><dt>Trend status</dt><dd data-product-trend></dd></div>
-              <div><dt>Amazon status</dt><dd data-product-amazon-status></dd></div>
+              <div data-product-amazon-row hidden><dt>Amazon status</dt><dd data-product-amazon-status></dd></div>
             </dl>
           </section>
           <button class="round-button" type="button" data-share-page>Share product</button>
@@ -86,7 +84,7 @@
     <div data-product-error class="error-state" hidden>
       <h1>Product not found.</h1>
       <p>This product may still be a draft, hidden, or linked with the wrong slug.</p>
-      <a class="jelly-button secondary" href="index.html#shop">Return to the product guide</a>
+      <a class="jelly-button secondary" href="product-guides.html">Return to Product Guides</a>
     </div>
   </main>
 
@@ -95,8 +93,9 @@
     <nav><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy</a></nav>
   </footer>
 
-  <script src="data/content-data.js"></script>
-  <script src="js/main.js"></script>
+  <script src="data/content-data.js?v=3"></script>
+  <script src="js/monetization.js"></script>
+<script src="js/main.js"></script>
   <script src="js/product.js"></script>
 </body>
 </html>

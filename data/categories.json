@@ -185,5 +185,128 @@
       "key": "",
       "label": "Unclassified"
     }
+  ],
+  "editorialSections": [
+    {
+      "key": "everyday-korea",
+      "label": "Everyday Korea",
+      "href": "everyday-korea.html",
+      "description": "Daily routines, homes, work, school, commuting, and ordinary habits in Korea.",
+      "order": 1,
+      "active": true,
+      "icon": "🏠",
+      "homeBlurb": "Homes, routines, work, school, and ordinary Korean life.",
+      "showWhenEmpty": true
+    },
+    {
+      "key": "korean-kitchen",
+      "label": "Korean Kitchen",
+      "href": "korean-kitchen.html",
+      "description": "Kitchen tools, cooking routines, storage, and food culture in Korean daily life.",
+      "order": 2,
+      "active": true,
+      "icon": "🥣",
+      "homeBlurb": "Cooking tools, storage, food habits, and real kitchen context.",
+      "showWhenEmpty": true
+    },
+    {
+      "key": "k-beauty",
+      "label": "K-Beauty",
+      "href": "k-beauty.html",
+      "description": "Korean skincare, beauty routines, product types, and personal-care culture explained with local context.",
+      "order": 3,
+      "active": true,
+      "icon": "💄",
+      "homeBlurb": "Skincare, beauty routines, product types, and real Korean beauty context.",
+      "showWhenEmpty": false
+    },
+    {
+      "key": "trends-finds",
+      "label": "Trends & Finds",
+      "href": "trends-finds.html",
+      "description": "Current finds, retail moments, and products getting meaningful attention in Korea.",
+      "order": 4,
+      "active": true,
+      "icon": "✨",
+      "homeBlurb": "Current finds, retail moments, and things getting attention in Korea.",
+      "showWhenEmpty": true
+    },
+    {
+      "key": "seen-online",
+      "label": "Seen Online",
+      "href": "seen-online.html",
+      "description": "Things spotted in Korean media and social content, separated from verified everyday use.",
+      "order": 5,
+      "active": true,
+      "icon": "📱",
+      "homeBlurb": "Things spotted in Korean media and social content, with context.",
+      "showWhenEmpty": true
+    }
+  ],
+  "contentTypes": [
+    {
+      "key": "korea-discovery",
+      "label": "Korea Discovery",
+      "description": "Primarily informational or cultural discovery content."
+    },
+    {
+      "key": "culture-everyday",
+      "label": "Culture / Everyday Korea",
+      "description": "Daily-life habits and cultural context with no purchase focus."
+    },
+    {
+      "key": "product-guide",
+      "label": "Product Guide",
+      "description": "A product-led explainer with substantial Korean-life context."
+    },
+    {
+      "key": "mixed",
+      "label": "Mixed",
+      "description": "Culture and product context are both meaningful."
+    }
+  ],
+  "contextConfidence": [
+    {
+      "key": "broadly-verified",
+      "label": "Broadly Verified",
+      "description": "Supported broadly enough to describe beyond one household or local observation."
+    },
+    {
+      "key": "common-not-universal",
+      "label": "Common, but not universal",
+      "description": "Common in Korea, but not something that should be stated as universal."
+    },
+    {
+      "key": "context-dependent",
+      "label": "Context-dependent",
+      "description": "May differ by region, generation, household, housing type, or other context."
+    },
+    {
+      "key": "local-personal",
+      "label": "Local / Personal Observation",
+      "description": "Based mainly on the editor’s own local or personal observation and should be written that way."
+    }
+  ],
+  "monetizationProfiles": [
+    {
+      "key": "default",
+      "label": "Default — Recommended",
+      "description": "Standard information-page monetization after AdSense is enabled."
+    },
+    {
+      "key": "light",
+      "label": "Light",
+      "description": "Lower ad density for product-led or mixed pages."
+    },
+    {
+      "key": "none",
+      "label": "No ads",
+      "description": "No manual AdSense placements on this article."
+    },
+    {
+      "key": "custom",
+      "label": "Custom",
+      "description": "Only explicit Ad Break blocks may render manual ad units."
+    }
   ]
 }

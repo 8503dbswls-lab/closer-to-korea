@@ -77,6 +77,14 @@
     <strong>Local tool:</strong> Nothing is uploaded anywhere. This page edits an in-browser working copy and exports replacement data files.
   </div>
 
+  <div class="notice monetization-status" role="status" aria-label="Monetization status">
+    <strong>Monetization:</strong>
+    <span data-adsense-status>AdSense: checking…</span>
+    <span aria-hidden="true">·</span>
+    <span data-amazon-status>Amazon Associates: checking…</span>
+    <small>Global monetization switches are managed separately. AdSense site connection and manual ad units are tracked here; Auto ads are managed in Google AdSense. Article settings below only prepare each post for future activation.</small>
+  </div>
+
   <nav class="tabs" aria-label="Content manager sections">
     <button type="button" class="tab active" data-tab-button="products" aria-selected="true">Products</button>
     <button type="button" class="tab" data-tab-button="articles" aria-selected="false">Articles</button>
@@ -270,8 +278,21 @@
               <button type="button" class="button small" data-add-block="quote">Quote</button>
               <button type="button" class="button small" data-add-block="image">Image</button>
               <button type="button" class="button small" data-add-block="definition-list">Definition list</button>
+              <button type="button" class="button small" data-add-block="ad-break">Ad Break</button>
             </div>
             <div class="body-blocks" data-body-blocks></div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Editorial &amp; monetization</legend>
+            <p class="help">These fields prepare the article for future AdSense and Amazon activation. They do not turn ads or affiliate links on by themselves.</p>
+            <div class="grid two">
+              <label><span>Editorial section *</span><select name="sectionKey" required></select></label>
+              <label><span>Content type *</span><select name="contentType" required></select></label>
+              <label><span>Korea context confidence *</span><select name="koreaContextConfidence" required></select></label>
+              <label><span>Monetization profile *</span><select name="monetizationProfile" required></select></label>
+            </div>
+            <p class="help">Use <strong>Context-dependent</strong> when regional, generational, household, or housing differences may matter. Use <strong>Local / Personal Observation</strong> when the claim is mainly based on your own experience.</p>
           </fieldset>
 
           <fieldset>
@@ -312,6 +333,23 @@
           <pre class="validation-output" data-validation-output aria-live="polite"></pre>
         </section>
 
+        <section class="export-card local-publish-card" data-local-publish-panel hidden>
+          <p class="eyebrow">Local shortcut</p>
+          <h2>One-click publish</h2>
+          <p>This panel only appears when the admin is opened from the local Closer to Korea admin server on this PC.</p>
+          <p class="local-publish-git" data-local-publish-git>Checking local Git status…</p>
+          <div class="local-image-stage">
+            <label class="file-input">
+              <span>Stage new photos</span>
+              <input type="file" accept="image/jpeg,image/png,image/webp" multiple data-local-image-input disabled>
+            </label>
+            <p class="help">JPG, PNG, or WebP up to 12 MB each. Staged files stay outside the Git project until a validated Publish uses their returned paths.</p>
+            <div class="local-image-results" data-local-image-results></div>
+          </div>
+          <button type="button" class="button primary" data-local-publish-button disabled>Validate and publish to GitHub</button>
+          <pre class="validation-output local-publish-output" data-local-publish-output aria-live="polite"></pre>
+        </section>
+
         <section class="export-card">
           <p class="eyebrow">Step 2</p>
           <h2>Download replacement files</h2>
@@ -320,7 +358,6 @@
             <button type="button" class="button secondary" data-download-products>Download products.json</button>
             <button type="button" class="button secondary" data-download-articles>Download articles.json</button>
             <button type="button" class="button secondary" data-download-bundle>Download content-data.js</button>
-            <button type="button" class="button secondary" data-download-bundle-v2>Download content-data-v2.js</button>
             <button type="button" class="button ghost" data-download-backup>Download full content backup</button>
           </div>
         </section>
@@ -340,7 +377,7 @@
           <h2>After downloading</h2>
           <ol>
             <li>Replace <code>data/products.json</code> and/or <code>data/articles.json</code>.</li>
-            <li>Replace <code>data/content-data.js</code> and <code>data/content-data-v2.js</code>.</li>
+            <li>Replace <code>data/content-data.js</code>.</li>
             <li>Copy new photos into <code>assets/images/</code>.</li>
             <li>Run <code>node scripts/validate-content.mjs</code>.</li>
             <li>Preview the site before uploading it.</li>
@@ -366,8 +403,9 @@
 
   </div>
 
-  <script src="data/content-data-v2.js"></script>
+  <script src="data/content-data.js?v=3"></script>
   <script src="js/content-admin.js"></script>
+  <script src="js/local-publish-client.js"></script>
   <script src="js/admin-lock.js"></script>
 </body>
 </html>

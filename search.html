@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search | Closer to Korea</title>
+  <meta name="description" content="Search Closer to Korea for Korean everyday-life guides, product explainers, and verified product records.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#f8f3ff">
+  <meta property="og:title" content="Search | Closer to Korea">
+  <meta property="og:description" content="Search Korean everyday-life guides and product explainers on Closer to Korea.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://closertokorea.com/search.html">
+  <meta property="og:site_name" content="Closer to Korea">
+  <link rel="canonical" href="https://closertokorea.com/search.html">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive-patch.css">
+</head>
+<body class="y2k-shell">
+  <div class="ambient-orb orb-one" aria-hidden="true"></div>
+  <div class="ambient-orb orb-two" aria-hidden="true"></div>
+  <div class="cursor-sparkle" aria-hidden="true">✦</div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
+    <nav class="desktop-nav" aria-label="Primary" data-navigation></nav>
+    <div class="header-actions actions">
+      <a class="round-button site-search-link" href="search.html" aria-label="Search Closer to Korea">Search</a>
+      <button class="round-button menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-toggle>Menu</button>
+    </div>
+  </div>
+  <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu data-mobile-navigation id="mobile-menu"></nav>
+</header>
+
+  <main id="main">
+    <section class="category-hero search-hero">
+      <div class="container">
+        <span class="eyebrow">Closer to Korea / Search</span>
+        <h1 class="headline">Find the Korean thing you are trying to understand.</h1>
+        <p>Search published articles and verified product records. You can use a product name, a Korean-life context, or a simple description of what you saw.</p>
+        <form class="unified-search-form" action="search.html" method="get" role="search" data-unified-search-form>
+          <label class="sr-only" for="unified-search-input">Search Closer to Korea</label>
+          <input id="unified-search-input" name="q" type="search" placeholder="Try “kimchi container” or “microwave egg cooker”" autocomplete="off" data-unified-search-input>
+          <button class="jelly-button primary" type="submit">Search</button>
+        </form>
+        <p class="search-status" aria-live="polite" data-unified-search-status>Search articles and products across Closer to Korea.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div data-unified-search-results></div>
+        <div class="empty-state" data-unified-search-empty hidden>
+          <h2>No matching published content yet.</h2>
+          <p>Try a broader description, a use case, or a different English name. Closer to Korea only shows content that has been published and passed editorial checks.</p>
+          <a class="button alt" href="product-guides.html">Browse Product Guides</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html">Closer <b>to</b> Korea</a>
+        <p>Helping you get closer to what Korea is really like right now.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="about.html">About</a>
+        <a href="editorial-policy.html">Editorial Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="advertising-disclosure.html">Advertising Disclosure</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="data/content-data.js?v=3"></script>
+  <script src="js/monetization.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/search.js"></script>
+</body>
+</html>

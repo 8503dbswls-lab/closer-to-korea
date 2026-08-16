@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const source = window.__CTK_DATA__ || {products:[],articles:[],categories:{categories:[],curationFilters:[],matchTypes:[],verificationOptions:[],trendStatuses:[]},siteCopy:{}};
+  const source = window.__CTK_DATA__ || {products:[],articles:[],categories:{categories:[],curationFilters:[],matchTypes:[],verificationOptions:[],trendStatuses:[],editorialSections:[],contentTypes:[],contextConfidence:[],monetizationProfiles:[]},siteCopy:{},monetization:{adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}}};
   const storageKey = "ctk-content-manager-v1";
 
   const state = {
@@ -9,10 +9,14 @@
     articles: structuredClone(source.articles || []),
     categories: structuredClone(source.categories || {}),
     siteCopy: structuredClone(source.siteCopy || {}),
+    monetization: structuredClone(source.monetization || {adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}}),
     selectedProductId: null,
     selectedArticleId: null,
     articleBlocks: []
   };
+
+  let productDirty=false;
+  let articleDirty=false;
 
   const $ = (selector, root=document) => root.querySelector(selector);
   const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
@@ -95,6 +99,10 @@
     $$('select[name="categoryKey"]').forEach(select=>populateSelect(select,categoryItems));
     populateSelect($('[name="productMatchType"]'),state.categories.matchTypes||[]);
     populateSelect($('[name="trendStatus"]'),(state.categories.trendStatuses||[]).filter(item=>item.key!==""),true);
+    populateSelect($('[name="sectionKey"]'),(state.categories.editorialSections||[]).filter(item=>item.active!==false).sort((a,b)=>(a.order||0)-(b.order||0)));
+    populateSelect($('[name="contentType"]'),state.categories.contentTypes||[]);
+    populateSelect($('[name="koreaContextConfidence"]'),state.categories.contextConfidence||[]);
+    populateSelect($('[name="monetizationProfile"]'),state.categories.monetizationProfiles||[]);
 
     const verificationContainer=$("[data-verification-options]");
     verificationContainer.replaceChildren();
@@ -223,6 +231,10 @@
       body:[],
       categoryKey:(state.categories.categories||[])[0]?.key || "",
       categoryLabel:"",
+      sectionKey:(state.categories.editorialSections||[]).find(item=>item.active!==false)?.key || "korean-kitchen",
+      contentType:"korea-discovery",
+      koreaContextConfidence:"context-dependent",
+      monetizationProfile:"default",
       tags:[],
       heroImage:"",
       heroImageAlt:"",
@@ -299,12 +311,14 @@
   function selectProduct(id){
     state.selectedProductId=id;
     fillProductForm(productById(id));
+    productDirty=false;
     renderProductList();
   }
 
   function newProduct(){
     state.selectedProductId=null;
     fillProductForm(productDefaults());
+    productDirty=false;
     renderProductList();
   }
 
@@ -320,12 +334,18 @@
       setStatus("[data-product-status]",`A product with ID “${data.id}” already exists.`,true);
       return;
     }
+    const duplicateSlug=state.products.find(product=>product.slug===data.slug && product.id!==state.selectedProductId);
+    if(duplicateSlug){
+      setStatus("[data-product-status]",`A product with slug “${data.slug}” already exists.`,true);
+      return;
+    }
     const index=state.products.findIndex(product=>product.id===state.selectedProductId);
     if(index>=0)state.products[index]=data;
     else state.products.push(data);
     state.selectedProductId=data.id;
     renderProductList();
     fillProductForm(data);
+    productDirty=false;
     saveBrowser(false);
     setStatus("[data-product-status]","Product saved to the working copy.");
   }
@@ -360,7 +380,8 @@
     const form=$("[data-article-form]");
     [
       "id","slug","title","seoTitle","excerpt","metaDescription","primaryKeyword",
-      "categoryKey","heroImage","heroImageAlt","heroImageCaption","heroImageWidth",
+      "categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile",
+      "heroImage","heroImageAlt","heroImageCaption","heroImageWidth",
       "heroImageHeight","sourceRequirement","publishedAt","updatedAt"
     ].forEach(name=>{
       const field=form.elements[name];
@@ -381,7 +402,8 @@
     const data=articleDefaults();
     [
       "id","slug","title","seoTitle","excerpt","metaDescription","primaryKeyword",
-      "categoryKey","heroImage","heroImageAlt","heroImageCaption","sourceRequirement",
+      "categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile",
+      "heroImage","heroImageAlt","heroImageCaption","sourceRequirement",
       "publishedAt","updatedAt"
     ].forEach(name=>data[name]=form.elements[name]?.value.trim() || "");
     data.heroImageWidth=Number(form.elements.heroImageWidth.value)||1200;
@@ -400,12 +422,14 @@
   function selectArticle(id){
     state.selectedArticleId=id;
     fillArticleForm(articleById(id));
+    articleDirty=false;
     renderArticleList();
   }
 
   function newArticle(){
     state.selectedArticleId=null;
     fillArticleForm(articleDefaults());
+    articleDirty=false;
     renderArticleList();
   }
 
@@ -433,6 +457,7 @@
     state.selectedArticleId=data.id;
     renderArticleList();
     fillArticleForm(data);
+    articleDirty=false;
     saveBrowser(false);
     setStatus("[data-article-status]","Article saved to the working copy.");
   }
@@ -478,6 +503,11 @@
       wrapper.innerHTML=`<label><span>One item per line</span><textarea data-block-key="items" rows="5">${escapeHtml((block.items||[]).join("\n"))}</textarea></label>`;
     }else if(block.type==="definition-list"){
       wrapper.innerHTML=`<label><span>One row per line: Term | Description</span><textarea data-block-key="items" rows="6">${escapeHtml((block.items||[]).map(item=>`${item.term} | ${item.description}`).join("\n"))}</textarea></label>`;
+    }else if(block.type==="ad-break"){
+      const articleSlots=Object.keys(state.monetization?.adsense?.slots||{}).filter(key=>key.startsWith("article-"));
+      const options=articleSlots.map(slot=>`<option value="${escapeAttr(slot)}"${slot===block.slot?" selected":""}>${escapeHtml(slot)}</option>`).join("");
+      wrapper.innerHTML=`<label><span>Manual ad slot</span><select data-block-key="slot">${options}</select></label>
+        <p class="help">Only renders when this article uses the Custom monetization profile and AdSense manual slots are enabled.</p>`;
     }else{
       wrapper.innerHTML=`<label><span>${block.type==="heading"?"Heading":block.type==="quote"?"Quote":"Paragraph"}</span><textarea data-block-key="text" rows="${block.type==="paragraph"?5:3}">${escapeHtml(block.text||"")}</textarea></label>`;
     }
@@ -538,6 +568,8 @@
           const [term,...rest]=line.split("|");
           return {term:(term||"").trim(),description:rest.join("|").trim()};
         }).filter(item=>item.term||item.description);
+      }else if(block.type==="ad-break"){
+        block.slot=$('[data-block-key="slot"]',fieldRoot)?.value||"article-mid";
       }else{
         block.text=$('[data-block-key="text"]',fieldRoot)?.value.trim()||"";
       }
@@ -552,7 +584,8 @@
       list:{type:"list",items:[]},
       quote:{type:"quote",text:""},
       image:{type:"image",src:"",alt:"",caption:"",width:1200,height:800},
-      "definition-list":{type:"definition-list",items:[]}
+      "definition-list":{type:"definition-list",items:[]},
+      "ad-break":{type:"ad-break",slot:"article-mid"}
     };
     state.articleBlocks.push(defaults[type]);
     renderBodyBlocks();
@@ -602,6 +635,30 @@
     const matchKeys=new Set((state.categories.matchTypes||[]).map(item=>item.key));
     const categoryKeys=new Set((state.categories.categories||[]).map(item=>item.key));
     const verificationKeys=new Set((state.categories.verificationOptions||[]).map(item=>item.key));
+    const sectionKeys=new Set((state.categories.editorialSections||[]).filter(item=>item.active!==false).map(item=>item.key));
+    const contentTypeKeys=new Set((state.categories.contentTypes||[]).map(item=>item.key));
+    const contextConfidenceKeys=new Set((state.categories.contextConfidence||[]).map(item=>item.key));
+    const monetizationProfileKeys=new Set((state.categories.monetizationProfiles||[]).map(item=>item.key));
+    const articleAdEligibleTypes=new Set(["paragraph","list","quote","definition-list"]);
+    const requiredArticleManualSlots=article=>{
+      if(!article||article.draft)return[];
+      const profileName=article.monetizationProfile||"default";
+      if(profileName==="none")return[];
+      const allowedSlots=new Set(Object.keys(state.monetization?.adsense?.slots||{}).filter(key=>key.startsWith("article-")));
+      if(profileName==="custom"){
+        return [...new Set((article.body||[])
+          .filter(block=>block?.type==="ad-break"&&allowedSlots.has(block.slot))
+          .map(block=>block.slot))];
+      }
+      const eligibleCount=(article.body||[]).filter(block=>articleAdEligibleTypes.has(block?.type)).length;
+      if(eligibleCount<5)return[];
+      const profileSlots=Array.isArray(state.monetization?.articleProfiles?.[profileName]?.manualSlots)
+        ?state.monetization.articleProfiles[profileName].manualSlots
+        :[];
+      if(profileName==="light")return profileSlots.slice(0,1);
+      if(profileName==="default"&&eligibleCount<10)return profileSlots.slice(0,1);
+      return profileSlots;
+    };
 
     state.products.forEach((product,index)=>{
       const label=`Product ${index+1} (${product.id||"missing ID"})`;
@@ -621,8 +678,12 @@
       }
       if(product.affiliateUrl && !product.linkLastCheckedAt)errors.push(`${label}: Affiliate URL requires link last checked date.`);
       if(product.activePurchaseCta && !product.affiliateUrl)errors.push(`${label}: Active purchase CTA requires affiliate URL.`);
-      if(!product.draft && !product.imageAlt)errors.push(`${label}: Public product needs image alt text.`);
-      if(!product.draft && !product.lastCheckedAt)errors.push(`${label}: Public product needs last checked date.`);
+      if(product.activePurchaseCta && product.amazonAvailability!=="available")errors.push(`${label}: Active purchase CTA requires Amazon status Available.`);
+      if(!product.draft){
+        const requiredTextFields=["id","slug","name","summary","categoryKey","image","imageAlt","seenInKorea","usedBy","whyItMatters","productMatchType","publishedAt","lastCheckedAt","publicImageStatus"];
+        requiredTextFields.forEach(field=>{if(!String(product[field]||"").trim())errors.push(`${label}: ${field} must not be blank for a public product.`);});
+        if(!(product.verificationStatus||[]).length)errors.push(`${label}: Public product needs at least one verification status.`);
+      }
       if(product.draft && product.featured)warnings.push(`${label}: Draft product is featured.`);
     });
 
@@ -635,14 +696,69 @@
       if(!article.title)errors.push(`${label}: Title is required.`);
       if(!article.excerpt)errors.push(`${label}: Excerpt is required.`);
       if(!categoryKeys.has(article.categoryKey))errors.push(`${label}: Unknown category.`);
+      if(!sectionKeys.has(article.sectionKey))errors.push(`${label}: Unknown or inactive editorial section.`);
+      if(!contentTypeKeys.has(article.contentType))errors.push(`${label}: Unknown content type.`);
+      if(!contextConfidenceKeys.has(article.koreaContextConfidence))errors.push(`${label}: Unknown Korea context confidence.`);
+      if(!monetizationProfileKeys.has(article.monetizationProfile))errors.push(`${label}: Unknown monetization profile.`);
       if(article.sourceRequirement==="required" && !(article.sources||[]).length)errors.push(`${label}: Sources are required.`);
-      if(!article.draft && !(article.body||[]).length)errors.push(`${label}: Public article needs body content.`);
-      if(!article.draft && !article.heroImageAlt)errors.push(`${label}: Public article needs hero image alt text.`);
+      if(article.koreaContextConfidence==="broadly-verified" && !(article.sources||[]).length){
+        warnings.push(`${label}: Broadly Verified is selected without a listed source. Confirm that broad support is documented before publication.`);
+      }
+      if(article.contentType==="product-guide" && !(article.relatedProductIds||[]).length){
+        warnings.push(`${label}: Product Guide has no related product IDs.`);
+      }
+      if(!article.draft){
+        const requiredTextFields=["id","slug","title","seoTitle","excerpt","metaDescription","categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile","heroImage","heroImageAlt","publishedAt","updatedAt"];
+        requiredTextFields.forEach(field=>{if(!String(article[field]||"").trim())errors.push(`${label}: ${field} must not be blank for a public article.`);});
+        if(!String(article.primaryKeyword||"").trim())warnings.push(`${label}: Public article has no primary keyword.`);
+        if(!(article.body||[]).length)errors.push(`${label}: Public article needs body content.`);
+        if(!Number(article.heroImageWidth)||!Number(article.heroImageHeight))errors.push(`${label}: Public article needs hero image width and height.`);
+      }
+      const allowedBlockTypes=new Set(["paragraph","heading","list","quote","image","definition-list","ad-break"]);
+      const allowedArticleAdSlots=new Set(Object.keys(state.monetization?.adsense?.slots||{}).filter(key=>key.startsWith("article-")));
+      const adBreakSlots=new Set();
+      let adBreakCount=0;
       (article.body||[]).forEach((block,blockIndex)=>{
+        if(!allowedBlockTypes.has(block.type))errors.push(`${label}: Unknown body block type “${block.type}” at block ${blockIndex+1}.`);
+        if(["paragraph","heading","quote"].includes(block.type) && !String(block.text||"").trim())errors.push(`${label}: ${block.type} block ${blockIndex+1} must not be blank.`);
+        if(block.type==="list" && (!(block.items||[]).length || (block.items||[]).some(item=>!String(item||"").trim())))errors.push(`${label}: List block ${blockIndex+1} needs non-blank items.`);
+        if(block.type==="definition-list" && (!(block.items||[]).length || (block.items||[]).some(item=>!String(item?.term||"").trim()||!String(item?.description||"").trim())))errors.push(`${label}: Definition list block ${blockIndex+1} needs a term and description for every item.`);
         if(block.type==="image" && !block.alt)errors.push(`${label}: Image block ${blockIndex+1} needs alt text.`);
+        if(block.type==="ad-break"){
+          adBreakCount+=1;
+          if(article.monetizationProfile!=="custom")errors.push(`${label}: Ad Break block ${blockIndex+1} requires Monetization Profile = Custom.`);
+          if(!allowedArticleAdSlots.has(block.slot))errors.push(`${label}: Ad Break block ${blockIndex+1} uses an unknown article ad slot.`);
+          if(adBreakSlots.has(block.slot))errors.push(`${label}: Ad Break slot “${block.slot}” is used more than once.`);
+          adBreakSlots.add(block.slot);
+          if(blockIndex<2 || blockIndex>(article.body||[]).length-3)errors.push(`${label}: Ad Break block ${blockIndex+1} must have at least two content blocks before and after it.`);
+          if((article.body||[])[blockIndex-1]?.type==="ad-break" || (article.body||[])[blockIndex+1]?.type==="ad-break")errors.push(`${label}: Adjacent Ad Break blocks are not allowed.`);
+        }
       });
+      if(article.monetizationProfile==="custom" && adBreakCount===0)warnings.push(`${label}: Custom monetization profile has no Ad Break block.`);
       if(article.draft && article.featured)warnings.push(`${label}: Draft article is featured.`);
     });
+
+    if(state.monetization?.adsense?.connectionEnabled===true){
+      const publisherId=String(state.monetization?.adsense?.publisherId||"").trim();
+      if(!/^ca-pub-\d{16}$/.test(publisherId))errors.push("Monetization: AdSense publisher ID must use ca-pub- followed by 16 digits.");
+    }
+    if(state.monetization?.adsense?.manualAdsEnabled===true && state.monetization?.adsense?.connectionEnabled!==true)errors.push("Monetization: Manual ad units require the AdSense connection to be enabled.");
+    if(state.monetization?.adsense?.manualAdsEnabled===true){
+      const configuredSlots=Object.entries(state.monetization?.adsense?.slots||{}).filter(([,value])=>String(value||"").trim());
+      if(!configuredSlots.length)errors.push("Monetization: Manual ad units are enabled but no AdSense ad unit ID is configured.");
+      configuredSlots.forEach(([slotName,slotId])=>{
+        if(!/^\d+$/.test(String(slotId).trim()))errors.push(`Monetization: AdSense ad unit ID for ${slotName} must contain digits only.`);
+      });
+      state.articles.filter(article=>!article.draft).forEach(article=>{
+        requiredArticleManualSlots(article).forEach(slotName=>{
+          if(!String(state.monetization?.adsense?.slots?.[slotName]||"").trim()){
+            errors.push(`Monetization: Public article ${article.slug} requires an ad unit ID for slot ${slotName}.`);
+          }
+        });
+      });
+    }
+    if(state.monetization?.amazonAssociates?.enabled===true && !String(state.monetization?.amazonAssociates?.associateTag||"").trim())errors.push("Monetization: Amazon Associates cannot be active without an associate tag.");
+    if(state.monetization?.amazonAssociates?.enabled===true && !String(state.monetization?.amazonAssociates?.siteDisclosure||"").trim())errors.push("Monetization: Amazon Associates cannot be active without the required site disclosure.");
 
     const output=$("[data-validation-output]");
     const lines=[];
@@ -677,7 +793,8 @@
       products:state.products,
       articles:state.articles,
       categories:state.categories,
-      siteCopy:state.siteCopy
+      siteCopy:state.siteCopy,
+      monetization:state.monetization
     };
   }
 
@@ -721,6 +838,26 @@
     }
   }
 
+  function renderMonetizationStatus(){
+    const adsense=$('[data-adsense-status]');
+    const amazon=$('[data-amazon-status]');
+    const set=(element,label,enabled)=>{
+      if(!element)return;
+      element.textContent=`${label}: ${enabled ? "Active" : "Not active"}`;
+      element.classList.toggle("is-active",Boolean(enabled));
+      element.classList.toggle("is-inactive",!enabled);
+    };
+    if(adsense){
+      const connected=state.monetization?.adsense?.connectionEnabled===true;
+      const manual=state.monetization?.adsense?.manualAdsEnabled===true;
+      adsense.textContent=!connected
+        ?"AdSense: Not connected"
+        :(manual?"AdSense: Connected · Manual ads ON":"AdSense: Connected · Manual ads OFF / review stage");
+      adsense.classList.toggle("is-active",connected);
+    }
+    set(amazon,"Amazon Associates",state.monetization?.amazonAssociates?.enabled);
+  }
+
   function autoSlug(form,titleName,slugName,idName){
     const title=form.elements[titleName];
     const slug=form.elements[slugName];
@@ -734,6 +871,7 @@
   }
 
   populateReferenceOptions();
+  renderMonetizationStatus();
   if(loadBrowser())console.info("Loaded saved browser draft.");
   renderProductList();
   renderArticleList();
@@ -760,10 +898,39 @@
   $("[data-download-products]")?.addEventListener("click",downloadProducts);
   $("[data-download-articles]")?.addEventListener("click",downloadArticles);
   $("[data-download-bundle]")?.addEventListener("click",()=>downloadBundle("content-data.js"));
-  $("[data-download-bundle-v2]")?.addEventListener("click",()=>downloadBundle("content-data-v2.js"));
   $("[data-download-backup]")?.addEventListener("click",downloadBackup);
   $("[data-import-products]")?.addEventListener("change",event=>importJson(event.target.files?.[0],"products"));
   $("[data-import-articles]")?.addEventListener("change",event=>importJson(event.target.files?.[0],"articles"));
+
+  const productForm=$("[data-product-form]");
+  const articleForm=$("[data-article-form]");
+  productForm?.addEventListener("input",()=>{productDirty=true;});
+  productForm?.addEventListener("change",()=>{productDirty=true;});
+  articleForm?.addEventListener("input",()=>{articleDirty=true;});
+  articleForm?.addEventListener("change",()=>{articleDirty=true;});
+
+  if(window.location.hostname==="127.0.0.1" || window.location.hostname==="localhost"){
+    window.__CTK_ADMIN_LOCAL__={
+      preparePublishPayload(){
+        if(productDirty){
+          productForm?.requestSubmit();
+          if(productDirty)return {ok:false,error:"The current product has unsaved or invalid changes. Fix the product form before publishing."};
+        }
+        if(articleDirty){
+          articleForm?.requestSubmit();
+          if(articleDirty)return {ok:false,error:"The current article has unsaved or invalid changes. Fix the article form before publishing."};
+        }
+        if(!validateWorkingCopy())return {ok:false,error:"Browser validation found blocking errors. Review Step 1 before publishing."};
+        return {
+          ok:true,
+          payload:{
+            products:clone(state.products),
+            articles:clone(state.articles)
+          }
+        };
+      }
+    };
+  }
 
   autoSlug($("[data-product-form]"),"name","slug","id");
   autoSlug($("[data-article-form]"),"title","slug","id");

@@ -9,17 +9,22 @@ function productDate(value){
   const parsed=new Date(`${value}T00:00:00`);
   return Number.isNaN(parsed.getTime())?value:parsed.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
 }
+function productMonetizationConfig(){
+  return window.__CTK_DATA__?.monetization||{adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}};
+}
 function productAffiliateHref(product){
-  return product.affiliateUrl||'';
+  return window.CTKMonetization?.affiliateHref(product,productMonetizationConfig())||'';
 }
 function productMatchUiClass(key){
   return ({confirmed:'exact',likely:'similar',similar:'alternative','culture-inspired':'trend'})[key]||'alternative';
 }
 function productDetailCta(product){
+  const config=productMonetizationConfig();
+  if(!window.CTKMonetization?.amazonEnabled(config))return '';
   const href=productAffiliateHref(product);
-  if(product.soldOut)return'<button class="jelly-button secondary" type="button" disabled>Sold out</button>';
+  if(product.soldOut&&product.activePurchaseCta===true)return'<button class="jelly-button secondary" type="button" disabled>Sold out</button>';
   if(href)return `<a class="jelly-button primary" href="${productSafe(href)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate-click="${productSafe(product.id)}" aria-label="${productSafe(product.cta||'View on Amazon')}: ${productSafe(product.name)}">${productSafe(product.cta||'View on Amazon')}</a>`;
-  return `<button class="jelly-button secondary" type="button" disabled>${productSafe(product.amazonLabel||'Amazon match under review')}</button>`;
+  return '';
 }
 async function loadProductDetail(){
   const loading=document.querySelector('[data-product-loading]');
@@ -41,6 +46,19 @@ async function loadProductDetail(){
     document.title=`${product.name} | Closer to Korea`;
     const meta=document.querySelector('meta[name="description"]');
     if(meta)meta.content=product.summary;
+    const canonicalUrl=`https://closertokorea.com/product.html?slug=${encodeURIComponent(product.slug)}`;
+    let canonical=document.querySelector('link[rel="canonical"]');
+    if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}
+    canonical.href=canonicalUrl;
+    let ogUrl=document.querySelector('meta[property="og:url"]');
+    if(!ogUrl){ogUrl=document.createElement('meta');ogUrl.setAttribute('property','og:url');document.head.appendChild(ogUrl);}
+    ogUrl.content=canonicalUrl;
+    let ogTitle=document.querySelector('meta[property="og:title"]');
+    if(!ogTitle){ogTitle=document.createElement('meta');ogTitle.setAttribute('property','og:title');document.head.appendChild(ogTitle);}
+    ogTitle.content=`${product.name} | Closer to Korea`;
+    let ogDescription=document.querySelector('meta[property="og:description"]');
+    if(!ogDescription){ogDescription=document.createElement('meta');ogDescription.setAttribute('property','og:description');document.head.appendChild(ogDescription);}
+    ogDescription.content=product.summary;
 
     document.querySelector('[data-product-breadcrumb]').textContent=product.name;
     document.querySelector('[data-product-category]').textContent=product.category||product.categoryKey;
@@ -57,10 +75,16 @@ async function loadProductDetail(){
 
     document.querySelector('[data-product-verification]').innerHTML=(product.verificationLabels||[]).map(label=>`<span>${productSafe(label)}</span>`).join('');
     document.querySelector('[data-product-checked]').textContent=`Last checked ${productDate(product.lastCheckedAt)}`;
+    const amazonOn=window.CTKMonetization?.amazonEnabled(productMonetizationConfig())===true;
+    const affiliateHref=productAffiliateHref(product);
     document.querySelector('[data-product-cta]').innerHTML=productDetailCta(product);
-    document.querySelector('[data-product-affiliate-note]').textContent=productAffiliateHref(product)
+    const affiliateNote=document.querySelector('[data-product-affiliate-note]');
+    affiliateNote.textContent=amazonOn&&affiliateHref
       ?'Paid link: Closer to Korea may earn a commission. Price and availability can change.'
-      :'No active Amazon link is attached while availability is being checked.';
+      :'';
+    affiliateNote.hidden=!(amazonOn&&affiliateHref);
+    const amazonRow=document.querySelector('[data-product-amazon-row]');
+    amazonRow.hidden=!amazonOn;
 
     document.querySelector('[data-product-seen]').textContent=product.seenInKorea;
     document.querySelector('[data-product-used-by]').textContent=product.usedBy;
@@ -83,7 +107,7 @@ async function loadProductDetail(){
       "@type":"Product",
       "name":product.name,
       "description":product.summary,
-      "image":product.image,
+      "image":new URL(product.image,location.href).href,
       "category":product.category||product.categoryKey
     };
     const script=document.createElement('script');

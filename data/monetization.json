@@ -1,0 +1,49 @@
+{
+  "adsense": {
+    "connectionEnabled": false,
+    "publisherId": "",
+    "manualAdsEnabled": false,
+    "slots": {
+      "home-mid": "",
+      "home-lower": "",
+      "article-mid": "",
+      "article-late": "",
+      "category-feed": ""
+    },
+    "connectionPages": [
+      "index.html",
+      "article.html",
+      "product.html",
+      "product-guides.html",
+      "everyday-korea.html",
+      "korean-kitchen.html",
+      "trends-finds.html",
+      "seen-online.html"
+    ]
+  },
+  "amazonAssociates": {
+    "enabled": false,
+    "associateTag": "",
+    "siteDisclosure": "As an Amazon Associate I earn from qualifying purchases.",
+    "inlineDisclosure": "This section may contain affiliate links. Closer to Korea may earn a commission from qualifying purchases."
+  },
+  "articleProfiles": {
+    "default": {
+      "manualSlots": [
+        "article-mid",
+        "article-late"
+      ]
+    },
+    "light": {
+      "manualSlots": [
+        "article-mid"
+      ]
+    },
+    "none": {
+      "manualSlots": []
+    },
+    "custom": {
+      "manualSlots": []
+    }
+  }
+}

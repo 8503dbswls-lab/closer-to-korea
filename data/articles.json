@@ -36,7 +36,11 @@
     "updatedAt": "2026-07-28",
     "featured": false,
     "draft": true,
-    "sourceRequirement": "optional"
+    "sourceRequirement": "optional",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
   },
   {
     "id": "kitchen-tools-guide",
@@ -75,7 +79,11 @@
     "updatedAt": "2026-07-28",
     "featured": false,
     "draft": true,
-    "sourceRequirement": "optional"
+    "sourceRequirement": "optional",
+    "sectionKey": "korean-kitchen",
+    "contentType": "mixed",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "light"
   },
   {
     "id": "everywhere-guide",
@@ -113,7 +121,11 @@
     "updatedAt": "2026-07-28",
     "featured": false,
     "draft": true,
-    "sourceRequirement": "optional"
+    "sourceRequirement": "optional",
+    "sectionKey": "trends-finds",
+    "contentType": "korea-discovery",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
   },
   {
     "id": "korean-microwave-steamed-egg-cooker",
@@ -621,6 +633,10 @@
     "featured": true,
     "draft": false,
     "heroImageWidth": 1800,
-    "heroImageHeight": 1200
+    "heroImageHeight": 1200,
+    "sectionKey": "korean-kitchen",
+    "contentType": "product-guide",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "light"
   }
 ]

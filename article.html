@@ -16,18 +16,16 @@
   <div class="cursor-sparkle" aria-hidden="true">✦</div>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html#newly-added">Newly Added</a>
-        <a href="index.html#trending">Trending</a>
-        <a href="index.html#categories">Categories</a>
-        <a href="index.html#shop">Product Guide</a>
-        <a href="about.html">About</a>
-      </nav>
-      <div class="header-actions"><a class="round-button text-button" href="index.html">Home</a></div>
+  <div class="header-inner">
+    <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
+    <nav class="desktop-nav" aria-label="Primary" data-navigation></nav>
+    <div class="header-actions actions">
+      <a class="round-button site-search-link" href="search.html" aria-label="Search Closer to Korea">Search</a>
+      <button class="round-button menu-button" type="button" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" data-menu-toggle>Menu</button>
     </div>
-  </header>
+  </div>
+  <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu data-mobile-navigation id="mobile-menu"></nav>
+</header>
 
   <main id="main" class="data-article-page">
     <nav class="article-breadcrumb" aria-label="Breadcrumb">
@@ -75,8 +73,9 @@
     <div><a class="brand" href="index.html">Closer <span>to</span> Korea</a></div>
     <nav><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy</a></nav>
   </footer>
-  <script src="data/content-data-v2.js?v=2"></script>
-  <script src="js/main.js"></script>
-  <script src="js/article-v2.js?v=2"></script>
+  <script src="data/content-data.js?v=3"></script>
+  <script src="js/monetization.js"></script>
+<script src="js/main.js"></script>
+  <script src="js/article.js?v=3"></script>
 </body>
 </html>

@@ -8,12 +8,15 @@ const bundle={
   products:read("data/products.json"),
   articles:read("data/articles.json"),
   categories:read("data/categories.json"),
-  siteCopy:read("data/site-copy.json")
+  siteCopy:read("data/site-copy.json"),
+  monetization:read("data/monetization.json")
 };
 
+const bundleText = `window.__CTK_DATA__ = ${JSON.stringify(bundle)};\n`;
+
 fs.writeFileSync(
-  path.join(root,"data/content-data.js"),
-  `window.__CTK_DATA__ = ${JSON.stringify(bundle)};\n`,
+  path.join(root, "data", "content-data.js"),
+  bundleText,
   "utf8"
 );
 

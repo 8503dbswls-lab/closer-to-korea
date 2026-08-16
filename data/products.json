@@ -192,7 +192,7 @@
     "koreanProductStatus": "Purchased at Daiso Korea and personally used. The bottom marking identifies microwave and dishwasher use, no direct flame, ceramic tableware, and Made in China. Exact manufacturer, product number, and model remain unconfirmed.",
     "productMatchType": "likely",
     "productMatchLabel": "Likely Match",
-    "usDifference": "An exact Amazon US match has not yet been confirmed. Any future linked item must be labeled as a Similar Alternative unless the exact brand and model are verified.",
+    "usDifference": "An exact U.S. retail match has not yet been confirmed. Any future linked item must be labeled as a Similar Alternative unless the exact brand and model are verified.",
     "verificationStatus": [
       "personally-used",
       "personally-purchased-in-korea",
@@ -207,7 +207,7 @@
     "amazonUrl": "",
     "affiliateUrl": "",
     "amazonAvailability": "under-review",
-    "amazonLabel": "Similar Amazon options under review",
+    "amazonLabel": "U.S. purchase options not currently linked",
     "publishedAt": "2026-07-07",
     "lastCheckedAt": "2026-07-30",
     "linkLastCheckedAt": "",

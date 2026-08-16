@@ -79,7 +79,6 @@ On the **Export & publish** tab, download:
 products.json
 articles.json
 content-data.js
-content-data-v2.js
 ```
 
 Replace the corresponding files in:
@@ -88,19 +87,19 @@ Replace the corresponding files in:
 data/
 ```
 
-New images must still be copied into:
+For the manual export workflow, new images must also be copied into the project under:
 
 ```text
 assets/images/
 ```
 
-## Why two content-data files exist
+When using the local one-click workflow, JPG, PNG, and WebP files can instead be staged from the local admin. Only staged images that are actually referenced by the published Product or Article are copied into `assets/images/uploads/` and committed.
 
-The current project includes two fallback bundles because an earlier article-cache fix introduced `content-data-v2.js`.
+## Generated content fallback bundle
 
-Both bundles should contain the same product and article data.
+The current project uses one generated fallback bundle: `data/content-data.js`.
 
-The manager exports both formats.
+The visual manager exports this file together with `products.json` and `articles.json`. Replace the existing `data/content-data.js` when publishing an update.
 
 ## Validate before publishing
 
@@ -122,4 +121,32 @@ The Node validator remains the final authority because it can also verify file p
 - Do not mark a product Confirmed Match without brand, model, evidence, and sources.
 - Add accurate image alt text.
 - Add article sources when `sourceRequirement` is `required`.
-- Export and replace both data bundles after every change.
+- In the manual workflow, replace `products.json`, `articles.json`, and the single generated `content-data.js` bundle after every published change.
+
+## Local one-click publish (Windows)
+
+One-click publish is an optional local workflow. It is never enabled from the public `closertokorea.com/admin.html` page.
+
+Requirements:
+
+- Work from a real Git clone of the Closer to Korea repository, not a downloaded ZIP.
+- Install Node.js and Git for Windows.
+- Sign in to GitHub through Git Credential Manager (or another Git credential method supported by your PC). Never place a GitHub token inside HTML or JavaScript.
+- Keep the Git working tree clean before publishing. If the local branch and `origin` are not synchronized, publishing is blocked.
+
+Workflow:
+
+1. Double-click `START_ADMIN_WINDOWS.bat`.
+2. The admin opens on `http://127.0.0.1:8787/admin.html`.
+3. Save the current Product or Article in the editor. The local Publish button also refuses to proceed if the current form has unsaved invalid changes.
+4. Run browser validation, then use **Validate and publish to GitHub**.
+5. The local bridge writes only `data/products.json` and `data/articles.json`, runs the existing deployment-preparation scripts, validates the full site, commits the generated changes, and pushes the current branch.
+6. Any validation, commit, or push failure triggers a rollback to the pre-publish Git HEAD.
+
+### Local image staging
+
+While the local admin is running, JPG, PNG, and WebP images can be selected with **Stage new photos**. The local bridge verifies the actual file signature instead of trusting the filename or MIME label, creates a collision-resistant path under `assets/images/uploads/`, and keeps the staged file outside the Git working tree until publication.
+
+Use the returned path as the Product image, Article hero image, or an Article body-image path. On a successful publish, only staged images referenced by the published data are copied into the project and committed. If validation or push fails, Git-side image copies are rolled back while the staged file remains available for a corrected retry during that local admin session.
+
+The manual JSON download/export workflow remains available as a fallback. In the manual workflow, image files must already exist at the referenced project paths; missing images are blocked by the deployment validator.

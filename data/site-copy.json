@@ -3,24 +3,41 @@
     "name": "Closer to Korea",
     "tagline": "Real Korean products, explained with local context.",
     "defaultTitle": "See What Koreans Actually Use | Closer to Korea",
-    "defaultDescription": "Discover real Korean products, trends, and everyday finds with clear local context and U.S. buying options when available."
+    "defaultDescription": "Discover Korean products, routines, and everyday finds with clear local context for U.S. readers."
   },
   "navigation": [
     {
-      "label": "Explore",
-      "href": "#categories-quick"
+      "label": "Home",
+      "href": "index.html"
     },
     {
-      "label": "Trending",
-      "href": "#trending"
+      "label": "Explore Korea",
+      "children": [
+        {
+          "label": "Everyday Korea",
+          "href": "everyday-korea.html"
+        },
+        {
+          "label": "Korean Kitchen",
+          "href": "korean-kitchen.html"
+        },
+        {
+          "label": "K-Beauty",
+          "href": "k-beauty.html"
+        },
+        {
+          "label": "Trends & Finds",
+          "href": "trends-finds.html"
+        },
+        {
+          "label": "Seen Online",
+          "href": "seen-online.html"
+        }
+      ]
     },
     {
-      "label": "Latest Articles",
-      "href": "#guides"
-    },
-    {
-      "label": "Products",
-      "href": "#shop"
+      "label": "Product Guides",
+      "href": "product-guides.html"
     },
     {
       "label": "About",
@@ -31,7 +48,7 @@
     "badge": "Real Korea · Clear Context",
     "eyebrow": "Real products used in Korea. Explained with local context.",
     "title": "See What Koreans Actually Use",
-    "description": "Discover real Korean products, trends, and everyday finds—with clear context on what they are and where to buy them.",
+    "description": "Discover Korean products, routines, and everyday finds—with clear context on what they are and how they fit into life in Korea.",
     "primaryCta": {
       "label": "Explore Korea",
       "href": "#categories-quick"
@@ -41,9 +58,9 @@
       "href": "#guides"
     },
     "trustItems": [
-      "Real Korean products",
+      "Korean daily-life context",
       "Match status labeled clearly",
-      "U.S. buying options when available"
+      "U.S. search guidance when useful"
     ],
     "image": "assets/images/korean-everyday-hero.svg",
     "imageAlt": "Glossy collage of Korean home, beauty, kitchen, stationery, fashion, and technology products",
@@ -87,7 +104,7 @@
     "categories": {
       "eyebrow": "Browse by category",
       "title": "A wider view of Korean products",
-      "description": "From home storage and cooking tools to beauty, fashion, stationery, electronics, and cultural design."
+      "description": "From home storage and cooking tools to beauty, fashion, stationery, electronics, and cultural design. Choose one below to filter the product guide."
     },
     "productGuide": {
       "eyebrow": "Curated product guide",
@@ -96,13 +113,13 @@
       "emptyTitle": "No verified matches are available in this category yet.",
       "emptyText": "Try another filter or check back after the next update.",
       "errorTitle": "Product data could not load.",
-      "errorText": "Open this project through a local server or deployed URL, then try again."
+      "errorText": "Please refresh the page. If the problem continues, try again later."
     },
     "guides": {
       "eyebrow": "Fresh from Korea",
       "title": "Latest Articles",
-      "emptyTitle": "New guides are on the way.",
-      "emptyText": "Articles added to data/articles.json will appear here automatically."
+      "emptyTitle": "No additional published guides yet.",
+      "emptyText": "New guides are added after their facts, images, and context are verified."
     },
     "curator": {
       "eyebrow": "About the curator",
@@ -114,17 +131,17 @@
       "cta": "Read the selection standards"
     },
     "disclosure": {
-      "eyebrow": "Amazon affiliate disclosure",
-      "title": "Amazon is an optional next step, not the point of the story.",
-      "text": "Closer to Korea may earn a commission from qualifying purchases. Links are added only after the listing and product match are reviewed. Prices and availability can change.",
-      "cta": "Read the full disclosure"
+      "eyebrow": "Commercial transparency",
+      "title": "Editorial context comes before commercial links.",
+      "text": "Commercial links, if added later, are labeled clearly and do not change product-match or verification judgments.",
+      "cta": "Read the disclosure policy"
     },
     "newsletter": {
-      "eyebrow": "Weekly updates",
-      "title": "New Korean finds, added every week.",
-      "text": "Get new products, guides, and link updates when the newsletter is connected.",
-      "button": "Join weekly updates",
-      "demoMessage": "Demo only — your email was not sent or stored."
+      "eyebrow": "Updates",
+      "title": "New Korean finds are added as they are verified.",
+      "text": "A newsletter is not currently active.",
+      "button": "Newsletter unavailable",
+      "demoMessage": ""
     }
   },
   "productCard": {
@@ -133,14 +150,11 @@
     "usedByLabel": "Who commonly uses it",
     "whyLabel": "Why it is used or trending",
     "statusLabel": "Korean product status",
-    "inactiveAffiliateText": "Amazon availability is currently being checked.",
+    "inactiveAffiliateText": "U.S. purchase options are not currently linked.",
     "activeAffiliateText": "Paid link: Closer to Korea may earn a commission. Price and availability can change."
   },
   "footer": {
     "shareButton": "Share this guide",
     "copyButton": "Copy link"
-  },
-  "ads": {
-    "enabled": false
   }
 }

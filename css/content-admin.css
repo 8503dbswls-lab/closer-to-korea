@@ -125,3 +125,21 @@ label.wide{grid-column:1/-1}
   .editor-actions{width:100%}
   .editor-actions .button{flex:1}
 }
+.monetization-status{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;background:rgba(255,255,255,.8)}
+.monetization-status span{font-weight:800}
+.monetization-status .is-active{color:#356b28}
+.monetization-status .is-inactive{color:#8a5260}
+.monetization-status small{width:100%;color:var(--muted)}
+
+/* Local-only publishing controls. Hidden on the public static admin page. */
+.local-publish-card[hidden]{display:none!important}
+.local-publish-git{color:var(--muted);font-weight:700}
+.local-publish-output{min-height:84px;margin-top:1rem}
+.local-publish-output:empty{display:none}
+.local-publish-output.is-error{color:#ffdbe4}
+.local-image-stage{margin:1rem 0;padding:1rem;border:1px dashed rgba(111,75,96,.25);border-radius:16px;background:rgba(255,255,255,.55)}
+.local-image-results{display:grid;gap:.7rem;margin-top:.85rem}
+.local-image-result{display:grid;gap:.65rem;padding:.8rem;border-radius:14px;background:#fff;border:1px solid rgba(111,75,96,.16)}
+.local-image-result code{overflow-wrap:anywhere}
+.local-image-actions{display:flex;flex-wrap:wrap;gap:.45rem}
+.button.compact{padding:.5rem .7rem;font-size:.82rem}

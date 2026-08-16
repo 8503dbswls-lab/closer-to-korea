@@ -156,14 +156,18 @@ Articles:
 - `draft: true` — never public
 - `featured: true` — prioritized in Latest Guides
 
-## Before launch
+## Launch and monetization readiness
 
-- replace placeholder SVGs with original or properly licensed photography
-- add verified Amazon Associates URLs and tracking tags
-- add the approved curator biography and contact information
-- confirm the production domain used in canonical, sitemap, robots, and OG URLs
-- create a dedicated 1200 × 630 Open Graph image
-- review FTC, Amazon Associates, privacy, analytics, and email-consent requirements
+Current site infrastructure:
+
+- production domain: `https://closertokorea.com`
+- canonical, sitemap, robots, and Open Graph URLs use the production domain
+- a 1200 × 630 PNG social-card fallback is available for pages without an article image
+- public content cannot use development placeholder SVGs; draft-only placeholder assets may remain until that content is ready
+- Amazon Associates URLs and tracking tags remain empty until they are verified and the Amazon monetization layer is intentionally enabled
+- AdSense connection and manual ad units remain disabled until the appropriate application/approval stage
+
+Before a monetization application or major public launch, re-check the current curator/contact information and the applicable FTC, Amazon Associates, privacy, analytics, advertising, and consent requirements.
 
 
 ## Visual content manager
@@ -174,7 +178,7 @@ Open:
 admin.html
 ```
 
-Use the manager to add and edit products and articles through forms, then export the replacement JSON and fallback data bundles.
+Use the manager to add and edit products and articles through forms. The manual workflow exports replacement JSON plus the single generated `content-data.js` fallback bundle; the optional Windows local workflow can validate, prepare generated files, commit, and push in one controlled publish step.
 
 See:
 

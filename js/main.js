@@ -6,6 +6,7 @@ const state={
   articles:[],
   categories:{categories:[],curationFilters:[],matchTypes:[],verificationOptions:[],trendStatuses:[]},
   copy:{},
+  monetization:window.__CTK_DATA__?.monetization||{adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}},
   query:'',
   category:'all',
   match:'all',
@@ -120,8 +121,6 @@ function applySiteCopy(){
   }
 
   const title=getPath(state.copy,'site.defaultTitle');
-  const adsEnabled=Boolean(getPath(state.copy,'ads.enabled'));
-  document.body.classList.toggle('ads-enabled',adsEnabled);
 
   const description=getPath(state.copy,'site.defaultDescription');
   if(title)document.title=title;
@@ -129,33 +128,123 @@ function applySiteCopy(){
   if(description&&metaDescription)metaDescription.content=description;
 }
 
+function applyMonetizationState(){
+  const helper=window.CTKMonetization;
+  const adsenseConnected=Boolean(helper?.adsenseConnected(state.monetization));
+  const manualAdsActive=Boolean(helper?.manualAdsEnabled(state.monetization));
+  const amazonActive=Boolean(helper?.amazonEnabled(state.monetization));
+  document.body.classList.toggle('adsense-connected',adsenseConnected);
+  document.body.classList.toggle('manual-ads-enabled',manualAdsActive);
+  document.body.classList.toggle('amazon-associates-enabled',amazonActive);
+
+  qsa('[data-ad-mount]').forEach(mount=>{
+    const slotName=mount.dataset.adMount||'';
+    const wrapper=mount.closest('[data-ad-slot],.ad-slot');
+    const rendered=Boolean(helper?.renderManualAdMount(mount,slotName,state.monetization));
+    if(wrapper){
+      wrapper.classList.toggle('is-active',rendered);
+      wrapper.dataset.adConfigured=rendered?'true':'false';
+    }
+  });
+}
+
+function currentPageName(){
+  const name=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  return name||'index.html';
+}
+function visibleEditorialSections(){
+  const publishedKeys=new Set(publishedArticles().map(article=>article.sectionKey).filter(Boolean));
+  return (state.categories.editorialSections||[])
+    .filter(item=>item.active!==false&&(item.showWhenEmpty!==false||publishedKeys.has(item.key)))
+    .sort((a,b)=>(a.order||0)-(b.order||0));
+}
+function navLink(item){
+  const current=currentPageName();
+  const active=(item.href||'').split('?')[0].toLowerCase()===current;
+  return `<a href="${safe(item.href)}"${active?' aria-current="page"':''}>${safe(item.label)}</a>`;
+}
+function navigationMarkup(items=[],mobile=false){
+  return items.map(item=>{
+    const children=Array.isArray(item.children)?item.children:[];
+    if(!children.length)return navLink(item);
+    const current=currentPageName();
+    const childActive=children.some(child=>(child.href||'').split('?')[0].toLowerCase()===current);
+    return `<details class="nav-dropdown${childActive?' is-current':''}"${mobile&&childActive?' open':''}>
+      <summary>${safe(item.label)}</summary>
+      <div class="nav-dropdown__menu">${children.map(navLink).join('')}</div>
+    </details>`;
+  }).join('');
+}
 function renderNavigation(){
-  const items=state.copy.navigation||[];
+  const allSections=state.categories.editorialSections||[];
+  const sectionHrefs=new Set(allSections.map(item=>item.href).filter(Boolean));
+  const visibleHrefs=new Set(visibleEditorialSections().map(item=>item.href));
+  const items=(state.copy.navigation||[]).map(item=>({
+    ...item,
+    children:Array.isArray(item.children)
+      ?item.children.filter(child=>!sectionHrefs.has(child.href)||visibleHrefs.has(child.href))
+      :item.children
+  }));
   const desktop=qs('[data-navigation]');
   const mobile=qs('[data-mobile-navigation]');
-  const markup=items.map(item=>`<a href="${safe(item.href)}">${safe(item.label)}</a>`).join('');
-  if(desktop)desktop.innerHTML=markup;
+  if(desktop)desktop.innerHTML=navigationMarkup(items,false);
   if(mobile){
-    mobile.innerHTML=markup;
+    mobile.innerHTML=navigationMarkup(items,true);
     qsa('a',mobile).forEach(link=>link.addEventListener('click',()=>closePanel(menuButton,mobileMenu)));
   }
 }
 
+function renderExploreSections(){
+  const grid=qs('[data-explore-sections]');
+  if(!grid)return;
+  const sections=visibleEditorialSections();
+  if(!sections.length)return;
+  grid.innerHTML=sections.map(item=>`<a href="${safe(item.href)}">
+    <span aria-hidden="true">${safe(item.icon||'✦')}</span>
+    <strong>${safe(item.label)}</strong>
+    <small>${safe(item.homeBlurb||item.description||'Explore this side of everyday Korea.')}</small>
+  </a>`).join('');
+}
+
+function scrollToProductGuide(){
+  const target=qs('#products-with-context');
+  if(!target)return;
+  const behavior=window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  requestAnimationFrame(()=>target.scrollIntoView({behavior,block:'start'}));
+}
+
+function syncCategoryBeadState(){
+  qsa('[data-curation-filter]').forEach(button=>{
+    const active=state.category==='all'&&state.status===button.dataset.curationFilter;
+    button.classList.toggle('active',active);
+    button.setAttribute('aria-pressed',String(active));
+  });
+  qsa('[data-category-link]').forEach(button=>{
+    const active=state.category===button.dataset.categoryLink&&state.status==='all';
+    button.classList.toggle('active',active);
+    button.setAttribute('aria-pressed',String(active));
+  });
+}
+
 function renderCategoryControls(){
+  const publishedCategoryKeys=new Set(publicProducts().map(item=>item.categoryKey));
+  const visibleCategories=(state.categories.categories||[])
+    .filter(item=>item.active!==false&&publishedCategoryKeys.has(item.key))
+    .sort((a,b)=>a.order-b.order);
+
   const menu=qs('[data-category-menu]');
   if(menu){
     const curation=(state.categories.curationFilters||[]).filter(item=>item.active!==false).sort((a,b)=>a.order-b.order)
-      .map(item=>`<button type="button" data-curation-filter="${safe(item.key)}">${safe(item.label)}</button>`);
-    const categories=(state.categories.categories||[]).filter(item=>item.active!==false).sort((a,b)=>a.order-b.order)
-      .map(item=>`<button type="button" data-category-link="${safe(item.key)}">${safe(item.label)}</button>`);
+      .map(item=>`<button type="button" data-curation-filter="${safe(item.key)}" aria-pressed="false">${safe(item.label)}</button>`);
+    const categories=visibleCategories
+      .map(item=>`<button type="button" data-category-link="${safe(item.key)}" aria-pressed="false">${safe(item.label)}</button>`);
     menu.innerHTML=[...curation,...categories].join('');
   }
 
   const categorySelect=qs('[data-category-filter]');
   if(categorySelect){
     categorySelect.innerHTML='<option value="all">All categories</option>'+
-      (state.categories.categories||[]).filter(item=>item.active!==false).sort((a,b)=>a.order-b.order)
-        .map(item=>`<option value="${safe(item.key)}">${safe(item.label)}</option>`).join('');
+      visibleCategories.map(item=>`<option value="${safe(item.key)}">${safe(item.label)}</option>`).join('');
   }
   const matchSelect=qs('[data-match-filter]');
   if(matchSelect){
@@ -181,16 +270,17 @@ function bindDynamicFilters(){
       const categorySelect=qs('[data-category-filter]');if(categorySelect)categorySelect.value='all';
       const statusSelect=qs('[data-status-filter]');if(statusSelect)statusSelect.value=state.status;
       renderProducts();
-      location.hash='shop';
+      scrollToProductGuide();
     };
   });
+  syncCategoryBeadState();
 }
 
 function publicProducts(){
   return state.products.filter(product=>!product.draft&&!product.hidden);
 }
 function affiliateHref(product){
-  return product.affiliateUrl||'';
+  return window.CTKMonetization?.affiliateHref(product,state.monetization)||'';
 }
 function productMatchUiClass(key){
   return ({confirmed:'exact',likely:'similar',similar:'alternative','culture-inspired':'trend'})[key]||'alternative';
@@ -202,10 +292,11 @@ function verificationChips(product){
   return labels.map(label=>`<span>${safe(label)}</span>`).join('');
 }
 function productCta(product){
+  if(!window.CTKMonetization?.amazonEnabled(state.monetization))return '';
   const href=affiliateHref(product);
-  if(product.soldOut)return `<button class="jelly-button secondary" type="button" disabled aria-label="${safe(product.name)} is currently sold out">Sold out</button>`;
-  if(href)return `<a class="jelly-button primary" href="${safe(href)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate-click="${safe(product.id)}" aria-label="${safe(product.cta||'View on Amazon')}: ${safe(product.name)}">${safe(product.cta||'View on Amazon')}</a>`;
-  return `<button class="jelly-button secondary" type="button" disabled aria-label="${safe(product.name)}: Amazon match under review">${safe(product.amazonLabel||'Link coming soon')}</button>`;
+  if(product.soldOut&&product.activePurchaseCta===true)return `<button class="jelly-button secondary" type="button" disabled aria-label="${safe(product.name)} is currently sold out">Sold out</button>`;
+  if(href)return `<a class="jelly-button primary" href="${safe(href)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate-click="${safe(product.id)}" aria-label="${safe(product.cta||'View product')}: ${safe(product.name)}">${safe(product.cta||'View product')}</a>`;
+  return '';
 }
 function productCard(product,{compact=false}={}){
   const cardCopy=state.copy.productCard||{};
@@ -236,7 +327,7 @@ function productCard(product,{compact=false}={}){
       ${details}
       <div class="verification-row">${verificationChips(product)}<span>Last checked ${formatDate(product.lastCheckedAt)}</span></div>
       <a class="product-detail-link" href="product.html?slug=${encodeURIComponent(product.slug||product.id)}">View full product details</a>
-      <div class="card-footer">${productCta(product)}<small class="affiliate-note">${affiliateHref(product)?safe(cardCopy.activeAffiliateText||'Paid link: we may earn a commission.'):safe(cardCopy.inactiveAffiliateText||'No active Amazon link is attached while availability is being checked.')}</small></div>
+      ${(()=>{const cta=productCta(product);const note=(window.CTKMonetization?.amazonEnabled(state.monetization)&&affiliateHref(product))?safe(cardCopy.activeAffiliateText||'Paid link: we may earn a commission.'):'';return (cta||note)?`<div class="card-footer">${cta}${note?`<small class="affiliate-note">${note}</small>`:''}</div>`:'';})()}
     </div>
   </article>`;
 }
@@ -302,6 +393,7 @@ function renderProducts(){
   const empty=qs('[data-empty-state]');
   if(empty)empty.hidden=list.length!==0;
   renderActiveFilters();
+  syncCategoryBeadState();
   updateUrl();
 }
 function renderActiveFilters(){
@@ -350,10 +442,26 @@ function setCategory(value){
   state.status='all';
   syncControls();
   renderProducts();
-  location.hash='shop';
+  scrollToProductGuide();
 }
 
-function articleCard(article){
+function publishedArticles(){
+  return state.articles
+    .filter(article=>!article.draft)
+    .sort((a,b)=>Number(b.featured)-Number(a.featured)||b.publishedAt.localeCompare(a.publishedAt));
+}
+function articleCard(article,{layout='guide'}={}){
+  if(layout==='story'){
+    return `<article class="card">
+      <img src="${safe(article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
+      <div class="card-body">
+        <span class="label lavender">${safe(article.sectionKey||article.categoryKey||'Closer to Korea')}</span>
+        <h3>${safe(article.title)}</h3>
+        <p>${safe(article.excerpt)}</p>
+        <a href="article.html?slug=${encodeURIComponent(article.slug)}">Read story →</a>
+      </div>
+    </article>`;
+  }
   return `<a href="article.html?slug=${encodeURIComponent(article.slug)}">
     <img src="${safe(article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
     <strong>${safe(article.title)}</strong>
@@ -361,13 +469,49 @@ function articleCard(article){
     <small>Published ${formatDate(article.publishedAt)}</small>
   </a>`;
 }
+function sectionFeaturedArticle(sectionKey){
+  return publishedArticles().find(article=>article.sectionKey===sectionKey)||null;
+}
+function renderSectionFeatured(){
+  qsa('[data-section-featured]').forEach(container=>{
+    const sectionKey=container.dataset.sectionKey||'';
+    const article=sectionFeaturedArticle(sectionKey);
+    const wrapper=container.closest('section');
+    if(!article){
+      container.replaceChildren();
+      if(wrapper)wrapper.hidden=true;
+      return;
+    }
+    container.innerHTML=`
+      <img class="media" src="${safe(article.heroImage)}" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
+      <div class="panel">
+        <span class="label cherry label-featured">Featured guide</span>
+        <h2 class="section-title">${safe(article.title)}</h2>
+        <p>${safe(article.excerpt)}</p>
+        <a class="button" href="article.html?slug=${encodeURIComponent(article.slug)}">Read the guide</a>
+      </div>`;
+    if(wrapper)wrapper.hidden=false;
+  });
+}
 function renderArticles(){
-  const grid=qs('[data-article-grid]');
-  if(!grid)return;
-  const list=state.articles.filter(article=>!article.draft).sort((a,b)=>Number(b.featured)-Number(a.featured)||b.publishedAt.localeCompare(a.publishedAt));
-  grid.innerHTML=list.map(articleCard).join('');
-  const empty=qs('[data-article-empty]');
-  if(empty)empty.hidden=list.length!==0;
+  const grids=qsa('[data-article-grid]');
+  const published=publishedArticles();
+  renderSectionFeatured();
+  if(!grids.length)return;
+  grids.forEach(grid=>{
+    const contentType=grid.dataset.contentType||'';
+    const sectionKey=grid.dataset.sectionKey||'';
+    const layout=grid.dataset.articleLayout||'guide';
+    const excludeFeatured=grid.dataset.excludeFeatured==='true';
+    const featured=sectionKey?sectionFeaturedArticle(sectionKey):null;
+    const list=published
+      .filter(article=>(!contentType||article.contentType===contentType)&&(!sectionKey||article.sectionKey===sectionKey))
+      .filter(article=>!excludeFeatured||!featured||article.slug!==featured.slug);
+    grid.innerHTML=list.map(article=>articleCard(article,{layout})).join('');
+    const scope=grid.closest('section')||grid.parentElement||document;
+    const empty=qs('[data-article-empty]',scope);
+    if(empty)empty.hidden=list.length!==0;
+  });
 }
 
 function bindControls(){
@@ -377,7 +521,7 @@ function bindControls(){
     const status=qs('[data-search-status]');
     if(status)status.textContent=state.query?`Showing products matching “${state.query}”.`:'Showing all products.';
     closePanel(searchButton,searchPanel);
-    location.hash='shop';
+    location.hash='products-with-context';
   });
   qs('[data-global-search]')?.addEventListener('keydown',event=>{
     if(event.key==='Enter'){event.preventDefault();qs('[data-search-submit]')?.click()}
@@ -388,7 +532,7 @@ function bindControls(){
   qs('[data-status-filter]')?.addEventListener('change',event=>{state.status=event.target.value;renderProducts()});
   qs('[data-sort]')?.addEventListener('change',event=>{state.sort=event.target.value;renderProducts()});
   qs('[data-actually-used-filter]')?.addEventListener('click',()=>{
-    state.category='all';state.status='actually-used';syncControls();renderProducts();location.hash='shop';
+    state.category='all';state.status='actually-used';syncControls();renderProducts();location.hash='products-with-context';
   });
   qs('[data-clear-filters]')?.addEventListener('click',()=>{
     Object.assign(state,{query:'',category:'all',match:'all',verification:'all',status:'all',sort:'featured'});
@@ -437,6 +581,7 @@ async function fetchJson(path){
     if(path.endsWith('articles.json'))return fallback.articles;
     if(path.endsWith('categories.json'))return fallback.categories;
     if(path.endsWith('site-copy.json'))return fallback.siteCopy;
+    if(path.endsWith('monetization.json'))return fallback.monetization;
     throw error;
   }
 }
@@ -447,7 +592,8 @@ async function loadData(){
     fetchJson('data/products.json'),
     fetchJson('data/articles.json'),
     fetchJson('data/categories.json'),
-    fetchJson('data/site-copy.json')
+    fetchJson('data/site-copy.json'),
+    fetchJson('data/monetization.json')
   ]);
   if(results[0].status==='fulfilled'){
     const now=Date.now();
@@ -463,9 +609,12 @@ async function loadData(){
   state.articles=results[1].status==='fulfilled'?results[1].value:[];
   state.categories=results[2].status==='fulfilled'?results[2].value:state.categories;
   state.copy=results[3].status==='fulfilled'?results[3].value:state.copy;
+  state.monetization=results[4].status==='fulfilled'?results[4].value:state.monetization;
 
   applySiteCopy();
+  applyMonetizationState();
   renderNavigation();
+  renderExploreSections();
   renderCategoryControls();
   syncControls();
   renderPreviews();
