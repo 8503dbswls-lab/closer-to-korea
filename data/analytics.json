@@ -1,0 +1,10 @@
+{
+  "googleAnalytics": {
+    "enabled": true,
+    "measurementId": "G-EVRM967TSL",
+    "excludePages": [
+      "admin.html",
+      "article-daiso-egg-maker.html"
+    ]
+  }
+}

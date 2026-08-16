@@ -4,6 +4,7 @@ import process from 'node:process';
 const steps=[
   ['Build content bundles',['scripts/build-content-bundle.mjs']],
   ['Sync section indexing and sitemap',['scripts/sync-site-structure.mjs']],
+  ['Sync Google Analytics head code',['scripts/sync-google-analytics-head.mjs']],
   ['Sync AdSense head code',['scripts/sync-adsense-head.mjs']],
   ['Sync ads.txt',['scripts/sync-ads-txt.mjs']],
   ['Validate content and deployment safety',['scripts/validate-content.mjs']]
