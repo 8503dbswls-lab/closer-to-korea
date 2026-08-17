@@ -215,11 +215,11 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/1000012543_clean.jpg",
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-open.jpg",
         "alt": "Inside of a white ceramic microwave gyeran-jjim cooker with the lid removed",
         "caption": "The cooker has a ceramic interior, a matching lid, and two side handles.",
-        "width": 1800,
-        "height": 1200
+        "width": 1536,
+        "height": 1152
       },
       {
         "type": "paragraph",
@@ -228,6 +228,14 @@
       {
         "type": "paragraph",
         "text": "However, appearance alone does not tell you whether a ceramic container is safe for a microwave, dishwasher, oven, or direct heat. The markings on the bottom should always be checked."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-top.jpg",
+        "alt": "Top view of a white Korean microwave steamed egg cooker with a lid and small steam hole",
+        "caption": "The top view shows the lid, central knob, and small steam opening.",
+        "width": 1536,
+        "height": 1503
       },
       {
         "type": "heading",
@@ -268,11 +276,11 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/1000012547_clean.jpg",
-        "alt": "Top view of a Korean microwave egg cooker with a small steam hole in the lid",
-        "caption": "The lid includes a small opening that allows steam to escape.",
-        "width": 1600,
-        "height": 2000
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
+        "alt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
+        "caption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
+        "width": 1536,
+        "height": 1152
       },
       {
         "type": "heading",
@@ -366,14 +374,6 @@
       {
         "type": "paragraph",
         "text": "Always check the bottom label or manufacturer information before using another ceramic container in a microwave or dishwasher."
-      },
-      {
-        "type": "image",
-        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/1000012551_clean.jpg",
-        "alt": "Bottom label showing microwave safe, dishwasher safe, no direct flame, and Made in China",
-        "caption": "The bottom marking confirms microwave and dishwasher use and warns against direct flame.",
-        "width": 1800,
-        "height": 1200
       },
       {
         "type": "heading",
@@ -613,15 +613,15 @@
       "Daiso Korea",
       "Korean home cooking"
     ],
-    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/1000012537_clean.jpg",
-    "heroImageAlt": "White ceramic Korean microwave steamed egg cooker with lid and side handles",
-    "heroImageCaption": "A ceramic microwave cooker used for Korean steamed eggs.",
+    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
+    "heroImageAlt": "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
+    "heroImageCaption": "A white ceramic microwave steamed egg cooker with a lid, side handles, and ribbed sides.",
     "relatedProductIds": [
       "egg-steamer"
     ],
     "sources": [
       {
-        "label": "Owner-supplied product photographs, including the bottom marking shown in 1000012551_clean.jpg"
+        "label": "Owner-supplied product photographs, including refreshed product-use images and a separate bottom-marking reference retained in the editorial record"
       },
       {
         "label": "Owner’s direct-use record: the matching-looking Daiso cooker has been used about five times for small portions of gyeran-jjim"
@@ -629,11 +629,11 @@
     ],
     "sourceRequirement": "required",
     "publishedAt": "2026-07-30",
-    "updatedAt": "2026-07-30",
+    "updatedAt": "2026-08-17",
     "featured": true,
     "draft": false,
-    "heroImageWidth": 1800,
-    "heroImageHeight": 1200,
+    "heroImageWidth": 1536,
+    "heroImageHeight": 1152,
     "sectionKey": "korean-kitchen",
     "contentType": "product-guide",
     "koreaContextConfidence": "context-dependent",
