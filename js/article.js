@@ -1,6 +1,15 @@
 const articleQuery=new URLSearchParams(location.search);
 const articleSlug=articleQuery.get('slug');
 
+const articleHeroOverrides={
+  'korean-restaurant-table-utensil-drawer':{
+    src:'assets/images/articles/korean-restaurant-table-utensil-drawer/temporary-editorial-illustration.svg',
+    alt:'Original editorial illustration of a Korean restaurant table with an under-table utensil drawer',
+    width:1200,
+    height:760
+  }
+};
+
 function articleSafe(value=''){
   return String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
 }
@@ -8,6 +17,16 @@ function articleDate(value){
   if(!value)return'';
   const parsed=new Date(`${value}T00:00:00`);
   return Number.isNaN(parsed.getTime())?value:parsed.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+}
+function articleHero(article){
+  const override=articleHeroOverrides[article.slug];
+  if(override)return override;
+  return {
+    src:article.heroImage,
+    alt:article.heroImageAlt||'',
+    width:Number(article.heroImageWidth)||1200,
+    height:Number(article.heroImageHeight)||760
+  };
 }
 function createArticleAdSlot(slotName){
   const helper=window.CTKMonetization;
@@ -112,7 +131,7 @@ function renderArticleBody(container,blocks=[],article=null){
 
 function relatedMarkup(ids,products){
   const related=products.filter(product=>ids.includes(product.id)&&!product.draft&&!product.hidden);
-  if(!related.length)return'<p>No related products are published yet.</p>';
+  if(!related.length)return'';
   return related.map(product=>`<a class="related-product" href="product.html?slug=${encodeURIComponent(product.slug||product.id)}">
     <img src="${articleSafe(product.image)}" width="160" height="160" loading="lazy" alt="${articleSafe(product.imageAlt||product.name)}">
     <span>${articleSafe(product.name)}</span>
@@ -147,6 +166,7 @@ async function loadArticle(){
     }
     const article=articles.find(item=>item.slug===articleSlug&&!item.draft);
     if(!article)throw new Error('Article not found');
+    const hero=articleHero(article);
 
     document.title=article.seoTitle||`${article.title} | Closer to Korea`;
     const description=article.metaDescription||article.excerpt;
@@ -165,11 +185,11 @@ async function loadArticle(){
     const canonicalUrl=`https://closertokorea.com/article.html?slug=${encodeURIComponent(article.slug)}`;
     setMeta('meta[property="og:title"]','content',article.seoTitle||article.title);
     setMeta('meta[property="og:description"]','content',description);
-    setMeta('meta[property="og:image"]','content',new URL(article.heroImage,location.href).href);
+    setMeta('meta[property="og:image"]','content',new URL(hero.src,location.href).href);
     setMeta('meta[property="og:url"]','content',canonicalUrl);
     setMeta('meta[name="twitter:title"]','content',article.seoTitle||article.title);
     setMeta('meta[name="twitter:description"]','content',description);
-    setMeta('meta[name="twitter:image"]','content',new URL(article.heroImage,location.href).href);
+    setMeta('meta[name="twitter:image"]','content',new URL(hero.src,location.href).href);
     let canonical=document.querySelector('link[rel="canonical"]');
     if(!canonical){
       canonical=document.createElement('link');
@@ -186,10 +206,10 @@ async function loadArticle(){
     document.querySelector('[data-article-updated]').textContent=`Updated ${articleDate(article.updatedAt)}`;
 
     const image=document.querySelector('[data-article-image]');
-    image.src=article.heroImage;
-    image.alt=article.heroImageAlt;
-    image.width=Number(article.heroImageWidth)||1200;
-    image.height=Number(article.heroImageHeight)||760;
+    image.src=hero.src;
+    image.alt=hero.alt;
+    image.width=hero.width;
+    image.height=hero.height;
     if(article.heroImageCaption){
       const caption=document.createElement('p');
       caption.className='data-article-hero-caption';
@@ -221,7 +241,11 @@ async function loadArticle(){
       });
     }
 
-    document.querySelector('[data-related-products]').innerHTML=relatedMarkup(article.relatedProductIds||[],products);
+    const relatedContainer=document.querySelector('[data-related-products]');
+    const relatedHtml=relatedMarkup(article.relatedProductIds||[],products);
+    relatedContainer.innerHTML=relatedHtml;
+    const relatedSection=relatedContainer.closest('section');
+    if(relatedSection)relatedSection.hidden=!relatedHtml;
     document.querySelector('[data-article-sources]').innerHTML=sourceMarkup(article.sources);
 
     const schema={
@@ -229,7 +253,7 @@ async function loadArticle(){
       "@type":"Article",
       "headline":article.title,
       "description":description,
-      "image":new URL(article.heroImage,location.href).href,
+      "image":new URL(hero.src,location.href).href,
       "datePublished":article.publishedAt,
       "dateModified":article.updatedAt,
       "author":{"@type":"Person","name":"Closer to Korea curator"},
