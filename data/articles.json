@@ -638,5 +638,158 @@
     "contentType": "product-guide",
     "koreaContextConfidence": "context-dependent",
     "monetizationProfile": "light"
+  },
+  {
+    "id": "korean-restaurant-table-utensil-drawer",
+    "slug": "korean-restaurant-table-utensil-drawer",
+    "seoTitle": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
+    "metaDescription": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "primaryKeyword": "Korean restaurant utensil drawer",
+    "secondaryKeywords": [
+      "where are chopsticks in Korean restaurants",
+      "Korean restaurant table drawer",
+      "utensil drawer under restaurant table",
+      "Korean restaurant spoons and chopsticks"
+    ],
+    "title": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
+    "excerpt": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "If spoons and chopsticks are not visible when you sit down at a Korean restaurant, check the underside of the table before asking for them."
+      },
+      {
+        "type": "heading",
+        "text": "Where Are the Chopsticks?"
+      },
+      {
+        "type": "paragraph",
+        "text": "You sit down at a restaurant in Korea, but there are no spoons or chopsticks on the tabletop. Before looking around for a server, check the table itself. Some customer tables have a built-in drawer underneath for utensils.\n\nThis setup is common enough in several types of everyday restaurants that checking for the utensils can feel like a natural first step. It is not universal, though, so the table may also have a utensil container on top or use another serving method."
+      },
+      {
+        "type": "heading",
+        "text": "How the Drawer Works"
+      },
+      {
+        "type": "paragraph",
+        "text": "Open it, take the spoon and chopsticks you need, and return to your meal. In this arrangement, customers can take the utensils they need directly from the drawer.\n\nIf you do not find the drawer, check for a utensil container on the tabletop or ask a staff member."
+      },
+      {
+        "type": "heading",
+        "text": "What You May Find Inside"
+      },
+      {
+        "type": "paragraph",
+        "text": "A utensil drawer commonly contains spoons, chopsticks, and napkins. Some restaurants also place individually packaged disposable wet wipes inside. The contents are not identical everywhere, so the drawer may contain only some of these items."
+      },
+      {
+        "type": "heading",
+        "text": "A Practical Benefit of the Setup"
+      },
+      {
+        "type": "paragraph",
+        "text": "From the Korea-based operator's local observation, keeping utensils below the tabletop can leave more room on the table for food and side dishes. That can make the surface feel more open and orderly during a meal.\n\nThis is a practical observation, not a confirmed official explanation for why the drawers became common."
+      },
+      {
+        "type": "heading",
+        "text": "Not Every Korean Restaurant Has One"
+      },
+      {
+        "type": "paragraph",
+        "text": "A utensil drawer is a familiar setup in many everyday restaurant examples, but it is not a standard feature of every Korean restaurant. Some restaurants may use a separate utensil container instead. Some restaurants may provide wrapped utensils separately.\n\nFor visitors, the simple rule is to look before assuming the utensils will be on the table. Check the drawer and the tabletop container, then ask if you still cannot find them."
+      },
+      {
+        "type": "heading",
+        "text": "Why First-Time Visitors May Miss It"
+      },
+      {
+        "type": "paragraph",
+        "text": "Some English-speaking visitors have shared experiences of looking for utensils or asking where to find them in Korean restaurants. These community experiences describe individual visitors, not all Americans or all English-speaking travelers.\n\nOnce you know to check the table, the drawer is a small but useful detail to recognize when dining out in Korea."
+      },
+      {
+        "type": "heading",
+        "text": "FAQ"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "What is usually inside a Korean restaurant utensil drawer?",
+            "description": "It commonly contains spoons, chopsticks, and napkins. Some restaurants also include individually packaged disposable wet wipes, but the contents vary."
+          },
+          {
+            "term": "Does every Korean restaurant have a utensil drawer?",
+            "description": "No. Not every Korean restaurant uses a utensil drawer."
+          },
+          {
+            "term": "What should I do if I cannot find the utensils?",
+            "description": "Check for the table drawer or a tabletop utensil container. If you still cannot find them, ask a staff member."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "If the tabletop is empty when you sit down at a Korean restaurant, check the table drawer or a tabletop utensil container. The spoons and chopsticks may already be within reach."
+      }
+    ],
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "everyday life in Korea",
+      "travel tips",
+      "restaurant etiquette"
+    ],
+    "heroImage": "assets/images/korean-kitchen.svg",
+    "heroImageAlt": "Editorial illustration representing Korean dining and kitchen culture",
+    "relatedProductIds": [],
+    "sources": [
+      {
+        "label": "Why Many Korean Restaurant Tables Have Hidden Utensil Drawers",
+        "url": "https://everydaykoreastories.com/why-many-korean-restaurant-tables-have-hidden-utensil-drawers/"
+      },
+      {
+        "label": "Korean BBQ Table Drawer: What Is Inside?",
+        "url": "https://behindkorea.com/korean-bbq-table-drawer/"
+      },
+      {
+        "label": "Korean Restaurant Table Drawers: Where to Find Utensils",
+        "url": "https://coreadesk.com/korean-restaurant-table-drawer/"
+      },
+      {
+        "label": "A First-Time Visitor’s Guide to Ordering Food at Korean Restaurants",
+        "url": "https://www.koreanlifeexplained.com/2026/06/first-time-guide-ordering-food-korean-restaurants.html?m=1"
+      },
+      {
+        "label": "Korean Restaurant Etiquette Guide: A Complete Guide from Ordering Bells to Self-Service Bars",
+        "url": "https://www.haniseoul.com/travels/korea/korean-restaurant-etiquette"
+      },
+      {
+        "label": "Understanding Korean Culture — Creatrip",
+        "url": "https://creatrip.com/en/blog/5404/Understanding-Korean-Culture"
+      },
+      {
+        "label": "Reddit community example: visitors looking for spoons or chopsticks in Korean restaurants",
+        "url": "https://www.reddit.com/r/koreatravel/comments/1rqp9fb/did_you_ever_spend_time_looking_for_spoons_or/"
+      },
+      {
+        "label": "Reddit community example: reactions to Korean restaurant table design",
+        "url": "https://www.reddit.com/r/PlayLocalKorea/comments/1vkbkuh/korean_restaurant_tables_are_built_for/"
+      }
+    ],
+    "sourceRequirement": "required",
+    "publishedAt": "2026-08-17",
+    "updatedAt": "2026-08-17",
+    "featured": false,
+    "draft": false,
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "common-not-universal",
+    "monetizationProfile": "default"
   }
 ]
