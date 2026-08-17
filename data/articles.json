@@ -664,7 +664,11 @@
       },
       {
         "type": "paragraph",
-        "text": "You sit down at a restaurant in Korea, but there are no spoons or chopsticks on the tabletop. Before looking around for a server, check the table itself. Some customer tables have a built-in drawer underneath for utensils.\n\nThis setup is common enough in several types of everyday restaurants that checking for the utensils can feel like a natural first step. It is not universal, though, so the table may also have a utensil container on top or use another serving method."
+        "text": "You sit down at a restaurant in Korea, but there are no spoons or chopsticks on the tabletop. Before looking around for a server, check the table itself. Some customer tables have a built-in drawer underneath for utensils."
+      },
+      {
+        "type": "paragraph",
+        "text": "This setup is common enough in several types of everyday restaurants that checking for the utensils can feel like a natural first step. It is not universal, though, so the table may also have a utensil container on top or use another serving method."
       },
       {
         "type": "heading",
@@ -672,7 +676,11 @@
       },
       {
         "type": "paragraph",
-        "text": "Open it, take the spoon and chopsticks you need, and return to your meal. In this arrangement, customers can take the utensils they need directly from the drawer.\n\nIf you do not find the drawer, check for a utensil container on the tabletop or ask a staff member."
+        "text": "Open it, take the spoon and chopsticks you need, and return to your meal. In this arrangement, customers can take the utensils they need directly from the drawer."
+      },
+      {
+        "type": "paragraph",
+        "text": "If you do not find the drawer, check for a utensil container on the tabletop or ask a staff member."
       },
       {
         "type": "heading",
@@ -688,7 +696,11 @@
       },
       {
         "type": "paragraph",
-        "text": "From the Korea-based operator's local observation, keeping utensils below the tabletop can leave more room on the table for food and side dishes. That can make the surface feel more open and orderly during a meal.\n\nThis is a practical observation, not a confirmed official explanation for why the drawers became common."
+        "text": "From the Korea-based operator's local observation, keeping utensils below the tabletop can leave more room on the table for food and side dishes. That can make the surface feel more open and orderly during a meal."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is a practical observation, not a confirmed official explanation for why the drawers became common."
       },
       {
         "type": "heading",
@@ -696,7 +708,11 @@
       },
       {
         "type": "paragraph",
-        "text": "A utensil drawer is a familiar setup in many everyday restaurant examples, but it is not a standard feature of every Korean restaurant. Some restaurants may use a separate utensil container instead. Some restaurants may provide wrapped utensils separately.\n\nFor visitors, the simple rule is to look before assuming the utensils will be on the table. Check the drawer and the tabletop container, then ask if you still cannot find them."
+        "text": "A utensil drawer is a familiar setup in many everyday restaurant examples, but it is not a standard feature of every Korean restaurant. Some restaurants may use a separate utensil container instead. Some restaurants may provide wrapped utensils separately."
+      },
+      {
+        "type": "paragraph",
+        "text": "For visitors, the simple rule is to look before assuming the utensils will be on the table. Check the drawer and the tabletop container, then ask if you still cannot find them."
       },
       {
         "type": "heading",
@@ -704,7 +720,11 @@
       },
       {
         "type": "paragraph",
-        "text": "Some English-speaking visitors have shared experiences of looking for utensils or asking where to find them in Korean restaurants. These community experiences describe individual visitors, not all Americans or all English-speaking travelers.\n\nOnce you know to check the table, the drawer is a small but useful detail to recognize when dining out in Korea."
+        "text": "Some English-speaking visitors have shared experiences of looking for utensils or asking where to find them in Korean restaurants. These community experiences describe individual visitors, not all Americans or all English-speaking travelers."
+      },
+      {
+        "type": "paragraph",
+        "text": "Once you know to check the table, the drawer is a small but useful detail to recognize when dining out in Korea."
       },
       {
         "type": "heading",
@@ -790,6 +810,8 @@
     "sectionKey": "everyday-korea",
     "contentType": "culture-everyday",
     "koreaContextConfidence": "common-not-universal",
-    "monetizationProfile": "default"
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 760
   }
 ]
