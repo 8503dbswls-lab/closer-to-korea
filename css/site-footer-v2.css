@@ -1,0 +1,130 @@
+
+/* Closer to Korea — unified trust footer preview */
+
+.site-footer-v2{
+  width:min(var(--max,1180px),calc(100% - (var(--responsive-gutter,1rem) * 2)));
+  margin:0 auto;
+  padding:clamp(2.2rem,6vw,4.2rem) 0 6.5rem;
+  border-top:1px solid var(--line);
+}
+
+.site-footer-v2__top{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(0,1.55fr);
+  gap:clamp(2rem,5vw,4rem);
+  align-items:start;
+}
+
+.site-footer-v2__brand{
+  max-width:430px;
+}
+
+.site-footer-v2__brand>.brand{
+  display:inline-block;
+  margin-bottom:.85rem;
+}
+
+.site-footer-v2__brand>p{
+  margin:.25rem 0 1.2rem;
+  color:var(--muted);
+}
+
+.site-footer-v2__contact{
+  padding:1rem 1.05rem;
+  border:1px solid rgba(41,39,45,.1);
+  border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(248,247,255,.92));
+}
+
+.site-footer-v2__contact p{
+  margin:0 0 .35rem;
+  color:var(--muted);
+  font-size:.82rem;
+}
+
+.site-footer-v2__contact a{
+  font-weight:800;
+  overflow-wrap:anywhere;
+}
+
+.site-footer-v2__links{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1rem,3vw,2rem);
+}
+
+.site-footer-v2__links nav{
+  display:grid;
+  align-content:start;
+  gap:.55rem;
+}
+
+.site-footer-v2__links nav strong{
+  margin-bottom:.25rem;
+  font-size:.76rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:#655579;
+}
+
+.site-footer-v2__links nav a{
+  min-height:auto;
+  color:var(--muted);
+  text-decoration:none;
+  line-height:1.4;
+}
+
+.site-footer-v2__links nav a:hover{
+  color:var(--ink);
+  text-decoration:underline;
+}
+
+.site-footer-v2__bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  flex-wrap:wrap;
+  margin-top:clamp(2rem,5vw,3.4rem);
+  padding-top:1.15rem;
+  border-top:1px solid rgba(41,39,45,.08);
+}
+
+.site-footer-v2__bottom p{
+  margin:0;
+  color:var(--muted);
+  font-size:.72rem;
+}
+
+@media(max-width:799px){
+  .site-footer-v2__top{
+    grid-template-columns:1fr;
+  }
+
+  .site-footer-v2__brand{
+    max-width:none;
+  }
+
+  .site-footer-v2__links{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:479px){
+  .site-footer-v2{
+    padding-bottom:6.3rem;
+  }
+
+  .site-footer-v2__links{
+    grid-template-columns:1fr;
+    gap:1.4rem;
+  }
+
+  .site-footer-v2__links nav{
+    padding-bottom:1rem;
+    border-bottom:1px solid rgba(41,39,45,.07);
+  }
+
+  .site-footer-v2__bottom{
+    display:grid;
+  }
+}
