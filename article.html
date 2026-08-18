@@ -37,6 +37,7 @@ gtag('config', 'G-EVRM967TSL');
 <link rel="stylesheet" href="css/responsive-patch.css">
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/article-sticky.css?v=1">
+<link rel="stylesheet" href="css/article-bonus.css?v=1">
 </head>
 <body>
 <div class="cursor-sparkle" aria-hidden="true">✦</div>
@@ -71,28 +72,38 @@ gtag('config', 'G-EVRM967TSL');
 
     <img class="data-article-hero" data-article-image width="1200" height="760" fetchpriority="high" alt="">
 
-    <section class="language-note" data-article-language hidden aria-labelledby="language-note-title">
-      <p class="eyebrow">A little Korean</p>
-      <h2 id="language-note-title">Korean Name &amp; Word Breakdown</h2>
-      <div data-language-note-content></div>
-    </section>
-
     <div class="data-article-layout">
       <div class="data-article-body" data-article-body></div>
+
       <aside class="data-article-sidebar">
         <section>
           <h2>Related product</h2>
           <div data-related-products></div>
         </section>
-        <section>
-          <h2>Sources</h2>
-          <div data-article-sources></div>
-        </section>
+
+        <details class="language-bonus" data-article-language hidden>
+          <summary>
+            <span class="language-bonus__sparkle" aria-hidden="true">✦</span>
+            <span>
+              <strong>A little Korean</strong>
+              <small>Want to know what Koreans actually call this?</small>
+            </span>
+          </summary>
+          <div class="language-bonus__content" data-language-note-content></div>
+        </details>
+
         <button class="round-button" type="button" data-share-page>Share guide</button>
         <button class="round-button" type="button" data-copy-link>Copy link</button>
         <p data-share-status aria-live="polite"></p>
       </aside>
     </div>
+
+    <section class="article-sources-footer">
+      <details>
+        <summary>Sources &amp; References</summary>
+        <div data-article-sources></div>
+      </details>
+    </section>
   </article>
 
   <div data-article-error class="error-state" hidden>
@@ -111,6 +122,6 @@ gtag('config', 'G-EVRM967TSL');
 <script src="js/monetization.js"></script>
 <script src="js/main.js"></script>
 <script src="js/article.js?v=3"></script>
-<script src="js/article-language.js"></script>
+<script src="js/article-language.js?v=2"></script>
 </body>
 </html>

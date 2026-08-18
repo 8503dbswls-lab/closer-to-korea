@@ -39,22 +39,24 @@
     if(!note)return;
 
     content.innerHTML=`
-      <dl class="language-note__summary">
-        <div><dt>Korean name</dt><dd lang="ko">${safe(note.koreanName)}</dd></div>
-        <div><dt>Pronunciation</dt><dd><i>${safe(note.pronunciation)}</i></dd></div>
-      </dl>
-      <div class="language-note__parts">
+      <p class="language-bonus__name">
+        <strong lang="ko">${safe(note.koreanName)}</strong>
+        <span>· <i>${safe(note.pronunciation)}</i></span>
+      </p>
+      <div class="language-bonus__parts">
         ${(note.parts||[]).map(part=>`
-          <div>
+          <p>
             <strong lang="ko">${safe(part.korean)}</strong>
             <span><i>${safe(part.romanization)}</i></span>
-            <span>${safe(part.meaning)}</span>
-          </div>
+            <span>= ${safe(part.meaning)}</span>
+          </p>
         `).join('')}
       </div>
       <p><strong>Literal idea:</strong> ${safe(note.literalMeaning||'')}</p>
       <p><strong>Natural English:</strong> ${safe(note.naturalEnglish||'')}</p>
+      <p class="language-bonus__closer">Now you’ll recognize the word if you see it in Korea. ✦</p>
     `;
+
     section.hidden=false;
   }
 
