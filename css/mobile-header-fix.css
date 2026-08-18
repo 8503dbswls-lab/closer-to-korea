@@ -1,0 +1,96 @@
+
+/* Closer to Korea — compact mobile header fix */
+
+@media (max-width: 699px){
+  .site-header{
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+
+  .header-inner{
+    min-height:58px !important;
+    width:min(var(--max,1180px),calc(100% - 1rem)) !important;
+    grid-template-columns:minmax(0,1fr) auto !important;
+    gap:.45rem !important;
+    padding-block:.35rem !important;
+  }
+
+  .site-header .brand{
+    font-size:clamp(1.05rem,5vw,1.35rem) !important;
+    line-height:1 !important;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .header-actions{
+    gap:.35rem !important;
+    align-items:center;
+  }
+
+  .header-actions .round-button,
+  .header-actions .menu-button,
+  .header-actions .site-search-link{
+    width:42px !important;
+    min-width:42px !important;
+    height:42px !important;
+    min-height:42px !important;
+    padding:0 !important;
+    border-radius:50% !important;
+    font-size:0 !important;
+    display:inline-grid !important;
+    place-items:center !important;
+    background:rgba(255,255,255,.82) !important;
+  }
+
+  /* Search is an anchor, not [data-search-toggle], so give it its own icon. */
+  .header-actions .site-search-link::before{
+    content:"⌕";
+    font-size:1.25rem;
+    line-height:1;
+    font-weight:800;
+    color:var(--ink,#29272d);
+  }
+
+  .header-actions [data-menu-toggle]::before{
+    content:"☰";
+    font-size:1.15rem !important;
+    line-height:1;
+    font-weight:800;
+    color:var(--ink,#29272d);
+  }
+
+  .header-actions [data-menu-toggle][aria-expanded="true"]::before{
+    content:"×";
+    font-size:1.35rem !important;
+  }
+
+  .mobile-menu{
+    max-height:calc(100dvh - 58px) !important;
+  }
+
+  /* Avoid giant touch-target inheritance on header controls. */
+  @media (pointer:coarse){
+    .header-actions .round-button,
+    .header-actions .menu-button,
+    .header-actions .site-search-link{
+      min-height:42px !important;
+    }
+  }
+}
+
+@media (max-width: 380px){
+  .site-header .brand{
+    font-size:1rem !important;
+  }
+
+  .header-actions .round-button,
+  .header-actions .menu-button,
+  .header-actions .site-search-link{
+    width:40px !important;
+    min-width:40px !important;
+    height:40px !important;
+    min-height:40px !important;
+  }
+}
