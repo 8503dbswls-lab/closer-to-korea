@@ -26,6 +26,83 @@ function productDetailCta(product){
   if(href)return `<a class="jelly-button primary" href="${productSafe(href)}" target="_blank" rel="sponsored nofollow noopener" data-affiliate-click="${productSafe(product.id)}" aria-label="${productSafe(product.cta||'View on Amazon')}: ${productSafe(product.name)}">${productSafe(product.cta||'View on Amazon')}</a>`;
   return '';
 }
+
+function ensureProductGalleryStyles(){
+  if(document.getElementById('ctk-product-gallery-styles'))return;
+  const style=document.createElement('style');
+  style.id='ctk-product-gallery-styles';
+  style.textContent=`
+    .product-gallery{margin-top:.8rem}
+    .product-gallery__caption{margin:.55rem .1rem 0;color:var(--muted);font-size:.88rem}
+    .product-gallery__thumbs{display:flex;gap:.6rem;overflow-x:auto;padding:.65rem .1rem .2rem;scroll-snap-type:x proximity}
+    .product-gallery__thumb{flex:0 0 84px;width:84px;height:84px;padding:3px;border:2px solid transparent;border-radius:16px;background:#fff;cursor:pointer;scroll-snap-align:start;box-shadow:0 8px 20px rgba(93,72,120,.08)}
+    .product-gallery__thumb[aria-current="true"]{border-color:#ff5b9c}
+    .product-gallery__thumb:focus-visible{outline:3px solid var(--cherry);outline-offset:2px}
+    .product-gallery__thumb img{width:100%;height:100%;object-fit:cover;border-radius:11px}
+    .data-product-hero>figure>[data-product-image]{transition:opacity .15s ease}
+    @media(min-width:700px){
+      .product-gallery__thumb{flex-basis:92px;width:92px;height:92px}
+    }
+  `;
+  document.head.appendChild(style);
+}
+
+function renderProductGallery(product,image){
+  const items=Array.isArray(product.images)&&product.images.length
+    ?product.images
+    :[{src:product.image,alt:product.imageAlt||product.name,caption:''}];
+
+  const figure=image.closest('figure');
+  if(!figure||items.length<2)return items;
+
+  ensureProductGalleryStyles();
+
+  const gallery=document.createElement('div');
+  gallery.className='product-gallery';
+  gallery.setAttribute('aria-label',`${product.name} photo gallery`);
+
+  const caption=document.createElement('p');
+  caption.className='product-gallery__caption';
+  caption.setAttribute('aria-live','polite');
+
+  const thumbs=document.createElement('div');
+  thumbs.className='product-gallery__thumbs';
+
+  function selectItem(item,button){
+    image.style.opacity='.45';
+    image.src=item.src;
+    image.alt=item.alt||product.name;
+    if(item.width)image.width=item.width;
+    if(item.height)image.height=item.height;
+    caption.textContent=item.caption||'';
+    thumbs.querySelectorAll('.product-gallery__thumb').forEach(node=>node.setAttribute('aria-current','false'));
+    button?.setAttribute('aria-current','true');
+    requestAnimationFrame(()=>{image.style.opacity='1';});
+  }
+
+  items.forEach((item,index)=>{
+    const button=document.createElement('button');
+    button.type='button';
+    button.className='product-gallery__thumb';
+    button.setAttribute('aria-label',`View product photo ${index+1} of ${items.length}`);
+    button.setAttribute('aria-current',index===0?'true':'false');
+    button.innerHTML=`<img src="${productSafe(item.src)}" alt="" loading="lazy" decoding="async">`;
+    button.addEventListener('click',()=>selectItem(item,button));
+    thumbs.appendChild(button);
+  });
+
+  caption.textContent=items[0].caption||'';
+  gallery.append(caption,thumbs);
+  figure.insertAdjacentElement('afterend',gallery);
+
+  image.src=items[0].src;
+  image.alt=items[0].alt||product.name;
+  if(items[0].width)image.width=items[0].width;
+  if(items[0].height)image.height=items[0].height;
+
+  return items;
+}
+
 async function loadProductDetail(){
   const loading=document.querySelector('[data-product-loading]');
   const detail=document.querySelector('[data-product-detail]');
@@ -68,6 +145,7 @@ async function loadProductDetail(){
     const image=document.querySelector('[data-product-image]');
     image.src=product.image;
     image.alt=product.imageAlt||product.name;
+    const galleryItems=renderProductGallery(product,image);
 
     const match=document.querySelector('[data-product-match]');
     match.textContent=product.productMatchLabel||product.productMatchType;
@@ -107,7 +185,7 @@ async function loadProductDetail(){
       "@type":"Product",
       "name":product.name,
       "description":product.summary,
-      "image":new URL(product.image,location.href).href,
+      "image":galleryItems.map(item=>new URL(item.src,location.href).href),
       "category":product.category||product.categoryKey
     };
     const script=document.createElement('script');

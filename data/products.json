@@ -227,7 +227,51 @@
     "personalUseNotes": "The owner has used this matching-looking Daiso microwave egg cooker about five times to prepare small portions of gyeran-jjim.",
     "safetyNotes": "The bottom marking on this specific cooker states Microwave & Dishwasher Safe and Do Not Use Over Direct Flame. Oven use, exact heat resistance, material specifications beyond ceramic tableware, and model-level instructions remain unconfirmed.",
     "publicImageStatus": "original-photo",
-    "activePurchaseCta": false
+    "activePurchaseCta": false,
+    "images": [
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
+        "alt": "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
+        "caption": "Closed view of the ceramic microwave steamed egg cooker.",
+        "width": 1536,
+        "height": 1152
+      },
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-open.jpg",
+        "alt": "Inside of a white ceramic microwave gyeran-jjim cooker with the lid removed",
+        "caption": "Open view showing the ceramic interior, lid, and side handles.",
+        "width": 1536,
+        "height": 1152
+      },
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-top.jpg",
+        "alt": "Top view of a white Korean microwave steamed egg cooker with a lid and small steam hole",
+        "caption": "Top view showing the lid, central knob, and small steam opening.",
+        "width": 1536,
+        "height": 1503
+      },
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-detail.jpg",
+        "alt": "Close-up of the lid knob, steam hole, side handle, and ribbed ceramic body of a microwave steamed egg cooker",
+        "caption": "Close-up of the lid, steam opening, handle, and ribbed ceramic surface.",
+        "width": 1448,
+        "height": 1086
+      },
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
+        "alt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
+        "caption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
+        "width": 1536,
+        "height": 1152
+      },
+      {
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-bottom-marking.jpg",
+        "alt": "Bottom marking on the ceramic egg cooker stating microwave and dishwasher safe, do not use over direct flame, ceramic tableware, and Made in China",
+        "caption": "Bottom marking used to verify microwave and dishwasher use, the direct-flame warning, ceramic tableware, and Made in China.",
+        "width": 1448,
+        "height": 1086
+      }
+    ]
   },
   {
     "id": "study-timer",
