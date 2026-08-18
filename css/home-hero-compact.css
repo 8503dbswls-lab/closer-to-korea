@@ -1,0 +1,120 @@
+
+/* Closer to Korea — compact home hero
+   Goal: keep the brand impact while revealing that more content continues below. */
+
+@media (min-width: 960px){
+  .hero{
+    min-height:auto !important;
+    padding-top:.9rem !important;
+    padding-bottom:1rem !important;
+    gap:1rem !important;
+    align-items:stretch !important;
+  }
+
+  .hero-copy,
+  .hero-collage{
+    min-height:clamp(560px,68vh,690px) !important;
+    max-height:690px;
+  }
+
+  .hero-copy{
+    padding:clamp(1.7rem,3.2vw,2.65rem) !important;
+  }
+
+  .hero h1{
+    max-width:11.2ch !important;
+    margin:.55rem 0 .8rem !important;
+    font-size:clamp(3.9rem,6.4vw,5.55rem) !important;
+    line-height:.93 !important;
+  }
+
+  .hero-copy>p{
+    margin:.35rem 0 .65rem;
+    max-width:52ch !important;
+    font-size:1rem !important;
+    line-height:1.55 !important;
+  }
+
+  .hero-actions{
+    margin:.75rem 0 .35rem !important;
+  }
+
+  .trust-row{
+    margin-top:.5rem !important;
+  }
+
+  .hero-collage{
+    aspect-ratio:auto !important;
+  }
+
+  .hero-collage img{
+    position:absolute;
+    inset:.45rem;
+    width:calc(100% - .9rem);
+    height:calc(100% - .9rem);
+    object-fit:cover;
+  }
+
+  /* The first section should begin close enough to peek into the initial viewport. */
+  .hero + .section{
+    padding-top:clamp(1.6rem,3vw,2.4rem) !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 959px){
+  .hero{
+    padding-top:.75rem !important;
+    padding-bottom:1rem !important;
+    gap:.9rem !important;
+  }
+
+  .hero-copy{
+    padding:1.4rem !important;
+  }
+
+  .hero h1{
+    font-size:clamp(3rem,8.5vw,4.5rem) !important;
+    line-height:.94 !important;
+  }
+
+  .hero-collage{
+    min-height:420px !important;
+  }
+}
+
+@media (max-width: 699px){
+  .hero{
+    padding-top:.55rem !important;
+    padding-bottom:.8rem !important;
+    gap:.7rem !important;
+  }
+
+  .hero-copy{
+    padding:1.05rem !important;
+  }
+
+  .hero h1{
+    margin:.5rem 0 .7rem !important;
+    max-width:10.5ch !important;
+    font-size:clamp(2.35rem,12vw,3.45rem) !important;
+    line-height:.94 !important;
+  }
+
+  .hero-copy>p{
+    font-size:.95rem !important;
+    line-height:1.5 !important;
+  }
+
+  .hero-actions{
+    margin:.65rem 0 .3rem !important;
+  }
+
+  .hero-collage{
+    min-height:auto !important;
+    aspect-ratio:4/3 !important;
+  }
+
+  .hero + .section{
+    padding-top:1.3rem !important;
+  }
+}
