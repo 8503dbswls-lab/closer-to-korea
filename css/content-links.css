@@ -1,0 +1,157 @@
+.language-note,
+.related-article-panel{
+  margin:1.4rem 0 2rem;
+  padding:clamp(1.1rem,3vw,1.7rem);
+  border:1px solid rgba(41,39,45,.1);
+  border-radius:28px;
+  background:linear-gradient(135deg,#fff,#f8f7ff,#eef9ff);
+  box-shadow:var(--shadow);
+}
+.language-note h2,
+.related-article-panel h2{
+  margin:.35rem 0 1rem;
+  font:400 clamp(1.7rem,4vw,2.5rem)/1.05 "Bagel Fat One",sans-serif;
+}
+.language-note__summary{
+  display:grid;
+  gap:.6rem;
+  margin:0 0 1rem;
+}
+.language-note__summary div{
+  padding:.75rem;
+  border-radius:18px;
+  background:rgba(255,255,255,.8);
+}
+.language-note__summary dt{
+  font-size:.72rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--muted);
+}
+.language-note__summary dd{
+  margin:.2rem 0 0;
+  font-size:1.05rem;
+}
+.language-note__parts{
+  display:grid;
+  gap:.55rem;
+  margin:1rem 0;
+}
+.language-note__parts div{
+  display:grid;
+  grid-template-columns:minmax(70px,.65fr) minmax(100px,.8fr) 2fr;
+  gap:.7rem;
+  align-items:center;
+  padding:.7rem .8rem;
+  border-radius:16px;
+  background:rgba(255,255,255,.78);
+}
+.language-note__parts strong{
+  font-size:1.08rem;
+}
+.related-article-card{
+  display:grid;
+  grid-template-columns:120px 1fr;
+  gap:1rem;
+  align-items:center;
+  text-decoration:none;
+}
+.related-article-card img{
+  width:120px;
+  height:90px;
+  object-fit:cover;
+  border-radius:18px;
+}
+.related-article-card span{
+  display:grid;
+  gap:.35rem;
+}
+.related-article-card small{
+  color:var(--muted);
+}
+.related-article-card b{
+  color:#655579;
+}
+.product-guide-list{
+  display:grid;
+  gap:1rem;
+}
+.product-guide-card{
+  overflow:hidden;
+  display:grid;
+  border:1px solid rgba(255,255,255,.94);
+  border-radius:28px;
+  background:rgba(255,255,255,.8);
+  box-shadow:var(--shadow);
+}
+.product-guide-card__image{
+  display:block;
+  min-height:260px;
+  background:var(--pearl);
+}
+.product-guide-card__image img{
+  width:100%;
+  height:100%;
+  min-height:260px;
+  max-height:440px;
+  object-fit:cover;
+}
+.product-guide-card__body{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:.8rem;
+  padding:1.2rem;
+}
+.product-guide-card__body h2{
+  margin:0;
+  font:400 clamp(1.8rem,4vw,2.5rem)/1.05 "Bagel Fat One",sans-serif;
+}
+.product-guide-card__body h2 a{
+  text-decoration:none;
+}
+.product-guide-card__body p{
+  margin:0;
+  color:var(--muted);
+}
+.product-guide-card__badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.4rem;
+}
+.product-guide-card__badges span{
+  padding:.3rem .55rem;
+  border-radius:999px;
+  background:var(--pearl);
+  font-size:.68rem;
+  font-weight:800;
+}
+
+@media(min-width:760px){
+  .language-note__summary{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .product-guide-card{
+    grid-template-columns:minmax(280px,.85fr) 1.15fr;
+  }
+  .product-guide-card__image,
+  .product-guide-card__image img{
+    height:100%;
+    min-height:320px;
+  }
+}
+@media(max-width:600px){
+  .language-note__parts div{
+    grid-template-columns:1fr;
+    gap:.15rem;
+  }
+  .related-article-card{
+    grid-template-columns:1fr;
+  }
+  .related-article-card img{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+  }
+}

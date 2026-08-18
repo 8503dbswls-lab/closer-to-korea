@@ -3,55 +3,45 @@
 <head>
 <!-- BEGIN Microsoft Clarity -->
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "y37qppo4d2");
+(function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "y37qppo4d2");
 </script>
 <!-- END Microsoft Clarity -->
 
 <!-- BEGIN Google Analytics (GA4) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EVRM967TSL"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EVRM967TSL');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-EVRM967TSL');
 </script>
 <!-- END Google Analytics (GA4) -->
 
-<!-- BEGIN Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EVRM967TSL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-EVRM967TSL');
-</script>
-<!-- END Google Analytics (GA4) -->
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <title>Guide | Closer to Korea</title>
-  <meta name="description" content="A Closer to Korea guide explaining Korean products and everyday life with real context.">
-  <meta name="theme-color" content="#FFF9FC">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="Closer to Korea">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive-patch.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<title>Guide | Closer to Korea</title>
+<meta name="description" content="A Closer to Korea guide explaining Korean products and everyday life with real context.">
+<meta name="theme-color" content="#FFF9FC">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Closer to Korea">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/responsive-patch.css">
+<link rel="stylesheet" href="css/content-links.css">
 </head>
 <body>
-  <div class="cursor-sparkle" aria-hidden="true">✦</div>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
+<div class="cursor-sparkle" aria-hidden="true">✦</div>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
   <div class="header-inner">
     <a class="brand" href="index.html">Closer <span>to</span> Korea</a>
     <nav class="desktop-nav" aria-label="Primary" data-navigation></nav>
@@ -63,55 +53,63 @@
   <nav class="mobile-menu" aria-label="Mobile navigation" data-mobile-menu data-mobile-navigation id="mobile-menu"></nav>
 </header>
 
-  <main id="main" class="data-article-page">
-    <nav class="article-breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#guides">Guides</a><span aria-hidden="true">/</span><span data-article-breadcrumb>Loading…</span>
-    </nav>
+<main id="main" class="data-article-page">
+  <nav class="article-breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a><span aria-hidden="true">/</span><a href="index.html#guides">Articles</a><span aria-hidden="true">/</span><span data-article-breadcrumb>Loading…</span>
+  </nav>
 
-    <div data-article-loading class="empty-state">
-      <h1>Loading guide…</h1>
+  <div data-article-loading class="empty-state"><h1>Loading guide…</h1></div>
+
+  <article data-article hidden>
+    <header class="data-article-header">
+      <p class="eyebrow" data-article-category></p>
+      <h1 data-article-title></h1>
+      <p class="legal-lede" data-article-excerpt></p>
+      <p class="article-dates"><span data-article-published></span><span data-article-updated></span></p>
+    </header>
+
+    <img class="data-article-hero" data-article-image width="1200" height="760" fetchpriority="high" alt="">
+
+    <section class="language-note" data-article-language hidden aria-labelledby="language-note-title">
+      <p class="eyebrow">A little Korean</p>
+      <h2 id="language-note-title">Korean Name &amp; Word Breakdown</h2>
+      <div data-language-note-content></div>
+    </section>
+
+    <div class="data-article-layout">
+      <div class="data-article-body" data-article-body></div>
+      <aside class="data-article-sidebar">
+        <section>
+          <h2>Related product</h2>
+          <div data-related-products></div>
+        </section>
+        <section>
+          <h2>Sources</h2>
+          <div data-article-sources></div>
+        </section>
+        <button class="round-button" type="button" data-share-page>Share guide</button>
+        <button class="round-button" type="button" data-copy-link>Copy link</button>
+        <p data-share-status aria-live="polite"></p>
+      </aside>
     </div>
+  </article>
 
-    <article data-article hidden>
-      <header class="data-article-header">
-        <p class="eyebrow" data-article-category></p>
-        <h1 data-article-title></h1>
-        <p class="legal-lede" data-article-excerpt></p>
-        <p class="article-dates"><span data-article-published></span><span data-article-updated></span></p>
-      </header>
-      <img class="data-article-hero" data-article-image width="1200" height="760" fetchpriority="high" alt="">
-      <div class="data-article-layout">
-        <div class="data-article-body" data-article-body></div>
-        <aside class="data-article-sidebar">
-          <section>
-            <h2>Related products</h2>
-            <div data-related-products></div>
-          </section>
-          <section>
-            <h2>Sources</h2>
-            <div data-article-sources></div>
-          </section>
-          <button class="round-button" type="button" data-share-page>Share guide</button>
-          <button class="round-button" type="button" data-copy-link>Copy link</button>
-          <p data-share-status aria-live="polite"></p>
-        </aside>
-      </div>
-    </article>
+  <div data-article-error class="error-state" hidden>
+    <h1>Guide not found.</h1>
+    <p>This guide may still be a draft, or the link may be incorrect.</p>
+    <a class="jelly-button secondary" href="index.html">Return to the homepage</a>
+  </div>
+</main>
 
-    <div data-article-error class="error-state" hidden>
-      <h1>Guide not found.</h1>
-      <p>This guide may still be a draft, or the link may be incorrect.</p>
-      <a class="jelly-button secondary" href="index.html">Return to the homepage</a>
-    </div>
-  </main>
+<footer class="site-footer">
+  <div><a class="brand" href="index.html">Closer <span>to</span> Korea</a></div>
+  <nav><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy</a></nav>
+</footer>
 
-  <footer class="site-footer">
-    <div><a class="brand" href="index.html">Closer <span>to</span> Korea</a></div>
-    <nav><a href="about.html">About</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy-policy.html">Privacy</a></nav>
-  </footer>
-  <script src="data/content-data.js?v=3"></script>
-  <script src="js/monetization.js"></script>
+<script src="data/content-data.js?v=3"></script>
+<script src="js/monetization.js"></script>
 <script src="js/main.js"></script>
-  <script src="js/article.js?v=3"></script>
+<script src="js/article.js?v=3"></script>
+<script src="js/article-language.js"></script>
 </body>
 </html>
