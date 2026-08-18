@@ -1,6 +1,36 @@
 
 /* Closer to Korea — unified trust footer preview */
 
+/* Important: neutralize the legacy .site-footer grid.
+   The v2 footer manages its own internal layout. */
+.site-footer.site-footer-v2{
+  display:block !important;
+  grid-template-columns:none !important;
+  align-items:initial !important;
+}
+
+.site-footer-v2__top,
+.site-footer-v2__bottom{
+  width:100%;
+  min-width:0;
+}
+
+.site-footer-v2__links,
+.site-footer-v2__links nav,
+.site-footer-v2__brand{
+  min-width:0;
+}
+
+.site-footer-v2__links nav a,
+.site-footer-v2__links nav strong,
+.site-footer-v2__brand p,
+.site-footer-v2__contact p,
+.site-footer-v2__contact a{
+  overflow-wrap:normal;
+  word-break:normal;
+}
+
+
 .site-footer-v2{
   width:min(var(--max,1180px),calc(100% - (var(--responsive-gutter,1rem) * 2)));
   margin:0 auto;
