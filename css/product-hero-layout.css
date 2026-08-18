@@ -1,0 +1,74 @@
+
+/* Closer to Korea — Product hero balance fix */
+
+@media (min-width: 900px){
+  .data-product-hero{
+    display:grid !important;
+    grid-template-columns:minmax(0,1fr) minmax(360px,.92fr) !important;
+    gap:1.35rem !important;
+    align-items:start !important;
+  }
+
+  .data-product-hero > figure{
+    grid-column:1;
+    grid-row:1;
+    margin:0 !important;
+  }
+
+  .data-product-summary{
+    grid-column:2;
+    grid-row:1;
+    align-self:start;
+    min-width:0;
+  }
+
+  .data-product-summary h1{
+    margin-top:.35rem;
+  }
+
+  .data-product-summary .product-gallery{
+    margin-top:1.15rem;
+  }
+
+  .data-product-summary .product-gallery__thumbs{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:.65rem;
+    overflow:visible;
+    padding:.25rem 0 0;
+  }
+
+  .data-product-summary .product-gallery__thumb{
+    width:100%;
+    height:auto;
+    aspect-ratio:1/1;
+    min-width:0;
+    flex:none;
+  }
+
+  .data-product-summary .product-gallery__caption{
+    margin:.4rem 0 .65rem;
+  }
+}
+
+@media (min-width: 1200px){
+  .data-product-summary .product-gallery__thumbs{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 899px){
+  .data-product-hero{
+    display:block !important;
+  }
+
+  .data-product-summary{
+    margin-top:1rem;
+  }
+
+  .data-product-summary .product-gallery__thumbs{
+    display:flex;
+    gap:.6rem;
+    overflow-x:auto;
+  }
+}
