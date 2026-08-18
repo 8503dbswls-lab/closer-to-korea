@@ -1,0 +1,29 @@
+
+/* Closer to Korea — sticky article sidebar
+   Desktop/tablet only. Mobile keeps the normal document flow. */
+
+@media (min-width: 900px){
+  .data-article-layout{
+    align-items:start;
+  }
+
+  .data-article-sidebar{
+    position:sticky;
+    top:92px;
+    align-self:start;
+    max-height:calc(100vh - 112px);
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    padding-bottom:.35rem;
+  }
+}
+
+@media (max-width: 899px){
+  .data-article-sidebar{
+    position:static;
+    top:auto;
+    max-height:none;
+    overflow:visible;
+  }
+}
