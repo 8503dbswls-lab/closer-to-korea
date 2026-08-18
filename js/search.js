@@ -3,7 +3,7 @@ import {buildSearchDocuments,searchDocuments} from './search-core.mjs';
 const qs=(selector,root=document)=>root.querySelector(selector);
 const safe=(value='')=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));
 
-async function fetchJson(path,key){
+async function fetchJson(path,key,fallbackValue=null){
   try{
     const response=await fetch(path,{cache:'no-store'});
     if(!response.ok)throw new Error(`${path}: HTTP ${response.status}`);
@@ -11,6 +11,7 @@ async function fetchJson(path,key){
   }catch(error){
     const fallback=window.__CTK_DATA__;
     if(fallback&&Object.prototype.hasOwnProperty.call(fallback,key))return fallback[key];
+    if(fallbackValue!==null)return fallbackValue;
     throw error;
   }
 }
@@ -51,12 +52,13 @@ async function init(){
   const input=qs('[data-unified-search-input]');
   if(input)input.value=query;
   try{
-    const [articles,products,categories]=await Promise.all([
+    const [articles,products,categories,searchAliases]=await Promise.all([
       fetchJson('data/articles.json','articles'),
       fetchJson('data/products.json','products'),
-      fetchJson('data/categories.json','categories')
+      fetchJson('data/categories.json','categories'),
+      fetchJson('data/search-aliases.json','searchAliases',{})
     ]);
-    const documents=buildSearchDocuments({articles,products,categories});
+    const documents=buildSearchDocuments({articles,products,categories,searchAliases});
     render(searchDocuments(documents,query),query);
   }catch(error){
     const status=qs('[data-unified-search-status]');

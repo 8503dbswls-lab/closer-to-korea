@@ -1,0 +1,117 @@
+
+.home-discovery-search{
+  padding-top:clamp(2.2rem,6vw,5rem);
+  padding-bottom:clamp(3rem,8vw,6.5rem);
+}
+
+.home-discovery-search__card{
+  position:relative;
+  overflow:hidden;
+  padding:clamp(1.35rem,5vw,3.4rem);
+  border:1px solid rgba(41,39,45,.1);
+  border-radius:34px;
+  background:
+    radial-gradient(circle at 88% 16%,rgba(255,184,216,.48),transparent 24%),
+    radial-gradient(circle at 8% 86%,rgba(205,235,255,.7),transparent 28%),
+    linear-gradient(135deg,#fff,#f8f7ff);
+  box-shadow:var(--shadow);
+}
+
+.home-discovery-search__copy{
+  max-width:760px;
+}
+
+.home-discovery-search__copy h2{
+  margin:.4rem 0 .8rem;
+  max-width:15ch;
+  font:400 clamp(2.2rem,7vw,4.4rem)/.98 "Bagel Fat One",sans-serif;
+  letter-spacing:-.035em;
+}
+
+.home-discovery-search__copy>p:last-child{
+  max-width:62ch;
+  color:var(--muted);
+}
+
+.home-discovery-search__form{
+  max-width:860px;
+  margin-top:1.4rem;
+}
+
+.home-discovery-search__form label{
+  display:block;
+  margin-bottom:.5rem;
+  font-size:.78rem;
+  font-weight:800;
+  color:#655579;
+}
+
+.home-discovery-search__row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:.65rem;
+}
+
+.home-discovery-search__row input{
+  width:100%;
+  min-height:54px;
+  padding:.8rem 1.05rem;
+  border:1px solid rgba(41,39,45,.15);
+  border-radius:999px;
+  background:rgba(255,255,255,.9);
+  color:var(--ink);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.home-discovery-search__examples{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:.45rem;
+  max-width:900px;
+  margin-top:1rem;
+}
+
+.home-discovery-search__examples span{
+  font-size:.72rem;
+  font-weight:800;
+  color:var(--muted);
+}
+
+.home-discovery-search__examples a{
+  padding:.35rem .62rem;
+  border:1px solid rgba(41,39,45,.1);
+  border-radius:999px;
+  background:rgba(255,255,255,.72);
+  font-size:.72rem;
+  text-decoration:none;
+}
+
+.home-discovery-search__examples a:hover{
+  background:#fff;
+}
+
+.home-discovery-search__note{
+  margin:.9rem 0 0;
+  max-width:70ch;
+  color:var(--muted);
+  font-size:.78rem;
+}
+
+@media(max-width:699px){
+  .home-discovery-search__card{
+    border-radius:26px;
+  }
+
+  .home-discovery-search__row{
+    grid-template-columns:1fr;
+  }
+
+  .home-discovery-search__row .jelly-button{
+    width:100%;
+  }
+
+  .home-discovery-search__examples{
+    align-items:flex-start;
+  }
+}

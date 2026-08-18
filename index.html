@@ -43,6 +43,7 @@
 <link href="css/responsive-patch.css" rel="stylesheet"/>
 <link href="css/mobile-header-fix.css?v=1" rel="stylesheet"/>
 <link href="css/home-refresh.css" rel="stylesheet"/>
+<link href="css/home-discovery-search.css?v=1" rel="stylesheet"/>
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -202,6 +203,41 @@
     <span>Advertisement</span>
     <div class="ad-slot__mount" data-ad-mount="home-lower"></div>
   </aside>
+
+  <!-- Final discovery search -->
+  <section class="section home-discovery-search" id="find-it">
+    <div class="home-discovery-search__card">
+      <div class="home-discovery-search__copy">
+        <p class="eyebrow">Find it without knowing the name</p>
+        <h2>Looking for something you saw in Korea?</h2>
+        <p>Describe what it looked like, what it was used for, where you saw it—or type the Korean word the way it sounded to you.</p>
+      </div>
+
+      <form class="home-discovery-search__form" action="search.html" method="get" role="search">
+        <label for="home-discovery-query">You do not need the exact product name.</label>
+        <div class="home-discovery-search__row">
+          <input
+            id="home-discovery-query"
+            name="q"
+            type="search"
+            autocomplete="off"
+            placeholder='Try “small pot for steamed egg” or “keran jim”'
+            required>
+          <button class="jelly-button primary" type="submit">Find it</button>
+        </div>
+      </form>
+
+      <div class="home-discovery-search__examples" aria-label="Example searches">
+        <span>Try:</span>
+        <a href="search.html?q=small%20pot%20for%20steamed%20egg">small pot for steamed egg</a>
+        <a href="search.html?q=thing%20under%20korean%20restaurant%20table">thing under a restaurant table</a>
+        <a href="search.html?q=keran%20jim">keran jim</a>
+      </div>
+
+      <p class="home-discovery-search__note">English description, Korean name, romanization, and reasonable sound-alike spellings can all work.</p>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
