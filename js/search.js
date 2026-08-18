@@ -1,4 +1,4 @@
-import {buildSearchDocuments,searchDocuments} from './search-core.mjs';
+import {buildSearchDocuments,searchDocuments} from './search-core.mjs?v=3';
 
 const qs=(selector,root=document)=>root.querySelector(selector);
 const safe=(value='')=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[char]));

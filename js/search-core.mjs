@@ -1,7 +1,9 @@
 function normalize(value=''){
+  // NFKC preserves complete Hangul syllables such as 계란찜기.
+  // NFKD would decompose Hangul into Jamo and the following filter
+  // would accidentally remove the Korean search term.
   return String(value)
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g,'')
+    .normalize('NFKC')
     .toLowerCase()
     .replace(/[^a-z0-9가-힣]+/g,' ')
     .trim();
