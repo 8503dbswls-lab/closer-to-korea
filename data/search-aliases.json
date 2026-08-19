@@ -1,59 +1,83 @@
 {
-  "articles": {
-    "korean-microwave-steamed-egg-cooker": [
-      "계란찜기",
-      "전자레인지용 계란찜기",
-      "gyeran jjim gi",
-      "gyeranjjimgi",
-      "gyeran jjim",
-      "gyeranjjim",
-      "gye ran jim",
-      "keran jjim",
-      "keran jim",
-      "korean steamed egg bowl",
-      "korean microwave egg bowl",
-      "small ceramic pot with lid",
-      "small pot for steamed egg",
-      "small bowl for steamed egg",
-      "bowl with lid for eggs",
-      "thing used to make steamed egg",
-      "microwave egg cooker"
-    ],
-    "korean-restaurant-table-utensil-drawer": [
-      "수저서랍",
-      "수저 서랍",
-      "sujeo seorap",
-      "sujeo drawer",
-      "soo jeo drawer",
-      "utensil drawer under table",
-      "drawer under korean restaurant table",
-      "thing under korean restaurant table",
-      "thing under restaurant table",
-      "spoon chopstick drawer",
-      "spoon and chopstick drawer",
-      "korean restaurant table drawer",
-      "hidden utensil drawer"
-    ]
-  },
-  "products": {
-    "egg-steamer": [
-      "계란찜기",
-      "전자레인지용 계란찜기",
-      "gyeran jjim gi",
-      "gyeranjjimgi",
-      "gyeran jjim",
-      "gyeranjjim",
-      "gye ran jim",
-      "keran jjim",
-      "keran jim",
-      "korean steamed egg cooker",
-      "korean steamed egg bowl",
-      "small ceramic pot with lid",
-      "small pot for steamed egg",
-      "microwave egg bowl",
-      "bowl with lid for eggs",
-      "microwave egg cooker",
-      "ceramic egg steamer"
-    ]
-  }
+    "articles":  {
+                     "korean-microwave-steamed-egg-cooker":  [
+                                                                 "계란찜기",
+                                                                 "전자레인지용 계란찜기",
+                                                                 "gyeran jjim gi",
+                                                                 "gyeranjjimgi",
+                                                                 "gyeran jjim",
+                                                                 "gyeranjjim",
+                                                                 "gye ran jim",
+                                                                 "keran jjim",
+                                                                 "keran jim",
+                                                                 "korean steamed egg bowl",
+                                                                 "korean microwave egg bowl",
+                                                                 "small ceramic pot with lid",
+                                                                 "small pot for steamed egg",
+                                                                 "small bowl for steamed egg",
+                                                                 "bowl with lid for eggs",
+                                                                 "thing used to make steamed egg",
+                                                                 "microwave egg cooker"
+                                                             ],
+                     "korean-restaurant-table-utensil-drawer":  [
+                                                                    "수저서랍",
+                                                                    "수저 서랍",
+                                                                    "sujeo seorap",
+                                                                    "sujeo drawer",
+                                                                    "soo jeo drawer",
+                                                                    "utensil drawer under table",
+                                                                    "drawer under korean restaurant table",
+                                                                    "thing under korean restaurant table",
+                                                                    "thing under restaurant table",
+                                                                    "spoon chopstick drawer",
+                                                                    "spoon and chopstick drawer",
+                                                                    "korean restaurant table drawer",
+                                                                    "hidden utensil drawer"
+                                                                ],
+                     "storage-chairs-korean-bbq-restaurants":  [
+                                                                   {
+                                                                       "value":  [
+                                                                                     "수납 의자",
+                                                                                     "고깃집 의자",
+                                                                                     "sunap uija",
+                                                                                     "gogitjip uija",
+                                                                                     "soo-nap ee-ja",
+                                                                                     "go-geet-jip ee-ja",
+                                                                                     "korean bbq storage chair",
+                                                                                     "korean bbq chair with storage",
+                                                                                     "korean bbq chair storage inside",
+                                                                                     "korean bbq coat storage",
+                                                                                     "korean restaurant chair storage",
+                                                                                     "korean bbq bag storage",
+                                                                                     "korean restaurant chair for coats and bags",
+                                                                                     "chair storage under the seat at korean bbq",
+                                                                                     "chair with storage at korean restaurant",
+                                                                                     "where to put coat at korean bbq",
+                                                                                     "where to put bag at korean bbq"
+                                                                                 ],
+                                                                       "Count":  17
+                                                                   }
+                                                               ]
+                 },
+    "products":  {
+                     "egg-steamer":  [
+                                         "계란찜기",
+                                         "전자레인지용 계란찜기",
+                                         "gyeran jjim gi",
+                                         "gyeranjjimgi",
+                                         "gyeran jjim",
+                                         "gyeranjjim",
+                                         "gye ran jim",
+                                         "keran jjim",
+                                         "keran jim",
+                                         "korean steamed egg cooker",
+                                         "korean steamed egg bowl",
+                                         "small ceramic pot with lid",
+                                         "small pot for steamed egg",
+                                         "microwave egg bowl",
+                                         "bowl with lid for eggs",
+                                         "microwave egg cooker",
+                                         "ceramic egg steamer"
+                                     ]
+                 }
 }
