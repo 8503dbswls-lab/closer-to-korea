@@ -821,14 +821,6 @@
         "text": "At some Korean BBQ restaurants in Korea, you may find chairs with storage space inside the chair or beneath the seat. That space can be used for coats and bags, giving diners somewhere to put their belongings while they eat."
       },
       {
-        "type": "image",
-        "src": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-seating-area.webp",
-        "width": 1200,
-        "height": 800,
-        "alt": "Korean BBQ dining area showing black storage chairs around grill tables",
-        "caption": "Storage-chair designs vary by restaurant; this dining area shows one example of the seating setup."
-      },
-      {
         "type": "heading",
         "text": "Why the Korea-Based Editor Found It Useful at a Grilling Restaurant"
       },
@@ -900,10 +892,10 @@
       "restaurant design",
       "travel in Korea"
     ],
-    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-hero.webp",
-    "heroImageAlt": "Korean BBQ restaurant interior with round tables and black cylindrical storage chairs",
+    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-seating-area.webp",
+    "heroImageAlt": "Korean BBQ dining area showing black storage chairs around grill tables",
     "heroImageWidth": 1200,
-    "heroImageHeight": 760,
+    "heroImageHeight": 800,
     "relatedProductIds": [],
     "sources": [
       {
