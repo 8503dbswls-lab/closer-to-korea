@@ -765,8 +765,8 @@
       "travel tips",
       "restaurant etiquette"
     ],
-    "heroImage": "assets/images/articles/korean-restaurant-table-utensil-drawer/korean-restaurant-table-utensil-drawer-hero.webp",
-    "heroImageAlt": "Open wooden drawer beside a Korean restaurant table holding metal spoons and chopsticks",
+    "heroImage": "assets/images/articles/korean-restaurant-table-utensil-drawer/korean-restaurant-table-utensil-drawer-ai-illustration.webp",
+    "heroImageAlt": "AI-generated illustration of a Korean restaurant table drawer holding metal spoons and chopsticks",
     "relatedProductIds": [],
     "sources": [
       {
@@ -796,7 +796,9 @@
     "koreaContextConfidence": "common-not-universal",
     "monetizationProfile": "default",
     "heroImageWidth": 1200,
-    "heroImageHeight": 900
+    "heroImageHeight": 900,
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "heroImageType": "ai-illustration"
   },
   {
     "id": "storage-chairs-korean-bbq-restaurants",
@@ -892,10 +894,10 @@
       "restaurant design",
       "travel in Korea"
     ],
-    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-seating-area.webp",
-    "heroImageAlt": "Korean BBQ dining area showing black storage chairs around grill tables",
+    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-ai-illustration.webp",
+    "heroImageAlt": "AI-generated illustration of a Korean barbecue restaurant with black storage-style chairs around grill tables",
     "heroImageWidth": 1200,
-    "heroImageHeight": 800,
+    "heroImageHeight": 900,
     "relatedProductIds": [],
     "sources": [
       {
@@ -935,6 +937,8 @@
         "Korean restaurant chair for coats and bags",
         "chair storage under the seat at Korean BBQ"
       ]
-    }
+    },
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "heroImageType": "ai-illustration"
   }
 ]
