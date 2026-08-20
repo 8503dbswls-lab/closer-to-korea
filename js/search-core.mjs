@@ -60,7 +60,7 @@ export function buildSearchDocuments({articles=[],products=[],categories={},sear
       title,
       excerpt,
       label:sectionLabel||categoryLabel||'Article',
-      href:`article.html?slug=${encodeURIComponent(article.slug||'')}`,
+      href:`${encodeURIComponent(article.slug||'')}.html`,
       image:article.heroImage||'',
       imageAlt:article.heroImageAlt||'',
       publishedAt:article.publishedAt||'',

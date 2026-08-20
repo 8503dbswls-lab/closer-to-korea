@@ -182,7 +182,7 @@ async function loadArticle(){
       }
       element.setAttribute(attribute,value);
     };
-    const canonicalUrl=`https://closertokorea.com/article.html?slug=${encodeURIComponent(article.slug)}`;
+    const canonicalUrl=`https://closertokorea.com/${encodeURIComponent(article.slug)}.html`;
     setMeta('meta[property="og:title"]','content',article.seoTitle||article.title);
     setMeta('meta[property="og:description"]','content',description);
     setMeta('meta[property="og:image"]','content',new URL(hero.src,location.href).href);

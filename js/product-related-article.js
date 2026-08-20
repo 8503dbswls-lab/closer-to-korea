@@ -61,7 +61,7 @@
       if(!related) return;
 
       content.innerHTML = `
-        <a class="related-article-card" href="article.html?slug=${encodeURIComponent(related.slug)}">
+        <a class="related-article-card" href="${encodeURIComponent(related.slug)}.html">
           <img src="${safe(related.heroImage)}"
                alt="${safe(related.heroImageAlt || related.title)}"
                loading="lazy"

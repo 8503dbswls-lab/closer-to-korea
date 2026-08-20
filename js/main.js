@@ -458,11 +458,11 @@ function articleCard(article,{layout='guide'}={}){
         <span class="label lavender">${safe(article.sectionKey||article.categoryKey||'Closer to Korea')}</span>
         <h3>${safe(article.title)}</h3>
         <p>${safe(article.excerpt)}</p>
-        <a href="article.html?slug=${encodeURIComponent(article.slug)}">Read story →</a>
+        <a href="${encodeURIComponent(article.slug)}.html">Read story →</a>
       </div>
     </article>`;
   }
-  return `<a href="article.html?slug=${encodeURIComponent(article.slug)}">
+  return `<a href="${encodeURIComponent(article.slug)}.html">
     <img src="${safe(article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
     <strong>${safe(article.title)}</strong>
     <span>${safe(article.excerpt)}</span>
@@ -488,7 +488,7 @@ function renderSectionFeatured(){
         <span class="label cherry label-featured">Featured guide</span>
         <h2 class="section-title">${safe(article.title)}</h2>
         <p>${safe(article.excerpt)}</p>
-        <a class="button" href="article.html?slug=${encodeURIComponent(article.slug)}">Read the guide</a>
+        <a class="button" href="${encodeURIComponent(article.slug)}.html">Read the guide</a>
       </div>`;
     if(wrapper)wrapper.hidden=false;
   });

@@ -42,7 +42,7 @@
 
   function articleCard(article, compact=false){
     return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}">
-      <a class="home-content-card__image" href="article.html?slug=${encodeURIComponent(article.slug)}">
+      <a class="home-content-card__image" href="${encodeURIComponent(article.slug)}.html">
         <img src="${safe(article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">
       </a>
       <div class="home-content-card__body">
@@ -50,7 +50,7 @@
           <span class="home-kind-badge">ARTICLE</span>
           ${article.sectionKey ? `<span>${safe(article.sectionKey.replaceAll('-',' '))}</span>` : ''}
         </div>
-        <h3><a href="article.html?slug=${encodeURIComponent(article.slug)}">${safe(article.title)}</a></h3>
+        <h3><a href="${encodeURIComponent(article.slug)}.html">${safe(article.title)}</a></h3>
         <p>${safe(article.excerpt || '')}</p>
         <small>${dateValue(article) ? `Published ${safe(formatDate(dateValue(article)))}` : ''}</small>
       </div>
