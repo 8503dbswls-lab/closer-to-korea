@@ -1,961 +1,947 @@
 [
-    {
-        "id":  "home-products-guide",
-        "slug":  "things-koreans-actually-use-at-home",
-        "title":  "Things Koreans Actually Use at Home",
-        "excerpt":  "How compact apartments, food storage, climate, and everyday routines shape household product choices in Korea.",
-        "body":  [
-                     {
-                         "type":  "paragraph",
-                         "text":  "Korean household products make more sense when you understand the routines around them. Storage, ventilation, floor care, food preparation, and limited refrigerator space all influence what people keep at home."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Start with the routine, not the product"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A product can be common in Korea without being uniquely Korean. The useful question is where it appears, who uses it, and which part of daily life it supports."
-                     }
-                 ],
-        "categoryKey":  "home-kitchen",
-        "tags":  [
-                     "home",
-                     "apartment",
-                     "storage",
-                     "daily life"
-                 ],
-        "heroImage":  "assets/images/everyday-korea.svg",
-        "heroImageAlt":  "Editorial illustration representing everyday products in a Korean home",
-        "relatedProductIds":  [
-                                  "kimchi-container",
-                                  "study-timer"
-                              ],
-        "sources":  [
-
-                    ],
-        "publishedAt":  "2026-07-28",
-        "updatedAt":  "2026-07-28",
-        "featured":  false,
-        "draft":  true,
-        "sourceRequirement":  "optional",
-        "sectionKey":  "everyday-korea",
-        "contentType":  "culture-everyday",
-        "koreaContextConfidence":  "context-dependent",
-        "monetizationProfile":  "default"
-    },
-    {
-        "id":  "kitchen-tools-guide",
-        "slug":  "korean-kitchen-tools-and-why-people-use-them",
-        "title":  "Korean Kitchen Tools and Why People Use Them",
-        "excerpt":  "Food culture, portion sizes, storage, and convenience explain more than a shopping list ever could.",
-        "body":  [
-                     {
-                         "type":  "paragraph",
-                         "text":  "Kitchen tools should be explained through the dishes, storage needs, and household routines they support."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Exact product or practical alternative?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "When the exact Korean listing is unavailable in the US, the closest alternative must be clearly labeled rather than presented as the same item."
-                     }
-                 ],
-        "categoryKey":  "food",
-        "tags":  [
-                     "food",
-                     "kitchen",
-                     "cooking",
-                     "culture"
-                 ],
-        "heroImage":  "assets/images/korean-kitchen.svg",
-        "heroImageAlt":  "Editorial illustration representing Korean kitchen tools and food culture",
-        "relatedProductIds":  [
-                                  "egg-steamer",
-                                  "kimchi-container"
-                              ],
-        "sources":  [
-
-                    ],
-        "publishedAt":  "2026-07-21",
-        "updatedAt":  "2026-07-28",
-        "featured":  false,
-        "draft":  true,
-        "sourceRequirement":  "optional",
-        "sectionKey":  "korean-kitchen",
-        "contentType":  "mixed",
-        "koreaContextConfidence":  "context-dependent",
-        "monetizationProfile":  "light"
-    },
-    {
-        "id":  "everywhere-guide",
-        "slug":  "products-you-see-everywhere-in-korea",
-        "title":  "Products You See Everywhere in Korea",
-        "excerpt":  "A framework for separating everyday standards, seasonal essentials, and short-lived trends.",
-        "body":  [
-                     {
-                         "type":  "paragraph",
-                         "text":  "Seeing a product often does not always mean it is a national trend. Season, location, age group, and retail context all matter."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Look for repeated daily-life context"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Products used across homes, commutes, workplaces, schools, and retail environments are more likely to reflect broad practical use."
-                     }
-                 ],
-        "categoryKey":  "trending",
-        "tags":  [
-                     "trending",
-                     "daily life",
-                     "verification"
-                 ],
-        "heroImage":  "assets/images/trending-now.svg",
-        "heroImageAlt":  "Editorial illustration representing products currently visible in Korea",
-        "relatedProductIds":  [
-                                  "portable-hand-fan",
-                                  "digital-camera"
-                              ],
-        "sources":  [
-
-                    ],
-        "publishedAt":  "2026-07-14",
-        "updatedAt":  "2026-07-28",
-        "featured":  false,
-        "draft":  true,
-        "sourceRequirement":  "optional",
-        "sectionKey":  "trends-finds",
-        "contentType":  "korea-discovery",
-        "koreaContextConfidence":  "context-dependent",
-        "monetizationProfile":  "default"
-    },
-    {
-        "id":  "korean-microwave-steamed-egg-cooker",
-        "slug":  "korean-microwave-steamed-egg-cooker",
-        "seoTitle":  "What Is a Korean Microwave Steamed Egg Cooker?",
-        "metaDescription":  "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
-        "primaryKeyword":  "Korean microwave steamed egg cooker",
-        "title":  "What Is a Korean Microwave Steamed Egg Cooker?",
-        "excerpt":  "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
-        "body":  [
-                     {
-                         "type":  "paragraph",
-                         "text":  "You may have seen a small ceramic pot with a lid in a Korean kitchen without knowing what it was called."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This type of container is best described in English as a Korean microwave steamed egg cooker or microwave gyeran-jjim cooker. It is used to make gyeran-jjim, a soft Korean steamed egg dish, in a microwave."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The cooker shown in this article is a ceramic container that was sold through Daiso Korea. It has a lid, two side handles, and a small steam hole. It looks a little like a traditional Korean pot, but it is designed for microwave use rather than direct heat."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Quick Answer"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A Korean microwave steamed egg cooker is a small microwave-safe container used to prepare gyeran-jjim more conveniently."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It is not the same as a traditional black ttukbaegi, which may be used over direct heat depending on the product. The bottom of this specific cooker states that it is microwave- and dishwasher-safe and should not be used over direct flame."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The exact manufacturer and model number have not yet been confirmed, so this product is classified as a Likely Match rather than a Confirmed Match."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "What Is It Called?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The Korean product name is 전자레인지용 계란찜기."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A natural English translation is microwave steamed egg cooker."
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "Korean microwave egg cooker",
-                                       "Microwave gyeran-jjim cooker",
-                                       "Ceramic microwave egg steamer",
-                                       "Korean steamed egg bowl with lid",
-                                       "Ceramic microwave bowl for steamed eggs"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The Korean word gyeran-jjim means steamed eggs. The word jjim-gi can refer to a cooker or container used to prepare a steamed dish."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "There is no single standard English name for this type of product, so American shoppers may search by its appearance or purpose instead of its Korean name."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "What Does It Look Like?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This cooker has several practical features:"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "A ceramic body",
-                                       "A matching lid",
-                                       "Two side handles",
-                                       "A small steam hole in the lid",
-                                       "A ribbed exterior",
-                                       "A compact size for microwave cooking"
-                                   ]
-                     },
-                     {
-                         "type":  "image",
-                         "src":  "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-open.jpg",
-                         "alt":  "Inside of a white ceramic microwave gyeran-jjim cooker with the lid removed",
-                         "caption":  "The cooker has a ceramic interior, a matching lid, and two side handles.",
-                         "width":  1536,
-                         "height":  1152
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Its shape makes it look like a miniature casserole dish or a small Korean earthenware pot."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "However, appearance alone does not tell you whether a ceramic container is safe for a microwave, dishwasher, oven, or direct heat. The markings on the bottom should always be checked."
-                     },
-                     {
-                         "type":  "image",
-                         "src":  "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-top.jpg",
-                         "alt":  "Top view of a white Korean microwave steamed egg cooker with a lid and small steam hole",
-                         "caption":  "The top view shows the lid, central knob, and small steam opening.",
-                         "width":  1536,
-                         "height":  1503
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "How It Is Used"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The main purpose of this cooker is to prepare gyeran-jjim in a microwave."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Eggs are mixed with seasonings and optional ingredients, poured into the container, covered, and cooked in the microwave. The exact amount of egg, added liquid, cooking time, and microwave setting will depend on the recipe and the appliance."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "I have used my own cooker about five times so far."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "My usual version includes a small amount of:"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "Minced garlic",
-                                       "Milk",
-                                       "Salt",
-                                       "Black pepper"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "I have been happy with the results so far."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This is my personal method, not a standard recipe followed by every Korean household."
-                     },
-                     {
-                         "type":  "image",
-                         "src":  "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
-                         "alt":  "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
-                         "caption":  "A finished serving of gyeran-jjim in the microwave egg cooker.",
-                         "width":  1536,
-                         "height":  1152
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Why Koreans Eat Gyeran-Jjim"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Gyeran-jjim is a familiar Korean egg dish with a soft texture. It may be served as a side dish, as part of a home meal, or as a simple dish on its own."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Traditional versions may be cooked in a ttukbaegi or another pot over heat. In modern homes, people may also use a microwave-safe bowl or a dedicated microwave cooker when they want a faster and simpler option."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This product represents a practical side of everyday life in Korea: a familiar dish prepared with a small, convenient kitchen tool."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It is not an ancient or ceremonial object. It is a modern household item connected to a traditional-style Korean dish."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Is It a Ttukbaegi?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Not exactly."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A ttukbaegi is a Korean earthenware pot often used for soups, stews, and steamed eggs. Many ttukbaegi products are designed to hold heat well, and some can be used over direct heat."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This microwave egg cooker may resemble a small ttukbaegi, but the bottom marking specifically says:"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "Microwave \u0026 Dishwasher Safe",
-                                       "Do Not Use Over Direct Flame",
-                                       "Ceramic Tableware",
-                                       "Made in China"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "For that reason, it should not be placed on a gas burner or used over an open flame."
-                     },
-                     {
-                         "type":  "quote",
-                         "text":  "A ceramic microwave cooker used to make Korean steamed eggs."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Is It Made in Korea?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "No."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The bottom marking on this specific cooker says Made in China."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It was sold and used in Korea, but it was not manufactured in Korea."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "That distinction is important. This site does not only cover products manufactured in Korea. It also explains products that are actually sold, used, or recognized in Korean daily life."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Is It Microwave-Safe?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The marking on this specific product says that it is microwave-safe."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It also says that it is dishwasher-safe."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "However, these statements apply to this exact cooker. Similar-looking products may have different materials or safety instructions."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Always check the bottom label or manufacturer information before using another ceramic container in a microwave or dishwasher."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Can It Be Used Over Direct Heat?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "No."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The bottom marking clearly states: Do Not Use Over Direct Flame."
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "A gas burner",
-                                       "An open flame",
-                                       "A stovetop heating element"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Oven use has not been confirmed and should not be assumed."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Do You Need a Special Cooker for Gyeran-Jjim?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "No."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "You do not need a dedicated cooker to make gyeran-jjim. A suitable microwave-safe bowl may also work."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A dedicated cooker may simply make the process more convenient because it has:"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "A lid",
-                                       "Handles",
-                                       "A compact size",
-                                       "A shape designed for individual portions",
-                                       "A steam hole"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The result will still depend on the recipe, cooking time, microwave wattage, and container size."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A special cooker cannot guarantee the same texture in every microwave."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Product Match Status"
-                     },
-                     {
-                         "type":  "definition-list",
-                         "items":  [
-                                       {
-                                           "term":  "Match Type",
-                                           "description":  "Likely Match"
-                                       },
-                                       {
-                                           "term":  "Classification",
-                                           "description":  "Korean microwave gyeran-jjim cooker"
-                                       },
-                                       {
-                                           "term":  "Confidence",
-                                           "description":  "Moderate"
-                                       }
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Evidence"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "The product is physically owned and directly used",
-                                       "Its appearance and function match the photographed Daiso Korea item",
-                                       "The bottom marking confirms microwave and dishwasher use",
-                                       "The bottom marking confirms that it should not be used over direct flame",
-                                       "The product is marked as ceramic tableware",
-                                       "The product is marked Made in China"
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "What Remains Unconfirmed"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "Exact manufacturer",
-                                       "Exact product number",
-                                       "Exact model name",
-                                       "Current Daiso Korea availability",
-                                       "Current store price",
-                                       "Exact production batch",
-                                       "Exact matching product in the United States"
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "What to Look for in a Similar Product"
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Microwave Safety"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The listing or product label should clearly say that the container is microwave-safe."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Do not assume that every ceramic bowl can be used in a microwave."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Lid Design"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Check whether the lid has a steam hole or instructions explaining how steam should escape."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A tightly sealed lid may not be appropriate for microwave cooking."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Material"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Confirm whether the product is made from ceramic, stoneware, glass, or another microwave-safe material."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Capacity"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The container should have enough space for the egg mixture to expand during cooking."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Handles"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Handles may make the container easier to move, but they can still become hot."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Dishwasher Safety"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Microwave-safe and dishwasher-safe are separate features. Check both."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Direct Heat Warning"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Do not use a microwave cooker on a stovetop unless the manufacturer specifically allows it."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Where This Fits in Korean Daily Life"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This is a small kitchen tool, but it reflects the practical side of Korean home cooking."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It takes a familiar Korean dish and adapts it to a microwave-friendly format. Products like this are the kind of everyday items you may notice in Korean homes or variety stores without knowing their English name."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It is not uniquely Korean in its manufacturing or basic function. What makes it relevant is how it connects to gyeran-jjim and modern Korean household life."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Final Takeaway"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The small ceramic pot used to make Korean steamed eggs in a microwave is best described as a Korean microwave steamed egg cooker or microwave gyeran-jjim cooker."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "It is not the same as a traditional direct-heat ttukbaegi."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The specific cooker shown here is marked as:"
-                     },
-                     {
-                         "type":  "list",
-                         "items":  [
-                                       "Microwave-safe",
-                                       "Dishwasher-safe",
-                                       "Not safe for direct flame",
-                                       "Ceramic tableware",
-                                       "Made in China"
-                                   ]
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The exact manufacturer and model have not yet been confirmed, so the product remains classified as a Likely Match."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This article will be updated if a verified identical product or a suitable U.S. alternative is confirmed."
-                     }
-                 ],
-        "categoryKey":  "food",
-        "categoryLabel":  "Korean Kitchen",
-        "tags":  [
-                     "Korean kitchen tools",
-                     "gyeran-jjim",
-                     "microwave cookware",
-                     "Daiso Korea",
-                     "Korean home cooking"
-                 ],
-        "heroImage":  "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
-        "heroImageAlt":  "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
-        "heroImageCaption":  "A white ceramic microwave steamed egg cooker with a lid, side handles, and ribbed sides.",
-        "relatedProductIds":  [
-                                  "egg-steamer"
-                              ],
-        "sources":  [
-                        {
-                            "label":  "Owner-supplied product photographs, including refreshed product-use images and a separate bottom-marking reference retained in the editorial record"
-                        },
-                        {
-                            "label":  "Owner’s direct-use record: the matching-looking Daiso cooker has been used about five times for small portions of gyeran-jjim"
-                        }
-                    ],
-        "sourceRequirement":  "required",
-        "publishedAt":  "2026-07-30",
-        "updatedAt":  "2026-08-17",
-        "featured":  true,
-        "draft":  false,
-        "heroImageWidth":  1536,
-        "heroImageHeight":  1152,
-        "sectionKey":  "korean-kitchen",
-        "contentType":  "product-guide",
-        "koreaContextConfidence":  "context-dependent",
-        "monetizationProfile":  "light"
-    },
-    {
-        "id":  "korean-restaurant-table-utensil-drawer",
-        "slug":  "korean-restaurant-table-utensil-drawer",
-        "seoTitle":  "What Is the Utensil Drawer Under a Korean Restaurant Table?",
-        "metaDescription":  "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
-        "primaryKeyword":  "Korean restaurant utensil drawer",
-        "secondaryKeywords":  [
-                                  "where are chopsticks in Korean restaurants",
-                                  "Korean restaurant table drawer",
-                                  "utensil drawer under restaurant table",
-                                  "Korean restaurant spoons and chopsticks"
-                              ],
-        "title":  "What Is the Utensil Drawer Under a Korean Restaurant Table?",
-        "excerpt":  "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
-        "body":  [
-                     {
-                         "type":  "paragraph",
-                         "text":  "If spoons and chopsticks are not visible when you sit down at a Korean restaurant, check the underside of the table before asking for them."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Where Are the Chopsticks?"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "You sit down at a restaurant in Korea, but there are no spoons or chopsticks on the tabletop. Before looking around for a server, check the table itself. Some customer tables have a built-in drawer underneath for utensils."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This setup is common enough in several types of everyday restaurants that checking for the utensils can feel like a natural first step. It is not universal, though, so the table may also have a utensil container on top or use another serving method."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "How the Drawer Works"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Open it, take the spoon and chopsticks you need, and return to your meal. In this arrangement, customers can take the utensils they need directly from the drawer."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "If you do not find the drawer, check for a utensil container on the tabletop or ask a staff member."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "What You May Find Inside"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A utensil drawer commonly contains spoons, chopsticks, and napkins. Some restaurants also place individually packaged disposable wet wipes inside. The contents are not identical everywhere, so the drawer may contain only some of these items."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "A Practical Benefit of the Setup"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "From the Korea-based operator\u0027s local observation, keeping utensils below the tabletop can leave more room on the table for food and side dishes. That can make the surface feel more open and orderly during a meal."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "This is a practical observation, not a confirmed official explanation for why the drawers became common."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Not Every Korean Restaurant Has One"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "A utensil drawer is a familiar setup in many everyday restaurant examples, but it is not a standard feature of every Korean restaurant. Some restaurants may use a separate utensil container instead. Some restaurants may provide wrapped utensils separately."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "For visitors, the simple rule is to look before assuming the utensils will be on the table. Check the drawer and the tabletop container, then ask if you still cannot find them."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Why First-Time Visitors May Miss It"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Some English-speaking visitors have shared experiences of looking for utensils or asking where to find them in Korean restaurants. These community experiences describe individual visitors, not all Americans or all English-speaking travelers."
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "Once you know to check the table, the drawer is a small but useful detail to recognize when dining out in Korea."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "FAQ"
-                     },
-                     {
-                         "type":  "definition-list",
-                         "items":  [
-                                       {
-                                           "term":  "What is usually inside a Korean restaurant utensil drawer?",
-                                           "description":  "It commonly contains spoons, chopsticks, and napkins. Some restaurants also include individually packaged disposable wet wipes, but the contents vary."
-                                       },
-                                       {
-                                           "term":  "Does every Korean restaurant have a utensil drawer?",
-                                           "description":  "No. Not every Korean restaurant uses a utensil drawer."
-                                       },
-                                       {
-                                           "term":  "What should I do if I cannot find the utensils?",
-                                           "description":  "Check for the table drawer or a tabletop utensil container. If you still cannot find them, ask a staff member."
-                                       }
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Final Takeaway"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "If the tabletop is empty when you sit down at a Korean restaurant, check the table drawer or a tabletop utensil container. The spoons and chopsticks may already be within reach."
-                     }
-                 ],
-        "categoryKey":  "food",
-        "categoryLabel":  "Food \u0026 Kitchen Culture",
-        "tags":  [
-                     "Korean restaurants",
-                     "Korean dining",
-                     "everyday life in Korea",
-                     "travel tips",
-                     "restaurant etiquette"
-                 ],
-        "heroImage":  "assets/images/korean-kitchen.svg",
-        "heroImageAlt":  "Editorial illustration representing Korean dining and kitchen culture",
-        "relatedProductIds":  [
-
-                              ],
-        "sources":  [
-                        {
-                            "label":  "Why Many Korean Restaurant Tables Have Hidden Utensil Drawers",
-                            "url":  "https://everydaykoreastories.com/why-many-korean-restaurant-tables-have-hidden-utensil-drawers/"
-                        },
-                        {
-                            "label":  "Korean BBQ Table Drawer: What Is Inside?",
-                            "url":  "https://behindkorea.com/korean-bbq-table-drawer/"
-                        },
-                        {
-                            "label":  "Korean Restaurant Table Drawers: Where to Find Utensils",
-                            "url":  "https://coreadesk.com/korean-restaurant-table-drawer/"
-                        },
-                        {
-                            "label":  "A First-Time Visitor’s Guide to Ordering Food at Korean Restaurants",
-                            "url":  "https://www.koreanlifeexplained.com/2026/06/first-time-guide-ordering-food-korean-restaurants.html?m=1"
-                        },
-                        {
-                            "label":  "Korean Restaurant Etiquette Guide: A Complete Guide from Ordering Bells to Self-Service Bars",
-                            "url":  "https://www.haniseoul.com/travels/korea/korean-restaurant-etiquette"
-                        },
-                        {
-                            "label":  "Understanding Korean Culture — Creatrip",
-                            "url":  "https://creatrip.com/en/blog/5404/Understanding-Korean-Culture"
-                        },
-                        {
-                            "label":  "Reddit community example: visitors looking for spoons or chopsticks in Korean restaurants",
-                            "url":  "https://www.reddit.com/r/koreatravel/comments/1rqp9fb/did_you_ever_spend_time_looking_for_spoons_or/"
-                        },
-                        {
-                            "label":  "Reddit community example: reactions to Korean restaurant table design",
-                            "url":  "https://www.reddit.com/r/PlayLocalKorea/comments/1vkbkuh/korean_restaurant_tables_are_built_for/"
-                        }
-                    ],
-        "sourceRequirement":  "required",
-        "publishedAt":  "2026-08-17",
-        "updatedAt":  "2026-08-17",
-        "featured":  false,
-        "draft":  false,
-        "sectionKey":  "everyday-korea",
-        "contentType":  "culture-everyday",
-        "koreaContextConfidence":  "common-not-universal",
-        "monetizationProfile":  "default",
-        "heroImageWidth":  1200,
-        "heroImageHeight":  760
-    },
-    {
-        "id":  "storage-chairs-korean-bbq-restaurants",
-        "slug":  "storage-chairs-korean-bbq-restaurants",
-        "seoTitle":  "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
-        "metaDescription":  "Some Korean BBQ restaurants use chairs with space inside or underneath for storing coats and bags. Here is how this practical seating setup works.",
-        "primaryKeyword":  "Korean BBQ storage chair",
-        "secondaryKeywords":  [
-                                  "Korean BBQ coat storage",
-                                  "Korean restaurant chair storage",
-                                  "Korean BBQ bag storage"
-                              ],
-        "title":  "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
-        "excerpt":  "At some Korean BBQ restaurants, the chair is more than a place to sit. It can also provide space for a coat or bag.",
-        "body":  [
-                     {
-                         "type":  "heading",
-                         "text":  "A Chair That Can Hold Your Coat or Bag"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "At some Korean BBQ restaurants in Korea, you may find chairs with storage space inside the chair or beneath the seat. That space can be used for coats and bags, giving diners somewhere to put their belongings while they eat."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Why the Korea-Based Editor Found It Useful at a Grilling Restaurant"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The Korea-based editor found this storage useful as a practical place to keep coats and bags tucked away while dining. In that local observation, the storage chair is an optional setup seen at some Korean BBQ restaurants rather than a feature found at every restaurant."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Not Every Restaurant Has One"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "The setup varies by restaurant. If you visit a Korean BBQ restaurant and do not see a storage chair, the absence of one does not mean you are missing a standard feature. In the editor’s local observation, this type of chair can be a useful option at some Korean BBQ restaurants rather than a standard feature across Korean dining."
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "FAQ"
-                     },
-                     {
-                         "type":  "definition-list",
-                         "items":  [
-                                       {
-                                           "term":  "Can you store a coat or bag in a chair at a Korean BBQ restaurant in Korea?",
-                                           "description":  "At some Korean BBQ restaurants, chairs have storage space inside or beneath the seat where coats and bags can be placed. Based on the editor’s local observation, this setup can be found in some Korean BBQ restaurants, but not in every restaurant."
-                                       },
-                                       {
-                                           "term":  "Does every Korean BBQ restaurant in Korea have storage chairs?",
-                                           "description":  "No. Based on the editor’s local observation, storage chairs are one setup used in some Korean BBQ restaurants rather than a universal feature."
-                                       }
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Not sure what to search for?"
-                     },
-                     {
-                         "type":  "definition-list",
-                         "items":  [
-                                       {
-                                           "term":  "Korean",
-                                           "description":  "수납 의자, 고깃집 의자"
-                                       },
-                                       {
-                                           "term":  "Romanized",
-                                           "description":  "sunap uija, gogitjip uija"
-                                       },
-                                       {
-                                           "term":  "You might type",
-                                           "description":  "soo-nap ee-ja, go-geet-jip ee-ja"
-                                       },
-                                       {
-                                           "term":  "Describe it",
-                                           "description":  "Korean BBQ chair with storage inside · Korean restaurant chair for coats and bags · chair storage under the seat at Korean BBQ"
-                                       }
-                                   ]
-                     },
-                     {
-                         "type":  "heading",
-                         "text":  "Final Takeaway"
-                     },
-                     {
-                         "type":  "paragraph",
-                         "text":  "If you see a chair with storage space at a Korean BBQ restaurant, it may be the place for your coat or bag. The seating also provides a practical storage option."
-                     }
-                 ],
-        "categoryKey":  "food",
-        "categoryLabel":  "Food \u0026 Kitchen Culture",
-        "tags":  [
-                     "Korean BBQ",
-                     "Korean restaurants",
-                     "everyday life in Korea",
-                     "restaurant design",
-                     "travel in Korea"
-                 ],
-        "heroImage":  "assets/images/korean-kitchen.svg",
-        "heroImageAlt":  "Editorial illustration representing Korean dining and kitchen culture",
-        "relatedProductIds":  [
-
-                              ],
-        "sources":  [
-
-                    ],
-        "sourceRequirement":  "required",
-        "publishedAt":  "2026-08-19",
-        "updatedAt":  "2026-08-19",
-        "featured":  false,
-        "draft":  false,
-        "sectionKey":  "everyday-korea",
-        "contentType":  "culture-everyday",
-        "koreaContextConfidence":  "context-dependent",
-        "monetizationProfile":  "default",
-        "searchHelp":  {
-                           "heading":  "Not sure what to search for?",
-                           "koreanTerms":  [
-                                               "수납 의자",
-                                               "고깃집 의자"
-                                           ],
-                           "romanizedTerms":  [
-                                                  "sunap uija",
-                                                  "gogitjip uija"
-                                              ],
-                           "soundAlikeTerms":  [
-                                                   "soo-nap ee-ja",
-                                                   "go-geet-jip ee-ja"
-                                               ],
-                           "descriptionSearches":  [
-                                                       "Korean BBQ chair with storage inside",
-                                                       "Korean restaurant chair for coats and bags",
-                                                       "chair storage under the seat at Korean BBQ"
-                                                   ]
-                       }
+  {
+    "id": "home-products-guide",
+    "slug": "things-koreans-actually-use-at-home",
+    "title": "Things Koreans Actually Use at Home",
+    "excerpt": "How compact apartments, food storage, climate, and everyday routines shape household product choices in Korea.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Korean household products make more sense when you understand the routines around them. Storage, ventilation, floor care, food preparation, and limited refrigerator space all influence what people keep at home."
+      },
+      {
+        "type": "heading",
+        "text": "Start with the routine, not the product"
+      },
+      {
+        "type": "paragraph",
+        "text": "A product can be common in Korea without being uniquely Korean. The useful question is where it appears, who uses it, and which part of daily life it supports."
+      }
+    ],
+    "categoryKey": "home-kitchen",
+    "tags": [
+      "home",
+      "apartment",
+      "storage",
+      "daily life"
+    ],
+    "heroImage": "assets/images/everyday-korea.svg",
+    "heroImageAlt": "Editorial illustration representing everyday products in a Korean home",
+    "relatedProductIds": [
+      "kimchi-container",
+      "study-timer"
+    ],
+    "sources": [],
+    "publishedAt": "2026-07-28",
+    "updatedAt": "2026-07-28",
+    "featured": false,
+    "draft": true,
+    "sourceRequirement": "optional",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
+  },
+  {
+    "id": "kitchen-tools-guide",
+    "slug": "korean-kitchen-tools-and-why-people-use-them",
+    "title": "Korean Kitchen Tools and Why People Use Them",
+    "excerpt": "Food culture, portion sizes, storage, and convenience explain more than a shopping list ever could.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Kitchen tools should be explained through the dishes, storage needs, and household routines they support."
+      },
+      {
+        "type": "heading",
+        "text": "Exact product or practical alternative?"
+      },
+      {
+        "type": "paragraph",
+        "text": "When the exact Korean listing is unavailable in the US, the closest alternative must be clearly labeled rather than presented as the same item."
+      }
+    ],
+    "categoryKey": "food",
+    "tags": [
+      "food",
+      "kitchen",
+      "cooking",
+      "culture"
+    ],
+    "heroImage": "assets/images/korean-kitchen.svg",
+    "heroImageAlt": "Editorial illustration representing Korean kitchen tools and food culture",
+    "relatedProductIds": [
+      "egg-steamer",
+      "kimchi-container"
+    ],
+    "sources": [],
+    "publishedAt": "2026-07-21",
+    "updatedAt": "2026-07-28",
+    "featured": false,
+    "draft": true,
+    "sourceRequirement": "optional",
+    "sectionKey": "korean-kitchen",
+    "contentType": "mixed",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "light"
+  },
+  {
+    "id": "everywhere-guide",
+    "slug": "products-you-see-everywhere-in-korea",
+    "title": "Products You See Everywhere in Korea",
+    "excerpt": "A framework for separating everyday standards, seasonal essentials, and short-lived trends.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Seeing a product often does not always mean it is a national trend. Season, location, age group, and retail context all matter."
+      },
+      {
+        "type": "heading",
+        "text": "Look for repeated daily-life context"
+      },
+      {
+        "type": "paragraph",
+        "text": "Products used across homes, commutes, workplaces, schools, and retail environments are more likely to reflect broad practical use."
+      }
+    ],
+    "categoryKey": "trending",
+    "tags": [
+      "trending",
+      "daily life",
+      "verification"
+    ],
+    "heroImage": "assets/images/trending-now.svg",
+    "heroImageAlt": "Editorial illustration representing products currently visible in Korea",
+    "relatedProductIds": [
+      "portable-hand-fan",
+      "digital-camera"
+    ],
+    "sources": [],
+    "publishedAt": "2026-07-14",
+    "updatedAt": "2026-07-28",
+    "featured": false,
+    "draft": true,
+    "sourceRequirement": "optional",
+    "sectionKey": "trends-finds",
+    "contentType": "korea-discovery",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
+  },
+  {
+    "id": "korean-microwave-steamed-egg-cooker",
+    "slug": "korean-microwave-steamed-egg-cooker",
+    "seoTitle": "What Is a Korean Microwave Steamed Egg Cooker?",
+    "metaDescription": "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
+    "primaryKeyword": "Korean microwave steamed egg cooker",
+    "title": "What Is a Korean Microwave Steamed Egg Cooker?",
+    "excerpt": "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "You may have seen a small ceramic pot with a lid in a Korean kitchen without knowing what it was called."
+      },
+      {
+        "type": "paragraph",
+        "text": "This type of container is best described in English as a Korean microwave steamed egg cooker or microwave gyeran-jjim cooker. It is used to make gyeran-jjim, a soft Korean steamed egg dish, in a microwave."
+      },
+      {
+        "type": "paragraph",
+        "text": "The cooker shown in this article is a ceramic container that was sold through Daiso Korea. It has a lid, two side handles, and a small steam hole. It looks a little like a traditional Korean pot, but it is designed for microwave use rather than direct heat."
+      },
+      {
+        "type": "heading",
+        "text": "Quick Answer"
+      },
+      {
+        "type": "paragraph",
+        "text": "A Korean microwave steamed egg cooker is a small microwave-safe container used to prepare gyeran-jjim more conveniently."
+      },
+      {
+        "type": "paragraph",
+        "text": "It is not the same as a traditional black ttukbaegi, which may be used over direct heat depending on the product. The bottom of this specific cooker states that it is microwave- and dishwasher-safe and should not be used over direct flame."
+      },
+      {
+        "type": "paragraph",
+        "text": "The exact manufacturer and model number have not yet been confirmed, so this product is classified as a Likely Match rather than a Confirmed Match."
+      },
+      {
+        "type": "heading",
+        "text": "What Is It Called?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korean product name is 전자레인지용 계란찜기."
+      },
+      {
+        "type": "paragraph",
+        "text": "A natural English translation is microwave steamed egg cooker."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Korean microwave egg cooker",
+          "Microwave gyeran-jjim cooker",
+          "Ceramic microwave egg steamer",
+          "Korean steamed egg bowl with lid",
+          "Ceramic microwave bowl for steamed eggs"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korean word gyeran-jjim means steamed eggs. The word jjim-gi can refer to a cooker or container used to prepare a steamed dish."
+      },
+      {
+        "type": "paragraph",
+        "text": "There is no single standard English name for this type of product, so American shoppers may search by its appearance or purpose instead of its Korean name."
+      },
+      {
+        "type": "heading",
+        "text": "What Does It Look Like?"
+      },
+      {
+        "type": "paragraph",
+        "text": "This cooker has several practical features:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "A ceramic body",
+          "A matching lid",
+          "Two side handles",
+          "A small steam hole in the lid",
+          "A ribbed exterior",
+          "A compact size for microwave cooking"
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-open.jpg",
+        "alt": "Inside of a white ceramic microwave gyeran-jjim cooker with the lid removed",
+        "caption": "The cooker has a ceramic interior, a matching lid, and two side handles.",
+        "width": 1536,
+        "height": 1152
+      },
+      {
+        "type": "paragraph",
+        "text": "Its shape makes it look like a miniature casserole dish or a small Korean earthenware pot."
+      },
+      {
+        "type": "paragraph",
+        "text": "However, appearance alone does not tell you whether a ceramic container is safe for a microwave, dishwasher, oven, or direct heat. The markings on the bottom should always be checked."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-top.jpg",
+        "alt": "Top view of a white Korean microwave steamed egg cooker with a lid and small steam hole",
+        "caption": "The top view shows the lid, central knob, and small steam opening.",
+        "width": 1536,
+        "height": 1503
+      },
+      {
+        "type": "heading",
+        "text": "How It Is Used"
+      },
+      {
+        "type": "paragraph",
+        "text": "The main purpose of this cooker is to prepare gyeran-jjim in a microwave."
+      },
+      {
+        "type": "paragraph",
+        "text": "Eggs are mixed with seasonings and optional ingredients, poured into the container, covered, and cooked in the microwave. The exact amount of egg, added liquid, cooking time, and microwave setting will depend on the recipe and the appliance."
+      },
+      {
+        "type": "paragraph",
+        "text": "I have used my own cooker about five times so far."
+      },
+      {
+        "type": "paragraph",
+        "text": "My usual version includes a small amount of:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Minced garlic",
+          "Milk",
+          "Salt",
+          "Black pepper"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "I have been happy with the results so far."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is my personal method, not a standard recipe followed by every Korean household."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
+        "alt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
+        "caption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
+        "width": 1536,
+        "height": 1152
+      },
+      {
+        "type": "heading",
+        "text": "Why Koreans Eat Gyeran-Jjim"
+      },
+      {
+        "type": "paragraph",
+        "text": "Gyeran-jjim is a familiar Korean egg dish with a soft texture. It may be served as a side dish, as part of a home meal, or as a simple dish on its own."
+      },
+      {
+        "type": "paragraph",
+        "text": "Traditional versions may be cooked in a ttukbaegi or another pot over heat. In modern homes, people may also use a microwave-safe bowl or a dedicated microwave cooker when they want a faster and simpler option."
+      },
+      {
+        "type": "paragraph",
+        "text": "This product represents a practical side of everyday life in Korea: a familiar dish prepared with a small, convenient kitchen tool."
+      },
+      {
+        "type": "paragraph",
+        "text": "It is not an ancient or ceremonial object. It is a modern household item connected to a traditional-style Korean dish."
+      },
+      {
+        "type": "heading",
+        "text": "Is It a Ttukbaegi?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Not exactly."
+      },
+      {
+        "type": "paragraph",
+        "text": "A ttukbaegi is a Korean earthenware pot often used for soups, stews, and steamed eggs. Many ttukbaegi products are designed to hold heat well, and some can be used over direct heat."
+      },
+      {
+        "type": "paragraph",
+        "text": "This microwave egg cooker may resemble a small ttukbaegi, but the bottom marking specifically says:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Microwave & Dishwasher Safe",
+          "Do Not Use Over Direct Flame",
+          "Ceramic Tableware",
+          "Made in China"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "For that reason, it should not be placed on a gas burner or used over an open flame."
+      },
+      {
+        "type": "quote",
+        "text": "A ceramic microwave cooker used to make Korean steamed eggs."
+      },
+      {
+        "type": "heading",
+        "text": "Is It Made in Korea?"
+      },
+      {
+        "type": "paragraph",
+        "text": "No."
+      },
+      {
+        "type": "paragraph",
+        "text": "The bottom marking on this specific cooker says Made in China."
+      },
+      {
+        "type": "paragraph",
+        "text": "It was sold and used in Korea, but it was not manufactured in Korea."
+      },
+      {
+        "type": "paragraph",
+        "text": "That distinction is important. This site does not only cover products manufactured in Korea. It also explains products that are actually sold, used, or recognized in Korean daily life."
+      },
+      {
+        "type": "heading",
+        "text": "Is It Microwave-Safe?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The marking on this specific product says that it is microwave-safe."
+      },
+      {
+        "type": "paragraph",
+        "text": "It also says that it is dishwasher-safe."
+      },
+      {
+        "type": "paragraph",
+        "text": "However, these statements apply to this exact cooker. Similar-looking products may have different materials or safety instructions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Always check the bottom label or manufacturer information before using another ceramic container in a microwave or dishwasher."
+      },
+      {
+        "type": "heading",
+        "text": "Can It Be Used Over Direct Heat?"
+      },
+      {
+        "type": "paragraph",
+        "text": "No."
+      },
+      {
+        "type": "paragraph",
+        "text": "The bottom marking clearly states: Do Not Use Over Direct Flame."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A gas burner",
+          "An open flame",
+          "A stovetop heating element"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Oven use has not been confirmed and should not be assumed."
+      },
+      {
+        "type": "heading",
+        "text": "Do You Need a Special Cooker for Gyeran-Jjim?"
+      },
+      {
+        "type": "paragraph",
+        "text": "No."
+      },
+      {
+        "type": "paragraph",
+        "text": "You do not need a dedicated cooker to make gyeran-jjim. A suitable microwave-safe bowl may also work."
+      },
+      {
+        "type": "paragraph",
+        "text": "A dedicated cooker may simply make the process more convenient because it has:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "A lid",
+          "Handles",
+          "A compact size",
+          "A shape designed for individual portions",
+          "A steam hole"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The result will still depend on the recipe, cooking time, microwave wattage, and container size."
+      },
+      {
+        "type": "paragraph",
+        "text": "A special cooker cannot guarantee the same texture in every microwave."
+      },
+      {
+        "type": "heading",
+        "text": "Product Match Status"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Match Type",
+            "description": "Likely Match"
+          },
+          {
+            "term": "Classification",
+            "description": "Korean microwave gyeran-jjim cooker"
+          },
+          {
+            "term": "Confidence",
+            "description": "Moderate"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Evidence"
+      },
+      {
+        "type": "list",
+        "items": [
+          "The product is physically owned and directly used",
+          "Its appearance and function match the photographed Daiso Korea item",
+          "The bottom marking confirms microwave and dishwasher use",
+          "The bottom marking confirms that it should not be used over direct flame",
+          "The product is marked as ceramic tableware",
+          "The product is marked Made in China"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What Remains Unconfirmed"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Exact manufacturer",
+          "Exact product number",
+          "Exact model name",
+          "Current Daiso Korea availability",
+          "Current store price",
+          "Exact production batch",
+          "Exact matching product in the United States"
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "What to Look for in a Similar Product"
+      },
+      {
+        "type": "heading",
+        "text": "Microwave Safety"
+      },
+      {
+        "type": "paragraph",
+        "text": "The listing or product label should clearly say that the container is microwave-safe."
+      },
+      {
+        "type": "paragraph",
+        "text": "Do not assume that every ceramic bowl can be used in a microwave."
+      },
+      {
+        "type": "heading",
+        "text": "Lid Design"
+      },
+      {
+        "type": "paragraph",
+        "text": "Check whether the lid has a steam hole or instructions explaining how steam should escape."
+      },
+      {
+        "type": "paragraph",
+        "text": "A tightly sealed lid may not be appropriate for microwave cooking."
+      },
+      {
+        "type": "heading",
+        "text": "Material"
+      },
+      {
+        "type": "paragraph",
+        "text": "Confirm whether the product is made from ceramic, stoneware, glass, or another microwave-safe material."
+      },
+      {
+        "type": "heading",
+        "text": "Capacity"
+      },
+      {
+        "type": "paragraph",
+        "text": "The container should have enough space for the egg mixture to expand during cooking."
+      },
+      {
+        "type": "heading",
+        "text": "Handles"
+      },
+      {
+        "type": "paragraph",
+        "text": "Handles may make the container easier to move, but they can still become hot."
+      },
+      {
+        "type": "heading",
+        "text": "Dishwasher Safety"
+      },
+      {
+        "type": "paragraph",
+        "text": "Microwave-safe and dishwasher-safe are separate features. Check both."
+      },
+      {
+        "type": "heading",
+        "text": "Direct Heat Warning"
+      },
+      {
+        "type": "paragraph",
+        "text": "Do not use a microwave cooker on a stovetop unless the manufacturer specifically allows it."
+      },
+      {
+        "type": "heading",
+        "text": "Where This Fits in Korean Daily Life"
+      },
+      {
+        "type": "paragraph",
+        "text": "This is a small kitchen tool, but it reflects the practical side of Korean home cooking."
+      },
+      {
+        "type": "paragraph",
+        "text": "It takes a familiar Korean dish and adapts it to a microwave-friendly format. Products like this are the kind of everyday items you may notice in Korean homes or variety stores without knowing their English name."
+      },
+      {
+        "type": "paragraph",
+        "text": "It is not uniquely Korean in its manufacturing or basic function. What makes it relevant is how it connects to gyeran-jjim and modern Korean household life."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "The small ceramic pot used to make Korean steamed eggs in a microwave is best described as a Korean microwave steamed egg cooker or microwave gyeran-jjim cooker."
+      },
+      {
+        "type": "paragraph",
+        "text": "It is not the same as a traditional direct-heat ttukbaegi."
+      },
+      {
+        "type": "paragraph",
+        "text": "The specific cooker shown here is marked as:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Microwave-safe",
+          "Dishwasher-safe",
+          "Not safe for direct flame",
+          "Ceramic tableware",
+          "Made in China"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The exact manufacturer and model have not yet been confirmed, so the product remains classified as a Likely Match."
+      },
+      {
+        "type": "paragraph",
+        "text": "This article will be updated if a verified identical product or a suitable U.S. alternative is confirmed."
+      }
+    ],
+    "categoryKey": "food",
+    "categoryLabel": "Korean Kitchen",
+    "tags": [
+      "Korean kitchen tools",
+      "gyeran-jjim",
+      "microwave cookware",
+      "Daiso Korea",
+      "Korean home cooking"
+    ],
+    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
+    "heroImageAlt": "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
+    "heroImageCaption": "A white ceramic microwave steamed egg cooker with a lid, side handles, and ribbed sides.",
+    "relatedProductIds": [
+      "egg-steamer"
+    ],
+    "sources": [
+      {
+        "label": "Owner-supplied product photographs, including refreshed product-use images and a separate bottom-marking reference retained in the editorial record"
+      },
+      {
+        "label": "Owner’s direct-use record: the matching-looking Daiso cooker has been used about five times for small portions of gyeran-jjim"
+      }
+    ],
+    "sourceRequirement": "required",
+    "publishedAt": "2026-07-30",
+    "updatedAt": "2026-08-17",
+    "featured": true,
+    "draft": false,
+    "heroImageWidth": 1536,
+    "heroImageHeight": 1152,
+    "sectionKey": "korean-kitchen",
+    "contentType": "product-guide",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "light"
+  },
+  {
+    "id": "korean-restaurant-table-utensil-drawer",
+    "slug": "korean-restaurant-table-utensil-drawer",
+    "seoTitle": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
+    "metaDescription": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "primaryKeyword": "Korean restaurant utensil drawer",
+    "secondaryKeywords": [
+      "where are chopsticks in Korean restaurants",
+      "Korean restaurant table drawer",
+      "utensil drawer under restaurant table",
+      "Korean restaurant spoons and chopsticks"
+    ],
+    "title": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
+    "excerpt": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "If spoons and chopsticks are not visible when you sit down at a Korean restaurant, check the underside of the table before asking for them."
+      },
+      {
+        "type": "heading",
+        "text": "Where Are the Chopsticks?"
+      },
+      {
+        "type": "paragraph",
+        "text": "You sit down at a restaurant in Korea, but there are no spoons or chopsticks on the tabletop. Before looking around for a server, check the table itself. Some customer tables have a built-in drawer underneath for utensils."
+      },
+      {
+        "type": "paragraph",
+        "text": "This setup is common enough in several types of everyday restaurants that checking for the utensils can feel like a natural first step. It is not universal, though, so the table may also have a utensil container on top or use another serving method."
+      },
+      {
+        "type": "heading",
+        "text": "How the Drawer Works"
+      },
+      {
+        "type": "paragraph",
+        "text": "Open it, take the spoon and chopsticks you need, and return to your meal. In this arrangement, customers can take the utensils they need directly from the drawer."
+      },
+      {
+        "type": "paragraph",
+        "text": "If you do not find the drawer, check for a utensil container on the tabletop or ask a staff member."
+      },
+      {
+        "type": "heading",
+        "text": "What You May Find Inside"
+      },
+      {
+        "type": "paragraph",
+        "text": "A utensil drawer commonly contains spoons, chopsticks, and napkins. Some restaurants also place individually packaged disposable wet wipes inside. The contents are not identical everywhere, so the drawer may contain only some of these items."
+      },
+      {
+        "type": "heading",
+        "text": "A Practical Benefit of the Setup"
+      },
+      {
+        "type": "paragraph",
+        "text": "From the Korea-based operator's local observation, keeping utensils below the tabletop can leave more room on the table for food and side dishes. That can make the surface feel more open and orderly during a meal."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is a practical observation, not a confirmed official explanation for why the drawers became common."
+      },
+      {
+        "type": "heading",
+        "text": "Not Every Korean Restaurant Has One"
+      },
+      {
+        "type": "paragraph",
+        "text": "A utensil drawer is a familiar setup in many everyday restaurant examples, but it is not a standard feature of every Korean restaurant. Some restaurants may use a separate utensil container instead. Some restaurants may provide wrapped utensils separately."
+      },
+      {
+        "type": "paragraph",
+        "text": "For visitors, the simple rule is to look before assuming the utensils will be on the table. Check the drawer and the tabletop container, then ask if you still cannot find them."
+      },
+      {
+        "type": "heading",
+        "text": "Why First-Time Visitors May Miss It"
+      },
+      {
+        "type": "paragraph",
+        "text": "Some English-speaking visitors have shared experiences of looking for utensils or asking where to find them in Korean restaurants. These community experiences describe individual visitors, not all Americans or all English-speaking travelers."
+      },
+      {
+        "type": "paragraph",
+        "text": "Once you know to check the table, the drawer is a small but useful detail to recognize when dining out in Korea."
+      },
+      {
+        "type": "heading",
+        "text": "FAQ"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "What is usually inside a Korean restaurant utensil drawer?",
+            "description": "It commonly contains spoons, chopsticks, and napkins. Some restaurants also include individually packaged disposable wet wipes, but the contents vary."
+          },
+          {
+            "term": "Does every Korean restaurant have a utensil drawer?",
+            "description": "No. Not every Korean restaurant uses a utensil drawer."
+          },
+          {
+            "term": "What should I do if I cannot find the utensils?",
+            "description": "Check for the table drawer or a tabletop utensil container. If you still cannot find them, ask a staff member."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "If the tabletop is empty when you sit down at a Korean restaurant, check the table drawer or a tabletop utensil container. The spoons and chopsticks may already be within reach."
+      }
+    ],
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "everyday life in Korea",
+      "travel tips",
+      "restaurant etiquette"
+    ],
+    "heroImage": "assets/images/korean-kitchen.svg",
+    "heroImageAlt": "Editorial illustration representing Korean dining and kitchen culture",
+    "relatedProductIds": [],
+    "sources": [
+      {
+        "label": "Why Many Korean Restaurant Tables Have Hidden Utensil Drawers",
+        "url": "https://everydaykoreastories.com/why-many-korean-restaurant-tables-have-hidden-utensil-drawers/"
+      },
+      {
+        "label": "Korean BBQ Table Drawer: What Is Inside?",
+        "url": "https://behindkorea.com/korean-bbq-table-drawer/"
+      },
+      {
+        "label": "Korean Restaurant Table Drawers: Where to Find Utensils",
+        "url": "https://coreadesk.com/korean-restaurant-table-drawer/"
+      },
+      {
+        "label": "A First-Time Visitor’s Guide to Ordering Food at Korean Restaurants",
+        "url": "https://www.koreanlifeexplained.com/2026/06/first-time-guide-ordering-food-korean-restaurants.html?m=1"
+      },
+      {
+        "label": "Korean Restaurant Etiquette Guide: A Complete Guide from Ordering Bells to Self-Service Bars",
+        "url": "https://www.haniseoul.com/travels/korea/korean-restaurant-etiquette"
+      },
+      {
+        "label": "Understanding Korean Culture — Creatrip",
+        "url": "https://creatrip.com/en/blog/5404/Understanding-Korean-Culture"
+      },
+      {
+        "label": "Reddit community example: visitors looking for spoons or chopsticks in Korean restaurants",
+        "url": "https://www.reddit.com/r/koreatravel/comments/1rqp9fb/did_you_ever_spend_time_looking_for_spoons_or/"
+      },
+      {
+        "label": "Reddit community example: reactions to Korean restaurant table design",
+        "url": "https://www.reddit.com/r/PlayLocalKorea/comments/1vkbkuh/korean_restaurant_tables_are_built_for/"
+      }
+    ],
+    "sourceRequirement": "required",
+    "publishedAt": "2026-08-17",
+    "updatedAt": "2026-08-17",
+    "featured": false,
+    "draft": false,
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "common-not-universal",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 760
+  },
+  {
+    "id": "storage-chairs-korean-bbq-restaurants",
+    "slug": "storage-chairs-korean-bbq-restaurants",
+    "seoTitle": "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
+    "metaDescription": "Some Korean BBQ restaurants use chairs with space inside or underneath for storing coats and bags. Here is how this practical seating setup works.",
+    "primaryKeyword": "Korean BBQ storage chair",
+    "secondaryKeywords": [
+      "Korean BBQ coat storage",
+      "Korean restaurant chair storage",
+      "Korean BBQ bag storage"
+    ],
+    "title": "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
+    "excerpt": "At some Korean BBQ restaurants, the chair is more than a place to sit. It can also provide space for a coat or bag.",
+    "body": [
+      {
+        "type": "heading",
+        "text": "A Chair That Can Hold Your Coat or Bag"
+      },
+      {
+        "type": "paragraph",
+        "text": "At some Korean BBQ restaurants in Korea, you may find chairs with storage space inside the chair or beneath the seat. That space can be used for coats and bags, giving diners somewhere to put their belongings while they eat."
+      },
+      {
+        "type": "heading",
+        "text": "Why the Korea-Based Editor Found It Useful at a Grilling Restaurant"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korea-based editor found this storage useful as a practical place to keep coats and bags tucked away while dining. In that local observation, the storage chair is an optional setup seen at some Korean BBQ restaurants rather than a feature found at every restaurant."
+      },
+      {
+        "type": "heading",
+        "text": "Not Every Restaurant Has One"
+      },
+      {
+        "type": "paragraph",
+        "text": "The setup varies by restaurant. If you visit a Korean BBQ restaurant and do not see a storage chair, the absence of one does not mean you are missing a standard feature. In the editor’s local observation, this type of chair can be a useful option at some Korean BBQ restaurants rather than a standard feature across Korean dining."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you see a chair with storage space at a Korean BBQ restaurant, it may be the place for your coat or bag. The seating also provides a practical storage option."
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Can you store a coat or bag in a chair at a Korean BBQ restaurant in Korea?",
+            "description": "At some Korean BBQ restaurants, chairs have storage space inside or beneath the seat where coats and bags can be placed. Based on the editor’s local observation, this setup can be found in some Korean BBQ restaurants, but not in every restaurant."
+          },
+          {
+            "term": "Does every Korean BBQ restaurant in Korea have storage chairs?",
+            "description": "No. Based on the editor’s local observation, storage chairs are one setup used in some Korean BBQ restaurants rather than a universal feature."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Not sure what to search for?"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Korean",
+            "description": "수납 의자, 고깃집 의자"
+          },
+          {
+            "term": "Romanized",
+            "description": "sunap uija, gogitjip uija"
+          },
+          {
+            "term": "You might type",
+            "description": "soo-nap ee-ja, go-geet-jip ee-ja"
+          },
+          {
+            "term": "Describe it",
+            "description": "Korean BBQ chair with storage inside · Korean restaurant chair for coats and bags · chair storage under the seat at Korean BBQ"
+          }
+        ]
+      }
+    ],
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "tags": [
+      "Korean BBQ",
+      "Korean restaurants",
+      "everyday life in Korea",
+      "restaurant design",
+      "travel in Korea"
+    ],
+    "heroImage": "assets/images/korean-kitchen.svg",
+    "heroImageAlt": "Editorial illustration representing Korean dining and kitchen culture",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 760,
+    "relatedProductIds": [],
+    "sources": [],
+    "publishedAt": "2026-08-19",
+    "updatedAt": "2026-08-20",
+    "featured": false,
+    "draft": false,
+    "sourceRequirement": "optional",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default",
+    "searchHelp": {
+      "heading": "Not sure what to search for?",
+      "koreanTerms": [
+        "수납 의자",
+        "고깃집 의자"
+      ],
+      "romanizedTerms": [
+        "sunap uija",
+        "gogitjip uija"
+      ],
+      "soundAlikeTerms": [
+        "soo-nap ee-ja",
+        "go-geet-jip ee-ja"
+      ],
+      "descriptionSearches": [
+        "Korean BBQ chair with storage inside",
+        "Korean restaurant chair for coats and bags",
+        "chair storage under the seat at Korean BBQ"
+      ]
     }
+  }
 ]
