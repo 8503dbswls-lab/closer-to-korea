@@ -765,46 +765,30 @@
       "travel tips",
       "restaurant etiquette"
     ],
-    "heroImage": "assets/images/korean-kitchen.svg",
-    "heroImageAlt": "Editorial illustration representing Korean dining and kitchen culture",
+    "heroImage": "assets/images/articles/korean-restaurant-table-utensil-drawer/korean-restaurant-table-utensil-drawer-hero.webp",
+    "heroImageAlt": "Open wooden drawer beside a Korean restaurant table holding metal spoons and chopsticks",
     "relatedProductIds": [],
     "sources": [
       {
-        "label": "Why Many Korean Restaurant Tables Have Hidden Utensil Drawers",
-        "url": "https://everydaykoreastories.com/why-many-korean-restaurant-tables-have-hidden-utensil-drawers/"
+        "label": "South Korea Hallyu — Myeongdong Kyoja guide showing cutlery kept in a drawer under the table",
+        "url": "https://southkoreahallyu.com/myeongdong-kyoja-seoul-restaurant/"
       },
       {
-        "label": "Korean BBQ Table Drawer: What Is Inside?",
-        "url": "https://behindkorea.com/korean-bbq-table-drawer/"
-      },
-      {
-        "label": "Korean Restaurant Table Drawers: Where to Find Utensils",
+        "label": "CoreaDesk — Korean restaurant table drawers and where diners may find utensils",
         "url": "https://coreadesk.com/korean-restaurant-table-drawer/"
       },
       {
-        "label": "A First-Time Visitor’s Guide to Ordering Food at Korean Restaurants",
-        "url": "https://www.koreanlifeexplained.com/2026/06/first-time-guide-ordering-food-korean-restaurants.html?m=1"
+        "label": "KoreaRoute — guide noting built-in utensil drawers or compartments at many Korean restaurants",
+        "url": "https://korearoute.com/guides/korean-dining-essentials-guide"
       },
       {
-        "label": "Korean Restaurant Etiquette Guide: A Complete Guide from Ordering Bells to Self-Service Bars",
-        "url": "https://www.haniseoul.com/travels/korea/korean-restaurant-etiquette"
-      },
-      {
-        "label": "Understanding Korean Culture — Creatrip",
-        "url": "https://creatrip.com/en/blog/5404/Understanding-Korean-Culture"
-      },
-      {
-        "label": "Reddit community example: visitors looking for spoons or chopsticks in Korean restaurants",
+        "label": "Reddit r/koreatravel — community examples of visitors looking for spoons or chopsticks before finding the table drawer",
         "url": "https://www.reddit.com/r/koreatravel/comments/1rqp9fb/did_you_ever_spend_time_looking_for_spoons_or/"
-      },
-      {
-        "label": "Reddit community example: reactions to Korean restaurant table design",
-        "url": "https://www.reddit.com/r/PlayLocalKorea/comments/1vkbkuh/korean_restaurant_tables_are_built_for/"
       }
     ],
     "sourceRequirement": "required",
     "publishedAt": "2026-08-17",
-    "updatedAt": "2026-08-17",
+    "updatedAt": "2026-08-20",
     "featured": false,
     "draft": false,
     "sectionKey": "everyday-korea",
@@ -812,7 +796,7 @@
     "koreaContextConfidence": "common-not-universal",
     "monetizationProfile": "default",
     "heroImageWidth": 1200,
-    "heroImageHeight": 760
+    "heroImageHeight": 900
   },
   {
     "id": "storage-chairs-korean-bbq-restaurants",
@@ -835,6 +819,14 @@
       {
         "type": "paragraph",
         "text": "At some Korean BBQ restaurants in Korea, you may find chairs with storage space inside the chair or beneath the seat. That space can be used for coats and bags, giving diners somewhere to put their belongings while they eat."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-seating-area.webp",
+        "width": 1200,
+        "height": 800,
+        "alt": "Korean BBQ dining area showing black storage chairs around grill tables",
+        "caption": "Storage-chair designs vary by restaurant; this dining area shows one example of the seating setup."
       },
       {
         "type": "heading",
@@ -908,17 +900,26 @@
       "restaurant design",
       "travel in Korea"
     ],
-    "heroImage": "assets/images/korean-kitchen.svg",
-    "heroImageAlt": "Editorial illustration representing Korean dining and kitchen culture",
+    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-hero.webp",
+    "heroImageAlt": "Korean BBQ restaurant interior with round tables and black cylindrical storage chairs",
     "heroImageWidth": 1200,
     "heroImageHeight": 760,
     "relatedProductIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "label": "Maeil Newspaper — report on cylindrical storage chairs used in Korean meat restaurants for coats and bags",
+        "url": "https://www.imaeil.com/page/view/2026072418584558957"
+      },
+      {
+        "label": "YES24 marketplace listing — commercial storage chair described for coat storage and Korean meat-restaurant use",
+        "url": "https://www.yes24.com/Product/Goods/117630011"
+      }
+    ],
     "publishedAt": "2026-08-19",
     "updatedAt": "2026-08-20",
     "featured": false,
     "draft": false,
-    "sourceRequirement": "optional",
+    "sourceRequirement": "required",
     "sectionKey": "everyday-korea",
     "contentType": "culture-everyday",
     "koreaContextConfidence": "context-dependent",
