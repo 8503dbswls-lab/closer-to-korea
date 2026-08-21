@@ -1056,8 +1056,8 @@
       "food storage",
       "everyday Korea"
     ],
-    "heroImage": "assets/images/everyday-korea.svg",
-    "heroImageAlt": "Editorial illustration representing everyday life in Korea",
+    "heroImage": "assets/images/articles/korean-kimchi-cutter-container/korean-kimchi-cutter-container-hero.webp",
+    "heroImageAlt": "AI-generated illustration of a clear Korean kimchi cutter storage container filled with kimchi, with the cutting tool stored flat in the lid",
     "heroImageWidth": 1200,
     "heroImageHeight": 760,
     "relatedProductIds": [],
@@ -1087,6 +1087,8 @@
         "kimchi storage container with cutting board",
         "container for cutting and storing kimchi"
       ]
-    }
+    },
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "heroImageType": "ai-illustration"
   }
 ]
