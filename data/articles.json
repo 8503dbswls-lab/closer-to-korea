@@ -1058,15 +1058,32 @@
     ],
     "heroImage": "assets/images/articles/korean-kimchi-cutter-container/korean-kimchi-cutter-container-hero.webp",
     "heroImageAlt": "AI-generated illustration of a clear Korean kimchi cutter storage container filled with kimchi, with the cutting tool stored flat in the lid",
-    "heroImageWidth": 1200,
-    "heroImageHeight": 760,
+    "heroImageWidth": 1254,
+    "heroImageHeight": 1254,
     "relatedProductIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "label": "Today’s House — 김치 자르미 (1/2포기용) product listing and safety information",
+        "url": "https://store.ohou.se/goods/716255"
+      },
+      {
+        "label": "GobizKorea — Hansel Kimchi Jarmi cutter-and-container product page",
+        "url": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S0500200070000&goodsNms=Hansel-Kimchi-Jarmi-%28half-sized-%EB%B0%98%ED%8F%AC%EA%B8%B0%29-Kimchi-Cutter-and-Container-540g%2F1.19lbs-Half-Sized-Cabbage-Cut&goods_no=GS2023073130243&upperCode=M0500200000000"
+      },
+      {
+        "label": "LocknLock — Breathing STS Kimchi Container / fermented-food storage",
+        "url": "https://locknlock.com/eng/product/container/fermented-food-storage/breathing-sts-kimchi-container"
+      },
+      {
+        "label": "Walmart U.S. — e-Jen kimchi fermentation storage container listing",
+        "url": "https://www.walmart.com/ip/657843249"
+      }
+    ],
     "publishedAt": "2026-08-21",
     "updatedAt": "2026-08-21",
     "featured": false,
     "draft": false,
-    "sourceRequirement": "optional",
+    "sourceRequirement": "required",
     "sectionKey": "everyday-korea",
     "contentType": "culture-everyday",
     "koreaContextConfidence": "context-dependent",
@@ -1089,6 +1106,13 @@
       ]
     },
     "heroImageCaption": "AI-generated illustration for explanatory purposes.",
-    "heroImageType": "ai-illustration"
+    "heroImageType": "ai-illustration",
+    "languageBonus": {
+      "approved": true,
+      "korean": "김치커터 밀폐용기",
+      "romanized": "kimchi cutter milpye-yonggi",
+      "explanation": "In plain Korean, you can think of it as 김치를 자르는 김치통 — “a kimchi container for cutting kimchi.” Some Korean product listings also use names such as 김치 자르미 or 김치 자르미 김치통, so this is better treated as a descriptive product name than one universal everyday term.",
+      "closer": "The useful idea to remember is simple: a kimchi container with a cutter."
+    }
   }
 ]
