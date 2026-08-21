@@ -940,5 +940,153 @@
     },
     "heroImageCaption": "AI-generated illustration for explanatory purposes.",
     "heroImageType": "ai-illustration"
+  },
+  {
+    "id": "korean-kimchi-cutter-container",
+    "slug": "korean-kimchi-cutter-container",
+    "seoTitle": "What Is a Korean Kimchi Cutter Container?",
+    "metaDescription": "A Korean kimchi container can combine a cutting surface, knife, and storage space in one product. Here is what the kimchi cutter concept means.",
+    "primaryKeyword": "Korean kimchi cutter container",
+    "secondaryKeywords": [
+      "kimchi Jarmi",
+      "kimchi cutting container",
+      "kimchi storage container",
+      "kimchi container with cutter"
+    ],
+    "title": "What Is a Korean Kimchi Cutter Container?",
+    "excerpt": "Some Korean product materials show a kimchi container that also incorporates a cutting function. The result is a product concept built around cutting and storing kimchi in one container.",
+    "body": [
+      {
+        "type": "heading",
+        "text": "A Kimchi Container That Also Cuts"
+      },
+      {
+        "type": "paragraph",
+        "text": "Some Korean product materials show a container that combines a kimchi cutter with storage. The confirmed Kimchi Jarmi product presents one product as a cutting board, knife, and storage container rather than as three separate kitchen items."
+      },
+      {
+        "type": "paragraph",
+        "text": "That does not establish the product as a standard household item in Korea. It is more accurate to describe it as a specific product concept shown in Korean product materials."
+      },
+      {
+        "type": "heading",
+        "text": "How It Fits Into the Kimchi Container Category"
+      },
+      {
+        "type": "paragraph",
+        "text": "Korean kimchi-container products emphasize features connected with airtight storage, odor control, portioning, and storage in kimchi refrigerators. The cutter-container concept adds a cutting function to that storage role."
+      },
+      {
+        "type": "paragraph",
+        "text": "This distinction matters. A regular kimchi container and a cutter-style container should not automatically be treated as the same kind of product."
+      },
+      {
+        "type": "heading",
+        "text": "Are Kimchi Storage Containers Also Sold in the United States?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The reviewed U.S. examples concern kimchi-specific storage containers and fermentation-food containers; they do not establish an American equivalent to this cutter-container."
+      },
+      {
+        "type": "paragraph",
+        "text": "Kimchi-specific storage containers and fermentation-food containers are also sold in the U.S."
+      },
+      {
+        "type": "paragraph",
+        "text": "English-language online communities also include questions and shared experiences about how to cut and store whole kimchi. Those discussions are limited community examples, not evidence of a single American practice."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "The simplest way to understand this product is as a kitchen item shown in Korean product materials that combines kimchi cutting and storage. It is a documented product concept, but the available claims do not establish how widely it is used in Korean homes."
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "What is a Korean kimchi cutter container?",
+            "description": "It is a product concept that combines a kimchi cutter with a storage container. The confirmed Kimchi Jarmi product combines the roles of a cutting board, knife, and container in one item."
+          },
+          {
+            "term": "Are kimchi storage containers sold in the United States?",
+            "description": "Yes. Kimchi-specific storage containers and fermentation-food containers are sold in the United States."
+          },
+          {
+            "term": "What is different about this kimchi container?",
+            "description": "It combines kimchi cutting and storage in one container."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Not sure what to search for?"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Korean",
+            "description": "김치자르미"
+          },
+          {
+            "term": "Romanized",
+            "description": "Kimchi Jarmi"
+          },
+          {
+            "term": "You might type",
+            "description": "kim-chee jar-mee"
+          },
+          {
+            "term": "Describe it",
+            "description": "Korean kimchi container with a cutter · kimchi storage container with cutting board · container for cutting and storing kimchi"
+          }
+        ]
+      }
+    ],
+    "categoryKey": "everyday-korea",
+    "categoryLabel": "Everyday Korea",
+    "tags": [
+      "Korean kitchen",
+      "kimchi",
+      "Korean products",
+      "food storage",
+      "everyday Korea"
+    ],
+    "heroImage": "assets/images/everyday-korea.svg",
+    "heroImageAlt": "Editorial illustration representing everyday life in Korea",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 760,
+    "relatedProductIds": [],
+    "sources": [],
+    "publishedAt": "2026-08-21",
+    "updatedAt": "2026-08-21",
+    "featured": false,
+    "draft": false,
+    "sourceRequirement": "optional",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default",
+    "searchHelp": {
+      "heading": "Not sure what to search for?",
+      "koreanTerms": [
+        "김치자르미"
+      ],
+      "romanizedTerms": [
+        "Kimchi Jarmi"
+      ],
+      "soundAlikeTerms": [
+        "kim-chee jar-mee"
+      ],
+      "descriptionSearches": [
+        "Korean kimchi container with a cutter",
+        "kimchi storage container with cutting board",
+        "container for cutting and storing kimchi"
+      ]
+    }
   }
 ]
