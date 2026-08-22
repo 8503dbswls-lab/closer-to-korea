@@ -109,6 +109,75 @@ function siteArticleFromPayload(payload,existing=null){
     existing?.heroImageAlt ||
     "Editorial illustration representing everyday life in Korea";
 
+  const allowedSectionKeys = [
+    "everyday-korea",
+    "korean-kitchen",
+    "k-beauty",
+    "trends-finds",
+    "seen-online"
+  ];
+
+  const allowedContentTypes = [
+    "korea-discovery",
+    "culture-everyday",
+    "product-guide",
+    "mixed"
+  ];
+
+  const sectionKey =
+    String(
+      payload?.publish_settings?.sectionKey ||
+      existing?.sectionKey ||
+      ""
+    ).trim();
+
+  const contentType =
+    String(
+      payload?.publish_settings?.contentType ||
+      existing?.contentType ||
+      ""
+    ).trim();
+
+  if (!allowedSectionKeys.includes(sectionKey)) {
+    fail(
+      "Editorial Section is missing or invalid. " +
+      "Return to S3A and set the publication classification first."
+    );
+  }
+
+  if (!allowedContentTypes.includes(contentType)) {
+    fail(
+      "Content Type is missing or invalid. " +
+      "Return to S3A and set the publication classification first."
+    );
+  }
+
+  const categoryDefaults = {
+    "everyday-korea": {
+      categoryKey: "culture",
+      categoryLabel: "Everyday Korea"
+    },
+    "korean-kitchen": {
+      categoryKey: "food",
+      categoryLabel: "Korean Kitchen"
+    },
+    "k-beauty": {
+      categoryKey: "beauty",
+      categoryLabel: "K-Beauty"
+    },
+    "trends-finds": {
+      categoryKey: "trending",
+      categoryLabel: "Trends & Finds"
+    },
+    "seen-online": {
+      categoryKey: "culture",
+      categoryLabel: "Seen Online"
+    }
+  };
+
+  const categoryDefault =
+    categoryDefaults[sectionKey];
+
   const sources = [
     ...(payload?.publish_settings?.sources || existing?.sources || [])
   ];
@@ -167,8 +236,8 @@ function siteArticleFromPayload(payload,existing=null){
     title,
     excerpt:String(article.dek||seo.meta_description||"").trim(),
     body,
-    categoryKey:payload?.publish_settings?.categoryKey || existing?.categoryKey || "everyday-korea",
-    categoryLabel:payload?.publish_settings?.categoryLabel || existing?.categoryLabel || "Everyday Korea",
+    categoryKey:payload?.publish_settings?.categoryKey || existing?.categoryKey || categoryDefault.categoryKey,
+    categoryLabel:payload?.publish_settings?.categoryLabel || existing?.categoryLabel || categoryDefault.categoryLabel,
     tags,
     heroImage,
     heroImageAlt,
@@ -183,8 +252,9 @@ function siteArticleFromPayload(payload,existing=null){
     sourceRequirement:
       requestedSourceRequirement ||
       (sources.length ? "required" : "optional"),
-    sectionKey:payload?.publish_settings?.sectionKey || existing?.sectionKey || "everyday-korea",
-    contentType:payload?.publish_settings?.contentType || existing?.contentType || "culture-everyday",
+    sectionKey,
+    contentType,
+    isProductGuide: contentType === "product-guide",
     koreaContextConfidence:payload?.publish_settings?.koreaContextConfidence || existing?.koreaContextConfidence || "context-dependent",
     monetizationProfile:payload?.publish_settings?.monetizationProfile || existing?.monetizationProfile || "default",
     searchHelp:searchHelp || existing?.searchHelp || undefined,

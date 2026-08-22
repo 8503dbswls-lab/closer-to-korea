@@ -196,7 +196,8 @@
       "active": true,
       "icon": "🏠",
       "homeBlurb": "Homes, routines, work, school, and ordinary Korean life.",
-      "showWhenEmpty": true
+      "showWhenEmpty": true,
+      "featuredMinArticles": 4
     },
     {
       "key": "korean-kitchen",
@@ -207,7 +208,8 @@
       "active": true,
       "icon": "🥣",
       "homeBlurb": "Cooking tools, storage, food habits, and real kitchen context.",
-      "showWhenEmpty": true
+      "showWhenEmpty": true,
+      "featuredMinArticles": 4
     },
     {
       "key": "k-beauty",
@@ -218,7 +220,8 @@
       "active": true,
       "icon": "💄",
       "homeBlurb": "Skincare, beauty routines, product types, and real Korean beauty context.",
-      "showWhenEmpty": false
+      "showWhenEmpty": false,
+      "featuredMinArticles": 4
     },
     {
       "key": "trends-finds",
@@ -229,7 +232,8 @@
       "active": true,
       "icon": "✨",
       "homeBlurb": "Current finds, retail moments, and things getting attention in Korea.",
-      "showWhenEmpty": true
+      "showWhenEmpty": true,
+      "featuredMinArticles": 4
     },
     {
       "key": "seen-online",
@@ -240,7 +244,8 @@
       "active": true,
       "icon": "📱",
       "homeBlurb": "Things spotted in Korean media and social content, with context.",
-      "showWhenEmpty": true
+      "showWhenEmpty": true,
+      "featuredMinArticles": 4
     }
   ],
   "contentTypes": [

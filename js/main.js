@@ -469,8 +469,22 @@ function articleCard(article,{layout='guide'}={}){
     <small>Published ${formatDate(article.publishedAt)}</small>
   </a>`;
 }
+function editorialSectionConfig(sectionKey){
+  return (state.categories.editorialSections||[]).find(item=>item.key===sectionKey)||null;
+}
+function sectionArticles(sectionKey){
+  return publishedArticles()
+    .filter(article=>article.sectionKey===sectionKey)
+    .sort((a,b)=>(b.publishedAt||'').localeCompare(a.publishedAt||'')||(a.title||'').localeCompare(b.title||''));
+}
 function sectionFeaturedArticle(sectionKey){
-  return publishedArticles().find(article=>article.sectionKey===sectionKey)||null;
+  const list=sectionArticles(sectionKey);
+  const config=editorialSectionConfig(sectionKey);
+  const min=Math.max(1,Number(config?.featuredMinArticles||4));
+
+  if(list.length<min)return null;
+
+  return list.find(article=>article.featured===true)||list[0]||null;
 }
 function renderSectionFeatured(){
   qsa('[data-section-featured]').forEach(container=>{
@@ -507,6 +521,11 @@ function renderArticles(){
     const list=published
       .filter(article=>(!contentType||article.contentType===contentType)&&(!sectionKey||article.sectionKey===sectionKey))
       .filter(article=>!excludeFeatured||!featured||article.slug!==featured.slug);
+
+    if(sectionKey){
+      list.sort((a,b)=>(b.publishedAt||'').localeCompare(a.publishedAt||'')||(a.title||'').localeCompare(b.title||''));
+    }
+
     grid.innerHTML=list.map(article=>articleCard(article,{layout})).join('');
     const scope=grid.closest('section')||grid.parentElement||document;
     const empty=qs('[data-article-empty]',scope);
