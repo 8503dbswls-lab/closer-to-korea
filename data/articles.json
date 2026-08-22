@@ -1140,6 +1140,22 @@
         "text": "왁뿌볼 is introduced as a sensory toy with a wax outer shell. The basic activity is simple: break the shell and enjoy the resulting sound and texture."
       },
       {
+        "type": "image",
+        "src": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-front.webp",
+        "alt": "Purple grape-themed wakppubol toy inside clear spherical packaging with Korean labeling",
+        "caption": "A grape-themed wakppubol purchased in Korea. This is one specific product example, not a universal design for every wakppubol.",
+        "width": 1086,
+        "height": 1448
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-side.webp",
+        "alt": "Side view of a purple wakppubol sensory toy packaged inside a clear round protective case",
+        "caption": "Side view of the same wakppubol in the rigid clear sphere it was sold in.",
+        "width": 1086,
+        "height": 1448
+      },
+      {
         "type": "heading",
         "text": "Where It Fits in Korea’s Toy Conversation"
       },
@@ -1218,10 +1234,10 @@
       "fidget toys",
       "왁뿌볼"
     ],
-    "heroImage": "assets/images/everyday-korea.svg",
-    "heroImageAlt": "Editorial illustration representing everyday life in Korea",
-    "heroImageWidth": 1200,
-    "heroImageHeight": 760,
+    "heroImage": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-retail-display.webp",
+    "heroImageAlt": "Colorful wakppubol sensory toys in clear round packaging displayed in a Korean retail store",
+    "heroImageWidth": 1448,
+    "heroImageHeight": 1086,
     "relatedProductIds": [],
     "sources": [
       {
@@ -1315,6 +1331,8 @@
       "romanized": "wakppubol",
       "explanation": "왁뿌볼 is short for 왁스 뿌시기 볼, literally “wax-crushing ball.” The name refers to a sensory toy with a wax-coated outer layer that is cracked for its sound and texture.",
       "closer": "So when you see 왁뿌볼 in Korean, think “wax-crushing ball.”"
-    }
+    },
+    "heroImageCaption": "Different wakppubol toys photographed on a retail display in Korea. Prices shown reflect the display at the time of the photo and may change.",
+    "heroImageType": "owner-photo-edited"
   }
 ]
