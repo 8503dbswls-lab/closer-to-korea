@@ -91,17 +91,42 @@ function gallery(product) {
 
   const main = items[0];
 
-  if (items.length === 1) {
-    return `<figure><img src="${esc(main.src)}" width="${Number(main.width)||800}" height="${Number(main.height)||800}" fetchpriority="high" alt="${esc(main.alt||product.name)}"></figure>`;
-  }
+  const thumbs = items.map((item,index)=>`
+    <button
+      class="product-gallery__thumb"
+      type="button"
+      aria-label="View product photo ${index + 1} of ${items.length}"
+      aria-current="${index===0 ? "true" : "false"}"
+      data-product-gallery-thumb
+      data-src="${esc(item.src)}"
+      data-alt="${esc(item.alt || product.name)}"
+      data-caption="${esc(item.caption || "")}"
+      data-width="${Number(item.width)||800}"
+      data-height="${Number(item.height)||800}">
+      <img src="${esc(item.src)}" alt="" loading="lazy" decoding="async">
+    </button>
+  `).join("");
 
-  return `<figure><img src="${esc(main.src)}" width="${Number(main.width)||800}" height="${Number(main.height)||800}" fetchpriority="high" alt="${esc(main.alt||product.name)}"></figure>
-  <div class="product-static-gallery" aria-label="${esc(product.name)} image gallery">
-    ${items.map((item,index)=>`<figure>
-      <img src="${esc(item.src)}" alt="${esc(item.alt||product.name)}" loading="${index===0?"eager":"lazy"}" decoding="async">
-      ${item.caption?`<figcaption>${esc(item.caption)}</figcaption>`:""}
-    </figure>`).join("")}
-  </div>`;
+  return `
+    <div class="product-gallery-shell">
+      <figure class="product-gallery-main">
+        <img
+          data-product-gallery-main
+          src="${esc(main.src)}"
+          width="${Number(main.width)||800}"
+          height="${Number(main.height)||800}"
+          fetchpriority="high"
+          alt="${esc(main.alt || product.name)}">
+        <figcaption class="product-gallery__caption" data-product-gallery-caption>${esc(main.caption || "")}</figcaption>
+      </figure>
+
+      ${items.length > 1 ? `
+        <div class="product-gallery__thumbs" aria-label="${esc(product.name)} photo gallery">
+          ${thumbs}
+        </div>
+      ` : ""}
+    </div>
+  `;
 }
 
 if (!fs.existsSync(productsPath)) fail("data/products.json not found");
@@ -195,6 +220,18 @@ for (const product of published) {
 <link rel="stylesheet" href="css/site-footer-v2.css?v=1">
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/product-hero-layout.css?v=1">
+<style>
+.product-gallery-shell{min-width:0}
+.product-gallery-main{margin:0}
+.product-gallery-main>[data-product-gallery-main]{width:100%;height:auto;display:block;border-radius:24px;transition:opacity .15s ease}
+.product-gallery__caption{margin:.55rem .1rem 0;color:var(--muted);font-size:.88rem;min-height:1.2em}
+.product-gallery__thumbs{display:flex;gap:.65rem;overflow-x:auto;padding:.7rem .1rem .2rem;scroll-snap-type:x proximity}
+.product-gallery__thumb{flex:0 0 82px;width:82px;height:82px;padding:3px;border:2px solid transparent;border-radius:16px;background:#fff;cursor:pointer;scroll-snap-align:start;box-shadow:0 8px 20px rgba(93,72,120,.08)}
+.product-gallery__thumb[aria-current="true"]{border-color:#ff5b9c}
+.product-gallery__thumb:focus-visible{outline:3px solid var(--cherry);outline-offset:2px}
+.product-gallery__thumb img{width:100%;height:100%;object-fit:cover;border-radius:11px}
+@media(min-width:700px){.product-gallery__thumb{flex-basis:92px;width:92px;height:92px}}
+</style>
 </head>
 <body>
 <div class="cursor-sparkle" aria-hidden="true">✦</div>
@@ -254,6 +291,37 @@ for (const product of published) {
 <script src="data/content-data.js?v=3"></script>
 <script src="js/monetization.js"></script>
 <script src="js/main.js"></script>
+<script>
+(() => {
+  const main = document.querySelector('[data-product-gallery-main]');
+  const caption = document.querySelector('[data-product-gallery-caption]');
+  const thumbs = [...document.querySelectorAll('[data-product-gallery-thumb]')];
+  if (!main || !thumbs.length) return;
+
+  thumbs.forEach(button => {
+    button.addEventListener('click', () => {
+      main.style.opacity = '.45';
+
+      main.src = button.dataset.src || main.src;
+      main.alt = button.dataset.alt || main.alt;
+
+      const width = Number(button.dataset.width || 0);
+      const height = Number(button.dataset.height || 0);
+
+      if (width) main.width = width;
+      if (height) main.height = height;
+      if (caption) caption.textContent = button.dataset.caption || '';
+
+      thumbs.forEach(t => t.setAttribute('aria-current','false'));
+      button.setAttribute('aria-current','true');
+
+      requestAnimationFrame(() => {
+        main.style.opacity = '1';
+      });
+    });
+  });
+})();
+</script>
 <script>(()=>{const s=document.querySelector('[data-share-page]'),c=document.querySelector('[data-copy-link]'),m=document.querySelector('[data-share-status]');const show=t=>{if(!m)return;m.textContent=t;setTimeout(()=>m.textContent='',2500)};s?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);show('Link copied.')}}catch{}});c?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);show('Link copied.')}catch{show('Copy the URL from your browser.')}})})();</script>
 </body>
 </html>`;
