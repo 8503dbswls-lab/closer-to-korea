@@ -326,7 +326,7 @@ function productCard(product,{compact=false}={}){
       <p class="context-line"><strong>In Korea:</strong> ${safe(product.seenInKorea)}</p>
       ${details}
       <div class="verification-row">${verificationChips(product)}<span>Last checked ${formatDate(product.lastCheckedAt)}</span></div>
-      <a class="product-detail-link" href="product.html?slug=${encodeURIComponent(product.slug||product.id)}">View full product details</a>
+      <a class="product-detail-link" href="product-${encodeURIComponent(product.slug||product.id)}.html">View full product details</a>
       ${(()=>{const cta=productCta(product);const note=(window.CTKMonetization?.amazonEnabled(state.monetization)&&affiliateHref(product))?safe(cardCopy.activeAffiliateText||'Paid link: we may earn a commission.'):'';return (cta||note)?`<div class="card-footer">${cta}${note?`<small class="affiliate-note">${note}</small>`:''}</div>`:'';})()}
     </div>
   </article>`;

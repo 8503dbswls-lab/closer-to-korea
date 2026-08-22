@@ -3,8 +3,6 @@
   <url><loc>https://closertokorea.com/</loc></url>
   <url><loc>https://closertokorea.com/everyday-korea.html</loc></url>
   <url><loc>https://closertokorea.com/korean-kitchen.html</loc></url>
-  <url><loc>https://closertokorea.com/product-guides.html</loc></url>
-  <url><loc>https://closertokorea.com/product.html?slug=egg-steamer</loc></url>
   <url><loc>https://closertokorea.com/about.html</loc></url>
   <url><loc>https://closertokorea.com/contact.html</loc></url>
   <url><loc>https://closertokorea.com/editorial-policy.html</loc></url>
@@ -16,4 +14,8 @@
   <url><loc>https://closertokorea.com/korean-restaurant-table-utensil-drawer.html</loc></url>
   <url><loc>https://closertokorea.com/storage-chairs-korean-bbq-restaurants.html</loc></url>
   <url><loc>https://closertokorea.com/korean-kimchi-cutter-container.html</loc></url>
+  <url>
+    <loc>https://closertokorea.com/product-egg-steamer.html</loc>
+    <lastmod>2026-07-30</lastmod>
+  </url>
 </urlset>
