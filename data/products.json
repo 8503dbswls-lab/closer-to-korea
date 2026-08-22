@@ -274,6 +274,80 @@
     ]
   },
   {
+    "id": "kimchi-cutter-container",
+    "name": "Korean Kimchi Cutter Container",
+    "summary": "A Korean kitchen product concept that combines a kimchi-cutting function with storage in one container.",
+    "categoryKey": "food",
+    "category": "Food & Kitchen Culture",
+    "tags": [
+      "food",
+      "kitchen",
+      "kimchi",
+      "storage",
+      "cutter",
+      "Korean kitchen tools"
+    ],
+    "image": "assets/images/articles/korean-kimchi-cutter-container/korean-kimchi-cutter-container-hero.webp",
+    "imageAlt": "AI-generated illustration of a clear Korean kimchi cutter storage container filled with kimchi, with the cutting tool stored flat in the lid",
+    "seenInKorea": "A matching-looking cutter-container is owned by the site operator in Korea, but its exact brand and model have not yet been confirmed. Korean product listings also document the cutter-and-container concept.",
+    "usedBy": "Relevant to people who want to cut and store whole-leaf kimchi in the same container. This page does not claim that the product is standard in every Korean household.",
+    "whyItMatters": "It combines cutting and storage in one kitchen item, which can be useful when handling whole-leaf kimchi without moving it to a separate cutting board.",
+    "koreanProductStatus": "A documented Korean product concept. The site operator owns a matching-looking container, but the exact brand, manufacturer, and model are still unconfirmed.",
+    "productMatchType": "likely",
+    "productMatchLabel": "Likely Match",
+    "usDifference": "No exact U.S. retail match has been confirmed. Any future Amazon US link should be labeled as a Similar Alternative unless the exact product is verified.",
+    "verificationStatus": [
+      "owned-in-korea",
+      "research-based",
+      "model-unverified"
+    ],
+    "verificationLabels": [
+      "Owned in Korea",
+      "Research-Based",
+      "Exact Model Unverified"
+    ],
+    "personallyUsed": false,
+    "amazonUrl": "",
+    "affiliateUrl": "",
+    "amazonAvailability": "under-review",
+    "amazonLabel": "U.S. purchase options not currently linked",
+    "publishedAt": "2026-08-22",
+    "lastCheckedAt": "2026-08-22",
+    "linkLastCheckedAt": "",
+    "trendStatus": "",
+    "trendLabel": "",
+    "featured": false,
+    "newlyAdded": true,
+    "soldOut": false,
+    "draft": false,
+    "hidden": false,
+    "cta": "View Product Details",
+    "slug": "kimchi-cutter-container",
+    "brand": "",
+    "modelNumber": "",
+    "modelEvidence": "The exact brand and model of the site operator's matching-looking container have not yet been verified. Separate Korean listings confirm that cutter-and-container products exist.",
+    "sourceUrls": [
+      "https://store.ohou.se/goods/716255",
+      "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?ctgryCode=S0500200070000&goods_no=GS2023073130243&upperCode=M0500200000000"
+    ],
+    "personalUseNotes": "",
+    "safetyNotes": "Material, dishwasher compatibility, heat resistance, knife specifications, and model-level care instructions are not yet verified for the site operator's exact container.",
+    "publicImageStatus": "ai-illustration-temporary",
+    "activePurchaseCta": false,
+    "relatedArticleSlugs": [
+      "korean-kimchi-cutter-container"
+    ],
+    "images": [
+      {
+        "src": "assets/images/articles/korean-kimchi-cutter-container/korean-kimchi-cutter-container-hero.webp",
+        "alt": "AI-generated illustration of a clear Korean kimchi cutter storage container filled with kimchi, with the cutting tool stored flat in the lid",
+        "caption": "AI-generated illustration for explanatory purposes. Original product photos will be added after the site operator photographs the item.",
+        "width": 1254,
+        "height": 1254
+      }
+    ]
+  },
+  {
     "id": "study-timer",
     "name": "Visual Study Timer",
     "summary": "A desk timer that makes focused work intervals easy to see without checking a phone.",
