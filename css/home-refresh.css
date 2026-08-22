@@ -182,3 +182,15 @@
     align-items:flex-start;
   }
 }
+
+/* Closer to Korea — Home discovery heading font fix
+   Keep category-card copy in DM Sans; only align the section heading
+   with the site's display-heading typography. */
+
+.quick-categories__head h2,
+#quick-categories-title{
+  font-family:"Bagel Fat One",sans-serif;
+  font-weight:400;
+  letter-spacing:-.035em;
+  line-height:.96;
+}
