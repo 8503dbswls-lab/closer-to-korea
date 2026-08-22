@@ -1047,8 +1047,8 @@
         ]
       }
     ],
-    "categoryKey": "everyday-korea",
-    "categoryLabel": "Everyday Korea",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
     "tags": [
       "Korean kitchen",
       "kimchi",
@@ -1084,8 +1084,8 @@
     "featured": false,
     "draft": false,
     "sourceRequirement": "required",
-    "sectionKey": "everyday-korea",
-    "contentType": "culture-everyday",
+    "sectionKey": "korean-kitchen",
+    "contentType": "product-guide",
     "koreaContextConfidence": "context-dependent",
     "monetizationProfile": "default",
     "searchHelp": {
@@ -1113,6 +1113,7 @@
       "romanized": "kimchi cutter milpye-yonggi",
       "explanation": "In plain Korean, you can think of it as 김치를 자르는 김치통 — “a kimchi container for cutting kimchi.” Some Korean product listings also use names such as 김치 자르미 or 김치 자르미 김치통, so this is better treated as a descriptive product name than one universal everyday term.",
       "closer": "The useful idea to remember is simple: a kimchi container with a cutter."
-    }
+    },
+    "isProductGuide": true
   }
 ]
