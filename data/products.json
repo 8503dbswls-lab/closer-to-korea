@@ -569,5 +569,86 @@
     "safetyNotes": "",
     "publicImageStatus": "placeholder",
     "activePurchaseCta": false
+  },
+  {
+    "id": "grape-wakppubol",
+    "name": "Grape Wakppubol Wax-Cracking Ball",
+    "summary": "A grape-themed wakppubol purchased and photographed in Korea, with a wax outer shell that is cracked for its sound and tactile feel.",
+    "categoryKey": "trending",
+    "category": "Trending in Korea",
+    "tags": [
+      "wakppubol",
+      "왁뿌볼",
+      "sensory toy",
+      "wax cracking",
+      "trend"
+    ],
+    "image": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-front.webp",
+    "imageAlt": "Front view of a purple grape-themed wakppubol inside clear spherical packaging with restored Korean product labeling",
+    "images": [
+      {
+        "src": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-front.webp",
+        "alt": "Front view of a purple grape-themed wakppubol inside clear spherical packaging with restored Korean product labeling",
+        "caption": "Front view of the grape-themed wakppubol purchased in Korea. The Korean lettering in this image has been carefully restored from the original package photo.",
+        "width": 1086,
+        "height": 1448
+      },
+      {
+        "src": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-side.webp",
+        "alt": "Instruction-side view of a purple grape-themed wakppubol inside rigid clear spherical packaging",
+        "caption": "Instruction-side view of this specific package, including the cracking illustration and refrigerated-use message.",
+        "width": 1086,
+        "height": 1448
+      }
+    ],
+    "seenInKorea": "This specific grape-themed wakppubol was purchased by the site owner from an offline retail display in Korea and photographed in its original rigid clear packaging.",
+    "usedBy": "Relevant to people interested in tactile toys built around cracking sound and texture. This record does not claim that every wakppubol has the same design, packaging, or instructions.",
+    "whyItMatters": "The product is a physical example of the wax-cracking sensory-toy trend discussed in Korean media in 2026.",
+    "koreanProductStatus": "Personally purchased and photographed in Korea. The package identifies it as 포도말랑이 왁뿌볼 and recommends chilled refrigerator storage before use. The exact manufacturer and model number remain unconfirmed.",
+    "productMatchType": "likely",
+    "productMatchLabel": "Likely Match",
+    "usDifference": "No exact U.S. retail match has been confirmed. Similar wax-cracking sensory toys are sold in the United States, but any future link must be labeled as a Similar Alternative unless this exact product is verified.",
+    "verificationStatus": [
+      "personally-photographed",
+      "personally-purchased-in-korea",
+      "seen-in-store",
+      "trend-verified",
+      "model-unverified"
+    ],
+    "verificationLabels": [
+      "Personally Photographed",
+      "Personally Purchased in Korea",
+      "Seen in a Korean Store",
+      "Trend Verified",
+      "Exact Model Unverified"
+    ],
+    "personallyUsed": false,
+    "amazonUrl": "",
+    "affiliateUrl": "",
+    "amazonAvailability": "under-review",
+    "amazonLabel": "U.S. purchase options not currently linked",
+    "publishedAt": "2026-08-23",
+    "lastCheckedAt": "2026-08-23",
+    "linkLastCheckedAt": "",
+    "trendStatus": "trending",
+    "trendLabel": "Trending",
+    "featured": false,
+    "newlyAdded": true,
+    "soldOut": false,
+    "draft": false,
+    "hidden": false,
+    "cta": "View Product Details",
+    "slug": "grape-wakppubol",
+    "brand": "",
+    "modelNumber": "",
+    "modelEvidence": "The package label is readable in the restored owner photograph, but the exact manufacturer and model number are not confirmed.",
+    "sourceUrls": [],
+    "personalUseNotes": "",
+    "safetyNotes": "Follow the instructions printed on the package for this specific item. Product instructions may differ between manufacturers.",
+    "publicImageStatus": "original-photo",
+    "activePurchaseCta": false,
+    "relatedArticleIds": [
+      "what-is-wakppubol-korean-wax-cracking-toy"
+    ]
   }
 ]

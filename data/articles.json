@@ -1142,8 +1142,8 @@
       {
         "type": "image",
         "src": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-purple-front.webp",
-        "alt": "Purple grape-themed wakppubol toy inside clear spherical packaging with Korean labeling",
-        "caption": "A grape-themed wakppubol purchased in Korea. This is one specific product example, not a universal design for every wakppubol.",
+        "alt": "Front view of a purple grape-themed wakppubol inside clear spherical packaging with restored Korean product labeling",
+        "caption": "Front view of the grape-themed wakppubol purchased in Korea. The Korean lettering in this image has been carefully restored from the original package photo.",
         "width": 1086,
         "height": 1448
       },
@@ -1238,7 +1238,9 @@
     "heroImageAlt": "Colorful wakppubol sensory toys in clear round packaging displayed in a Korean retail store",
     "heroImageWidth": 1448,
     "heroImageHeight": 1086,
-    "relatedProductIds": [],
+    "relatedProductIds": [
+      "grape-wakppubol"
+    ],
     "sources": [
       {
         "label": "왁뿌볼 | 왁스 뿌시기 볼 앱",
@@ -1298,7 +1300,7 @@
       }
     ],
     "publishedAt": "2026-08-22",
-    "updatedAt": "2026-08-22",
+    "updatedAt": "2026-08-23",
     "featured": false,
     "draft": false,
     "sourceRequirement": "required",
