@@ -346,7 +346,7 @@ function renderStatic(article){
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/article-sticky.css?v=1">
 <link rel="stylesheet" href="css/article-bonus.css?v=1">
-<link rel="stylesheet" href="css/related-content.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

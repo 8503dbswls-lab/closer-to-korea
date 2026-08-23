@@ -220,7 +220,7 @@ for (const product of published) {
 <link rel="stylesheet" href="css/site-footer-v2.css?v=1">
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/product-hero-layout.css?v=1">
-<link rel="stylesheet" href="css/related-content.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=2">
 <style>
 .product-gallery-shell{min-width:0}
 .product-gallery-main{margin:0}
