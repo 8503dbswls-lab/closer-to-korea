@@ -46,16 +46,16 @@
   ],
   "hero": {
     "badge": "Real Korea · Clear Context",
-    "eyebrow": "Real products used in Korea. Explained with local context.",
+    "eyebrow": "Everyday Korea, explained by someone in Korea.",
     "title": "See What Koreans Actually Use",
-    "description": "Discover Korean products, routines, and everyday finds—with clear context on what they are and how they fit into life in Korea.",
+    "description": "Discover Korean products, routines, restaurant habits, and online finds—with the local context most videos and shopping pages leave out.",
     "primaryCta": {
-      "label": "Explore Korea",
+      "label": "Start Exploring Korea",
       "href": "#categories-quick"
     },
     "secondaryCta": {
-      "label": "Latest Articles →",
-      "href": "#guides"
+      "label": "See What’s New →",
+      "href": "#latest"
     },
     "trustItems": [
       "Korean daily-life context",

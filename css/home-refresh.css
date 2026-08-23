@@ -27,6 +27,9 @@
   background:rgba(255,255,255,.78);
   box-shadow:var(--shadow);
 }
+.home-mixed-grid .is-featured{
+  background:linear-gradient(145deg,rgba(255,255,255,.96),rgba(255,241,248,.88));
+}
 .home-content-card__image{
   display:block;
   aspect-ratio:16/10;
@@ -106,14 +109,15 @@
 
 .home-trust{
   display:grid;
-  gap:1.3rem;
-  padding:clamp(1.6rem,5vw,3.5rem);
+  gap:1rem;
+  padding:clamp(1.25rem,3.5vw,2.2rem);
   border-radius:34px;
   background:linear-gradient(135deg,#fff,var(--pearl),var(--ice));
   box-shadow:var(--shadow);
 }
 .home-trust-intro h2{
-  max-width:12ch;
+  max-width:18ch;
+  font-size:clamp(2rem,5vw,3.25rem);
 }
 .home-trust-intro>p:last-child{
   max-width:62ch;
@@ -124,7 +128,10 @@
   gap:1rem;
 }
 .home-trust-grid article{
-  padding:1rem;
+  display:flex;
+  align-items:flex-start;
+  gap:.7rem;
+  padding:.8rem;
   border:1px solid rgba(255,255,255,.9);
   border-radius:22px;
   background:rgba(255,255,255,.72);
@@ -140,14 +147,16 @@
   font-weight:800;
 }
 .home-trust-grid h3{
-  margin:.7rem 0 .35rem;
+  margin:0 0 .25rem;
 }
 .home-trust-grid p,
 .home-curator-copy p{
+  margin:0;
   color:var(--muted);
 }
-.home-curator-copy{
-  max-width:72ch;
+.home-trust-link{
+  width:max-content;
+  font-weight:800;
 }
 
 @media(min-width:700px){
@@ -167,7 +176,7 @@
 
 @media(min-width:1040px){
   .home-mixed-grid{
-    grid-template-columns:repeat(4,minmax(0,1fr));
+    grid-template-columns:minmax(0,1.65fr) repeat(2,minmax(0,1fr));
   }
   .home-product-grid{
     grid-template-columns:repeat(3,minmax(0,1fr));
@@ -175,11 +184,37 @@
   .home-content-card.is-compact h3{
     font-size:1.4rem;
   }
+  .home-mixed-grid .is-featured .home-content-card__image{
+    aspect-ratio:4/3;
+  }
+  .home-mixed-grid .is-featured h3{
+    font-size:clamp(1.9rem,2.8vw,2.65rem);
+  }
 }
 
 @media(max-width:699px){
   .home-section-head{
     align-items:flex-start;
+  }
+  .home-mixed-grid .is-compact{
+    display:grid;
+    grid-template-columns:38% minmax(0,1fr);
+  }
+  .home-mixed-grid .is-compact .home-content-card__image{
+    height:100%;
+    min-height:170px;
+    aspect-ratio:auto;
+  }
+  .home-mixed-grid .is-compact .home-content-card__body{
+    padding:.85rem;
+  }
+  .home-mixed-grid .is-compact h3{
+    font-size:1.2rem;
+  }
+  .home-mixed-grid .is-compact p,
+  .home-mixed-grid .is-compact small,
+  .home-mixed-grid .is-compact .home-verification{
+    display:none;
   }
 }
 

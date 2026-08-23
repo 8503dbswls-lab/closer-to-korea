@@ -40,8 +40,8 @@
       .sort((a,b) => Number(b.featured)-Number(a.featured) || dateValue(b).localeCompare(dateValue(a)));
   }
 
-  function articleCard(article, compact=false){
-    return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}">
+  function articleCard(article, compact=false, featured=false){
+    return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}${featured?' is-featured':''}">
       <a class="home-content-card__image" href="${encodeURIComponent(article.slug)}.html">
         <img src="${safe(article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">
       </a>
@@ -95,22 +95,42 @@
       const articles = publicArticles(articleData);
       const products = publicProducts(productData);
 
+      const usedArticleIds=new Set();
+      const usedProductIds=new Set();
+
       const latestGrid=q('[data-home-latest]');
       if(latestGrid){
-        const mixed=interleave(articles.slice(0,2),products.slice(0,2));
-        latestGrid.innerHTML=mixed.map(entry =>
-          entry.type==='article' ? articleCard(entry.item,true) : productCard(entry.item,true)
-        ).join('');
+        const lead=articles.find(article=>article.featured===true) || articles[0];
+        const supportingArticle=articles.find(article=>!lead || article.id!==lead.id);
+        const supportingProduct=products[0];
+        const cards=[];
+        if(lead){
+          usedArticleIds.add(lead.id);
+          cards.push(articleCard(lead,false,true));
+        }
+        if(supportingArticle){
+          usedArticleIds.add(supportingArticle.id);
+          cards.push(articleCard(supportingArticle,true));
+        }
+        if(supportingProduct){
+          usedProductIds.add(supportingProduct.id);
+          cards.push(productCard(supportingProduct,true));
+        }
+        latestGrid.innerHTML=cards.join('');
       }
 
       const articleGrid=q('[data-home-article-grid]');
       if(articleGrid){
-        articleGrid.innerHTML=articles.slice(0,4).map(article=>articleCard(article)).join('');
+        const remainingArticles=articles.filter(article=>!usedArticleIds.has(article.id)).slice(0,3);
+        articleGrid.innerHTML=remainingArticles.map(article=>articleCard(article)).join('');
+        articleGrid.closest('.home-articles')?.toggleAttribute('hidden',remainingArticles.length===0);
       }
 
       const productGrid=q('[data-home-product-grid]');
       if(productGrid){
-        productGrid.innerHTML=products.slice(0,3).map(product=>productCard(product)).join('');
+        const remainingProducts=products.filter(product=>!usedProductIds.has(product.id)).slice(0,3);
+        productGrid.innerHTML=remainingProducts.map(product=>productCard(product)).join('');
+        productGrid.closest('.home-products')?.toggleAttribute('hidden',remainingProducts.length===0);
       }
 
       const trendingSection=q('[data-home-trending-section]');

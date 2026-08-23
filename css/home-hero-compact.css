@@ -13,8 +13,8 @@
 
   .hero-copy,
   .hero-collage{
-    min-height:clamp(560px,68vh,690px) !important;
-    max-height:690px;
+    min-height:clamp(500px,61vh,590px) !important;
+    max-height:590px;
   }
 
   .hero-copy{
@@ -24,7 +24,7 @@
   .hero h1{
     max-width:11.2ch !important;
     margin:.55rem 0 .8rem !important;
-    font-size:clamp(3.9rem,6.4vw,5.55rem) !important;
+    font-size:clamp(3.65rem,5.8vw,5.15rem) !important;
     line-height:.93 !important;
   }
 
@@ -56,7 +56,7 @@
   }
 
   /* The first section should begin close enough to peek into the initial viewport. */
-  .hero + .section{
+  .hero + .quick-categories{
     padding-top:clamp(1.6rem,3vw,2.4rem) !important;
   }
 }
@@ -114,7 +114,7 @@
     aspect-ratio:4/3 !important;
   }
 
-  .hero + .section{
+  .hero + .quick-categories{
     padding-top:1.3rem !important;
   }
 }
