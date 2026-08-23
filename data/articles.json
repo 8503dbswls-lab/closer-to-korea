@@ -613,9 +613,9 @@
       "Daiso Korea",
       "Korean home cooking"
     ],
-    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
-    "heroImageAlt": "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
-    "heroImageCaption": "A white ceramic microwave steamed egg cooker with a lid, side handles, and ribbed sides.",
+    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
+    "heroImageAlt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
+    "heroImageCaption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
     "relatedProductIds": [
       "egg-steamer"
     ],
@@ -629,7 +629,7 @@
     ],
     "sourceRequirement": "required",
     "publishedAt": "2026-07-30",
-    "updatedAt": "2026-08-17",
+    "updatedAt": "2026-08-23",
     "featured": true,
     "draft": false,
     "heroImageWidth": 1536,
