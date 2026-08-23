@@ -40,6 +40,16 @@
       .sort((a,b) => Number(b.featured)-Number(a.featured) || dateValue(b).localeCompare(dateValue(a)));
   }
 
+  function articleAndProductAreRelated(article,product){
+    if(!article || !product) return false;
+    const relatedProductIds=Array.isArray(article.relatedProductIds) ? article.relatedProductIds : [];
+    const relatedArticleSlugs=Array.isArray(product.relatedArticleSlugs) ? product.relatedArticleSlugs : [];
+    return relatedProductIds.includes(product.id)
+      || relatedProductIds.includes(product.slug)
+      || relatedArticleSlugs.includes(article.slug)
+      || relatedArticleSlugs.includes(article.id);
+  }
+
   function articleCard(article, compact=false, featured=false){
     return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}${featured?' is-featured':''}">
       <a class="home-content-card__image" href="${encodeURIComponent(article.slug)}.html">
@@ -102,7 +112,10 @@
       if(latestGrid){
         const lead=articles.find(article=>article.featured===true) || articles[0];
         const supportingArticle=articles.find(article=>!lead || article.id!==lead.id);
-        const supportingProduct=products[0];
+        const supportingProduct=products.find(product=>
+          !articleAndProductAreRelated(lead,product)
+          && !articleAndProductAreRelated(supportingArticle,product)
+        );
         const cards=[];
         if(lead){
           usedArticleIds.add(lead.id);
