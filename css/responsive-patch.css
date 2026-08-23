@@ -365,6 +365,20 @@ td {
     content: "×";
   }
 
+  [data-share-page]::before {
+    content: "↗";
+    font-size: 1.22rem;
+    line-height: 1;
+    font-weight: 800;
+  }
+
+  [data-copy-link]::before {
+    content: "⧉";
+    font-size: 1.22rem;
+    line-height: 1;
+    font-weight: 800;
+  }
+
   .search-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
