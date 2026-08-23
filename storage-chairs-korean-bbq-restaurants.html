@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/article-sticky.css?v=1">
 <link rel="stylesheet" href="css/article-bonus.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -56,4 +57,5 @@
 <script src="data/content-data.js?v=3"></script>
 <script src="js/main.js"></script>
 <script>(()=>{const s=document.querySelector('[data-share-page]'),c=document.querySelector('[data-copy-link]'),m=document.querySelector('[data-share-status]');const show=t=>{if(!m)return;m.textContent=t;setTimeout(()=>m.textContent='',2500)};s?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);show('Link copied.')}}catch{}});c?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);show('Link copied.')}catch{show('Copy the URL from your browser.')}})})();</script>
+<script src="js/related-content.js?v=1"></script>
 </body></html>

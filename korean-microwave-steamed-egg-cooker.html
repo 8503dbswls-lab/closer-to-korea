@@ -32,6 +32,7 @@
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/article-sticky.css?v=1">
 <link rel="stylesheet" href="css/article-bonus.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -220,5 +221,6 @@
   copyButton?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);showStatus('Link copied.')}catch{showStatus('Copy the URL from your browser.')}});
 })();
 </script>
+<script src="js/related-content.js?v=1"></script>
 </body>
 </html>

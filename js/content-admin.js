@@ -736,6 +736,15 @@
       });
       if(article.monetizationProfile==="custom" && adBreakCount===0)warnings.push(`${label}: Custom monetization profile has no Ad Break block.`);
       if(article.draft && article.featured)warnings.push(`${label}: Draft article is featured.`);
+
+      // Article and Product Guide cards must remain visually distinct, even when
+      // they explain the same physical product.
+      (article.relatedProductIds||[]).forEach(productId=>{
+        const relatedProduct=state.products.find(product=>product.id===productId);
+        if(relatedProduct && String(article.heroImage||"").trim()===String(relatedProduct.image||"").trim()){
+          warnings.push(`${label}: Article and related Product Guide use the same representative image. Use a context/use image for the Article and a product-identification image for the Product Guide.`);
+        }
+      });
     });
 
     if(state.monetization?.adsense?.connectionEnabled===true){

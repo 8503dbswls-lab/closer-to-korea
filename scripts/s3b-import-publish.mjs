@@ -346,6 +346,7 @@ function renderStatic(article){
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/article-sticky.css?v=1">
 <link rel="stylesheet" href="css/article-bonus.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -361,6 +362,7 @@ function renderStatic(article){
 <footer class="site-footer site-footer-v2"><div class="site-footer-v2__top"><div class="site-footer-v2__brand"><a class="brand" href="index.html">Closer <span>to</span> Korea</a><p>Korean everyday life, products, and small cultural details - explained with clear local context.</p><div class="site-footer-v2__contact"><p>Questions, corrections, or something Korean you want us to explain?</p><a href="mailto:contact@closertokorea.com">contact@closertokorea.com</a></div></div><div class="site-footer-v2__links"><nav aria-label="Explore"><strong>Explore</strong><a href="index.html#categories-quick">Explore Korea</a><a href="product-guides.html">Product Guides</a><a href="search.html">Search</a></nav><nav aria-label="About and standards"><strong>About</strong><a href="about.html">About Closer to Korea</a><a href="contact.html">Contact</a><a href="editorial-policy.html">Editorial Policy</a></nav><nav aria-label="Legal"><strong>Legal</strong><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="advertising-disclosure.html">Advertising Disclosure</a></nav></div></div><div class="site-footer-v2__bottom"><p>&copy; 2026 Closer to Korea. All rights reserved.</p><p>Made to help curious readers understand everyday Korea a little better.</p></div></footer>
 <script src="data/content-data.js?v=3"></script>
 <script src="js/main.js"></script>
+<script src="js/related-content.js?v=1"></script>
 <script>(()=>{const s=document.querySelector('[data-share-page]'),c=document.querySelector('[data-copy-link]'),m=document.querySelector('[data-share-status]');const show=t=>{if(!m)return;m.textContent=t;setTimeout(()=>m.textContent='',2500)};s?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);show('Link copied.')}}catch{}});c?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);show('Link copied.')}catch{show('Copy the URL from your browser.')}})})();</script>
 </body></html>`;
 }

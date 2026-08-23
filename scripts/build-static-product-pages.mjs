@@ -220,6 +220,7 @@ for (const product of published) {
 <link rel="stylesheet" href="css/site-footer-v2.css?v=1">
 <link rel="stylesheet" href="css/content-links.css">
 <link rel="stylesheet" href="css/product-hero-layout.css?v=1">
+<link rel="stylesheet" href="css/related-content.css?v=1">
 <style>
 .product-gallery-shell{min-width:0}
 .product-gallery-main{margin:0}
@@ -323,6 +324,7 @@ for (const product of published) {
 })();
 </script>
 <script>(()=>{const s=document.querySelector('[data-share-page]'),c=document.querySelector('[data-copy-link]'),m=document.querySelector('[data-share-status]');const show=t=>{if(!m)return;m.textContent=t;setTimeout(()=>m.textContent='',2500)};s?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);show('Link copied.')}}catch{}});c?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);show('Link copied.')}catch{show('Copy the URL from your browser.')}})})();</script>
+<script src="js/related-content.js?v=1"></script>
 </body>
 </html>`;
 
