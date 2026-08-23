@@ -2,6 +2,16 @@
 /* Closer to Korea — compact home hero
    Goal: keep the brand impact while revealing that more content continues below. */
 
+.hero-product-guide-link{
+  display:inline-flex;
+  width:max-content;
+  margin:.1rem 0 .15rem;
+  color:#655579;
+  font-size:.84rem;
+  font-weight:800;
+  text-underline-offset:.2em;
+}
+
 @media (min-width: 960px){
   .hero{
     min-height:auto !important;
@@ -107,6 +117,11 @@
 
   .hero-actions{
     margin:.65rem 0 .3rem !important;
+  }
+
+  .hero-actions .jelly-button{
+    flex:1 1 100%;
+    width:100%;
   }
 
   .hero-collage{

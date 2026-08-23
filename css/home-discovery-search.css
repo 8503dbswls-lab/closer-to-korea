@@ -1,13 +1,13 @@
 
 .home-discovery-search{
-  padding-top:clamp(2.2rem,6vw,5rem);
-  padding-bottom:clamp(3rem,8vw,6.5rem);
+  padding-top:clamp(2rem,4vw,3.6rem);
+  padding-bottom:clamp(2rem,4vw,3.8rem);
 }
 
 .home-discovery-search__card{
   position:relative;
   overflow:hidden;
-  padding:clamp(1.35rem,5vw,3.4rem);
+  padding:clamp(1.25rem,3.5vw,2.5rem);
   border:1px solid rgba(41,39,45,.1);
   border-radius:34px;
   background:
@@ -24,7 +24,7 @@
 .home-discovery-search__copy h2{
   margin:.4rem 0 .8rem;
   max-width:15ch;
-  font:400 clamp(2.2rem,7vw,4.4rem)/.98 "Bagel Fat One",sans-serif;
+  font:400 clamp(2.1rem,5.5vw,3.65rem)/.98 "Bagel Fat One",sans-serif;
   letter-spacing:-.035em;
 }
 

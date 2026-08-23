@@ -54,8 +54,8 @@
       "href": "#categories-quick"
     },
     "secondaryCta": {
-      "label": "See What’s New →",
-      "href": "#latest"
+      "label": "Find a Korean Product",
+      "href": "search.html"
     },
     "trustItems": [
       "Korean daily-life context",
