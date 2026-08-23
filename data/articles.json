@@ -613,9 +613,9 @@
       "Daiso Korea",
       "Korean home cooking"
     ],
-    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
-    "heroImageAlt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
-    "heroImageCaption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
+    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-closed.jpg",
+    "heroImageAlt": "White ceramic Korean microwave steamed egg cooker with lid and side handles on a light marble surface",
+    "heroImageCaption": "A white ceramic microwave steamed egg cooker with a lid, side handles, and ribbed sides.",
     "relatedProductIds": [
       "egg-steamer"
     ],
@@ -629,7 +629,7 @@
     ],
     "sourceRequirement": "required",
     "publishedAt": "2026-07-30",
-    "updatedAt": "2026-08-23",
+    "updatedAt": "2026-08-17",
     "featured": true,
     "draft": false,
     "heroImageWidth": 1536,
@@ -1056,8 +1056,8 @@
       "food storage",
       "everyday Korea"
     ],
-    "heroImage": "assets/images/articles/korean-kimchi-cutter-container/korean-kimchi-cutter-container-hero.webp",
-    "heroImageAlt": "AI-generated illustration of a clear Korean kimchi cutter storage container filled with kimchi, with the cutting tool stored flat in the lid",
+    "heroImage": "assets/images/articles/korean-kimchi-cutter-container/kimchi-cutter-container-in-use.webp",
+    "heroImageAlt": "AI-generated illustration of a gray Korean kimchi cutter container filled with napa cabbage kimchi as a hand presses the white cutting tool through the guide slots",
     "heroImageWidth": 1254,
     "heroImageHeight": 1254,
     "relatedProductIds": [],
@@ -1080,7 +1080,7 @@
       }
     ],
     "publishedAt": "2026-08-21",
-    "updatedAt": "2026-08-21",
+    "updatedAt": "2026-08-23",
     "featured": false,
     "draft": false,
     "sourceRequirement": "required",
@@ -1105,7 +1105,7 @@
         "container for cutting and storing kimchi"
       ]
     },
-    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "heroImageCaption": "AI-generated illustration showing how a kimchi cutter container may be used to portion whole-leaf kimchi.",
     "heroImageType": "ai-illustration",
     "languageBonus": {
       "approved": true,
