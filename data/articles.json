@@ -1337,5 +1337,155 @@
     },
     "heroImageCaption": "Different wakppubol toys photographed on a retail display in Korea. Prices shown reflect the display at the time of the photo and may change.",
     "heroImageType": "owner-photo-edited"
+  },
+  {
+    "id": "korean-coin-tissue",
+    "slug": "korean-coin-tissue",
+    "seoTitle": "What Is the Coin-Shaped Tissue You May Encounter at Restaurants the Korea-Based Editor Visits?",
+    "metaDescription": "Learn what Korean coin tissue is, how it expands with water, and where Korean product listings suggest it can be used.",
+    "primaryKeyword": "Korean coin tissue",
+    "secondaryKeywords": [
+      "coin-shaped tissue Korea",
+      "compressed tissue Korea",
+      "Korean compressed tissue",
+      "dongjeon tissue"
+    ],
+    "title": "What Is the Coin-Shaped Tissue You May Encounter at Restaurants the Korea-Based Editor Visits?",
+    "excerpt": "A small, dry disc can become a usable tissue after you add water. Here is what Korean coin tissue is and where Korean product listings say it can be used.",
+    "body": [
+      {
+        "type": "heading",
+        "text": "What Is Korean Coin Tissue?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Korean coin tissue, or 동전티슈, is a coin-shaped compressed tissue product manufactured and distributed in Korea. It is stored dry and compressed, then expands when water is added before use."
+      },
+      {
+        "type": "heading",
+        "text": "How Does It Work?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The product stays compact while it is dry. Add water, and the compressed disk unfolds into a tissue."
+      },
+      {
+        "type": "heading",
+        "text": "Where Might You Use It?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Korean product listings present coin tissue for several uses, including restaurants, travel, camping, and the home. That describes the settings listed by sellers, not a claim that every restaurant provides it."
+      },
+      {
+        "type": "heading",
+        "text": "Is It Common at Korean Restaurants?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Not necessarily. In the Korea-based editor's local observation, coin tissue is not something commonly provided everywhere, although diners may encounter it at some restaurants."
+      },
+      {
+        "type": "heading",
+        "text": "How Does It Compare With U.S. Restaurant Napkins?"
+      },
+      {
+        "type": "paragraph",
+        "text": "U.S. restaurant materials commonly describe paper napkins, dispenser napkins, and cloth napkins as dining-service options. The small compressed piece is expanded with water before use. The available information does not establish how widely coin tissue is used in U.S. restaurants."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you encounter one at a restaurant the Korea-based editor visits, it may be a dry compressed tissue. Add water, and it unfolds into a tissue for use."
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "What is Korean coin tissue?",
+            "description": "It is a dry, compressed tissue product shaped like a small coin. Water is added before use so it can unfold into a tissue or towel."
+          },
+          {
+            "term": "Does every Korean restaurant provide coin tissue?",
+            "description": "No. Based on the Korea-based editor's local observation, it is not commonly provided everywhere, although it can be encountered at some restaurants."
+          },
+          {
+            "term": "Where do Korean product listings say coin tissue can be used?",
+            "description": "Listings present it for restaurants, travel, camping, and home use."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Not sure what to search for?"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Korean",
+            "description": "동전티슈"
+          },
+          {
+            "term": "Romanized",
+            "description": "dongjeon tissue"
+          },
+          {
+            "term": "You might type",
+            "description": "dong-jeon tissue"
+          },
+          {
+            "term": "Describe it",
+            "description": "coin-shaped tissue that expands with water · compressed tissue seen at some restaurants visited by our Korea-based editor · small dry tissue that unfolds after adding water"
+          }
+        ]
+      }
+    ],
+    "categoryKey": "culture",
+    "categoryLabel": "Korean Culture Finds",
+    "tags": [
+      "Korean daily life",
+      "Korean restaurants",
+      "coin tissue",
+      "compressed tissue",
+      "Korean culture"
+    ],
+    "heroImage": "assets/images/articles/korean-coin-tissue/korean-coin-tissue-ai-illustration.png",
+    "heroImageAlt": "AI-generated illustration of many white coin-shaped compressed tissues arranged on a bamboo tray",
+    "heroImageWidth": 1254,
+    "heroImageHeight": 1254,
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "heroImageType": "ai-illustration",
+    "relatedProductIds": [],
+    "sources": [],
+    "publishedAt": "2026-09-02",
+    "updatedAt": "2026-09-02",
+    "featured": false,
+    "draft": false,
+    "sourceRequirement": "optional",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "local-personal",
+    "monetizationProfile": "default",
+    "searchHelp": {
+      "heading": "Not sure what to search for?",
+      "koreanTerms": [
+        "동전티슈"
+      ],
+      "romanizedTerms": [
+        "dongjeon tissue"
+      ],
+      "soundAlikeTerms": [
+        "dong-jeon tissue"
+      ],
+      "descriptionSearches": [
+        "coin-shaped tissue that expands with water",
+        "compressed tissue seen at some restaurants visited by our Korea-based editor",
+        "small dry tissue that unfolds after adding water"
+      ]
+    }
   }
 ]
