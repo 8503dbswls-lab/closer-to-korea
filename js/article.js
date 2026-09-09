@@ -1,5 +1,5 @@
 const articleQuery=new URLSearchParams(location.search);
-const articleSlug=articleQuery.get('slug');
+const articleSlug=articleQuery.get('slug')||document.documentElement.dataset.articleSlug;
 
 const articleHeroOverrides={
   'korean-restaurant-table-utensil-drawer':{
