@@ -164,13 +164,14 @@ for (const product of published) {
 
   const schema = {
     "@context":"https://schema.org",
-    "@type":"Product",
+    "@type":"WebPage",
+    url:canonical,
     name:product.name,
     description:product.summary || "",
     image:Array.isArray(product.images)&&product.images.length
       ? product.images.map(x=>abs(x.src)).filter(Boolean)
       : (product.image?[imageAbs]:[]),
-    category:product.category || product.categoryKey || ""
+    inLanguage:"en"
   };
 
   const relatedHtml = related ? `

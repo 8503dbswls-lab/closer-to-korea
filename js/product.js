@@ -182,11 +182,12 @@ async function loadProductDetail(){
 
     const schema={
       "@context":"https://schema.org",
-      "@type":"Product",
+      "@type":"WebPage",
+      "url":canonicalUrl,
       "name":product.name,
       "description":product.summary,
       "image":galleryItems.map(item=>new URL(item.src,location.href).href),
-      "category":product.category||product.categoryKey
+      "inLanguage":"en"
     };
     const script=document.createElement('script');
     script.type='application/ld+json';
