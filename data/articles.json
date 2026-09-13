@@ -1496,6 +1496,227 @@
     "isProductGuide": false,
     "sources": [
       {
+        "label": "한국의 주거문화",
+        "url": "https://www.aks.ac.kr/ikorea/upload/intl/korean/UserFiles/UKS5_Korean_House_eng.pdf"
+      },
+      {
+        "label": "Residents: Types of Housing",
+        "url": "https://www.busan.go.kr/eng/bshouse01"
+      },
+      {
+        "label": "Living Floor | Apartment",
+        "url": "https://www.intypes.cornell.edu/expanded.cfm?erID=58"
+      },
+      {
+        "label": "Muslim-Friendly Restaurants",
+        "url": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf"
+      },
+      {
+        "label": "Footwear inside accommodation, homes & AirBNB etc.",
+        "url": "https://www.reddit.com/r/koreatravel/comments/1g7o345"
+      },
+      {
+        "label": "Most Americans Take Their Shoes Off at Home, But Don't Expect Their Guests To",
+        "url": "https://yougov.com/en-us/articles/20063-most-americans-take-their-shoes-home-dont-expect-t"
+      },
+      {
+        "label": "Do you take your shoes off as soon as you enter your home?",
+        "url": "https://yougov.com/en-us/daily-results/20180103-ef530-2"
+      },
+      {
+        "label": "Is a shoe-free home really better? Scientists may have an answer.",
+        "url": "https://www.nationalgeographic.com/premium/article/shoes-on-inside-science-clean"
+      }
+    ],
+    "sourceRequirement": "required",
+    "languageBonus": null,
+    "id": "korea-remove-shoes-home-accommodation",
+    "contentId": "C-012",
+    "slug": "korea-remove-shoes-home-accommodation",
+    "title": "Why Shoes Come Off in Korean Homes and Ondol Rooms",
+    "seoTitle": "Why Shoes Come Off in Korean Homes and Ondol Rooms",
+    "metaDescription": "Learn what American visitors should know about removing outdoor shoes at Korean homes and ondol dining areas.",
+    "excerpt": "In Korea, the line between outdoor footwear and indoor living space is often marked at the entrance. Here is what U.S. readers should know before entering a home, accommodation, or floor-seated dining area.",
+    "primaryKeyword": "remove shoes in Korea",
+    "secondaryKeywords": [
+      "Korean home shoe etiquette",
+      "shoes off in Korean homes",
+      "Korean floor-seated restaurants",
+      "Korean accommodation shoe rules"
+    ],
+    "tags": [
+      "Korea culture",
+      "etiquette",
+      "homes",
+      "accommodations",
+      "restaurants"
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "text": "The entrance is where the rule begins"
+      },
+      {
+        "type": "paragraph",
+        "text": "In Korean residential spaces, people take off outdoor shoes at the entrance before entering the indoor living area. This practice is an important feature of residential culture. Wearing shoes into the home could upset the people who live there, so visitors should look for the transition between the entrance and the main living space before stepping inside."
+      },
+      {
+        "type": "paragraph",
+        "text": "As a local observation, the entrance and floor arrangement may help clarify where outdoor shoes should come off. These details can help show where outdoor footwear should come off, but the exact setup can vary by home or accommodation."
+      },
+      {
+        "type": "heading",
+        "text": "Why floors matter in Korean homes"
+      },
+      {
+        "type": "paragraph",
+        "text": "Korean housing culture has a historical connection between ondol, floor-based living, and the separation of outdoor shoes from indoor living areas. That context is related to the separation of outdoor footwear from the main living space, but it should not be treated as the only explanation for every household or setting."
+      },
+      {
+        "type": "paragraph",
+        "text": "For an American visitor, the practical takeaway is simple: pause at the entrance and follow the home's footwear instructions."
+      },
+      {
+        "type": "heading",
+        "text": "This can apply beyond private homes"
+      },
+      {
+        "type": "paragraph",
+        "text": "The same etiquette can matter in spaces with ondol rooms. The Korea Tourism Organization advises visitors to remove their shoes when entering an ondol room in a restaurant or a residential space."
+      },
+      {
+        "type": "paragraph",
+        "text": "In those settings, visitors should follow the instructions for the ondol room. If the shoe-removal boundary is unclear, ask before entering."
+      },
+      {
+        "type": "heading",
+        "text": "What about slippers?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Korean homes and accommodations may distinguish between outdoor shoes and indoor slippers. Whether indoor slippers are part of that setup depends on the specific place."
+      },
+      {
+        "type": "paragraph",
+        "text": "The broader contrast with the United States is not simply whether people take off their shoes. In the U.S., taking shoes off at home is a majority practice, but expectations for guests are less consistent. YouGov research and U.S. media coverage show a difference between what Americans do in their own homes and the rules they apply to visitors."
+      },
+      {
+        "type": "paragraph",
+        "text": "From a local-observation perspective, the difference may involve how clearly guest expectations are communicated, as well as the entrance and floor arrangement."
+      },
+      {
+        "type": "heading",
+        "text": "A simple habit for visitors"
+      },
+      {
+        "type": "paragraph",
+        "text": "In a Korean home or an ondol room, stop at the entrance and remove outdoor shoes before stepping onto the indoor floor, then follow the specific place's footwear arrangement. If the arrangement is unclear, ask rather than guessing."
+      },
+      {
+        "type": "paragraph",
+        "text": "English-language community questions about Korean homes and accommodations include questions about socks, bare feet, indoor footwear, and accommodation rules. Those questions are useful reminders that the details can require attention, but they should not be treated as a survey of all English-speaking travelers."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "The safest approach is to treat the entrance as a transition point. Take off outdoor shoes, notice whether indoor footwear is present, and follow the layout or instructions of the specific place. In a home, wearing outdoor shoes inside could upset the people who live there."
+      },
+      {
+        "type": "heading",
+        "text": "Frequently asked questions"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Do I need to remove my shoes in a Korean home?",
+            "description": "In Korean residential spaces, people commonly take off outdoor shoes at the entrance before entering the indoor living area. Wearing shoes inside could upset the people who live there."
+          },
+          {
+            "term": "Should I remove my shoes at a Korean restaurant?",
+            "description": "If the restaurant has an ondol room, the Korea Tourism Organization advises removing your shoes before entering that space."
+          },
+          {
+            "term": "Are indoor slippers always provided in Korea?",
+            "description": "No single setup should be assumed. Korean homes and accommodations may separate outdoor shoes from indoor slippers, but whether indoor slippers are part of the setup can vary."
+          },
+          {
+            "term": "Is removing shoes at home different in the United States?",
+            "description": "Taking shoes off at home is a majority practice in the United States, but expectations for guests are less consistent. Research and U.S. media coverage show a difference between personal household habits and guest rules."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Not sure what to search for?"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Korean",
+            "description": "현관, 온돌방"
+          },
+          {
+            "term": "Romanized",
+            "description": "hyeongwan, ondolbang"
+          },
+          {
+            "term": "You might type",
+            "description": "hyun-gwan, on-dol bang"
+          },
+          {
+            "term": "Describe it",
+            "description": "Korean home entrance where outdoor shoes come off, Korean restaurant with an ondol room where shoes come off, indoor slippers at a Korean accommodation"
+          }
+        ]
+      }
+    ],
+    "heroImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
+    "cardImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
+    "heroImageAlt": "A photo of the entrance leading into the house",
+    "heroImageWidth": 1295,
+    "heroImageHeight": 1214,
+    "heroImagePosition": "50% 50%",
+    "relatedProductIds": [],
+    "publishedAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "draft": false,
+    "featured": false,
+    "searchHelp": {
+      "heading": "Not sure what to search for?",
+      "koreanTerms": [
+        "현관",
+        "온돌방"
+      ],
+      "romanizedTerms": [
+        "hyeongwan",
+        "ondolbang"
+      ],
+      "soundAlikeTerms": [
+        "hyun-gwan",
+        "on-dol bang"
+      ],
+      "descriptionSearches": [
+        "Korean home entrance where outdoor shoes come off",
+        "Korean restaurant with an ondol room where shoes come off",
+        "indoor slippers at a Korean accommodation"
+      ]
+    },
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
+  },
+  {
+    "sectionKey": "everyday-korea",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "contentType": "culture-everyday",
+    "isProductGuide": false,
+    "sources": [
+      {
         "label": "Korea’s food-wrapping tradition: ssam",
         "url": "https://www.mcst.go.kr/english/policy/kocis/newsView.jsp?pSeq=93"
       },
