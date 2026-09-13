@@ -53,7 +53,7 @@
   function articleCard(article, compact=false, featured=false){
     return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}${featured?' is-featured':''}">
       <a class="home-content-card__image" href="${encodeURIComponent(article.slug)}.html">
-        <img src="${safe(article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">
+        <img src="${safe(article.cardImage || article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">
       </a>
       <div class="home-content-card__body">
         <div class="home-content-card__meta">

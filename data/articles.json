@@ -1487,5 +1487,213 @@
         "small dry tissue that unfolds after adding water"
       ]
     }
+  },
+  {
+    "sectionKey": "everyday-korea",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "contentType": "culture-everyday",
+    "isProductGuide": false,
+    "sources": [
+      {
+        "label": "Korea’s food-wrapping tradition: ssam",
+        "url": "https://www.mcst.go.kr/english/policy/kocis/newsView.jsp?pSeq=93"
+      },
+      {
+        "label": "About Korean Food- A Bite of Korea: Salad, Leaf Wraps & Korean BBQ",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=903&vcontsId=229195"
+      },
+      {
+        "label": "채소의 전통 조리법 - 나물 생채 쌈을 중심으로",
+        "url": "https://kiss.kstudy.com/Detail/Ar?key=280479"
+      },
+      {
+        "label": "What Are Perilla Leaves and How Can I Cook With Them?",
+        "url": "https://www.bonappetit.com/story/perilla-leaves"
+      },
+      {
+        "label": "깻잎의 이용실태에 관한 조사 연구",
+        "url": "https://kiss.kstudy.com/DetailOa/Ar?key=53614605"
+      },
+      {
+        "label": "How To Make Korean BBQ Ssam",
+        "url": "https://www.tastingtable.com/1601188/how-to-make-korean-bbq-ssam/"
+      },
+      {
+        "label": "KBBQ Perilla Wraps",
+        "url": "https://www.thekitchn.com/kbbq-perilla-wraps-22904629"
+      },
+      {
+        "label": "what is that veggie used as wrap in kbbq?",
+        "url": "https://www.reddit.com/r/NoStupidQuestions/comments/1ilha1a"
+      },
+      {
+        "label": "Perilla leaves",
+        "url": "https://www.maangchi.com/ingredient/perilla-leaves"
+      },
+      {
+        "label": "Ssam Bap: Korean Lettuce Wrap with Beef Ssamjang",
+        "url": "https://atcenteramerica.com/wp-content/uploads/2023/05/FINAL_Fermented-Foods_Receipespread.pdf"
+      }
+    ],
+    "sourceRequirement": "required",
+    "languageBonus": null,
+    "id": "korean-bbq-ssam-lettuce-perilla-wraps",
+    "contentId": "C-013",
+    "slug": "korean-bbq-ssam-lettuce-perilla-wraps",
+    "title": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
+    "seoTitle": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
+    "metaDescription": "Learn how ssam works at Korean barbecue, including lettuce and perilla leaves, fillings, personal assembly, and useful Korean search terms.",
+    "excerpt": "At Korean barbecue, diners may wrap grilled meat, rice, sauces, and side dishes in leafy greens. This eating style is called ssam, and the combination can be assembled according to personal taste.",
+    "primaryKeyword": "Korean BBQ ssam",
+    "secondaryKeywords": [
+      "Korean lettuce wraps",
+      "perilla leaf wraps",
+      "Korean barbecue wraps",
+      "ssam culture"
+    ],
+    "tags": [
+      "Korean food",
+      "Korean barbecue",
+      "ssam",
+      "perilla leaves",
+      "lettuce wraps"
+    ],
+    "body": [
+      {
+        "type": "heading",
+        "text": "What does ssam mean?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ssam is a Korean food culture in which leafy vegetables are used to wrap meat, rice, seasoning, or side dishes. At a Korean barbecue restaurant, the leaf becomes a small wrapper for ingredients placed inside it."
+      },
+      {
+        "type": "heading",
+        "text": "Lettuce and perilla leaves"
+      },
+      {
+        "type": "paragraph",
+        "text": "Lettuce and perilla leaves are introduced as representative ssam ingredients in Korean barbecue. Diners can choose one leaf, combine them, or adjust the filling to suit their preferences."
+      },
+      {
+        "type": "heading",
+        "text": "What is a perilla leaf?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korean word kkaennip refers to a perilla leaf, also called a deulkkae leaf—not a sesame leaf. Perilla and sesame are different plants, despite occasional confusion in English."
+      },
+      {
+        "type": "heading",
+        "text": "How diners assemble a ssam"
+      },
+      {
+        "type": "paragraph",
+        "text": "A diner might place grilled meat on a leaf and add rice, sauce, or a side dish before folding it. The combination is a matter of personal preference. From a Korea-based local-observation perspective, some diners may prefer to eat a prepared ssam in one bite, but this is not a universal rule."
+      },
+      {
+        "type": "heading",
+        "text": "Is ssam only found in Korea?"
+      },
+      {
+        "type": "paragraph",
+        "text": "No. Ssam and perilla have also been introduced in the United States through Korean barbecue restaurants and food media, so this eating style is not limited to Korea. English-language community discussions also include questions about the leafy vegetables served with Korean barbecue, but they should not be treated as representative of all Americans."
+      },
+      {
+        "type": "heading",
+        "text": "Final Takeaway"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ssam is best understood as a flexible way to build a bite with leafy greens, meat, rice, sauce, and side dishes. At Korean barbecue, lettuce and perilla are two useful starting points, but the final wrap can vary with the diner’s preferences."
+      },
+      {
+        "type": "heading",
+        "text": "Frequently asked questions"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "What is ssam in Korean food?",
+            "description": "Ssam is a Korean food culture in which leafy vegetables wrap ingredients such as meat, rice, seasoning, or side dishes."
+          },
+          {
+            "term": "What leaves are used for Korean BBQ ssam?",
+            "description": "Lettuce and perilla leaves are representative ssam ingredients introduced with Korean barbecue. The exact combination can vary by personal preference."
+          },
+          {
+            "term": "Is kkaennip a sesame leaf?",
+            "description": "No. Kkaennip is a perilla or deulkkae leaf, and perilla is a different plant from sesame."
+          },
+          {
+            "term": "Do you have to eat ssam in one bite?",
+            "description": "No universal rule requires that. From a Korea-based local-observation perspective, some diners may prefer one bite, but eating preferences can differ."
+          },
+          {
+            "term": "Is ssam available in the United States?",
+            "description": "Yes. Ssam and perilla have been introduced through Korean barbecue restaurants and food media in the United States."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Not sure what to search for?"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Korean",
+            "description": "쌈, 깻잎"
+          },
+          {
+            "term": "Romanized",
+            "description": "ssam, kkaennip"
+          },
+          {
+            "term": "You might type",
+            "description": "ssahm, kkan-nip"
+          },
+          {
+            "term": "Describe it",
+            "description": "Korean barbecue leafy vegetable wraps, Korean BBQ lettuce and perilla leaf wraps"
+          }
+        ]
+      }
+    ],
+    "heroImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d.webp",
+    "cardImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d-card.webp",
+    "heroImageAlt": "Collage showing leafy wraps filled with grilled meat and rice, and a hand folding a wrap.",
+    "heroImageWidth": 1296,
+    "heroImageHeight": 1214,
+    "heroImagePosition": "50% 50%",
+    "relatedProductIds": [],
+    "publishedAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "draft": false,
+    "featured": false,
+    "searchHelp": {
+      "heading": "Not sure what to search for?",
+      "koreanTerms": [
+        "쌈",
+        "깻잎"
+      ],
+      "romanizedTerms": [
+        "ssam",
+        "kkaennip"
+      ],
+      "soundAlikeTerms": [
+        "ssahm",
+        "kkan-nip"
+      ],
+      "descriptionSearches": [
+        "Korean barbecue leafy vegetable wraps",
+        "Korean BBQ lettuce and perilla leaf wraps"
+      ]
+    },
+    "koreaContextConfidence": "context-dependent",
+    "monetizationProfile": "default"
   }
 ]
