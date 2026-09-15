@@ -44,10 +44,13 @@
         });
 
       if (!published.length) {
+        list.replaceChildren();
+        empty.querySelector('h3').textContent = 'More guides coming soon.';
         empty.hidden = false;
         return;
       }
 
+      empty.hidden = true;
       list.innerHTML = published.map(product => {
         const href = staticProductHref(product);
 
@@ -75,6 +78,7 @@
         `;
       }).join('');
     } catch {
+      if (list.querySelector('a[href]')) return;
       empty.hidden = false;
       empty.querySelector('h3').textContent = 'Product guides could not load.';
       empty.querySelector('p').textContent = 'Please refresh the page and try again.';

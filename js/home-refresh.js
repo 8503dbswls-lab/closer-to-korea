@@ -53,7 +53,7 @@
   function articleCard(article, compact=false, featured=false){
     return `<article class="home-content-card home-content-card--article${compact?' is-compact':''}${featured?' is-featured':''}">
       <a class="home-content-card__image" href="${encodeURIComponent(article.slug)}.html">
-        <img src="${safe(article.cardImage || article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">
+        ${article.heroImage ? `<img src="${safe(article.cardImage || article.heroImage)}" alt="${safe(article.heroImageAlt || article.title)}" loading="lazy" decoding="async">` : ''}
       </a>
       <div class="home-content-card__body">
         <div class="home-content-card__meta">
@@ -70,7 +70,7 @@
   function productCard(product, compact=false){
     const labels = Array.isArray(product.verificationLabels) ? product.verificationLabels.slice(0,2) : [];
     return `<article class="home-content-card home-content-card--product${compact?' is-compact':''}">
-      <a class="home-content-card__image" href="product.html?slug=${encodeURIComponent(product.slug)}">
+      <a class="home-content-card__image" href="product-${encodeURIComponent(product.slug)}.html">
         <img src="${safe(product.image)}" alt="${safe(product.imageAlt || product.name)}" loading="lazy" decoding="async">
       </a>
       <div class="home-content-card__body">
@@ -78,7 +78,7 @@
           <span class="home-kind-badge product">PRODUCT GUIDE</span>
           ${product.productMatchLabel ? `<span>${safe(product.productMatchLabel)}</span>` : ''}
         </div>
-        <h3><a href="product.html?slug=${encodeURIComponent(product.slug)}">${safe(product.name)}</a></h3>
+        <h3><a href="product-${encodeURIComponent(product.slug)}.html">${safe(product.name)}</a></h3>
         <p>${safe(product.summary || '')}</p>
         ${labels.length ? `<div class="home-verification">${labels.map(label=>`<span>${safe(label)}</span>`).join('')}</div>` : ''}
       </div>
@@ -164,3 +164,5 @@
 
   render();
 })();
+
+// CTK text-only cards v1.1

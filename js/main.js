@@ -453,7 +453,7 @@ function publishedArticles(){
 function articleCard(article,{layout='guide'}={}){
   if(layout==='story'){
     return `<article class="card">
-      <img src="${safe(article.cardImage || article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
+      ${article.heroImage ? `<img src="${safe(article.cardImage || article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">` : ''}
       <div class="card-body">
         <span class="label lavender">${safe(article.sectionKey||article.categoryKey||'Closer to Korea')}</span>
         <h3>${safe(article.title)}</h3>
@@ -463,7 +463,7 @@ function articleCard(article,{layout='guide'}={}){
     </article>`;
   }
   return `<a href="${encodeURIComponent(article.slug)}.html">
-    <img src="${safe(article.cardImage || article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
+    ${article.heroImage ? `<img src="${safe(article.cardImage || article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">` : ''}
     <strong>${safe(article.title)}</strong>
     <span>${safe(article.excerpt)}</span>
     <small>Published ${formatDate(article.publishedAt)}</small>
@@ -497,7 +497,7 @@ function renderSectionFeatured(){
       return;
     }
     container.innerHTML=`
-      <img class="media" src="${safe(article.cardImage || article.heroImage)}" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">
+      ${article.heroImage ? `<img class="media" src="${safe(article.cardImage || article.heroImage)}" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">` : ''}
       <div class="panel">
         <span class="label cherry label-featured">Featured guide</span>
         <h2 class="section-title">${safe(article.title)}</h2>
@@ -707,3 +707,4 @@ document.addEventListener('click',event=>{
   const affiliate=event.target.closest('[data-affiliate-click]');
   if(affiliate)window.dispatchEvent(new CustomEvent('affiliate-click',{detail:{productId:affiliate.dataset.affiliateClick,href:affiliate.href}}));
 });
+// CTK text-only cards v1.1
