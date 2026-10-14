@@ -1359,7 +1359,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Korean coin tissue, or 동전티슈, is a coin-shaped compressed tissue product manufactured and distributed in Korea. It is stored dry and compressed, then expands when water is added before use."
+        "text": "Coin tissue, called 동전티슈 in Korean, is a small, dry compressed tissue that expands when water is added. The Korean name describes the coin-like shape; it does not identify a particular brand or country of manufacture."
       },
       {
         "type": "heading",
@@ -1367,7 +1367,7 @@
       },
       {
         "type": "paragraph",
-        "text": "The product stays compact while it is dry. Add water, and the compressed disk unfolds into a tissue."
+        "text": "Add water to the compressed disc and let it expand, then gently unfold it before use. These are the steps described by manufacturer HUASHENG for its coin-tissue product; follow the instructions on the product you receive."
       },
       {
         "type": "heading",
@@ -1375,7 +1375,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Korean product listings present coin tissue for several uses, including restaurants, travel, camping, and the home. That describes the settings listed by sellers, not a claim that every restaurant provides it."
+        "text": "CleanZone describes restaurant and outdoor uses for its coin tissue. HUASHENG lists restaurants, travel, camping, and home use for its product. These are manufacturers’ suggested uses, not evidence that every Korean restaurant provides coin tissue."
       },
       {
         "type": "heading",
@@ -1387,11 +1387,11 @@
       },
       {
         "type": "heading",
-        "text": "How Does It Compare With U.S. Restaurant Napkins?"
+        "text": "Does “Korean Coin Tissue” Mean It Was Made in Korea?"
       },
       {
         "type": "paragraph",
-        "text": "U.S. restaurant materials commonly describe paper napkins, dispenser napkins, and cloth napkins as dining-service options. The small compressed piece is expanded with water before use. The available information does not establish how widely coin tissue is used in U.S. restaurants."
+        "text": "No. A Korean name or sale in Korea does not establish where an item was made. HUASHENG is a manufacturer in China that lists Korea among its export markets. Check the packaging or the exact manufacturer’s information for a specific product’s origin. The sources below explain the product type; they do not identify a brand or model in the illustration."
       },
       {
         "type": "heading",
@@ -1399,7 +1399,7 @@
       },
       {
         "type": "paragraph",
-        "text": "If you encounter one at a restaurant the Korea-based editor visits, it may be a dry compressed tissue. Add water, and it unfolds into a tissue for use."
+        "text": "If a restaurant provides a coin tissue, it is used after adding water and unfolding it. Availability varies, and the product’s packaging is the best starting point for checking its instructions and origin."
       },
       {
         "type": "definition-list",
@@ -1413,8 +1413,8 @@
             "description": "No. Based on the Korea-based editor's local observation, it is not commonly provided everywhere, although it can be encountered at some restaurants."
           },
           {
-            "term": "Where do Korean product listings say coin tissue can be used?",
-            "description": "Listings present it for restaurants, travel, camping, and home use."
+            "term": "Where do manufacturers suggest using coin tissue?",
+            "description": "The manufacturers cited here suggest uses such as restaurants and outdoor activities; HUASHENG also lists travel, camping, and home use."
           }
         ]
       },
@@ -1460,12 +1460,21 @@
     "heroImageCaption": "AI-generated illustration for explanatory purposes.",
     "heroImageType": "ai-illustration",
     "relatedProductIds": [],
-    "sources": [],
+    "sources": [
+      {
+        "label": "CleanZone — company introduction: compressed coin tissue and suggested restaurant/outdoor uses (checked October 14, 2026)",
+        "url": "https://cointissue.tissuedori.com/shopinfo/company.html"
+      },
+      {
+        "label": "HUASHENG — Magic Coin Tissue Compress: water-activation steps, suggested uses, and manufacturer location (checked October 14, 2026)",
+        "url": "https://www.hsnonwoven.com/magic-coin-tissue-compress-product/"
+      }
+    ],
     "publishedAt": "2026-09-02",
-    "updatedAt": "2026-09-02",
+    "updatedAt": "2026-10-14",
     "featured": false,
     "draft": false,
-    "sourceRequirement": "optional",
+    "sourceRequirement": "required",
     "sectionKey": "everyday-korea",
     "contentType": "culture-everyday",
     "koreaContextConfidence": "local-personal",
