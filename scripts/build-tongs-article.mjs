@@ -18,11 +18,23 @@ const structured={'@context':'https://schema.org','@type':'Article',headline:art
 template=template.replace('</head>',`<script type="application/ld+json">${JSON.stringify(structured).replaceAll('<','\\u003c')}</script>\n</head>`);
 const meta=[['name','description',article.metaDescription],['property','og:type','article'],['property','og:site_name','Closer to Korea'],['property','og:title',article.title],['property','og:description',article.metaDescription],['property','og:url',url],['property','og:image',`https://closertokorea.com/${article.heroImage}`],['name','twitter:card','summary_large_image'],['name','twitter:title',article.title],['name','twitter:description',article.metaDescription],['name','twitter:image',`https://closertokorea.com/${article.heroImage}`]].map(([attr,key,value])=>`<meta ${attr}="${key}" content="${esc(value)}">`).join('\n');
 template=template.replace('</head>',`${meta}\n<link rel="canonical" href="${url}">\n</head>`);
+const videoReference=`<section class="article-video-reference" aria-labelledby="mbc-clip-title">
+<h2 id="mbc-clip-title">Watch the MBC clip</h2>
+<p>The Manager (전지적 참견 시점), episode 226 · November 26, 2022. Watch Lee Guk-joo prepare French toast in MBC’s official clip.</p>
+<a class="jelly-button primary" href="${esc(article.sources[0].url)}" target="_blank" rel="noopener">Watch on MBC’s official YouTube channel <span class="sr-only">(opens in a new tab)</span></a>
+<p><a href="${esc(article.sources[1].url)}" target="_blank" rel="noopener">Read MBC’s episode recap <span class="sr-only">(opens in a new tab)</span></a></p>
+</section>`;
+template=template.replace('</head>',`<style>
+.article-video-reference { margin: 1.5rem 0; padding: clamp(1rem, 4vw, 1.75rem); border: 2px solid #c6b7e2; border-radius: 20px; background: #f5f0ff; }
+.article-video-reference h2 { margin-top: 0; }
+.article-video-reference .jelly-button { max-width: 100%; white-space: normal; text-align: center; overflow-wrap: anywhere; }
+.article-video-reference a:focus-visible { outline: 3px solid #45226b; outline-offset: 4px; }
+</style>\n</head>`);
 const body=article.body.map((b,i)=>{
  if(b.type!=='paragraph')throw new Error('Unexpected tongs article block');
  let text=esc(b.text);
  if(i===0)for(const [label,href] of links)text=text.replace(esc(label),`<a href="${esc(href)}" target="_blank" rel="noopener">${esc(label)}</a>`);
- return `<p>${text}</p>`;
+ return `<p>${text}</p>${i===0?videoReference:""}`;
 }).join('\n');
 const main=`<main id="main" class="data-article-page">
 <nav class="article-breadcrumb"><a href="index.html">Home</a> / <a href="seen-online.html">Seen Online</a></nav>
