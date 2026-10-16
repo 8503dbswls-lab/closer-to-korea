@@ -1764,6 +1764,22 @@
       {
         "label": "Ssam Bap: Korean Lettuce Wrap with Beef Ssamjang",
         "url": "https://atcenteramerica.com/wp-content/uploads/2023/05/FINAL_Fermented-Foods_Receipespread.pdf"
+      },
+      {
+        "label": "NC State Extension: lettuce varieties, leaf shapes, and colors",
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/"
+      },
+      {
+        "label": "Flora of China: Perilla leaf shape, toothed margins, and underside hairs",
+        "url": "https://www.iplant.cn/foc/pdf/Perilla.pdf"
+      },
+      {
+        "label": "My Korean Kitchen: Korean pickled radish (ssam-mu)",
+        "url": "https://mykoreankitchen.com/korean-pickled-radish/"
+      },
+      {
+        "label": "Nongmin, July 29, 2019: onion ssam as an earlier food idea",
+        "url": "https://www.nongmin.com/article/20190727313909"
       }
     ],
     "sourceRequirement": "required",
@@ -1773,8 +1789,8 @@
     "slug": "korean-bbq-ssam-lettuce-perilla-wraps",
     "title": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
     "seoTitle": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
-    "metaDescription": "Learn how ssam works at Korean barbecue, including lettuce and perilla leaves, fillings, personal assembly, and useful Korean search terms.",
-    "excerpt": "At Korean barbecue, diners may wrap grilled meat, rice, sauces, and side dishes in leafy greens. This eating style is called ssam, and the combination can be assembled according to personal taste.",
+    "metaDescription": "Learn to tell Korean BBQ lettuce and perilla leaves apart, build a ssam with garlic and ssamjang, and try pickled radish sheets or onion cups.",
+    "excerpt": "The leaves served with Korean barbecue are often lettuce (sangchu) and perilla (kkaennip). They hold grilled meat, rice, garlic, ssamjang, or other fillings. Ssam is the Korean way of wrapping those ingredients into a bite, with room for your own preferences.",
     "primaryKeyword": "Korean BBQ ssam",
     "secondaryKeywords": [
       "Korean lettuce wraps",
@@ -1796,7 +1812,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Ssam is a Korean food culture in which leafy vegetables are used to wrap meat, rice, seasoning, or side dishes. At a Korean barbecue restaurant, the leaf becomes a small wrapper for ingredients placed inside it."
+        "text": "Ssam (쌈) means a wrap and describes a way of eating: place a small amount of food in a leaf or another wrapper, fold it around the filling, and eat it. Lettuce and perilla are familiar choices at Korean barbecue, but the wrapping method can also use other ingredients."
       },
       {
         "type": "heading",
@@ -1804,7 +1820,15 @@
       },
       {
         "type": "paragraph",
-        "text": "Lettuce and perilla leaves are introduced as representative ssam ingredients in Korean barbecue. Diners can choose one leaf, combine them, or adjust the filling to suit their preferences."
+        "text": "Lettuce is called sangchu (상추) in Korean. Its shape and color vary by variety. Loose-leaf lettuce often has broad, wavy or ruffled leaves, which may be green or reddish. Perilla leaves, called kkaennip (깻잎), are generally broad and rounded to oval, with a pointed tip and a noticeably toothed edge. Their distinct aroma is another useful clue."
+      },
+      {
+        "type": "paragraph",
+        "text": "You can use either leaf on its own or layer lettuce and perilla together before adding the filling."
+      },
+      {
+        "type": "paragraph",
+        "text": "From our Korea-based editor: \"To me, lettuce has a light taste. Perilla has its own aroma and a mild, clean taste that I enjoy, so I prefer wrapping my food in perilla leaves.\" This is a personal taste preference; another diner may enjoy the leaves differently."
       },
       {
         "type": "heading",
@@ -1812,7 +1836,11 @@
       },
       {
         "type": "paragraph",
-        "text": "The Korean word kkaennip refers to a perilla leaf, also called a deulkkae leaf—not a sesame leaf. Perilla and sesame are different plants, despite occasional confusion in English."
+        "text": "The Korean word kkaennip refers to a perilla leaf, also called a deulkkae leaf. Perilla and sesame are different plants, despite the occasional use of \"sesame leaf\" for kkaennip in English."
+      },
+      {
+        "type": "paragraph",
+        "text": "Perilla leaves have fine hairs on the underside. Our editor notes that this surface can feel slightly rough in the mouth to someone sensitive to texture: \"I sometimes turn the leaf over when making my ssam.\" Reversing the leaf is a personal way to adjust the texture, not a rule for eating it."
       },
       {
         "type": "heading",
@@ -1820,7 +1848,31 @@
       },
       {
         "type": "paragraph",
-        "text": "A diner might place grilled meat on a leaf and add rice, sauce, or a side dish before folding it. The combination is a matter of personal preference. From a Korea-based local-observation perspective, some diners may prefer to eat a prepared ssam in one bite, but this is not a universal rule."
+        "text": "Place a piece of grilled meat on a leaf, then add the fillings you like. Garlic and ssamjang are very common companions in the Korean meals our editor describes. Ssamjang is a seasoned dipping paste commonly made with fermented soybean paste and red chili paste. A little rice or a side dish can go into the wrap too."
+      },
+      {
+        "type": "paragraph",
+        "text": "Garlic and ssamjang are familiar choices, not mandatory ingredients. Adjust the amounts or leave something out to suit your taste. Some diners prefer to eat a prepared ssam in one bite, but this is not a universal rule."
+      },
+      {
+        "type": "heading",
+        "text": "Ssammu: thin pickled radish wraps"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ssammu (쌈무), also written ssam-mu, is radish sliced into thin sheets and pickled for wrapping food. You can wrap meat or other fillings in a sheet without lettuce or perilla, or layer it with the leaves in the same ssam."
+      },
+      {
+        "type": "paragraph",
+        "text": "Our editor has also seen light green and purplish versions in Korea. The color alone does not tell you which ingredients were used, so check the particular product if that matters to you."
+      },
+      {
+        "type": "heading",
+        "text": "Onion cups are another option"
+      },
+      {
+        "type": "paragraph",
+        "text": "Onion ssam uses a separated, curved layer of onion like a little cup. Put the fillings inside it instead of wrapping them in a leaf. Our editor remembers onion ssam drawing attention in Korea, and a 2019 Nongmin report describes the idea."
       },
       {
         "type": "heading",
@@ -1836,7 +1888,11 @@
       },
       {
         "type": "paragraph",
-        "text": "Ssam is best understood as a flexible way to build a bite with leafy greens, meat, rice, sauce, and side dishes. At Korean barbecue, lettuce and perilla are two useful starting points, but the final wrap can vary with the diner’s preferences."
+        "text": "Start with lettuce, perilla, or both, then choose the fillings and seasonings you enjoy. Ssammu and onion cups offer other ways to hold a bite. The leaf, the filling, and even which side of a perilla leaf faces out can reflect personal preference."
+      },
+      {
+        "type": "paragraph",
+        "text": "For another small detail you may notice at a Korean barbecue restaurant, see our guide to storage chairs at Korean BBQ restaurants."
       },
       {
         "type": "heading",
@@ -1901,7 +1957,7 @@
     "heroImagePosition": "50% 50%",
     "relatedProductIds": [],
     "publishedAt": "2026-09-13",
-    "updatedAt": "2026-09-13",
+    "updatedAt": "2026-10-16",
     "draft": false,
     "featured": false,
     "searchHelp": {
