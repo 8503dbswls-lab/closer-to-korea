@@ -723,3 +723,6 @@ main,.site-footer,.legal-page{width:min(var(--max),calc(100% - 1.25rem));margin:
 .mobile-menu .nav-dropdown__menu a{border-bottom:0;padding:.65rem .2rem}
 .mobile-menu>a[aria-current="page"],.mobile-menu .nav-dropdown__menu a[aria-current="page"]{font-weight:900;color:#7a3d70}
 .site-search-link[aria-current="page"]{background:linear-gradient(90deg,var(--ice),var(--pink))}
+
+/* Keep the full tongs visible in article/listing thumbnails. */
+img[src*="/scissor-style-tongs-lee-guk-joo/"] { object-fit: contain !important; background-color: #f5efe5; }

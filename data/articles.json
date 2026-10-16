@@ -1925,5 +1925,74 @@
     },
     "koreaContextConfidence": "context-dependent",
     "monetizationProfile": "default"
+  },
+  {
+    "id": "scissor-style-tongs-lee-guk-joo",
+    "slug": "scissor-style-tongs-lee-guk-joo",
+    "seoTitle": "Scissor-Style Tongs: From Lee Guk-joo’s Kitchen to My Dumplings",
+    "title": "Scissor-Style Tongs: From Lee Guk-joo’s Kitchen to My Dumplings",
+    "metaDescription": "A personal account of buying scissor-style kitchen tongs after seeing Lee Guk-joo use a similar style on a Korean show, then using them to turn dumplings.",
+    "excerpt": "After seeing Lee Guk-joo use scissor-style tongs on a Korean show, I bought a pair and tried them while pan-frying mandu.",
+    "primaryKeyword": "scissor-style tongs",
+    "secondaryKeywords": [
+      "Lee Guk-joo tongs",
+      "Korean kitchen tongs"
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "In an episode of MBC’s Korean variety show 전지적 참견 시점, comedian Lee Guk-joo makes French toast for her manager using tongs with triangular tips and scissor-style handles. The scene appears in episode 226, which aired on November 26, 2022. You can watch the official MBC clip or read MBC’s episode recap."
+      },
+      {
+        "type": "paragraph",
+        "text": "Seeing Lee use tongs made me curious enough to buy a pair myself. I ordered mine from Coupang, a Korean online retailer. The Korean listing name translates as “Comet Kitchen 304 Stainless Steel Scissor-Style Tongs.” I haven’t confirmed whether they are the same brand or model as the ones on screen, so this is an account of the pair I bought."
+      },
+      {
+        "type": "paragraph",
+        "text": "With the regular tongs I used before, my finger muscles would ache after repeated use. I suspected it was from squeezing against the force that pushed the tongs open again. This scissor-style pair felt more like picking up food with chopsticks to me, and my hand didn’t hurt while I used them."
+      },
+      {
+        "type": "paragraph",
+        "text": "I often used them when pan-frying mandu, or Korean dumplings. I would pick up and turn the dumplings several times as they cooked, and I found these tongs comfortable for that repeated movement. In my own use, I didn’t notice any particular drawbacks."
+      },
+      {
+        "type": "paragraph",
+        "text": "On screen, this style of tongs was used for French toast. In my kitchen, it became a tool I reached for when flipping dumplings. That’s my experience of trying something I saw on a Korean show, not a promise that everyone will find it equally comfortable."
+      }
+    ],
+    "categoryKey": "home-kitchen",
+    "categoryLabel": "Korean Home & Kitchen",
+    "tags": [
+      "scissor-style tongs",
+      "Lee Guk-joo",
+      "Korean kitchen",
+      "mandu"
+    ],
+    "heroImage": "assets/images/articles/scissor-style-tongs-lee-guk-joo/scissor-style-tongs.webp",
+    "heroImageAlt": "The author’s silver scissor-style kitchen tongs with triangular gripping tips and loop handles on a warm ivory background",
+    "heroImageWidth": 1672,
+    "heroImageHeight": 941,
+    "heroImageCaption": "Author’s own tongs. Background and lighting edited with AI.",
+    "heroImageType": "original-photo",
+    "relatedProductIds": [],
+    "sources": [
+      {
+        "label": "MBC official clip — Lee Guk-joo prepares French toast, episode 226 (November 26, 2022)",
+        "url": "https://www.youtube.com/watch?v=6MazS9MqY6g"
+      },
+      {
+        "label": "MBC episode recap — November 26, 2022",
+        "url": "https://enews.imbc.com/News/ViewAmp/366506"
+      }
+    ],
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "featured": false,
+    "draft": false,
+    "sourceRequirement": "required",
+    "sectionKey": "seen-online",
+    "contentType": "mixed",
+    "koreaContextConfidence": "local-personal",
+    "monetizationProfile": "light"
   }
 ]
