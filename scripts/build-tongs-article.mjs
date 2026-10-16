@@ -51,6 +51,6 @@ const main=`<main id="main" class="data-article-page">
 <section class="article-sources-footer"><details><summary>Sources &amp; References</summary><ul>${article.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul></details></section>
 </article></main>`;
 template=template.replace(/<main\b[\s\S]*?<\/main>/,main);
-template=template.replace('</body>','<script src="js/tongs-video.js?v=cutoff-746"></script></body>');
+template=template.replace('</body>','<script src="js/tongs-video.js?v=cutoff-guard-746-v2"></script></body>');
 fs.writeFileSync(`${slug}.html`,template);
 console.log(`Generated ${slug}.html from article data.`);
