@@ -23,10 +23,10 @@ const videoReference=`<section class="article-video-reference" aria-labelledby="
 <p>The Manager (전지적 참견 시점), episode 226 · November 26, 2022. Watch Lee Guk-joo prepare French toast in MBC’s official clip.</p>
 <p id="mbc-player-privacy">Load the player to connect to YouTube (Google). YouTube may process data under its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. The player and its preview do not load until you choose.</p>
 <div class="article-video-player" data-mbc-player>
-<button class="jelly-button primary" type="button" data-load-mbc-video aria-describedby="mbc-player-privacy">Load video · start at 12:12</button>
+<button class="jelly-button primary" type="button" data-load-mbc-video aria-describedby="mbc-player-privacy">Load 14-second excerpt · 12:12–12:26</button>
 </div>
-<p data-mbc-video-status aria-live="polite">After loading, press Play. Automatic playback is off.</p>
-<p><a href="${esc(article.sources[0].url)}&amp;t=732s" target="_blank" rel="noopener">Watch on MBC’s official YouTube channel from 12:12 <span class="sr-only">(opens in a new tab)</span></a></p>
+<p data-mbc-video-status aria-live="polite">After loading, press Play for the 12:12–12:26 excerpt. Automatic playback is off.</p>
+<p><a href="${esc(article.sources[0].url)}&amp;t=732s" target="_blank" rel="noopener">Watch the original on MBC’s YouTube channel from 12:12 (no end cutoff) <span class="sr-only">(opens in a new tab)</span></a></p>
 <p><a href="${esc(article.sources[1].url)}" target="_blank" rel="noopener">Read MBC’s episode recap <span class="sr-only">(opens in a new tab)</span></a></p>
 </section>`;
 template=template.replace('</head>',`<style>
@@ -51,6 +51,6 @@ const main=`<main id="main" class="data-article-page">
 <section class="article-sources-footer"><details><summary>Sources &amp; References</summary><ul>${article.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul></details></section>
 </article></main>`;
 template=template.replace(/<main\b[\s\S]*?<\/main>/,main);
-template=template.replace('</body>','<script src="js/tongs-video.js"></script></body>');
+template=template.replace('</body>','<script src="js/tongs-video.js?v=cutoff-746"></script></body>');
 fs.writeFileSync(`${slug}.html`,template);
 console.log(`Generated ${slug}.html from article data.`);
