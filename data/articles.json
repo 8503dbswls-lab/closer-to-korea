@@ -2050,5 +2050,163 @@
     "contentType": "mixed",
     "koreaContextConfidence": "local-personal",
     "monetizationProfile": "light"
+  },
+  {
+    "id": "korean-restaurant-call-buttons",
+    "slug": "korean-restaurant-call-buttons",
+    "seoTitle": "Korean Restaurant Call Buttons and Tablet Staff Calls",
+    "metaDescription": "Need help at a Korean restaurant? Learn how to use a table call button or a tablet’s 직원 호출 menu, including screens that ask you to select a request.",
+    "primaryKeyword": "Korean restaurant call button",
+    "secondaryKeywords": [
+      "Korean restaurant tablet staff call",
+      "직원 호출",
+      "how to call staff in a Korean restaurant",
+      "Korean table order staff call"
+    ],
+    "title": "How to Call Staff at a Korean Restaurant: Buttons and Tablets",
+    "excerpt": "A small button on the table or a staff-call menu on the ordering tablet can help you ask for assistance. Here is how to recognize the two setups and what to do next.",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Need help during your meal? At some restaurants in Korea, you can call a staff member using a button at your table. At others, the staff-call option is on the table-order tablet instead. If you cannot see a separate button, check the tablet screen."
+      },
+      {
+        "type": "paragraph",
+        "text": "These are alternative setups, not two steps you must complete in order. Use the option your restaurant provides."
+      },
+      {
+        "type": "heading",
+        "text": "What does 직원 호출 mean?"
+      },
+      {
+        "type": "paragraph",
+        "text": "직원 호출 means “call staff.” 직원 means staff, and 호출 means calling or summoning. On a restaurant tablet, it is the option for asking staff for assistance. The wording, icon, and position can differ between systems, so do not expect every screen to look the same."
+      },
+      {
+        "type": "heading",
+        "text": "If there is a physical call button"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Find the call button at your table. Check its label if it has more than one control.",
+          "Press the staff-call button once when you need assistance.",
+          "Give staff time to respond, then explain what you need when someone comes over."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The button sends a signal rather than placing a spoken request. For example, Syscall describes a system in which pressing the button displays the table number on a receiver so staff can see which table needs service."
+      },
+      {
+        "type": "heading",
+        "text": "If the call option is on a tablet"
+      },
+      {
+        "type": "paragraph",
+        "text": "Look for the staff-call option, which may be labeled 직원 호출. Our editor has used both of the following tablet setups:"
+      },
+      {
+        "type": "definition-list",
+        "items": [
+          {
+            "term": "Direct call",
+            "description": "Tapping the staff-call option sends the call without first asking you to choose an item. Wait for staff and explain what you need."
+          },
+          {
+            "term": "Choose a request first",
+            "description": "Tapping the staff-call option opens a list. Choose what you need, then follow any on-screen step to send the request."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Depending on the restaurant, the choices might include requests such as water or a small extra plate. Those are examples, not a fixed menu available everywhere."
+      },
+      {
+        "type": "paragraph",
+        "text": "If a selection screen appears, opening it may not have sent anything yet. Check for a final call or send button. Payhere’s table-order guide, for example, tells diners to select the desired item and then tap 호출하기 to send the call."
+      },
+      {
+        "type": "heading",
+        "text": "What if you cannot find a button or menu?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Not every restaurant uses either system. If you cannot find the control, are unsure what a screen means, or your request seems not to have gone through, get a staff member’s attention and ask for help. You do not need to keep tapping an unfamiliar screen."
+      },
+      {
+        "type": "paragraph",
+        "text": "A call is a request for assistance, not a promise of immediate service. After sending it, give staff time to respond rather than repeatedly pressing the button."
+      },
+      {
+        "type": "heading",
+        "text": "The detail worth remembering"
+      },
+      {
+        "type": "paragraph",
+        "text": "No separate call button? Check the table-order tablet. If 직원 호출 opens another screen, choose the request and complete any send step shown. If it sends the call directly, you can simply wait for staff. The useful habit is to read what happens next rather than assume every restaurant works the same way."
+      },
+      {
+        "type": "heading",
+        "text": "More small details at the table"
+      },
+      {
+        "type": "paragraph",
+        "text": "Still looking for your spoon and chopsticks? Read our guide to utensil drawers under Korean restaurant tables. If you are having barbecue, our ssam guide explains lettuce and perilla leaf wraps."
+      }
+    ],
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "everyday life in Korea",
+      "travel tips",
+      "table order",
+      "call buttons"
+    ],
+    "heroImage": "assets/images/articles/korean-restaurant-call-buttons/call-button-tablet-diagram.png",
+    "heroImageAlt": "Schematic illustration of a physical call button beside a tablet staff-call menu, shown as alternative setups.",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "heroImageCaption": "Original schematic illustration, not a restaurant photograph or an exact device interface. Buttons and tablet screens vary.",
+    "heroImageType": "editorial-illustration",
+    "relatedProductIds": [],
+    "sources": [
+      {
+        "label": "Syscall: restaurant wireless calling system and table-number notification",
+        "url": "https://www.syscallglobal.us/wireless-calling-system.html"
+      },
+      {
+        "label": "Payhere: table-order user guide, staff-call item selection and send step (Korean)",
+        "url": "https://help-center.payhere.in/a35eb17f-3ec1-4a9e-8cea-049599bb7c84"
+      }
+    ],
+    "sourceRequirement": "required",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "featured": false,
+    "draft": false,
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "koreaContextConfidence": "local-personal",
+    "monetizationProfile": "default",
+    "searchHelp": {
+      "heading": "Search terms",
+      "koreanTerms": [
+        "직원 호출",
+        "호출벨",
+        "테이블 오더"
+      ],
+      "romanizedTerms": [
+        "jigwon hochul"
+      ],
+      "soundAlikeTerms": [],
+      "descriptionSearches": [
+        "Korean restaurant table call button",
+        "tablet menu to call restaurant staff"
+      ]
+    }
   }
 ]

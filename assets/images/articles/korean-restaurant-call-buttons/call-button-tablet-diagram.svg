@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Two ways to call restaurant staff</title>
+<desc id="desc">An original schematic illustration of a physical call button beside a tablet with a staff-call control. These are alternative setups, not steps.</desc>
+<rect width="1200" height="630" rx="36" fill="#fff8fc"/>
+<text x="64" y="64" fill="#80516f" font-family="DejaVu Sans, sans-serif" font-size="20" font-weight="bold" letter-spacing="3">CLOSER TO KOREA · EVERYDAY DETAILS</text>
+<text x="64" y="132" fill="#292636" font-family="DejaVu Sans, sans-serif" font-size="44" font-weight="bold">Need a hand at your table?</text>
+<rect x="62" y="178" width="510" height="346" rx="26" fill="#f5e5ef"/>
+<rect x="596" y="178" width="542" height="346" rx="26" fill="#e9e5fb"/>
+<ellipse cx="316" cy="394" rx="130" ry="24" fill="#d9bbd1"/>
+<rect x="196" y="290" width="240" height="104" rx="48" fill="#413647"/>
+<ellipse cx="316" cy="299" rx="120" ry="45" fill="#55465e"/>
+<ellipse cx="316" cy="292" rx="88" ry="31" fill="#ff6790"/>
+<path d="M298 291h36m-30-2v-8a12 12 0 0 1 24 0v8m-16 8h8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+<text x="316" y="470" text-anchor="middle" fill="#292636" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="bold">Physical call button</text>
+<path d="M853 369h28l13 36h-54z" fill="#6e6488"/>
+<rect x="686" y="226" width="362" height="169" rx="19" fill="#413b56"/>
+<rect x="701" y="240" width="332" height="140" rx="9" fill="#fff"/>
+<rect x="724" y="261" width="119" height="11" rx="5" fill="#d8d2e5"/>
+<rect x="724" y="284" width="154" height="10" rx="5" fill="#eae6f1"/>
+<rect x="724" y="318" width="286" height="43" rx="10" fill="#e9e1fa"/>
+<text x="867" y="347" text-anchor="middle" fill="#4b355f" font-family="DejaVu Sans, sans-serif" font-size="23" font-weight="bold">Call staff</text>
+<text x="867" y="470" text-anchor="middle" fill="#292636" font-family="DejaVu Sans, sans-serif" font-size="28" font-weight="bold">Tablet staff-call menu</text>
+<text x="600" y="574" text-anchor="middle" fill="#6a6076" font-family="DejaVu Sans, sans-serif" font-size="22">Different setups. Use the option your restaurant provides.</text>
+</svg>
