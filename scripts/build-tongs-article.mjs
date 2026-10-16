@@ -21,11 +21,18 @@ template=template.replace('</head>',`${meta}\n<link rel="canonical" href="${url}
 const videoReference=`<section class="article-video-reference" aria-labelledby="mbc-clip-title">
 <h2 id="mbc-clip-title">Watch the MBC clip</h2>
 <p>The Manager (전지적 참견 시점), episode 226 · November 26, 2022. Watch Lee Guk-joo prepare French toast in MBC’s official clip.</p>
-<a class="jelly-button primary" href="${esc(article.sources[0].url)}" target="_blank" rel="noopener">Watch on MBC’s official YouTube channel <span class="sr-only">(opens in a new tab)</span></a>
+<p id="mbc-player-privacy">Load the player to connect to YouTube (Google). YouTube may process data under its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>. The player and its preview do not load until you choose.</p>
+<div class="article-video-player" data-mbc-player>
+<button class="jelly-button primary" type="button" data-load-mbc-video aria-describedby="mbc-player-privacy">Load video · start at 12:12</button>
+</div>
+<p data-mbc-video-status aria-live="polite">After loading, press Play. Automatic playback is off.</p>
+<p><a href="${esc(article.sources[0].url)}&amp;t=732s" target="_blank" rel="noopener">Watch on MBC’s official YouTube channel from 12:12 <span class="sr-only">(opens in a new tab)</span></a></p>
 <p><a href="${esc(article.sources[1].url)}" target="_blank" rel="noopener">Read MBC’s episode recap <span class="sr-only">(opens in a new tab)</span></a></p>
 </section>`;
 template=template.replace('</head>',`<style>
 .article-video-reference { margin: 1.5rem 0; padding: clamp(1rem, 4vw, 1.75rem); border: 2px solid #c6b7e2; border-radius: 20px; background: #f5f0ff; }
+.article-video-player { width: 100%; aspect-ratio: 16 / 9; min-height: 200px; display: grid; place-items: center; border-radius: 12px; overflow: hidden; background: #e9e1f5; }
+.article-video-player iframe { width: 100%; height: 100%; border: 0; }
 .article-video-reference h2 { margin-top: 0; }
 .article-video-reference .jelly-button { max-width: 100%; white-space: normal; text-align: center; overflow-wrap: anywhere; }
 .article-video-reference a:focus-visible { outline: 3px solid #45226b; outline-offset: 4px; }
@@ -44,5 +51,6 @@ const main=`<main id="main" class="data-article-page">
 <section class="article-sources-footer"><details><summary>Sources &amp; References</summary><ul>${article.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ul></details></section>
 </article></main>`;
 template=template.replace(/<main\b[\s\S]*?<\/main>/,main);
+template=template.replace('</body>','<script src="js/tongs-video.js"></script></body>');
 fs.writeFileSync(`${slug}.html`,template);
 console.log(`Generated ${slug}.html from article data.`);
