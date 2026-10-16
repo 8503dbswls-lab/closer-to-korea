@@ -1,152 +1,65 @@
-# CONTENT MANAGER GUIDE
+# Content manager: private source, public exports
 
-The project now includes a visual content editor:
+The complete editable source is a private editorial master. It contains published content, drafts, and editorial evidence. It must remain outside the public Git repository and webroot. A draft checkbox is not an access control.
 
-```text
-admin.html
+The files under `data/` are generated public exports, not the complete editing source. Never restore the master from those reduced exports. Existing public Git history is not erased by this separation.
+
+## Restore the full source
+
+1. Download your latest private editorial backup to a private folder outside the site checkout.
+2. Extract the archive there. It contains the editable `closer-to-korea-editorial-master.json`, assets, and restore instructions. Keep any `<master-path>.assets` sidecar folder with the master; it holds locally saved draft photos.
+3. Keep a verified backup before replacing or moving any source. Do not commit or serve the master, its backups, or raw import payloads.
+4. Set `CTK_EDITORIAL_MASTER` to the absolute path of the extracted JSON before starting the local content manager. For example, a private sibling folder is suitable; a folder inside the repository is not.
+5. Run `node scripts/local-admin-server.mjs`, then open the local address it prints. The local manager loads the complete master through its token-protected local endpoint. The public hosted admin cannot fetch this private source.
+
+Alternatively, explicitly import the complete master in the manager. Importing separate public products/articles exports does not establish a complete master. The manager must not silently treat those files, an old browser cache, or the public fallback bundle as a full source.
+
+## Edit without losing drafts
+
+- Save the full private master after edits. Local saves use a digest to reject stale edits and retain a prior copy outside the repository.
+- Existing IDs cannot silently disappear from a save. Mark an item as a draft instead of deleting its source record.
+- Browser working copies are temporary conveniences, not durable backups.
+- A full private backup includes unpublished records and evidence. Do not upload it to the site or a public repository.
+- When keeping the master in private file storage, replace the same private file with the latest version after edits and verify the saved copy. Keep its access private.
+
+## Public exports
+
+Public product, article, and fallback downloads use the same recursive allowlist. They include only records with `draft: false` and not `hidden: true`. Unknown publication flags are rejected; missing flags never make an item public.
+
+Only approved public display/search fields are exported. Editorial source evidence, private notes, and draft records stay in the master. Existing public search aliases are limited to published IDs. Private keyword plans and draft text are not turned into search aliases.
+
+To export locally without modifying the source:
+
+```sh
+node scripts/export-public-content.mjs --source /absolute/private/path/closer-to-korea-editorial-master.json
 ```
 
-It is a local administration tool and is not linked from the public website.
+This writes `data/products.json`, `data/articles.json`, `data/search-aliases.json`, and `data/content-data.js`, plus their matching public category, site-copy, and monetization configuration. Rebuilding the fallback from existing public JSON is permitted only after the public boundary check; it never updates the full source.
 
-## Open the manager
+## Images and article pages
 
-You can open `admin.html` directly from the project folder.
+Keep unpublished assets with the private source. Copy only images referenced by published records into the public assets folder. Public galleries, card images, hero images, and body images count as references.
 
-For the most reliable preview, run:
+Archiving a record excludes it from new public exports, but does not make a previously published URL or Git history private. Existing static pages require an explicit reviewed removal; the boundary check blocks a stale article page rather than silently deleting it.
 
-```bash
-python3 -m http.server 8080
-```
+Static article HTML still needs its existing article builder or the approved S3B importer. S3B requires the complete external master and keeps backups outside the checkout. Raw S3A payloads must also remain outside the public checkout. S3B does not push automatically.
 
-Then open:
+## Validate and publish
 
-```text
-http://localhost:8080/admin.html
-```
-
-## What the manager edits
-
-### Products
-
-The form supports:
-
-- ID and slug
-- product name and summary
-- category and tags
-- image path, alt text, and image status
-- Korean-life context
-- direct-use and safety notes
-- Product Match
-- Verification states
-- trend status
-- brand and model evidence
-- Amazon and affiliate URLs
-- publication dates and flags
-
-### Articles
-
-The form supports:
-
-- ID, slug, title, SEO title, and meta description
-- category and tags
-- hero image, alt, caption, width, and height
-- body blocks
-- related products
-- sources and source requirement
-- published and updated dates
-- featured and draft flags
-
-Article block types:
-
-- paragraph
-- heading
-- list
-- quote
-- image
-- definition list
-
-## Browser working copy
-
-The **Save draft in browser** button saves the current working copy to local browser storage.
-
-This is useful while editing, but it is not a replacement for exporting files and backing them up.
-
-## Export files
-
-On the **Export & publish** tab, download:
-
-```text
-products.json
-articles.json
-content-data.js
-```
-
-Replace the corresponding files in:
-
-```text
-data/
-```
-
-For the manual export workflow, new images must also be copied into the project under:
-
-```text
-assets/images/
-```
-
-When using the local one-click workflow, JPG, PNG, and WebP files can instead be staged from the local admin. Only staged images that are actually referenced by the published Product or Article are copied into `assets/images/uploads/` and committed.
-
-## Generated content fallback bundle
-
-The current project uses one generated fallback bundle: `data/content-data.js`.
-
-The visual manager exports this file together with `products.json` and `articles.json`. Replace the existing `data/content-data.js` when publishing an update.
-
-## Validate before publishing
-
-Use the manager’s browser validation first.
-
-Then run the full project validator:
-
-```bash
+```sh
+node scripts/test-public-content.mjs
+node scripts/test-editorial-source.mjs
+node scripts/test-private-authoring-flow.mjs
+node scripts/validate-public-boundary.mjs
+node scripts/validate-content.mjs --source /absolute/private/path/closer-to-korea-editorial-master.json
 node scripts/validate-content.mjs
+node scripts/test-search-metadata.mjs
 ```
 
-The Node validator remains the final authority because it can also verify file paths inside the project.
+Source validation retains evidence, image-rights, source-policy, and editorial checks. The local publisher uses `--source ... --evidence-only` before export so old generated pages do not reject a new source record. Full public deployment validation still runs after generation; the evidence-only option is not allowed without a private source. Public validation checks the fields actually shipped. They are different checks, not substitutes for one another. Resolve new errors before publication; report any preexisting failures separately.
 
-## Important publishing rules
+The local publisher requires a complete validated master, preserves it first, exports public-only data, and stages only known generated public files and referenced images. It must never stage everything indiscriminately. A failed publication does not delete the private master or its backup.
 
-- Keep incomplete products and articles as drafts.
-- Do not enable an active purchase CTA without a verified affiliate URL.
-- Do not mark a product Personally Used unless it was directly used.
-- Do not mark a product Confirmed Match without brand, model, evidence, and sources.
-- Add accurate image alt text.
-- Add article sources when `sourceRequirement` is `required`.
-- In the manual workflow, replace `products.json`, `articles.json`, and the single generated `content-data.js` bundle after every published change.
+Review the staged diff, previews, canonical metadata, listing links, sitemap, and the exact deployment commit. Publishing a source change does not itself prove the live site has updated.
 
-## Local one-click publish (Windows)
-
-One-click publish is an optional local workflow. It is never enabled from the public `closertokorea.com/admin.html` page.
-
-Requirements:
-
-- Work from a real Git clone of the Closer to Korea repository, not a downloaded ZIP.
-- Install Node.js and Git for Windows.
-- Sign in to GitHub through Git Credential Manager (or another Git credential method supported by your PC). Never place a GitHub token inside HTML or JavaScript.
-- Keep the Git working tree clean before publishing. If the local branch and `origin` are not synchronized, publishing is blocked.
-
-Workflow:
-
-1. Double-click `START_ADMIN_WINDOWS.bat`.
-2. The admin opens on `http://127.0.0.1:8787/admin.html`.
-3. Save the current Product or Article in the editor. The local Publish button also refuses to proceed if the current form has unsaved invalid changes.
-4. Run browser validation, then use **Validate and publish to GitHub**.
-5. The local bridge writes only `data/products.json` and `data/articles.json`, runs the existing deployment-preparation scripts, validates the full site, commits the generated changes, and pushes the current branch.
-6. Any validation, commit, or push failure triggers a rollback to the pre-publish Git HEAD.
-
-### Local image staging
-
-While the local admin is running, JPG, PNG, and WebP images can be selected with **Stage new photos**. The local bridge verifies the actual file signature instead of trusting the filename or MIME label, creates a collision-resistant path under `assets/images/uploads/`, and keeps the staged file outside the Git working tree until publication.
-
-Use the returned path as the Product image, Article hero image, or an Article body-image path. On a successful publish, only staged images referenced by the published data are copied into the project and committed. If validation or push fails, Git-side image copies are rolled back while the staged file remains available for a corrected retry during that local admin session.
-
-The manual JSON download/export workflow remains available as a fallback. In the manual workflow, image files must already exist at the referenced project paths; missing images are blocked by the deployment validator.
+The guardrails cover the supported exporters and publishers. They cannot make a public Git repository private or undo an arbitrary manual commit. Review staged files before every push, and never commit a private source archive.

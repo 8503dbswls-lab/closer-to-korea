@@ -5,12 +5,23 @@
   const panel=document.querySelector("[data-local-publish-panel]");
   const gitStatus=document.querySelector("[data-local-publish-git]");
   const button=document.querySelector("[data-local-publish-button]");
+  const saveButton=document.querySelector("[data-local-save-master]");
   const output=document.querySelector("[data-local-publish-output]");
   const imageInput=document.querySelector("[data-local-image-input]");
   const imageResults=document.querySelector("[data-local-image-results]");
-  if(!panel||!gitStatus||!button||!output||!imageInput||!imageResults)return;
+  if(!panel||!gitStatus||!button||!saveButton||!output||!imageInput||!imageResults)return;
 
   let sessionToken="";
+  let sourceReady=false;
+  let canPublish=false;
+  let busy=false;
+
+  function setBusy(value){
+    busy=value;
+    button.disabled=busy||!canPublish||!sourceReady;
+    saveButton.disabled=busy||!sourceReady;
+    imageInput.disabled=busy||!sourceReady;
+  }
 
   function setOutput(message,isError=false){
     output.textContent=message||"";
@@ -118,7 +129,7 @@
   async function stageSelectedImages(){
     const files=[...(imageInput.files||[])];
     if(!files.length)return;
-    imageInput.disabled=true;
+    setBusy(true);
     setOutput(`Staging ${files.length} image${files.length===1?"":"s"}…`);
     let success=0;
     try{
@@ -134,88 +145,75 @@
       setOutput(`Staged ${success} image${success===1?"":"s"}. Use the returned path in the content before publishing.`);
     }finally{
       imageInput.value="";
-      imageInput.disabled=button.disabled;
+      setBusy(false);
     }
   }
 
   async function loadSession(){
+    panel.hidden=false;
     try{
       const response=await fetch("/api/session",{cache:"no-store",headers:{"Accept":"application/json"}});
-      if(!response.ok)return;
+      if(!response.ok)throw new Error("The local admin server is unavailable.");
       const data=await response.json();
-      if(!data?.ok||!data.localAdmin||!data.token)return;
-
+      if(!data?.ok||!data.localAdmin||!data.token)throw new Error("The local admin session is unavailable.");
       sessionToken=data.token;
-      panel.hidden=false;
-
+      const sourceResponse=await fetch("/api/editorial-source",{
+        cache:"no-store",headers:{"Accept":"application/json","X-CTK-Publish-Token":sessionToken}
+      });
+      const loaded=await sourceResponse.json();
+      if(!sourceResponse.ok||!loaded.ok)throw new Error(loaded.error||"The complete private master could not be loaded.");
+      window.__CTK_ADMIN_LOCAL__.loadPrivateMaster(loaded.master,loaded.digest);
+      sourceReady=true;
       const git=data.git||{};
       const branch=git.branch||"(no branch)";
-      if(!git.available){
-        gitStatus.textContent="Local Git repository was not detected. One-click publish is disabled.";
-        button.disabled=true;
-        imageInput.disabled=true;
-        return;
-      }
-      if(!git.hasOrigin){
-        gitStatus.textContent=`Git is ready on branch ${branch}, but no origin remote is configured. Manual export remains available below.`;
-        button.disabled=true;
-        imageInput.disabled=true;
-        return;
-      }
-
-      gitStatus.textContent=`Local Git is ready on branch ${branch}. Publishing will validate, commit, and push only from this PC.`;
-      button.disabled=false;
-      imageInput.disabled=false;
-    }catch{
-      // Keep the panel hidden outside the local admin bridge or if the bridge is unavailable.
+      canPublish=Boolean(git.available&&git.hasOrigin&&git.branch);
+      gitStatus.textContent=canPublish
+        ?`Private master loaded. Git is ready on branch ${branch}. Publishing saves privately, then validates and pushes public-only files.`
+        :"Private master loaded. Private saves and image staging are available; publishing needs a Git branch and origin.";
+      setBusy(false);
+    }catch(error){
+      gitStatus.textContent="Private source is not ready. No public data or browser cache will be used as its replacement.";
+      setOutput(error?.message||String(error),true);
+      setBusy(false);
     }
   }
 
-  async function publish(){
-    if(!sessionToken||button.disabled)return;
+  async function saveOrPublish(publish){
+    if(!sessionToken||busy||!sourceReady||(publish&&!canPublish))return;
     const bridge=window.__CTK_ADMIN_LOCAL__;
     if(!bridge?.preparePublishPayload){
       setOutput("The local content bridge is not available. Reload the local admin page.",true);
       return;
     }
-    const prepared=bridge.preparePublishPayload();
+    const prepared=bridge.preparePublishPayload({validatePublic:publish});
     if(!prepared?.ok){
-      setOutput(prepared?.error||"The working copy is not ready to publish.",true);
+      setOutput(prepared?.error||"The private working copy is not ready.",true);
       return;
     }
-
-    const confirmed=window.confirm("Publish the validated Closer to Korea working copy to the configured Git origin?");
-    if(!confirmed)return;
-
-    button.disabled=true;
-    imageInput.disabled=true;
-    setOutput("Starting local publish…");
+    if(publish && !window.confirm("Save the complete private master outside the public project, then publish only validated, allowlisted public content and its referenced images to the configured Git origin? Drafts and editorial metadata will not be published."))return;
+    setBusy(true);
+    setOutput(publish?"Saving privately and preparing public-only publication…":"Saving the complete private master without publishing…");
     try{
-      const response=await fetch("/api/publish",{
+      const response=await fetch(publish?"/api/publish":"/api/editorial-source",{
         method:"POST",
-        headers:{
-          "Accept":"application/json",
-          "Content-Type":"application/json",
-          "X-CTK-Publish-Token":sessionToken
-        },
+        headers:{"Accept":"application/json","Content-Type":"application/json","X-CTK-Publish-Token":sessionToken},
         body:JSON.stringify(prepared.payload)
       });
       const data=await response.json().catch(()=>({ok:false,error:`Unexpected response (${response.status}).`}));
-      if(!response.ok||!data.ok){
-        setOutput(data.error||`Publish failed (${response.status}).`,true);
-        return;
-      }
-      const imageNote=(data.publishedImages||[]).length?` Published ${(data.publishedImages||[]).length} staged image(s).`:"";
-      setOutput(`${data.message||"Publish completed successfully."}${imageNote}`);
+      // A failed public publish can still have successfully saved the private master.
+      if(data.masterDigest)bridge.markPrivateMasterSaved(data.masterDigest,prepared.payload.master);
+      if(!response.ok||!data.ok){setOutput(data.error||`Request failed (${response.status}).`,true);return;}
+      const imageNote=(data.publishedImages||[]).length?` Published ${data.publishedImages.length} referenced photo(s).`:"";
+      setOutput(`${data.message||"Private master saved."}${imageNote}`);
     }catch(error){
-      setOutput(`Publish request failed: ${error?.message||error}`,true);
-    }finally{
-      button.disabled=false;
-      imageInput.disabled=false;
-    }
+      // A dropped response cannot prove whether the save or push happened. Do not retry blindly.
+      sourceReady=false;
+      setOutput(`The result is uncertain: ${error?.message||error}. Export your private working copy, then reload the local source and check the Git remote before retrying.`,true);
+    }finally{setBusy(false);}
   }
 
   imageInput.addEventListener("change",stageSelectedImages);
-  button.addEventListener("click",publish);
+  button.addEventListener("click",()=>saveOrPublish(true));
+  saveButton.addEventListener("click",()=>saveOrPublish(false));
   loadSession();
 })();

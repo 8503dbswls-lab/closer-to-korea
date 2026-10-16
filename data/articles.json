@@ -1,140 +1,34 @@
 [
   {
-    "id": "home-products-guide",
-    "slug": "things-koreans-actually-use-at-home",
-    "title": "Things Koreans Actually Use at Home",
-    "excerpt": "How compact apartments, food storage, climate, and everyday routines shape household product choices in Korea.",
-    "body": [
-      {
-        "type": "paragraph",
-        "text": "Korean household products make more sense when you understand the routines around them. Storage, ventilation, floor care, food preparation, and limited refrigerator space all influence what people keep at home."
-      },
-      {
-        "type": "heading",
-        "text": "Start with the routine, not the product"
-      },
-      {
-        "type": "paragraph",
-        "text": "A product can be common in Korea without being uniquely Korean. The useful question is where it appears, who uses it, and which part of daily life it supports."
-      }
-    ],
-    "categoryKey": "home-kitchen",
-    "tags": [
-      "home",
-      "apartment",
-      "storage",
-      "daily life"
-    ],
-    "heroImage": "assets/images/everyday-korea.svg",
-    "heroImageAlt": "Editorial illustration representing everyday products in a Korean home",
-    "relatedProductIds": [
-      "kimchi-container",
-      "study-timer"
-    ],
-    "sources": [],
-    "publishedAt": "2026-07-28",
-    "updatedAt": "2026-07-28",
-    "featured": false,
-    "draft": true,
-    "sourceRequirement": "optional",
-    "sectionKey": "everyday-korea",
-    "contentType": "culture-everyday",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default"
-  },
-  {
-    "id": "kitchen-tools-guide",
-    "slug": "korean-kitchen-tools-and-why-people-use-them",
-    "title": "Korean Kitchen Tools and Why People Use Them",
-    "excerpt": "Food culture, portion sizes, storage, and convenience explain more than a shopping list ever could.",
-    "body": [
-      {
-        "type": "paragraph",
-        "text": "Kitchen tools should be explained through the dishes, storage needs, and household routines they support."
-      },
-      {
-        "type": "heading",
-        "text": "Exact product or practical alternative?"
-      },
-      {
-        "type": "paragraph",
-        "text": "When the exact Korean listing is unavailable in the US, the closest alternative must be clearly labeled rather than presented as the same item."
-      }
-    ],
-    "categoryKey": "food",
-    "tags": [
-      "food",
-      "kitchen",
-      "cooking",
-      "culture"
-    ],
-    "heroImage": "assets/images/korean-kitchen.svg",
-    "heroImageAlt": "Editorial illustration representing Korean kitchen tools and food culture",
-    "relatedProductIds": [
-      "egg-steamer",
-      "kimchi-container"
-    ],
-    "sources": [],
-    "publishedAt": "2026-07-21",
-    "updatedAt": "2026-07-28",
-    "featured": false,
-    "draft": true,
-    "sourceRequirement": "optional",
-    "sectionKey": "korean-kitchen",
-    "contentType": "mixed",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "light"
-  },
-  {
-    "id": "everywhere-guide",
-    "slug": "products-you-see-everywhere-in-korea",
-    "title": "Products You See Everywhere in Korea",
-    "excerpt": "A framework for separating everyday standards, seasonal essentials, and short-lived trends.",
-    "body": [
-      {
-        "type": "paragraph",
-        "text": "Seeing a product often does not always mean it is a national trend. Season, location, age group, and retail context all matter."
-      },
-      {
-        "type": "heading",
-        "text": "Look for repeated daily-life context"
-      },
-      {
-        "type": "paragraph",
-        "text": "Products used across homes, commutes, workplaces, schools, and retail environments are more likely to reflect broad practical use."
-      }
-    ],
-    "categoryKey": "trending",
-    "tags": [
-      "trending",
-      "daily life",
-      "verification"
-    ],
-    "heroImage": "assets/images/trending-now.svg",
-    "heroImageAlt": "Editorial illustration representing products currently visible in Korea",
-    "relatedProductIds": [
-      "portable-hand-fan",
-      "digital-camera"
-    ],
-    "sources": [],
-    "publishedAt": "2026-07-14",
-    "updatedAt": "2026-07-28",
-    "featured": false,
-    "draft": true,
-    "sourceRequirement": "optional",
-    "sectionKey": "trends-finds",
-    "contentType": "korea-discovery",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default"
-  },
-  {
     "id": "korean-microwave-steamed-egg-cooker",
     "slug": "korean-microwave-steamed-egg-cooker",
-    "seoTitle": "What Is a Korean Microwave Steamed Egg Cooker?",
-    "metaDescription": "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
-    "primaryKeyword": "Korean microwave steamed egg cooker",
     "title": "What Is a Korean Microwave Steamed Egg Cooker?",
+    "seoTitle": "What Is a Korean Microwave Steamed Egg Cooker?",
     "excerpt": "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
+    "metaDescription": "Learn what a Korean microwave steamed egg cooker is, how it is used for gyeran-jjim, and how it differs from a traditional Korean ttukbaegi.",
+    "categoryKey": "food",
+    "categoryLabel": "Korean Kitchen",
+    "sectionKey": "korean-kitchen",
+    "contentType": "product-guide",
+    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
+    "heroImageAlt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
+    "heroImageCaption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
+    "publishedAt": "2026-07-30",
+    "updatedAt": "2026-08-23",
+    "monetizationProfile": "light",
+    "heroImageWidth": 1536,
+    "heroImageHeight": 1152,
+    "featured": true,
+    "tags": [
+      "Korean kitchen tools",
+      "gyeran-jjim",
+      "microwave cookware",
+      "Daiso Korea",
+      "Korean home cooking"
+    ],
+    "relatedProductIds": [
+      "egg-steamer"
+    ],
     "body": [
       {
         "type": "paragraph",
@@ -604,21 +498,6 @@
         "text": "This article will be updated if a verified identical product or a suitable U.S. alternative is confirmed."
       }
     ],
-    "categoryKey": "food",
-    "categoryLabel": "Korean Kitchen",
-    "tags": [
-      "Korean kitchen tools",
-      "gyeran-jjim",
-      "microwave cookware",
-      "Daiso Korea",
-      "Korean home cooking"
-    ],
-    "heroImage": "assets/images/articles/korean-microwave-steamed-egg-cooker/egg-cooker-cooked.jpg",
-    "heroImageAlt": "Cooked gyeran-jjim served in a white ceramic Korean microwave steamed egg cooker",
-    "heroImageCaption": "A finished serving of gyeran-jjim in the microwave egg cooker.",
-    "relatedProductIds": [
-      "egg-steamer"
-    ],
     "sources": [
       {
         "label": "Owner-supplied product photographs, including refreshed product-use images and a separate bottom-marking reference retained in the editorial record"
@@ -627,33 +506,56 @@
         "label": "Owner’s direct-use record: the matching-looking Daiso cooker has been used about five times for small portions of gyeran-jjim"
       }
     ],
-    "sourceRequirement": "required",
-    "publishedAt": "2026-07-30",
-    "updatedAt": "2026-08-23",
-    "featured": true,
     "draft": false,
-    "heroImageWidth": 1536,
-    "heroImageHeight": 1152,
-    "sectionKey": "korean-kitchen",
-    "contentType": "product-guide",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "light",
-    "heroImageType": "owner-photo"
+    "hidden": false,
+    "searchAliases": [
+      "계란찜기",
+      "전자레인지용 계란찜기",
+      "gyeran jjim gi",
+      "gyeranjjimgi",
+      "gyeran jjim",
+      "gyeranjjim",
+      "gye ran jim",
+      "keran jjim",
+      "keran jim",
+      "korean steamed egg bowl",
+      "korean microwave egg bowl",
+      "small ceramic pot with lid",
+      "small pot for steamed egg",
+      "small bowl for steamed egg",
+      "bowl with lid for eggs",
+      "thing used to make steamed egg",
+      "microwave egg cooker"
+    ]
   },
   {
     "id": "korean-restaurant-table-utensil-drawer",
     "slug": "korean-restaurant-table-utensil-drawer",
-    "seoTitle": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
-    "metaDescription": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
-    "primaryKeyword": "Korean restaurant utensil drawer",
-    "secondaryKeywords": [
-      "where are chopsticks in Korean restaurants",
-      "Korean restaurant table drawer",
-      "utensil drawer under restaurant table",
-      "Korean restaurant spoons and chopsticks"
-    ],
     "title": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
+    "seoTitle": "What Is the Utensil Drawer Under a Korean Restaurant Table?",
     "excerpt": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "metaDescription": "In many everyday Korean restaurants, spoons, chopsticks, napkins, and sometimes wet wipes may be kept in a drawer under the table. Here is how to find and use it.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-restaurant-table-utensil-drawer/korean-restaurant-table-utensil-drawer-ai-illustration.webp",
+    "heroImageAlt": "AI-generated illustration of a Korean restaurant table drawer holding metal spoons and chopsticks",
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "publishedAt": "2026-08-17",
+    "updatedAt": "2026-08-20",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 900,
+    "featured": false,
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "everyday life in Korea",
+      "travel tips",
+      "restaurant etiquette"
+    ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "paragraph",
@@ -757,18 +659,6 @@
         "text": "If the tabletop is empty when you sit down at a Korean restaurant, check the table drawer or a tabletop utensil container. The spoons and chopsticks may already be within reach."
       }
     ],
-    "categoryKey": "food",
-    "categoryLabel": "Food & Kitchen Culture",
-    "tags": [
-      "Korean restaurants",
-      "Korean dining",
-      "everyday life in Korea",
-      "travel tips",
-      "restaurant etiquette"
-    ],
-    "heroImage": "assets/images/articles/korean-restaurant-table-utensil-drawer/korean-restaurant-table-utensil-drawer-ai-illustration.webp",
-    "heroImageAlt": "AI-generated illustration of a Korean restaurant table drawer holding metal spoons and chopsticks",
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "South Korea Hallyu — Myeongdong Kyoja guide showing cutlery kept in a drawer under the table",
@@ -787,33 +677,52 @@
         "url": "https://www.reddit.com/r/koreatravel/comments/1rqp9fb/did_you_ever_spend_time_looking_for_spoons_or/"
       }
     ],
-    "sourceRequirement": "required",
-    "publishedAt": "2026-08-17",
-    "updatedAt": "2026-08-20",
-    "featured": false,
     "draft": false,
-    "sectionKey": "everyday-korea",
-    "contentType": "culture-everyday",
-    "koreaContextConfidence": "common-not-universal",
-    "monetizationProfile": "default",
-    "heroImageWidth": 1200,
-    "heroImageHeight": 900,
-    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
-    "heroImageType": "ai-illustration"
+    "hidden": false,
+    "searchAliases": [
+      "수저서랍",
+      "수저 서랍",
+      "sujeo seorap",
+      "sujeo drawer",
+      "soo jeo drawer",
+      "utensil drawer under table",
+      "drawer under korean restaurant table",
+      "thing under korean restaurant table",
+      "thing under restaurant table",
+      "spoon chopstick drawer",
+      "spoon and chopstick drawer",
+      "korean restaurant table drawer",
+      "hidden utensil drawer"
+    ]
   },
   {
     "id": "storage-chairs-korean-bbq-restaurants",
     "slug": "storage-chairs-korean-bbq-restaurants",
-    "seoTitle": "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
-    "metaDescription": "Some Korean BBQ restaurants use chairs with space inside or underneath for storing coats and bags. Here is how this practical seating setup works.",
-    "primaryKeyword": "Korean BBQ storage chair",
-    "secondaryKeywords": [
-      "Korean BBQ coat storage",
-      "Korean restaurant chair storage",
-      "Korean BBQ bag storage"
-    ],
     "title": "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
+    "seoTitle": "What Are the Storage Chairs at Some Korean BBQ Restaurants?",
     "excerpt": "At some Korean BBQ restaurants, the chair is more than a place to sit. It can also provide space for a coat or bag.",
+    "metaDescription": "Some Korean BBQ restaurants use chairs with space inside or underneath for storing coats and bags. Here is how this practical seating setup works.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-ai-illustration.webp",
+    "heroImageAlt": "AI-generated illustration of a Korean barbecue restaurant with black storage-style chairs around grill tables",
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "publishedAt": "2026-08-19",
+    "updatedAt": "2026-08-20",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 900,
+    "featured": false,
+    "tags": [
+      "Korean BBQ",
+      "Korean restaurants",
+      "everyday life in Korea",
+      "restaurant design",
+      "travel in Korea"
+    ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "heading",
@@ -886,20 +795,6 @@
         ]
       }
     ],
-    "categoryKey": "food",
-    "categoryLabel": "Food & Kitchen Culture",
-    "tags": [
-      "Korean BBQ",
-      "Korean restaurants",
-      "everyday life in Korea",
-      "restaurant design",
-      "travel in Korea"
-    ],
-    "heroImage": "assets/images/articles/storage-chairs-korean-bbq-restaurants/storage-chairs-korean-bbq-restaurants-ai-illustration.webp",
-    "heroImageAlt": "AI-generated illustration of a Korean barbecue restaurant with black storage-style chairs around grill tables",
-    "heroImageWidth": 1200,
-    "heroImageHeight": 900,
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "Maeil Newspaper — report on cylindrical storage chairs used in Korean meat restaurants for coats and bags",
@@ -910,52 +805,52 @@
         "url": "https://www.yes24.com/Product/Goods/117630011"
       }
     ],
-    "publishedAt": "2026-08-19",
-    "updatedAt": "2026-08-20",
-    "featured": false,
     "draft": false,
-    "sourceRequirement": "required",
-    "sectionKey": "everyday-korea",
-    "contentType": "culture-everyday",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default",
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "수납 의자",
-        "고깃집 의자"
-      ],
-      "romanizedTerms": [
-        "sunap uija",
-        "gogitjip uija"
-      ],
-      "soundAlikeTerms": [
-        "soo-nap ee-ja",
-        "go-geet-jip ee-ja"
-      ],
-      "descriptionSearches": [
-        "Korean BBQ chair with storage inside",
-        "Korean restaurant chair for coats and bags",
-        "chair storage under the seat at Korean BBQ"
-      ]
-    },
-    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
-    "heroImageType": "ai-illustration"
+    "hidden": false,
+    "searchAliases": [
+      "수납 의자",
+      "고깃집 의자",
+      "sunap uija",
+      "gogitjip uija",
+      "soo-nap ee-ja",
+      "go-geet-jip ee-ja",
+      "Korean BBQ chair with storage inside",
+      "Korean restaurant chair for coats and bags",
+      "chair storage under the seat at Korean BBQ",
+      "Korean BBQ storage chair",
+      "Korean BBQ coat storage",
+      "Korean restaurant chair storage",
+      "Korean BBQ bag storage"
+    ]
   },
   {
     "id": "korean-kimchi-cutter-container",
     "slug": "korean-kimchi-cutter-container",
-    "seoTitle": "What Is a Korean Kimchi Cutter Container?",
-    "metaDescription": "A Korean kimchi container can combine a cutting surface, knife, and storage space in one product. Here is what the kimchi cutter concept means.",
-    "primaryKeyword": "Korean kimchi cutter container",
-    "secondaryKeywords": [
-      "kimchi Jarmi",
-      "kimchi cutting container",
-      "kimchi storage container",
-      "kimchi container with cutter"
-    ],
     "title": "What Is a Korean Kimchi Cutter Container?",
+    "seoTitle": "What Is a Korean Kimchi Cutter Container?",
     "excerpt": "Some Korean product materials show a kimchi container that also incorporates a cutting function. The result is a product concept built around cutting and storing kimchi in one container.",
+    "metaDescription": "A Korean kimchi container can combine a cutting surface, knife, and storage space in one product. Here is what the kimchi cutter concept means.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "korean-kitchen",
+    "contentType": "product-guide",
+    "heroImage": "assets/images/articles/korean-kimchi-cutter-container/kimchi-cutter-container-in-use.webp",
+    "heroImageAlt": "AI-generated illustration of a gray Korean kimchi cutter container filled with napa cabbage kimchi as a hand presses the white cutting tool through the guide slots",
+    "heroImageCaption": "AI-generated illustration showing how a kimchi cutter container may be used to portion whole-leaf kimchi.",
+    "publishedAt": "2026-08-21",
+    "updatedAt": "2026-08-23",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1254,
+    "heroImageHeight": 1254,
+    "featured": false,
+    "tags": [
+      "Korean kitchen",
+      "kimchi",
+      "Korean products",
+      "food storage",
+      "everyday Korea"
+    ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "heading",
@@ -1048,20 +943,6 @@
         ]
       }
     ],
-    "categoryKey": "food",
-    "categoryLabel": "Food & Kitchen Culture",
-    "tags": [
-      "Korean kitchen",
-      "kimchi",
-      "Korean products",
-      "food storage",
-      "everyday Korea"
-    ],
-    "heroImage": "assets/images/articles/korean-kimchi-cutter-container/kimchi-cutter-container-in-use.webp",
-    "heroImageAlt": "AI-generated illustration of a gray Korean kimchi cutter container filled with napa cabbage kimchi as a hand presses the white cutting tool through the guide slots",
-    "heroImageWidth": 1254,
-    "heroImageHeight": 1254,
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "Today’s House — 김치 자르미 (1/2포기용) product listing and safety information",
@@ -1080,57 +961,51 @@
         "url": "https://www.walmart.com/ip/657843249"
       }
     ],
-    "publishedAt": "2026-08-21",
-    "updatedAt": "2026-08-23",
-    "featured": false,
     "draft": false,
-    "sourceRequirement": "required",
-    "sectionKey": "korean-kitchen",
-    "contentType": "product-guide",
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default",
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "김치자르미"
-      ],
-      "romanizedTerms": [
-        "Kimchi Jarmi"
-      ],
-      "soundAlikeTerms": [
-        "kim-chee jar-mee"
-      ],
-      "descriptionSearches": [
-        "Korean kimchi container with a cutter",
-        "kimchi storage container with cutting board",
-        "container for cutting and storing kimchi"
-      ]
-    },
-    "heroImageCaption": "AI-generated illustration showing how a kimchi cutter container may be used to portion whole-leaf kimchi.",
-    "heroImageType": "ai-illustration",
-    "languageBonus": {
-      "approved": true,
-      "korean": "김치커터 밀폐용기",
-      "romanized": "kimchi cutter milpye-yonggi",
-      "explanation": "In plain Korean, you can think of it as 김치를 자르는 김치통 — “a kimchi container for cutting kimchi.” Some Korean product listings also use names such as 김치 자르미 or 김치 자르미 김치통, so this is better treated as a descriptive product name than one universal everyday term.",
-      "closer": "The useful idea to remember is simple: a kimchi container with a cutter."
-    },
-    "isProductGuide": true
+    "hidden": false,
+    "searchAliases": [
+      "김치자르미",
+      "Kimchi Jarmi",
+      "kim-chee jar-mee",
+      "Korean kimchi container with a cutter",
+      "kimchi storage container with cutting board",
+      "container for cutting and storing kimchi",
+      "Korean kimchi cutter container",
+      "kimchi Jarmi",
+      "kimchi cutting container",
+      "kimchi storage container",
+      "kimchi container with cutter"
+    ]
   },
   {
     "id": "what-is-wakppubol-korean-wax-cracking-toy",
     "slug": "what-is-wakppubol-korean-wax-cracking-toy",
-    "seoTitle": "What Is 왁뿌볼, a Wax-Cracking Sensory Toy?",
-    "metaDescription": "왁뿌볼 is a sensory toy with a wax outer layer that users crack to enjoy the sound and texture. Here’s what it is and whether similar products are sold in the U.S.",
-    "primaryKeyword": "what is 왁뿌볼",
-    "secondaryKeywords": [
-      "wax ball",
-      "wax cracking squishy",
-      "wax sensory toy",
-      "wax-cracking sensory toy"
-    ],
     "title": "What Is 왁뿌볼, a Wax-Cracking Sensory Toy?",
+    "seoTitle": "What Is 왁뿌볼, a Wax-Cracking Sensory Toy?",
     "excerpt": "왁뿌볼 is introduced as a toy with a wax outer shell that users break to enjoy its sound and tactile feel. Korean coverage places it alongside slime and squishy toys in the current sensory-toy conversation.",
+    "metaDescription": "왁뿌볼 is a sensory toy with a wax outer layer that users crack to enjoy the sound and texture. Here’s what it is and whether similar products are sold in the U.S.",
+    "categoryKey": "trending",
+    "categoryLabel": "Trends & Finds",
+    "sectionKey": "trends-finds",
+    "contentType": "korea-discovery",
+    "heroImage": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-retail-display.webp",
+    "heroImageAlt": "Colorful wakppubol sensory toys in clear round packaging displayed in a Korean retail store",
+    "heroImageCaption": "Different wakppubol toys photographed on a retail display in Korea. Prices shown reflect the display at the time of the photo and may change.",
+    "publishedAt": "2026-08-22",
+    "updatedAt": "2026-08-23",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1448,
+    "heroImageHeight": 1086,
+    "featured": false,
+    "tags": [
+      "Korea",
+      "sensory toys",
+      "fidget toys",
+      "왁뿌볼"
+    ],
+    "relatedProductIds": [
+      "grape-wakppubol"
+    ],
     "body": [
       {
         "type": "heading",
@@ -1227,21 +1102,6 @@
         ]
       }
     ],
-    "categoryKey": "trending",
-    "categoryLabel": "Trends & Finds",
-    "tags": [
-      "Korea",
-      "sensory toys",
-      "fidget toys",
-      "왁뿌볼"
-    ],
-    "heroImage": "assets/images/articles/what-is-wakppubol-korean-wax-cracking-toy/wakppubol-retail-display.webp",
-    "heroImageAlt": "Colorful wakppubol sensory toys in clear round packaging displayed in a Korean retail store",
-    "heroImageWidth": 1448,
-    "heroImageHeight": 1086,
-    "relatedProductIds": [
-      "grape-wakppubol"
-    ],
     "sources": [
       {
         "label": "왁뿌볼 | 왁스 뿌시기 볼 앱",
@@ -1300,58 +1160,51 @@
         "url": "https://owlandgoosegifts.com/products/pastel-2-inch-crispy-cracking-squishy-ball-wax-asmr-sensory-toy"
       }
     ],
-    "publishedAt": "2026-08-22",
-    "updatedAt": "2026-08-23",
-    "featured": false,
     "draft": false,
-    "sourceRequirement": "required",
-    "sectionKey": "trends-finds",
-    "contentType": "korea-discovery",
-    "isProductGuide": false,
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default",
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "왁뿌볼"
-      ],
-      "romanizedTerms": [
-        "wakppubol"
-      ],
-      "soundAlikeTerms": [
-        "wak-ppu-bol",
-        "wakpooball"
-      ],
-      "descriptionSearches": [
-        "wax ball cracking sensory toy",
-        "wax cracking squishy ball",
-        "Korean wax shell toy"
-      ]
-    },
-    "languageBonus": {
-      "approved": true,
-      "korean": "왁뿌볼",
-      "romanized": "wakppubol",
-      "explanation": "왁뿌볼 is short for 왁스 뿌시기 볼, literally “wax-crushing ball.” The name refers to a sensory toy with a wax-coated outer layer that is cracked for its sound and texture.",
-      "closer": "So when you see 왁뿌볼 in Korean, think “wax-crushing ball.”"
-    },
-    "heroImageCaption": "Different wakppubol toys photographed on a retail display in Korea. Prices shown reflect the display at the time of the photo and may change.",
-    "heroImageType": "owner-photo-edited"
+    "hidden": false,
+    "searchAliases": [
+      "왁뿌볼",
+      "wakppubol",
+      "wak-ppu-bol",
+      "wakpooball",
+      "wax ball cracking sensory toy",
+      "wax cracking squishy ball",
+      "Korean wax shell toy",
+      "what is 왁뿌볼",
+      "wax ball",
+      "wax cracking squishy",
+      "wax sensory toy",
+      "wax-cracking sensory toy"
+    ]
   },
   {
     "id": "korean-coin-tissue",
     "slug": "korean-coin-tissue",
-    "seoTitle": "What Is the Coin-Shaped Tissue You May Encounter at Restaurants the Korea-Based Editor Visits?",
-    "metaDescription": "Learn what Korean coin tissue is, how it expands with water, and where Korean product listings suggest it can be used.",
-    "primaryKeyword": "Korean coin tissue",
-    "secondaryKeywords": [
-      "coin-shaped tissue Korea",
-      "compressed tissue Korea",
-      "Korean compressed tissue",
-      "dongjeon tissue"
-    ],
     "title": "What Is the Coin-Shaped Tissue You May Encounter at Restaurants the Korea-Based Editor Visits?",
+    "seoTitle": "What Is the Coin-Shaped Tissue You May Encounter at Restaurants the Korea-Based Editor Visits?",
     "excerpt": "A small, dry disc can become a usable tissue after you add water. Here is what Korean coin tissue is and where Korean product listings say it can be used.",
+    "metaDescription": "Learn what Korean coin tissue is, how it expands with water, and where Korean product listings suggest it can be used.",
+    "categoryKey": "culture",
+    "categoryLabel": "Korean Culture Finds",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-coin-tissue/korean-coin-tissue-ai-illustration.png",
+    "heroImageAlt": "AI-generated illustration of many white coin-shaped compressed tissues arranged on a bamboo tray",
+    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
+    "publishedAt": "2026-09-02",
+    "updatedAt": "2026-10-14",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1254,
+    "heroImageHeight": 1254,
+    "featured": false,
+    "tags": [
+      "Korean daily life",
+      "Korean restaurants",
+      "coin tissue",
+      "compressed tissue",
+      "Korean culture"
+    ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "heading",
@@ -1444,22 +1297,6 @@
         ]
       }
     ],
-    "categoryKey": "culture",
-    "categoryLabel": "Korean Culture Finds",
-    "tags": [
-      "Korean daily life",
-      "Korean restaurants",
-      "coin tissue",
-      "compressed tissue",
-      "Korean culture"
-    ],
-    "heroImage": "assets/images/articles/korean-coin-tissue/korean-coin-tissue-ai-illustration.png",
-    "heroImageAlt": "AI-generated illustration of many white coin-shaped compressed tissues arranged on a bamboo tray",
-    "heroImageWidth": 1254,
-    "heroImageHeight": 1254,
-    "heroImageCaption": "AI-generated illustration for explanatory purposes.",
-    "heroImageType": "ai-illustration",
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "CleanZone — company introduction: compressed coin tissue and suggested restaurant/outdoor uses (checked October 14, 2026)",
@@ -1470,89 +1307,29 @@
         "url": "https://www.hsnonwoven.com/magic-coin-tissue-compress-product/"
       }
     ],
-    "publishedAt": "2026-09-02",
-    "updatedAt": "2026-10-14",
-    "featured": false,
     "draft": false,
-    "sourceRequirement": "required",
-    "sectionKey": "everyday-korea",
-    "contentType": "culture-everyday",
-    "koreaContextConfidence": "local-personal",
-    "monetizationProfile": "default",
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "동전티슈"
-      ],
-      "romanizedTerms": [
-        "dongjeon tissue"
-      ],
-      "soundAlikeTerms": [
-        "dong-jeon tissue"
-      ],
-      "descriptionSearches": [
-        "coin-shaped tissue that expands with water",
-        "compressed tissue seen at some restaurants visited by our Korea-based editor",
-        "small dry tissue that unfolds after adding water"
-      ]
-    }
+    "hidden": false
   },
   {
-    "sectionKey": "everyday-korea",
-    "categoryKey": "culture",
-    "categoryLabel": "Everyday Korea",
-    "contentType": "culture-everyday",
-    "isProductGuide": false,
-    "sources": [
-      {
-        "label": "한국의 주거문화",
-        "url": "https://www.aks.ac.kr/ikorea/upload/intl/korean/UserFiles/UKS5_Korean_House_eng.pdf"
-      },
-      {
-        "label": "Residents: Types of Housing",
-        "url": "https://www.busan.go.kr/eng/bshouse01"
-      },
-      {
-        "label": "Living Floor | Apartment",
-        "url": "https://www.intypes.cornell.edu/expanded.cfm?erID=58"
-      },
-      {
-        "label": "Muslim-Friendly Restaurants",
-        "url": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf"
-      },
-      {
-        "label": "Footwear inside accommodation, homes & AirBNB etc.",
-        "url": "https://www.reddit.com/r/koreatravel/comments/1g7o345"
-      },
-      {
-        "label": "Most Americans Take Their Shoes Off at Home, But Don't Expect Their Guests To",
-        "url": "https://yougov.com/en-us/articles/20063-most-americans-take-their-shoes-home-dont-expect-t"
-      },
-      {
-        "label": "Do you take your shoes off as soon as you enter your home?",
-        "url": "https://yougov.com/en-us/daily-results/20180103-ef530-2"
-      },
-      {
-        "label": "Is a shoe-free home really better? Scientists may have an answer.",
-        "url": "https://www.nationalgeographic.com/premium/article/shoes-on-inside-science-clean"
-      }
-    ],
-    "sourceRequirement": "required",
-    "languageBonus": null,
     "id": "korea-remove-shoes-home-accommodation",
-    "contentId": "C-012",
     "slug": "korea-remove-shoes-home-accommodation",
     "title": "Why Shoes Come Off in Korean Homes and Ondol Rooms",
     "seoTitle": "Why Shoes Come Off in Korean Homes and Ondol Rooms",
-    "metaDescription": "Learn what American visitors should know about removing outdoor shoes at Korean homes and ondol dining areas.",
     "excerpt": "In Korea, the line between outdoor footwear and indoor living space is often marked at the entrance. Here is what U.S. readers should know before entering a home, accommodation, or floor-seated dining area.",
-    "primaryKeyword": "remove shoes in Korea",
-    "secondaryKeywords": [
-      "Korean home shoe etiquette",
-      "shoes off in Korean homes",
-      "Korean floor-seated restaurants",
-      "Korean accommodation shoe rules"
-    ],
+    "metaDescription": "Learn what American visitors should know about removing outdoor shoes at Korean homes and ondol dining areas.",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
+    "heroImageAlt": "A photo of the entrance leading into the house",
+    "cardImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
+    "publishedAt": "2026-09-13",
+    "updatedAt": "2026-09-13",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1295,
+    "heroImageHeight": 1214,
+    "featured": false,
     "tags": [
       "Korea culture",
       "etiquette",
@@ -1560,6 +1337,7 @@
       "accommodations",
       "restaurants"
     ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "heading",
@@ -1684,120 +1462,79 @@
         ]
       }
     ],
-    "heroImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
-    "cardImage": "assets/images/articles/korea-remove-shoes-home-accommodation/01-5c0cbf96c266.webp",
-    "heroImageAlt": "A photo of the entrance leading into the house",
-    "heroImageWidth": 1295,
-    "heroImageHeight": 1214,
-    "heroImagePosition": "50% 50%",
-    "relatedProductIds": [],
-    "publishedAt": "2026-09-13",
-    "updatedAt": "2026-09-13",
-    "draft": false,
-    "featured": false,
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "현관",
-        "온돌방"
-      ],
-      "romanizedTerms": [
-        "hyeongwan",
-        "ondolbang"
-      ],
-      "soundAlikeTerms": [
-        "hyun-gwan",
-        "on-dol bang"
-      ],
-      "descriptionSearches": [
-        "Korean home entrance where outdoor shoes come off",
-        "Korean restaurant with an ondol room where shoes come off",
-        "indoor slippers at a Korean accommodation"
-      ]
-    },
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default"
-  },
-  {
-    "sectionKey": "everyday-korea",
-    "categoryKey": "culture",
-    "categoryLabel": "Everyday Korea",
-    "contentType": "culture-everyday",
-    "isProductGuide": false,
     "sources": [
       {
-        "label": "Korea’s food-wrapping tradition: ssam",
-        "url": "https://www.mcst.go.kr/english/policy/kocis/newsView.jsp?pSeq=93"
+        "label": "한국의 주거문화",
+        "url": "https://www.aks.ac.kr/ikorea/upload/intl/korean/UserFiles/UKS5_Korean_House_eng.pdf"
       },
       {
-        "label": "About Korean Food- A Bite of Korea: Salad, Leaf Wraps & Korean BBQ",
-        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=903&vcontsId=229195"
+        "label": "Residents: Types of Housing",
+        "url": "https://www.busan.go.kr/eng/bshouse01"
       },
       {
-        "label": "채소의 전통 조리법 - 나물 생채 쌈을 중심으로",
-        "url": "https://kiss.kstudy.com/Detail/Ar?key=280479"
+        "label": "Living Floor | Apartment",
+        "url": "https://www.intypes.cornell.edu/expanded.cfm?erID=58"
       },
       {
-        "label": "What Are Perilla Leaves and How Can I Cook With Them?",
-        "url": "https://www.bonappetit.com/story/perilla-leaves"
+        "label": "Muslim-Friendly Restaurants",
+        "url": "https://english.visitkorea.or.kr/public/asis/upload/Muslim-friendly_restaurants.pdf"
       },
       {
-        "label": "깻잎의 이용실태에 관한 조사 연구",
-        "url": "https://kiss.kstudy.com/DetailOa/Ar?key=53614605"
+        "label": "Footwear inside accommodation, homes & AirBNB etc.",
+        "url": "https://www.reddit.com/r/koreatravel/comments/1g7o345"
       },
       {
-        "label": "How To Make Korean BBQ Ssam",
-        "url": "https://www.tastingtable.com/1601188/how-to-make-korean-bbq-ssam/"
+        "label": "Most Americans Take Their Shoes Off at Home, But Don't Expect Their Guests To",
+        "url": "https://yougov.com/en-us/articles/20063-most-americans-take-their-shoes-home-dont-expect-t"
       },
       {
-        "label": "KBBQ Perilla Wraps",
-        "url": "https://www.thekitchn.com/kbbq-perilla-wraps-22904629"
+        "label": "Do you take your shoes off as soon as you enter your home?",
+        "url": "https://yougov.com/en-us/daily-results/20180103-ef530-2"
       },
       {
-        "label": "what is that veggie used as wrap in kbbq?",
-        "url": "https://www.reddit.com/r/NoStupidQuestions/comments/1ilha1a"
-      },
-      {
-        "label": "Perilla leaves",
-        "url": "https://www.maangchi.com/ingredient/perilla-leaves"
-      },
-      {
-        "label": "Ssam Bap: Korean Lettuce Wrap with Beef Ssamjang",
-        "url": "https://atcenteramerica.com/wp-content/uploads/2023/05/FINAL_Fermented-Foods_Receipespread.pdf"
-      },
-      {
-        "label": "NC State Extension: lettuce varieties, leaf shapes, and colors",
-        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/"
-      },
-      {
-        "label": "Flora of China: Perilla leaf shape, toothed margins, and underside hairs",
-        "url": "https://www.iplant.cn/foc/pdf/Perilla.pdf"
-      },
-      {
-        "label": "My Korean Kitchen: Korean pickled radish (ssam-mu)",
-        "url": "https://mykoreankitchen.com/korean-pickled-radish/"
-      },
-      {
-        "label": "Nongmin, July 29, 2019: onion ssam as an earlier food idea",
-        "url": "https://www.nongmin.com/article/20190727313909"
+        "label": "Is a shoe-free home really better? Scientists may have an answer.",
+        "url": "https://www.nationalgeographic.com/premium/article/shoes-on-inside-science-clean"
       }
     ],
-    "sourceRequirement": "required",
-    "languageBonus": null,
+    "draft": false,
+    "hidden": false,
+    "searchAliases": [
+      "remove shoes in Korea",
+      "Korean home shoe etiquette",
+      "shoes off in Korean homes",
+      "Korean floor-seated restaurants",
+      "Korean accommodation shoe rules",
+      "현관",
+      "온돌방",
+      "hyeongwan",
+      "ondolbang",
+      "hyun-gwan",
+      "on-dol bang",
+      "Korean home entrance where outdoor shoes come off",
+      "Korean restaurant with an ondol room where shoes come off",
+      "indoor slippers at a Korean accommodation"
+    ]
+  },
+  {
     "id": "korean-bbq-ssam-lettuce-perilla-wraps",
-    "contentId": "C-013",
     "slug": "korean-bbq-ssam-lettuce-perilla-wraps",
     "title": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
     "seoTitle": "What Is Ssam? Korean BBQ Lettuce and Perilla Leaf Wraps",
-    "metaDescription": "Learn to tell Korean BBQ lettuce and perilla leaves apart, build a ssam with garlic and ssamjang, and try pickled radish sheets or onion cups.",
     "excerpt": "The leaves served with Korean barbecue are often lettuce (sangchu) and perilla (kkaennip). They hold grilled meat, rice, garlic, ssamjang, or other fillings. Ssam is the Korean way of wrapping those ingredients into a bite, with room for your own preferences.",
-    "primaryKeyword": "Korean BBQ ssam",
-    "secondaryKeywords": [
-      "Korean lettuce wraps",
-      "perilla leaf wraps",
-      "Korean barbecue wraps",
-      "ssam culture"
-    ],
+    "metaDescription": "Learn to tell Korean BBQ lettuce and perilla leaves apart, build a ssam with garlic and ssamjang, and try pickled radish sheets or onion cups.",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d.webp",
+    "heroImageAlt": "Collage showing leafy wraps filled with grilled meat and rice, and a hand folding a wrap.",
+    "cardImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d-card.webp",
+    "publishedAt": "2026-09-13",
+    "updatedAt": "2026-10-16",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1296,
+    "heroImageHeight": 1214,
+    "featured": false,
     "tags": [
       "Korean food",
       "Korean barbecue",
@@ -1805,6 +1542,7 @@
       "perilla leaves",
       "lettuce wraps"
     ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "heading",
@@ -1949,51 +1687,109 @@
         ]
       }
     ],
-    "heroImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d.webp",
-    "cardImage": "assets/images/articles/korean-bbq-ssam-lettuce-perilla-wraps/01-25072052563d-card.webp",
-    "heroImageAlt": "Collage showing leafy wraps filled with grilled meat and rice, and a hand folding a wrap.",
-    "heroImageWidth": 1296,
-    "heroImageHeight": 1214,
-    "heroImagePosition": "50% 50%",
-    "relatedProductIds": [],
-    "publishedAt": "2026-09-13",
-    "updatedAt": "2026-10-16",
+    "sources": [
+      {
+        "label": "Korea’s food-wrapping tradition: ssam",
+        "url": "https://www.mcst.go.kr/english/policy/kocis/newsView.jsp?pSeq=93"
+      },
+      {
+        "label": "About Korean Food- A Bite of Korea: Salad, Leaf Wraps & Korean BBQ",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=903&vcontsId=229195"
+      },
+      {
+        "label": "채소의 전통 조리법 - 나물 생채 쌈을 중심으로",
+        "url": "https://kiss.kstudy.com/Detail/Ar?key=280479"
+      },
+      {
+        "label": "What Are Perilla Leaves and How Can I Cook With Them?",
+        "url": "https://www.bonappetit.com/story/perilla-leaves"
+      },
+      {
+        "label": "깻잎의 이용실태에 관한 조사 연구",
+        "url": "https://kiss.kstudy.com/DetailOa/Ar?key=53614605"
+      },
+      {
+        "label": "How To Make Korean BBQ Ssam",
+        "url": "https://www.tastingtable.com/1601188/how-to-make-korean-bbq-ssam/"
+      },
+      {
+        "label": "KBBQ Perilla Wraps",
+        "url": "https://www.thekitchn.com/kbbq-perilla-wraps-22904629"
+      },
+      {
+        "label": "what is that veggie used as wrap in kbbq?",
+        "url": "https://www.reddit.com/r/NoStupidQuestions/comments/1ilha1a"
+      },
+      {
+        "label": "Perilla leaves",
+        "url": "https://www.maangchi.com/ingredient/perilla-leaves"
+      },
+      {
+        "label": "Ssam Bap: Korean Lettuce Wrap with Beef Ssamjang",
+        "url": "https://atcenteramerica.com/wp-content/uploads/2023/05/FINAL_Fermented-Foods_Receipespread.pdf"
+      },
+      {
+        "label": "NC State Extension: lettuce varieties, leaf shapes, and colors",
+        "url": "https://plants.ces.ncsu.edu/plants/lactuca-sativa/"
+      },
+      {
+        "label": "Flora of China: Perilla leaf shape, toothed margins, and underside hairs",
+        "url": "https://www.iplant.cn/foc/pdf/Perilla.pdf"
+      },
+      {
+        "label": "My Korean Kitchen: Korean pickled radish (ssam-mu)",
+        "url": "https://mykoreankitchen.com/korean-pickled-radish/"
+      },
+      {
+        "label": "Nongmin, July 29, 2019: onion ssam as an earlier food idea",
+        "url": "https://www.nongmin.com/article/20190727313909"
+      }
+    ],
     "draft": false,
-    "featured": false,
-    "searchHelp": {
-      "heading": "Not sure what to search for?",
-      "koreanTerms": [
-        "쌈",
-        "깻잎"
-      ],
-      "romanizedTerms": [
-        "ssam",
-        "kkaennip"
-      ],
-      "soundAlikeTerms": [
-        "ssahm",
-        "kkan-nip"
-      ],
-      "descriptionSearches": [
-        "Korean barbecue leafy vegetable wraps",
-        "Korean BBQ lettuce and perilla leaf wraps"
-      ]
-    },
-    "koreaContextConfidence": "context-dependent",
-    "monetizationProfile": "default"
+    "hidden": false,
+    "searchAliases": [
+      "Korean BBQ ssam",
+      "Korean lettuce wraps",
+      "perilla leaf wraps",
+      "Korean barbecue wraps",
+      "ssam culture",
+      "쌈",
+      "깻잎",
+      "ssam",
+      "kkaennip",
+      "ssahm",
+      "kkan-nip",
+      "Korean barbecue leafy vegetable wraps",
+      "Korean BBQ lettuce and perilla leaf wraps"
+    ]
   },
   {
     "id": "scissor-style-tongs-lee-guk-joo",
     "slug": "scissor-style-tongs-lee-guk-joo",
-    "seoTitle": "Scissor-Style Tongs: From Lee Guk-joo’s Kitchen to My Dumplings",
     "title": "Scissor-Style Tongs: From Lee Guk-joo’s Kitchen to My Dumplings",
-    "metaDescription": "A personal account of buying scissor-style kitchen tongs after seeing Lee Guk-joo use a similar style on a Korean show, then using them to turn dumplings.",
+    "seoTitle": "Scissor-Style Tongs: From Lee Guk-joo’s Kitchen to My Dumplings",
     "excerpt": "After seeing Lee Guk-joo use scissor-style tongs on a Korean show, I bought a pair and tried them while pan-frying mandu.",
-    "primaryKeyword": "scissor-style tongs",
-    "secondaryKeywords": [
-      "Lee Guk-joo tongs",
-      "Korean kitchen tongs"
+    "metaDescription": "A personal account of buying scissor-style kitchen tongs after seeing Lee Guk-joo use a similar style on a Korean show, then using them to turn dumplings.",
+    "categoryKey": "home-kitchen",
+    "categoryLabel": "Korean Home & Kitchen",
+    "sectionKey": "seen-online",
+    "contentType": "mixed",
+    "heroImage": "assets/images/articles/scissor-style-tongs-lee-guk-joo/scissor-style-tongs.webp",
+    "heroImageAlt": "The author’s silver scissor-style kitchen tongs with triangular gripping tips and loop handles on a warm ivory background",
+    "heroImageCaption": "Author’s own tongs. Background and lighting edited with AI.",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "monetizationProfile": "light",
+    "heroImageWidth": 1672,
+    "heroImageHeight": 941,
+    "featured": false,
+    "tags": [
+      "scissor-style tongs",
+      "Lee Guk-joo",
+      "Korean kitchen",
+      "mandu"
     ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "paragraph",
@@ -2016,21 +1812,6 @@
         "text": "On screen, this style of tongs was used for French toast. In my kitchen, it became a tool I reached for when flipping dumplings. That’s my experience of trying something I saw on a Korean show, not a promise that everyone will find it equally comfortable."
       }
     ],
-    "categoryKey": "home-kitchen",
-    "categoryLabel": "Korean Home & Kitchen",
-    "tags": [
-      "scissor-style tongs",
-      "Lee Guk-joo",
-      "Korean kitchen",
-      "mandu"
-    ],
-    "heroImage": "assets/images/articles/scissor-style-tongs-lee-guk-joo/scissor-style-tongs.webp",
-    "heroImageAlt": "The author’s silver scissor-style kitchen tongs with triangular gripping tips and loop handles on a warm ivory background",
-    "heroImageWidth": 1672,
-    "heroImageHeight": 941,
-    "heroImageCaption": "Author’s own tongs. Background and lighting edited with AI.",
-    "heroImageType": "original-photo",
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "MBC official clip — Lee Guk-joo prepares French toast, episode 226 (November 26, 2022)",
@@ -2041,30 +1822,38 @@
         "url": "https://enews.imbc.com/News/ViewAmp/366506"
       }
     ],
-    "publishedAt": "2026-10-16",
-    "updatedAt": "2026-10-16",
-    "featured": false,
     "draft": false,
-    "sourceRequirement": "required",
-    "sectionKey": "seen-online",
-    "contentType": "mixed",
-    "koreaContextConfidence": "local-personal",
-    "monetizationProfile": "light"
+    "hidden": false
   },
   {
     "id": "korean-restaurant-call-buttons",
     "slug": "korean-restaurant-call-buttons",
-    "seoTitle": "Korean Restaurant Call Buttons and Tablet Staff Calls",
-    "metaDescription": "Need help at a Korean restaurant? Learn how to use a table call button or a tablet’s 직원 호출 menu, including screens that ask you to select a request.",
-    "primaryKeyword": "Korean restaurant call button",
-    "secondaryKeywords": [
-      "Korean restaurant tablet staff call",
-      "직원 호출",
-      "how to call staff in a Korean restaurant",
-      "Korean table order staff call"
-    ],
     "title": "How to Call Staff at a Korean Restaurant: Buttons and Tablets",
+    "seoTitle": "Korean Restaurant Call Buttons and Tablet Staff Calls",
     "excerpt": "A small button on the table or a staff-call menu on the ordering tablet can help you ask for assistance. Here is how to recognize the two setups and what to do next.",
+    "metaDescription": "Need help at a Korean restaurant? Learn how to use a table call button or a tablet’s 직원 호출 menu, including screens that ask you to select a request.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-restaurant-call-buttons/call-button-tablet-diagram.png",
+    "heroImageAlt": "Schematic illustration of a physical call button beside a tablet staff-call menu, shown as alternative setups.",
+    "heroImageCaption": "Original schematic illustration, not a restaurant photograph or an exact device interface. Buttons and tablet screens vary.",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "everyday life in Korea",
+      "travel tips",
+      "table order",
+      "call buttons"
+    ],
+    "relatedProductIds": [],
     "body": [
       {
         "type": "paragraph",
@@ -2156,23 +1945,6 @@
         "text": "Still looking for your spoon and chopsticks? Read our guide to utensil drawers under Korean restaurant tables. If you are having barbecue, our ssam guide explains lettuce and perilla leaf wraps."
       }
     ],
-    "categoryKey": "food",
-    "categoryLabel": "Food & Kitchen Culture",
-    "tags": [
-      "Korean restaurants",
-      "Korean dining",
-      "everyday life in Korea",
-      "travel tips",
-      "table order",
-      "call buttons"
-    ],
-    "heroImage": "assets/images/articles/korean-restaurant-call-buttons/call-button-tablet-diagram.png",
-    "heroImageAlt": "Schematic illustration of a physical call button beside a tablet staff-call menu, shown as alternative setups.",
-    "heroImageWidth": 1200,
-    "heroImageHeight": 630,
-    "heroImageCaption": "Original schematic illustration, not a restaurant photograph or an exact device interface. Buttons and tablet screens vary.",
-    "heroImageType": "editorial-illustration",
-    "relatedProductIds": [],
     "sources": [
       {
         "label": "Syscall: restaurant wireless calling system and table-number notification",
@@ -2183,30 +1955,103 @@
         "url": "https://help-center.payhere.in/a35eb17f-3ec1-4a9e-8cea-049599bb7c84"
       }
     ],
-    "sourceRequirement": "required",
-    "publishedAt": "2026-10-16",
-    "updatedAt": "2026-10-16",
-    "featured": false,
     "draft": false,
+    "hidden": false
+  },
+  {
+    "id": "korean-restaurant-banchan-refills",
+    "slug": "korean-restaurant-banchan-refills",
+    "title": "Are Banchan Refills Free at Korean Restaurants?",
+    "seoTitle": "Are Banchan Refills Free at Korean Restaurants?",
+    "excerpt": "Start by looking for a self-service station. If you cannot find one, ask a staff member, and remember that separately priced side dishes are a different matter.",
+    "metaDescription": "Want more banchan at a Korean restaurant? Check for a self-service station, ask staff if needed, and distinguish basic side dishes from priced side-menu items.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
     "sectionKey": "everyday-korea",
     "contentType": "culture-everyday",
-    "koreaContextConfidence": "local-personal",
+    "heroImage": "assets/images/articles/korean-restaurant-banchan-refills/banchan-refill-guide.png",
+    "heroImageAlt": "Original explanatory illustration: check the self-service station, ask staff if there is none, and check prices for separately ordered side dishes.",
+    "heroImageCaption": "Original explanatory illustration, not a restaurant photograph. Refill arrangements and charges vary by restaurant and dish.",
+    "publishedAt": "2026-10-16",
+    "updatedAt": "2026-10-16",
     "monetizationProfile": "default",
-    "searchHelp": {
-      "heading": "Search terms",
-      "koreanTerms": [
-        "직원 호출",
-        "호출벨",
-        "테이블 오더"
-      ],
-      "romanizedTerms": [
-        "jigwon hochul"
-      ],
-      "soundAlikeTerms": [],
-      "descriptionSearches": [
-        "Korean restaurant table call button",
-        "tablet menu to call restaurant staff"
-      ]
-    }
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "banchan",
+      "everyday life in Korea",
+      "travel tips",
+      "self-service"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "At Korean restaurants, the basic side dishes served with your meal, known as banchan (반찬), can often be refilled at no extra charge. But this depends on the restaurant and the dish. Not everything on the table is a free refill."
+      },
+      {
+        "type": "heading",
+        "text": "1. I check for a self-service station first"
+      },
+      {
+        "type": "paragraph",
+        "text": "When I want more banchan, I first look for a self-service station. If there is one, I help myself. If I cannot see one, I call a staff member."
+      },
+      {
+        "type": "paragraph",
+        "text": "A self-service station, often called a 셀프바, is an area where diners can collect items such as side dishes themselves. Check any instructions, then take only as much of the available banchan as you expect to eat."
+      },
+      {
+        "type": "heading",
+        "text": "2. If there is no self-service station, ask staff"
+      },
+      {
+        "type": "paragraph",
+        "text": "You can say: “이 반찬 조금 더 주실 수 있나요?” This means, “Could I have a little more of this side dish, please?”"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you do not know the name of the dish, you can point to it as you ask. If your table has a call button or the ordering tablet has a staff-call menu, you can use that to get help. Our guide to Korean restaurant call buttons and tablet staff calls explains both options."
+      },
+      {
+        "type": "heading",
+        "text": "3. Keep separately priced side dishes in mind"
+      },
+      {
+        "type": "paragraph",
+        "text": "A side dish listed on the menu with its own price is different from the basic banchan served with your meal. Do not assume it comes with free refills. If you want more, you may need to place another paid order."
+      },
+      {
+        "type": "paragraph",
+        "text": "If you are unsure, ask first: “추가 비용이 있나요?” This means, “Is there an extra charge?”"
+      },
+      {
+        "type": "heading",
+        "text": "The simple order to remember"
+      },
+      {
+        "type": "paragraph",
+        "text": "Look for a self-service station first. If you cannot find one, ask staff. And keep basic banchan separate from paid side-menu items. Knowing those three things makes it easier to ask for more without an awkward surprise."
+      },
+      {
+        "type": "heading",
+        "text": "About the guidance"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korea Tourism Organization describes free extra side dishes and self-service setups in its “About Korean Food” guide. That page states it was last updated on March 24, 2023. It is useful general background, not a guarantee that every restaurant or every dish follows the same policy. Check the menu, signs, or staff when in doubt."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Korea Tourism Organization: About Korean Food, Visiting a Korean Restaurant (page states last updated March 24, 2023; checked October 16, 2026)",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=903&vcontsId=229195"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]

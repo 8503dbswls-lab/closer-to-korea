@@ -1,0 +1,7 @@
+# Defense in depth only. Complete editorial masters must live outside this repository.
+node_modules/
+backup_before_*/
+.ctk-editorial-backups/
+private-source/
+*editorial-master*.json
+*.ctk-*.tmp

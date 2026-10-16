@@ -68,14 +68,16 @@
       <p class="lede">Add or edit products and articles without touching JSON by hand.</p>
     </div>
     <div class="header-actions">
-      <button type="button" class="button secondary" data-save-browser>Save draft in browser</button>
-      <button type="button" class="button ghost" data-reset-browser>Reset browser draft</button>
+      <button type="button" class="button secondary" data-save-browser>Save private browser copy</button>
+      <button type="button" class="button ghost" data-reset-browser>Discard browser edits</button>
     </div>
   </header>
 
   <div class="notice" role="note">
-    <strong>Local tool:</strong> Nothing is uploaded anywhere. This page edits an in-browser working copy and exports replacement data files.
+    <strong>Local tool:</strong> The website contains public data only. Load a complete private editorial master to edit drafts. Browser storage is not a durable backup; never put the private master inside the website folder or upload it with public files.
   </div>
+
+  <div class="notice" role="status" data-editorial-source-status>No private master loaded.</div>
 
   <div class="notice monetization-status" role="status" aria-label="Monetization status">
     <strong>Monetization:</strong>
@@ -114,7 +116,7 @@
             </div>
             <div class="editor-actions">
               <button type="button" class="button ghost" data-duplicate-product>Duplicate</button>
-              <button type="button" class="button danger" data-delete-product>Delete</button>
+              <button type="button" class="button danger" data-delete-product>Archive</button>
               <button type="submit" class="button primary">Save product</button>
             </div>
           </div>
@@ -235,7 +237,7 @@
             </div>
             <div class="editor-actions">
               <button type="button" class="button ghost" data-duplicate-article>Duplicate</button>
-              <button type="button" class="button danger" data-delete-article>Delete</button>
+              <button type="button" class="button danger" data-delete-article>Archive</button>
               <button type="submit" class="button primary">Save article</button>
             </div>
           </div>
@@ -317,6 +319,7 @@
             <div class="checkbox-grid flags">
               <label class="check"><input type="checkbox" name="featured"> <span>Featured</span></label>
               <label class="check"><input type="checkbox" name="draft"> <span>Draft</span></label>
+              <label class="check"><input type="checkbox" name="hidden"> <span>Hidden</span></label>
             </div>
           </fieldset>
         </form>
@@ -335,7 +338,7 @@
 
         <section class="export-card local-publish-card" data-local-publish-panel hidden>
           <p class="eyebrow">Local shortcut</p>
-          <h2>One-click publish</h2>
+          <h2>Save privately or publish public content</h2>
           <p>This panel only appears when the admin is opened from the local Closer to Korea admin server on this PC.</p>
           <p class="local-publish-git" data-local-publish-git>Checking local Git status…</p>
           <div class="local-image-stage">
@@ -343,44 +346,47 @@
               <span>Stage new photos</span>
               <input type="file" accept="image/jpeg,image/png,image/webp" multiple data-local-image-input disabled>
             </label>
-            <p class="help">JPG, PNG, or WebP up to 12 MB each. Staged files stay outside the Git project until a validated Publish uses their returned paths.</p>
+            <p class="help">JPG, PNG, or WebP up to 12 MB each. Staged files stay outside the Git project. Saving the private master preserves its referenced photos privately; only photos referenced by published content enter the public project.</p>
             <div class="local-image-results" data-local-image-results></div>
           </div>
+          <button type="button" class="button secondary" data-local-save-master disabled>Save private master (no publish)</button>
           <button type="button" class="button primary" data-local-publish-button disabled>Validate and publish to GitHub</button>
           <pre class="validation-output local-publish-output" data-local-publish-output aria-live="polite"></pre>
         </section>
 
         <section class="export-card">
           <p class="eyebrow">Step 2</p>
-          <h2>Download replacement files</h2>
-          <p>Replace the matching files inside the website project.</p>
+          <h2>Download public-only files</h2>
+          <p>These contain only allowlisted published content. They are not backups and cannot restore your drafts. Use the local build workflow to generate a complete, consistent deployment.</p>
           <div class="download-grid">
             <button type="button" class="button secondary" data-download-products>Download products.json</button>
             <button type="button" class="button secondary" data-download-articles>Download articles.json</button>
             <button type="button" class="button secondary" data-download-bundle>Download content-data.js</button>
-            <button type="button" class="button ghost" data-download-backup>Download full content backup</button>
+            <button type="button" class="button secondary" data-download-aliases>Download public search-aliases.json</button>
           </div>
         </section>
 
         <section class="export-card">
           <p class="eyebrow">Optional</p>
-          <h2>Import existing files</h2>
-          <p>Use this if another editor sends you updated JSON files.</p>
+          <h2>Private master: import, backup, and recovery</h2>
+          <p>A complete private master includes every draft and all editorial metadata. Keep it and its backups outside the Git repository and public web folder. The public bundle and old browser caches are never treated as a complete master.</p>
           <div class="import-grid">
-            <label class="file-input"><span>Import products.json</span><input type="file" accept=".json,application/json" data-import-products></label>
-            <label class="file-input"><span>Import articles.json</span><input type="file" accept=".json,application/json" data-import-articles></label>
+            <label class="file-input"><span>Import complete PRIVATE editorial master</span><input type="file" accept=".json,application/json" data-import-master></label>
+            <button type="button" class="button secondary" data-download-backup>Download PRIVATE editorial master (never publish)</button>
+            <button type="button" class="button ghost" data-restore-browser>Restore browser edits after loading master</button>
+            <button type="button" class="button ghost" data-export-browser-recovery>Export browser recovery data (may be incomplete)</button>
           </div>
         </section>
 
         <section class="export-card guide">
           <p class="eyebrow">Publish checklist</p>
-          <h2>After downloading</h2>
+          <h2>Publish without losing drafts</h2>
           <ol>
-            <li>Replace <code>data/products.json</code> and/or <code>data/articles.json</code>.</li>
-            <li>Replace <code>data/content-data.js</code>.</li>
-            <li>Copy new photos into <code>assets/images/</code>.</li>
-            <li>Run <code>node scripts/validate-content.mjs</code>.</li>
-            <li>Preview the site before uploading it.</li>
+            <li>Save the complete private master outside the website repository. Preserve its private image folder and backups as well.</li>
+            <li>Configure the local admin with <code>CTK_EDITORIAL_MASTER</code> pointing to that master.</li>
+            <li>Save privately whenever you edit. Publish only when ready; the server derives public files from the saved master.</li>
+            <li>Only published, visible records and their referenced public photos belong in the public website.</li>
+            <li>Run deployment preparation and validation, then preview before publishing. Private masters and browser recovery files must never be uploaded.</li>
           </ol>
         </section>
       </div>
@@ -404,6 +410,7 @@
   </div>
 
   <script src="data/content-data.js?v=3"></script>
+  <script src="js/public-content.js"></script>
   <script src="js/content-admin.js"></script>
   <script src="js/local-publish-client.js"></script>
   <script src="js/admin-lock.js"></script>

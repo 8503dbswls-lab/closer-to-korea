@@ -1,16 +1,19 @@
 # CONTENT UPDATE RULES
 
+## Public/private boundary
+
+The complete editorial master is stored outside this public repository and webroot. The `data/products.json`, `data/articles.json`, `data/search-aliases.json`, and `data/content-data.js` files are generated public-only projections. Never put drafts, internal evidence, raw import payloads, or backup archives in this repository. Follow `CONTENT_MANAGER_GUIDE.md` for source restore, export, and validation. The content-data examples below describe the full private authoring schema; they are not permission to publish every field.
+
+Normal content editing changes the private master and assets first, then regenerates public data. Do not treat the public projection as the complete source. Preserve existing design/application code unless an intentional pipeline or design change has been authorized.
+
+
 This project separates protected design/application code from content data.
 
 ## Core operating principle
 
-**Keep the current design unchanged. Correct and expand content through data files only.**
+**Keep the current design unchanged. Correct and expand content in the private master, then generate public data.**
 
-For normal weekly updates, edit only:
-
-- `data/products.json`
-- `data/articles.json`
-- `assets/images/`
+For normal weekly updates, edit products and articles in the complete private master outside the repository. Store unpublished media privately. The generated public data files are outputs, not source files.
 
 The following are controlled vocabulary and permanent copy files. Edit them only when the site owner intentionally changes the taxonomy or brand language:
 
@@ -35,6 +38,8 @@ Do not edit during routine content updates:
 Run the validator before every publication:
 
 ```bash
+node scripts/validate-content.mjs --source /absolute/private/path/closer-to-korea-editorial-master.json
+node scripts/validate-public-boundary.mjs
 node scripts/validate-content.mjs
 ```
 

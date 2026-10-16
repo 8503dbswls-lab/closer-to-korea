@@ -4,11 +4,9 @@ This project separates protected design/application code from weekly content dat
 
 ## Weekly editing workflow
 
-For normal weekly updates, edit only:
+For normal weekly updates, edit the complete private editorial master outside this repository. Keep draft media beside that source. Generate the public `data/` files using the allowlisted exporter, and copy only media referenced by published content.
 
-- `data/products.json`
-- `data/articles.json`
-- `assets/images/`
+Follow `CONTENT_MANAGER_GUIDE.md` for restore, editing, source validation, export, and publication. Public JSON is a reduced export, never an authoritative editing source.
 
 Do not edit HTML, CSS, JavaScript, fonts, animation, design tokens, navigation behavior, card markup, filters, or accessibility logic during content updates.
 
@@ -96,6 +94,8 @@ Opening HTML directly with `file://` will prevent JSON fetch requests from worki
 ## Validate content
 
 ```bash
+node scripts/validate-content.mjs --source /absolute/private/path/closer-to-korea-editorial-master.json
+node scripts/validate-public-boundary.mjs
 node scripts/validate-content.mjs
 ```
 
@@ -145,15 +145,15 @@ Do not show a fixed Amazon price unless it comes from a maintained, compliant so
 
 Products:
 
-- `draft: true` — never public
-- `hidden: true` — temporarily removed
+- `draft: true` — excluded from newly generated public data; does not erase old files or Git history
+- `hidden: true` — excluded from newly generated public data; existing static pages require a reviewed removal
 - `newlyAdded: true` — included in Newly Added
 - `featured: true` — prioritized in recommended order
 - `soldOut: true` — disables Amazon CTA
 
 Articles:
 
-- `draft: true` — never public
+- `draft: true` — excluded from newly generated public data; does not erase old files or Git history
 - `featured: true` — prioritized in Latest Guides
 
 ## Launch and monetization readiness
@@ -178,7 +178,7 @@ Open:
 admin.html
 ```
 
-Use the manager to add and edit products and articles through forms. The manual workflow exports replacement JSON plus the single generated `content-data.js` fallback bundle; the optional Windows local workflow can validate, prepare generated files, commit, and push in one controlled publish step.
+Use the manager to add and edit products and articles through forms. The manager requires an explicitly loaded complete private master. Manual exports contain public-only JSON and the generated fallback bundle. The local workflow saves the private source first, validates it, then prepares and stages only explicit public files. Archiving is not a privacy erasure and does not automatically delete an existing static page or past Git history.
 
 See:
 

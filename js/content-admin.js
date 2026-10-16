@@ -1,18 +1,18 @@
 (() => {
   "use strict";
 
-  const source = window.__CTK_DATA__ || {products:[],articles:[],categories:{categories:[],curationFilters:[],matchTypes:[],verificationOptions:[],trendStatuses:[],editorialSections:[],contentTypes:[],contextConfidence:[],monetizationProfiles:[]},siteCopy:{},monetization:{adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}}};
-  const storageKey = "ctk-content-manager-v1";
-
+  // Public data is reference material, never a complete editorial source.
+  const publicReference = window.__CTK_DATA__ || {};
+  const storageKey = "ctk-content-manager-private-v2";
+  let source = null;
+  let sourceDigest = null;
+  let sourceLabel = "No private master loaded. Import a complete private master, or open the local admin server.";
   const state = {
-    products: structuredClone(source.products || []),
-    articles: structuredClone(source.articles || []),
-    categories: structuredClone(source.categories || {}),
-    siteCopy: structuredClone(source.siteCopy || {}),
-    monetization: structuredClone(source.monetization || {adsense:{connectionEnabled:false,manualAdsEnabled:false},amazonAssociates:{enabled:false}}),
-    selectedProductId: null,
-    selectedArticleId: null,
-    articleBlocks: []
+    products: [], articles: [],
+    categories: structuredClone(publicReference.categories || {}),
+    siteCopy: structuredClone(publicReference.siteCopy || {}),
+    monetization: structuredClone(publicReference.monetization || {}),
+    selectedProductId: null, selectedArticleId: null, articleBlocks: []
   };
 
   let productDirty=false;
@@ -253,6 +253,9 @@
 
   function fillProductForm(product){
     const form=$("[data-product-form]");
+    form.elements.id.readOnly=Boolean(state.selectedProductId);
+    form.elements.id.dataset.edited="true";
+    form.elements.slug.dataset.edited="true";
     const simpleFields=[
       "id","slug","name","summary","categoryKey","image","imageAlt","publicImageStatus",
       "seenInKorea","usedBy","whyItMatters","koreanProductStatus","personalUseNotes",
@@ -277,7 +280,7 @@
 
   function collectProductForm(){
     const form=$("[data-product-form]");
-    const data=productDefaults();
+    const data={...productDefaults(),...clone(productById(state.selectedProductId)||{})};
     const textFields=[
       "id","slug","name","summary","categoryKey","image","imageAlt","publicImageStatus",
       "seenInKorea","usedBy","whyItMatters","koreanProductStatus","personalUseNotes",
@@ -310,6 +313,7 @@
 
   function selectProduct(id){
     state.selectedProductId=id;
+    if(!productById(id))return newProduct();
     fillProductForm(productById(id));
     productDirty=false;
     renderProductList();
@@ -318,12 +322,15 @@
   function newProduct(){
     state.selectedProductId=null;
     fillProductForm(productDefaults());
+    delete $("[data-product-form]").elements.id.dataset.edited;
+    delete $("[data-product-form]").elements.slug.dataset.edited;
     productDirty=false;
     renderProductList();
   }
 
   function saveProduct(event){
     event.preventDefault();
+    if(!source)return;
     const data=collectProductForm();
     if(!data.id || !data.slug || !data.name){
       setStatus("[data-product-status]","ID, slug, and product name are required.",true);
@@ -369,8 +376,8 @@
   function deleteProduct(){
     const product=productById(state.selectedProductId);
     if(!product)return;
-    if(!window.confirm(`Delete “${product.name}” from the working copy?`))return;
-    state.products=state.products.filter(item=>item.id!==product.id);
+    if(!window.confirm(`Archive “${product.name}”? It will stay in the private master and be excluded from public exports.`))return;
+    Object.assign(product,{draft:true,hidden:true,featured:false});
     newProduct();
     renderProductList();
     saveBrowser(false);
@@ -378,6 +385,9 @@
 
   function fillArticleForm(article){
     const form=$("[data-article-form]");
+    form.elements.id.readOnly=Boolean(state.selectedArticleId);
+    form.elements.id.dataset.edited="true";
+    form.elements.slug.dataset.edited="true";
     [
       "id","slug","title","seoTitle","excerpt","metaDescription","primaryKeyword",
       "categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile",
@@ -392,6 +402,7 @@
     form.elements.sources.value=serializeSources(article.sources||[]);
     form.elements.featured.checked=Boolean(article.featured);
     form.elements.draft.checked=Boolean(article.draft);
+    form.elements.hidden.checked=Boolean(article.hidden);
     state.articleBlocks=clone(article.body||[]);
     renderBodyBlocks();
     $("[data-article-editor-title]").textContent=article.title || "New article";
@@ -399,7 +410,7 @@
 
   function collectArticleForm(){
     const form=$("[data-article-form]");
-    const data=articleDefaults();
+    const data={...articleDefaults(),...clone(articleById(state.selectedArticleId)||{})};
     [
       "id","slug","title","seoTitle","excerpt","metaDescription","primaryKeyword",
       "categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile",
@@ -410,9 +421,14 @@
     data.heroImageHeight=Number(form.elements.heroImageHeight.value)||760;
     data.tags=splitComma(form.elements.tags.value);
     data.relatedProductIds=splitComma(form.elements.relatedProductIds.value);
-    data.sources=parseSources(form.elements.sources.value);
+    data.sources=parseSources(form.elements.sources.value).map(item=>{
+      const prior=(articleById(state.selectedArticleId)?.sources||[]).find(old=>
+        old && typeof old==="object" && (item.url ? old.url===item.url : old.label===item.label));
+      return {...clone(prior||{}),...item};
+    });
     data.featured=form.elements.featured.checked;
     data.draft=form.elements.draft.checked;
+    data.hidden=form.elements.hidden.checked;
     data.body=clone(state.articleBlocks);
     const category=(state.categories.categories||[]).find(item=>item.key===data.categoryKey);
     data.categoryLabel=category?.label || data.categoryKey;
@@ -421,6 +437,7 @@
 
   function selectArticle(id){
     state.selectedArticleId=id;
+    if(!articleById(id))return newArticle();
     fillArticleForm(articleById(id));
     articleDirty=false;
     renderArticleList();
@@ -429,12 +446,15 @@
   function newArticle(){
     state.selectedArticleId=null;
     fillArticleForm(articleDefaults());
+    delete $("[data-article-form]").elements.id.dataset.edited;
+    delete $("[data-article-form]").elements.slug.dataset.edited;
     articleDirty=false;
     renderArticleList();
   }
 
   function saveArticle(event){
     event.preventDefault();
+    if(!source)return;
     syncBlocksFromDom();
     const data=collectArticleForm();
     if(!data.id || !data.slug || !data.title){
@@ -479,8 +499,8 @@
   function deleteArticle(){
     const article=articleById(state.selectedArticleId);
     if(!article)return;
-    if(!window.confirm(`Delete “${article.title}” from the working copy?`))return;
-    state.articles=state.articles.filter(item=>item.id!==article.id);
+    if(!window.confirm(`Archive “${article.title}”? It will stay in the private master and be excluded from public exports.`))return;
+    Object.assign(article,{draft:true,hidden:true,featured:false});
     newArticle();
     renderArticleList();
     saveBrowser(false);
@@ -508,8 +528,13 @@
       const options=articleSlots.map(slot=>`<option value="${escapeAttr(slot)}"${slot===block.slot?" selected":""}>${escapeHtml(slot)}</option>`).join("");
       wrapper.innerHTML=`<label><span>Manual ad slot</span><select data-block-key="slot">${options}</select></label>
         <p class="help">Only renders when this article uses the Custom monetization profile and AdSense manual slots are enabled.</p>`;
-    }else{
+    }else if(["paragraph","heading","quote"].includes(block.type)){
       wrapper.innerHTML=`<label><span>${block.type==="heading"?"Heading":block.type==="quote"?"Quote":"Paragraph"}</span><textarea data-block-key="text" rows="${block.type==="paragraph"?5:3}">${escapeHtml(block.text||"")}</textarea></label>`;
+    }
+    if(!wrapper.childElementCount){
+      const note=document.createElement("p");
+      note.textContent=`${block.type} block is preserved unchanged. Edit this block in the private master.`;
+      wrapper.appendChild(note);
     }
     return wrapper;
   }
@@ -531,6 +556,7 @@
         syncBlocksFromDom();
         if(index>0){
           [state.articleBlocks[index-1],state.articleBlocks[index]]=[state.articleBlocks[index],state.articleBlocks[index-1]];
+          articleDirty=true;
           renderBodyBlocks();
         }
       });
@@ -538,12 +564,14 @@
         syncBlocksFromDom();
         if(index<state.articleBlocks.length-1){
           [state.articleBlocks[index+1],state.articleBlocks[index]]=[state.articleBlocks[index],state.articleBlocks[index+1]];
+          articleDirty=true;
           renderBodyBlocks();
         }
       });
       $("[data-block-delete]",node).addEventListener("click",()=>{
         syncBlocksFromDom();
         state.articleBlocks.splice(index,1);
+        articleDirty=true;
         renderBodyBlocks();
       });
       container.appendChild(node);
@@ -566,11 +594,12 @@
       }else if(block.type==="definition-list"){
         block.items=splitLines($('[data-block-key="items"]',fieldRoot)?.value||"").map(line=>{
           const [term,...rest]=line.split("|");
-          return {term:(term||"").trim(),description:rest.join("|").trim()};
+          const previous=(block.items||[]).find(item=>item.term===(term||"").trim());
+          return {...clone(previous||{}),term:(term||"").trim(),description:rest.join("|").trim()};
         }).filter(item=>item.term||item.description);
       }else if(block.type==="ad-break"){
         block.slot=$('[data-block-key="slot"]',fieldRoot)?.value||"article-mid";
-      }else{
+      }else if(["paragraph","heading","quote"].includes(block.type)){
         block.text=$('[data-block-key="text"]',fieldRoot)?.value.trim()||"";
       }
     });
@@ -588,48 +617,112 @@
       "ad-break":{type:"ad-break",slot:"article-mid"}
     };
     state.articleBlocks.push(defaults[type]);
+    articleDirty=true;
     renderBodyBlocks();
     const blocks=$$("[data-body-blocks] .body-block");
     blocks.at(-1)?.scrollIntoView({behavior:"smooth",block:"center"});
   }
 
-  function saveBrowser(showMessage=true){
-    syncBlocksFromDom();
-    localStorage.setItem(storageKey,JSON.stringify({
-      products:state.products,
-      articles:state.articles
-    }));
-    if(showMessage)window.alert("Working copy saved in this browser.");
-  }
-
-  function loadBrowser(){
-    const raw=localStorage.getItem(storageKey);
-    if(!raw)return false;
-    try{
-      const parsed=JSON.parse(raw);
-      if(Array.isArray(parsed.products))state.products=parsed.products;
-      if(Array.isArray(parsed.articles))state.articles=parsed.articles;
-      return true;
-    }catch{
-      return false;
+  function assertMaster(data){
+    if(!data || data.schemaVersion!=="ctk-editorial-master-v1" ||
+      !Array.isArray(data.products) || !Array.isArray(data.articles) ||
+      !data.categories || !data.siteCopy || !data.monetization){
+      throw new Error("Use a complete ctk-editorial-master-v1 private master, not public JSON, a public bundle, or an old browser cache.");
+    }
+    for(const name of ["products","articles"]){
+      const ids=new Set();
+      for(const item of data[name]){
+        if(!item || typeof item.id!=="string" || !item.id || ids.has(item.id))throw new Error(`Invalid or duplicate ${name} ID in master.`);
+        ids.add(item.id);
+      }
+      if(source && source[name].some(item=>!ids.has(item.id)))throw new Error(`Import would lose existing ${name}. Restore or merge the missing records first.`);
     }
   }
 
+  function renderSourceStatus(){
+    const status=$("[data-editorial-source-status]");
+    if(status)status.textContent=sourceLabel;
+    $$("[data-product-form] input, [data-product-form] select, [data-product-form] textarea, [data-product-form] button, [data-article-form] input, [data-article-form] select, [data-article-form] textarea, [data-article-form] button, [data-new-product], [data-new-article], [data-save-browser], [data-download-products], [data-download-articles], [data-download-bundle], [data-download-aliases], [data-download-backup]")
+      .forEach(control=>{control.disabled=!source;});
+  }
+
+  function applyMaster(data,{digest=null,label="Imported private master. Save it outside the public project."}={}){
+    assertMaster(data);
+    source=clone(data);
+    sourceDigest=digest;
+    for(const key of ["products","articles","categories","siteCopy","monetization"])state[key]=clone(data[key]);
+    sourceLabel=label;
+    populateReferenceOptions();
+    renderMonetizationStatus();
+    renderProductList(); renderArticleList();
+    selectProduct(state.products[0]?.id); selectArticle(state.articles[0]?.id);
+    renderSourceStatus();
+  }
+
+  function saveBrowser(showMessage=true){
+    if(!source)return;
+    try{
+      if(showMessage)flushEditors();
+      localStorage.setItem(storageKey,JSON.stringify({schemaVersion:"ctk-browser-working-copy-v2",baseDigest:sourceDigest,data:currentBundle()}));
+      if(showMessage)window.alert("Private working copy saved in this browser only. This is not a durable backup. Save the private master outside the website project.");
+    }catch(error){
+      if(showMessage)window.alert(`Browser save failed: ${error.message}. Export the private master now.`);
+    }
+  }
+
+  function restoreBrowser(){
+    try{
+      const parsed=JSON.parse(localStorage.getItem(storageKey)||"null");
+      if(parsed?.schemaVersion!=="ctk-browser-working-copy-v2")throw new Error("No current private working copy was found. Legacy caches are not complete masters.");
+      if(!source)throw new Error("Load or import the complete private master before restoring browser edits.");
+      if(sourceDigest!==parsed.baseDigest)throw new Error("The private master has changed since this cache was saved. Export the cached copy and merge it into the latest master instead.");
+      if(!window.confirm("Restore this browser's private working copy? Unsaved form edits will be replaced."))return;
+      applyMaster(parsed.data,{digest:sourceDigest,label:"Browser edits restored against the loaded private master. Save the private master to make them durable."});
+    }catch(error){window.alert(`Restore failed: ${error.message}`);}
+  }
+
+  function exportBrowserRecovery(){
+    const raw=localStorage.getItem(storageKey)||localStorage.getItem("ctk-content-manager-v1");
+    if(!raw)return window.alert("No browser recovery data was found.");
+    downloadText(`PRIVATE-browser-recovery-INCOMPLETE-${today()}.json`,raw);
+  }
+
   function resetBrowser(){
-    if(!window.confirm("Discard the browser draft and restore the project data?"))return;
+    if(!source)return;
+    if(!window.confirm("Discard browser edits and restore the last loaded private master? Export a private backup first if needed."))return;
     localStorage.removeItem(storageKey);
-    state.products=clone(source.products||[]);
-    state.articles=clone(source.articles||[]);
-    renderProductList();
-    renderArticleList();
-    selectProduct(state.products.find(item=>!item.draft)?.id || state.products[0]?.id);
-    selectArticle(state.articles.find(item=>!item.draft)?.id || state.articles[0]?.id);
+    applyMaster(source,{digest:sourceDigest,label:sourceLabel});
+  }
+
+  function flushEditors(){
+    if(!source)throw new Error("Load a complete private editorial master first.");
+    if(productDirty){
+      $("[data-product-form]")?.requestSubmit();
+      if(productDirty)throw new Error("The current product has unsaved or invalid changes. Fix the product form first.");
+    }
+    if(articleDirty){
+      $("[data-article-form]")?.requestSubmit();
+      if(articleDirty)throw new Error("The current article has unsaved or invalid changes. Fix the article form first.");
+    }
+  }
+
+  function publicProjection(){
+    if(!source)throw new Error("Load a complete private editorial master first.");
+    if(!window.CTKPublicContent)throw new Error("Public projection is unavailable. No public export can be made.");
+    const data=window.CTKPublicContent.projectContent(currentBundle());
+    window.CTKPublicContent.assertPublicContent(data);
+    return data;
   }
 
   function validateWorkingCopy(){
     syncBlocksFromDom();
     const errors=[];
     const warnings=[];
+    let projected;
+    try{flushEditors();projected=publicProjection();}catch(error){
+      $("[data-validation-output]").textContent=error.message;
+      return false;
+    }
     const ids=new Set();
     const slugs=new Set();
     const matchKeys=new Set((state.categories.matchTypes||[]).map(item=>item.key));
@@ -660,7 +753,7 @@
       return profileSlots;
     };
 
-    state.products.forEach((product,index)=>{
+    projected.products.forEach((product,index)=>{
       const label=`Product ${index+1} (${product.id||"missing ID"})`;
       if(!product.id)errors.push(`${label}: ID is required.`);
       if(ids.has(product.id))errors.push(`${label}: Duplicate product ID.`);
@@ -687,7 +780,7 @@
       if(product.draft && product.featured)warnings.push(`${label}: Draft product is featured.`);
     });
 
-    state.articles.forEach((article,index)=>{
+    projected.articles.forEach((article,index)=>{
       const label=`Article ${index+1} (${article.slug||"missing slug"})`;
       if(!article.id)errors.push(`${label}: ID is required.`);
       if(!article.slug)errors.push(`${label}: Slug is required.`);
@@ -714,7 +807,7 @@
         if(!(article.body||[]).length)errors.push(`${label}: Public article needs body content.`);
         if(!Number(article.heroImageWidth)||!Number(article.heroImageHeight))errors.push(`${label}: Public article needs hero image width and height.`);
       }
-      const allowedBlockTypes=new Set(["paragraph","heading","list","quote","image","definition-list","ad-break"]);
+      const allowedBlockTypes=new Set(["paragraph","heading","list","quote","image","definition-list","ad-break","gallery"]);
       const allowedArticleAdSlots=new Set(Object.keys(state.monetization?.adsense?.slots||{}).filter(key=>key.startsWith("article-")));
       const adBreakSlots=new Set();
       let adBreakCount=0;
@@ -758,7 +851,7 @@
       configuredSlots.forEach(([slotName,slotId])=>{
         if(!/^\d+$/.test(String(slotId).trim()))errors.push(`Monetization: AdSense ad unit ID for ${slotName} must contain digits only.`);
       });
-      state.articles.filter(article=>!article.draft).forEach(article=>{
+      projected.articles.filter(article=>!article.draft).forEach(article=>{
         requiredArticleManualSlots(article).forEach(slotName=>{
           if(!String(state.monetization?.adsense?.slots?.[slotName]||"").trim()){
             errors.push(`Monetization: Public article ${article.slug} requires an ad unit ID for slot ${slotName}.`);
@@ -798,53 +891,46 @@
   }
 
   function currentBundle(){
-    return {
-      products:state.products,
-      articles:state.articles,
-      categories:state.categories,
-      siteCopy:state.siteCopy,
-      monetization:state.monetization
-    };
+    if(!source)throw new Error("No complete private editorial master is loaded.");
+    return {...clone(source),schemaVersion:"ctk-editorial-master-v1",
+      products:clone(state.products),articles:clone(state.articles),categories:clone(state.categories),
+      siteCopy:clone(state.siteCopy),monetization:clone(state.monetization)};
   }
 
-  function downloadProducts(){
-    downloadText("products.json",JSON.stringify(state.products,null,2));
-  }
-
-  function downloadArticles(){
-    syncBlocksFromDom();
-    downloadText("articles.json",JSON.stringify(state.articles,null,2));
-  }
-
-  function downloadBundle(filename){
-    syncBlocksFromDom();
-    downloadText(filename,`window.__CTK_DATA__ = ${JSON.stringify(currentBundle())};\n`,"text/javascript");
+  function downloadPublic(filename){
+    try{
+      flushEditors();
+      if(!validateWorkingCopy())throw new Error("Resolve the public-content validation errors before downloading.");
+      const projected=publicProjection();
+      if(filename==="content-data.js"){
+        const bundle=window.CTKPublicContent.createPublicBundle(currentBundle());
+        window.CTKPublicContent.assertPublicContent(bundle);
+        downloadText(filename,`window.__CTK_DATA__ = ${JSON.stringify(bundle)};\n`,"text/javascript");
+      }else{
+        const key={"products.json":"products","articles.json":"articles","search-aliases.json":"searchAliases"}[filename];
+        downloadText(filename,JSON.stringify(projected[key],null,2));
+      }
+    }catch(error){window.alert(`Public export stopped: ${error.message}`);}
   }
 
   function downloadBackup(){
-    syncBlocksFromDom();
-    downloadText(`closer-to-korea-content-backup-${today()}.json`,JSON.stringify(currentBundle(),null,2));
+    try{
+      flushEditors();
+      downloadText(`PRIVATE-ctk-editorial-master-${today()}.json`,JSON.stringify(currentBundle(),null,2));
+    }catch(error){window.alert(`Private export stopped: ${error.message}`);}
   }
 
-  async function importJson(file,type){
+  async function importMaster(file){
     if(!file)return;
     try{
       const parsed=JSON.parse(await file.text());
-      if(!Array.isArray(parsed))throw new Error("The imported file must contain a JSON array.");
-      if(type==="products"){
-        state.products=parsed;
-        renderProductList();
-        selectProduct(state.products[0]?.id);
-      }else{
-        state.articles=parsed;
-        renderArticleList();
-        selectArticle(state.articles[0]?.id);
-      }
+      assertMaster(parsed);
+      if(source && ["products","articles"].some(name=>state[name].some(item=>!parsed[name].some(incoming=>incoming.id===item.id))))throw new Error("Import would remove records from your working copy. Export and merge them first.");
+      if(source && !window.confirm("Replace the working copy with this complete private master? Export your current private master first if needed."))return;
+      // Preserve a digest only when this session already loaded the real local source.
+      applyMaster(parsed,{digest:sourceDigest,label:"Complete private master imported. Drafts stay private; save this master outside the website project."});
       saveBrowser(false);
-      window.alert(`${type}.json imported into the working copy.`);
-    }catch(error){
-      window.alert(`Import failed: ${error.message}`);
-    }
+    }catch(error){window.alert(`Import failed: ${error.message}`);}
   }
 
   function renderMonetizationStatus(){
@@ -881,7 +967,8 @@
 
   populateReferenceOptions();
   renderMonetizationStatus();
-  if(loadBrowser())console.info("Loaded saved browser draft.");
+  // Never automatically promote public data or a browser cache to master.
+  renderSourceStatus();
   renderProductList();
   renderArticleList();
 
@@ -904,12 +991,16 @@
   $("[data-save-browser]")?.addEventListener("click",()=>saveBrowser(true));
   $("[data-reset-browser]")?.addEventListener("click",resetBrowser);
   $("[data-run-validation]")?.addEventListener("click",validateWorkingCopy);
-  $("[data-download-products]")?.addEventListener("click",downloadProducts);
-  $("[data-download-articles]")?.addEventListener("click",downloadArticles);
-  $("[data-download-bundle]")?.addEventListener("click",()=>downloadBundle("content-data.js"));
+  $("[data-download-products]")?.addEventListener("click",()=>downloadPublic("products.json"));
+  $("[data-download-articles]")?.addEventListener("click",()=>downloadPublic("articles.json"));
+  $("[data-download-bundle]")?.addEventListener("click",()=>downloadPublic("content-data.js"));
+  $("[data-download-aliases]")?.addEventListener("click",()=>downloadPublic("search-aliases.json"));
   $("[data-download-backup]")?.addEventListener("click",downloadBackup);
-  $("[data-import-products]")?.addEventListener("change",event=>importJson(event.target.files?.[0],"products"));
-  $("[data-import-articles]")?.addEventListener("change",event=>importJson(event.target.files?.[0],"articles"));
+  $("[data-import-master]")?.addEventListener("change",event=>{
+    importMaster(event.target.files?.[0]); event.target.value="";
+  });
+  $("[data-restore-browser]")?.addEventListener("click",restoreBrowser);
+  $("[data-export-browser-recovery]")?.addEventListener("click",exportBrowserRecovery);
 
   const productForm=$("[data-product-form]");
   const articleForm=$("[data-article-form]");
@@ -920,23 +1011,22 @@
 
   if(window.location.hostname==="127.0.0.1" || window.location.hostname==="localhost"){
     window.__CTK_ADMIN_LOCAL__={
-      preparePublishPayload(){
-        if(productDirty){
-          productForm?.requestSubmit();
-          if(productDirty)return {ok:false,error:"The current product has unsaved or invalid changes. Fix the product form before publishing."};
-        }
-        if(articleDirty){
-          articleForm?.requestSubmit();
-          if(articleDirty)return {ok:false,error:"The current article has unsaved or invalid changes. Fix the article form before publishing."};
-        }
-        if(!validateWorkingCopy())return {ok:false,error:"Browser validation found blocking errors. Review Step 1 before publishing."};
-        return {
-          ok:true,
-          payload:{
-            products:clone(state.products),
-            articles:clone(state.articles)
-          }
-        };
+      loadPrivateMaster(data,digest){
+        if(typeof digest!=="string" || !/^[a-f0-9]{64}$/.test(digest))throw new Error("Missing private-master revision.");
+        applyMaster(data,{digest,label:"Private master loaded from outside the public project. Browser edits are not durable until saved."});
+      },
+      markPrivateMasterSaved(digest,savedMaster){
+        source=clone(savedMaster||currentBundle()); sourceDigest=digest;
+        sourceLabel="Private master saved outside the public project. Public exports contain published records only.";
+        renderSourceStatus(); saveBrowser(false);
+      },
+      preparePublishPayload({validatePublic=true}={}){
+        try{
+          flushEditors();
+          if(!sourceDigest)throw new Error("Load the private master through the local server before saving or publishing. An imported file alone is not a verified server source.");
+          if(validatePublic && !validateWorkingCopy())throw new Error("Browser validation found blocking errors. Review Step 1 before publishing.");
+          return {ok:true,payload:{master:currentBundle(),expectedDigest:sourceDigest}};
+        }catch(error){return {ok:false,error:error.message};}
       }
     };
   }

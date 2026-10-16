@@ -1,17 +1,30 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
+import {createRequire} from "node:module";
+import {loadEditorialMaster} from "./editorial-source.mjs";
 
 const root=process.cwd();
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),"utf8"));
-const products=readJson("data/products.json");
-const articles=readJson("data/articles.json");
-const categoryData=readJson("data/categories.json");
-const siteCopy=readJson("data/site-copy.json");
-const monetization=readJson("data/monetization.json");
+const sourceAt=process.argv.indexOf("--source");
+const sourceMode=sourceAt>=0;
+const evidenceOnly=process.argv.includes("--evidence-only");
+if(evidenceOnly&&!sourceMode)throw new Error("--evidence-only requires --source; public output validation cannot skip deployment checks.");
+const loadedSource=sourceMode?loadEditorialMaster(root,process.argv[sourceAt+1]):null;
+const privateSource=loadedSource?.data;
+const isPublished=item=>item?.draft===false&&item.hidden!==true;
+const products=privateSource?.products||readJson("data/products.json");
+const articles=privateSource?.articles||readJson("data/articles.json");
+const categoryData=privateSource?.categories||readJson("data/categories.json");
+const siteCopy=privateSource?.siteCopy||readJson("data/site-copy.json");
+const monetization=privateSource?.monetization||readJson("data/monetization.json");
 
 const errors=[];
 const warnings=[];
+if(!sourceMode){
+  try{createRequire(import.meta.url)("../js/public-content.js").assertPublicContent({products,articles,searchAliases:readJson("data/search-aliases.json")});}
+  catch(error){errors.push(`Public boundary: ${error.message}`);}
+}
 const datePattern=/^\d{4}-\d{2}-\d{2}$/;
 const httpsPattern=/^https:\/\//i;
 const sourceRequirements=new Set(["required","optional","not-applicable"]);
@@ -31,7 +44,7 @@ const adsenseConnectionEnd='<!-- CTK:ADSENSE-CONNECTION:END -->';
 const adsenseScriptNeedle='pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=';
 
 function requiredArticleManualSlots(article){
-  if(!article||article.draft)return[];
+  if(!isPublished(article))return[];
   const profileName=article.monetizationProfile||"default";
   if(profileName==="none")return[];
   if(profileName==="custom"){
@@ -79,9 +92,9 @@ const requiredProductFields=[
 ];
 const requiredArticleFields=[
   "id","slug","title","excerpt","body","categoryKey","tags","heroImage",
-  "heroImageAlt","relatedProductIds","sources","sourceRequirement",
+  "heroImageAlt","relatedProductIds","sources",...(sourceMode?["sourceRequirement"]:[]),
   "publishedAt","updatedAt","featured","draft",
-  "sectionKey","contentType","koreaContextConfidence","monetizationProfile"
+  "sectionKey","contentType",...(sourceMode?["koreaContextConfidence"]:[]),"monetizationProfile"
 ];
 
 function missing(record,field){
@@ -107,12 +120,25 @@ function checkDate(value,label,field,{required=false}={}){
 function checkUrl(value,label,field){
   if(value&&!httpsPattern.test(value))errors.push(`${label}: ${field} must use HTTPS`);
 }
+function imagePath(file){
+  if(typeof file!=="string"||!file||path.isAbsolute(file))return null;
+  const roots=[root,...(loadedSource?[`${loadedSource.path}.assets`]:[])];
+  for(const base of roots){
+    if(!fs.existsSync(base))continue;
+    const candidate=path.resolve(base,file),relative=path.relative(path.resolve(base),candidate);
+    if(!relative||relative==='..'||relative.startsWith(`..${path.sep}`)||path.isAbsolute(relative)||!fs.existsSync(candidate))continue;
+    const realRelative=path.relative(fs.realpathSync(base),fs.realpathSync(candidate));
+    if(!realRelative||realRelative==='..'||realRelative.startsWith(`..${path.sep}`)||path.isAbsolute(realRelative))continue;
+    if(fs.statSync(candidate).isFile())return candidate;
+  }
+  return null;
+}
 function checkImage(file,label){
-  if(file&&!fs.existsSync(path.join(root,file)))errors.push(`${label}: image does not exist: ${file}`);
+  if(file&&!imagePath(file))errors.push(`${label}: image does not exist: ${file}`);
 }
 function readPngSize(file,label){
-  const full=path.join(root,file);
-  if(!fs.existsSync(full)){
+  const full=imagePath(file);
+  if(!full){
     errors.push(`${label}: PNG file does not exist: ${file}`);
     return null;
   }
@@ -204,7 +230,7 @@ products.forEach((product,index)=>{
   if(verificationKeys.includes("personally-used")&&product.personallyUsed!==true){
     warnings.push(`${label}: personally-used verification is present but personallyUsed is not true`);
   }
-  if(verificationKeys.includes("personally-purchased-in-korea")){
+  if(sourceMode&&verificationKeys.includes("personally-purchased-in-korea")){
     const purchaseText=[product.seenInKorea,product.koreanProductStatus,product.personalUseNotes,product.modelEvidence].join(" ");
     if(!textIncludesAny(purchaseText,["purchased","bought","purchase"])||!textIncludesAny(purchaseText,["korea","korean"])){
       warnings.push(`${label}: personally-purchased-in-korea needs a clear purchase-in-Korea explanation`);
@@ -220,7 +246,7 @@ products.forEach((product,index)=>{
     warnings.push(`${label}: public non-confirmed product has no model number and no model-unverified status`);
   }
 
-  if(product.productMatchType==="confirmed"){
+  if(sourceMode&&product.productMatchType==="confirmed"){
     const hasBrand=String(product.brand||"").trim().length>1;
     const hasIdentifier=String(product.modelNumber||"").trim().length>1;
     const hasEvidence=String(product.modelEvidence||"").trim().length>12;
@@ -237,7 +263,7 @@ products.forEach((product,index)=>{
   checkUrl(product.affiliateUrl,label,"affiliateUrl");
   (product.sourceUrls||[]).forEach((url,sourceIndex)=>checkUrl(url,label,`sourceUrls[${sourceIndex}]`));
 
-  if(product.affiliateUrl&&!product.linkLastCheckedAt){
+  if(sourceMode&&product.affiliateUrl&&!product.linkLastCheckedAt){
     errors.push(`${label}: affiliateUrl requires linkLastCheckedAt`);
   }
   if(product.affiliateUrl&&product.amazonAvailability==="under-review"){
@@ -283,7 +309,7 @@ products.forEach((product,index)=>{
   if(product.draft===false){
     requireText(product,["id","slug","name","summary","categoryKey","image","imageAlt","seenInKorea","usedBy","whyItMatters","productMatchType"],label);
     if(!Array.isArray(product.verificationStatus)||product.verificationStatus.length===0)errors.push(`${label}: public product requires at least one verificationStatus`);
-    if(!String(product.publicImageStatus||"").trim())errors.push(`${label}: public product requires publicImageStatus`);
+    if(sourceMode&&!String(product.publicImageStatus||"").trim())errors.push(`${label}: public product requires publicImageStatus`);
     if(!String(product.publishedAt||"").trim())errors.push(`${label}: public product requires publishedAt`);
     if(!String(product.lastCheckedAt||"").trim())errors.push(`${label}: public product requires lastCheckedAt`);
     if(!matchMap.has(product.productMatchType))errors.push(`${label}: public product is missing a valid Product Match`);
@@ -317,7 +343,7 @@ articles.forEach((article,index)=>{
   if(!Array.isArray(article.relatedProductIds))errors.push(`${label}: relatedProductIds must be an array`);
   if(!Array.isArray(article.sources))errors.push(`${label}: sources must be an array`);
 
-  if(!sourceRequirements.has(article.sourceRequirement)){
+  if(sourceMode&&!sourceRequirements.has(article.sourceRequirement)){
     errors.push(`${label}: sourceRequirement must be required, optional, or not-applicable`);
   }
   if(article.sourceRequirement==="required"&&(!Array.isArray(article.sources)||article.sources.length===0)){
@@ -368,8 +394,8 @@ articles.forEach((article,index)=>{
   if(article.monetizationProfile==="custom" && adBreakCount===0)warnings.push(`${label}: custom monetization profile has no ad-break block`);
 
   if(article.draft===false){
-    requireText(article,["id","slug","title","seoTitle","excerpt","metaDescription","categoryKey","sectionKey","contentType","koreaContextConfidence","monetizationProfile","heroImage","heroImageAlt","publishedAt","updatedAt"],label);
-    if(!String(article.primaryKeyword||"").trim())warnings.push(`${label}: public article has no primaryKeyword`);
+    requireText(article,["id","slug","title","seoTitle","excerpt","metaDescription","categoryKey","sectionKey","contentType",...(sourceMode?["koreaContextConfidence"]:[]),"monetizationProfile","heroImage","heroImageAlt","publishedAt","updatedAt"],label);
+    if(sourceMode&&!String(article.primaryKeyword||"").trim())warnings.push(`${label}: public article has no primaryKeyword`);
     if(!Array.isArray(article.body)||article.body.length===0)errors.push(`${label}: public article requires body content`);
     if(!Number(article.heroImageWidth)||!Number(article.heroImageHeight))errors.push(`${label}: public article requires heroImageWidth and heroImageHeight`);
     if(/sample|placeholder|draft/i.test(`${article.title} ${article.excerpt}`)){
@@ -399,7 +425,7 @@ articles.forEach((article,index)=>{
     errors.push('monetization: AdSense connectionPages cannot be empty when connection is enabled');
   }
   for(const filename of connectionPages){
-    if(!fs.existsSync(path.join(root,filename))){
+    if(!evidenceOnly&&!fs.existsSync(path.join(root,filename))){
       errors.push(`monetization: AdSense connection page does not exist: ${filename}`);
     }
     if(['admin.html','article-daiso-egg-maker.html','trending-now.html'].includes(filename)){
@@ -407,7 +433,7 @@ articles.forEach((article,index)=>{
     }
   }
 
-  for(const filename of htmlFiles){
+  for(const filename of evidenceOnly?[]:htmlFiles){
     const html=fs.readFileSync(path.join(root,filename),'utf8');
     const hasStart=html.includes(adsenseConnectionStart);
     const hasEnd=html.includes(adsenseConnectionEnd);
@@ -427,7 +453,7 @@ articles.forEach((article,index)=>{
 }
 
 // ads.txt must track the same AdSense publisher ID when the connection is enabled.
-{
+if(!evidenceOnly){
   const adsense=monetization.adsense||{};
   const adsTxtPath=path.join(root,'ads.txt');
   const enabled=adsense.connectionEnabled===true;
@@ -447,12 +473,13 @@ articles.forEach((article,index)=>{
   }
 }
 
+// Generated output is checked after export/preparation, not during the pre-export evidence pass.
 // Section indexability and sitemap must match the public content state.
-{
+if(!evidenceOnly){
   const publicArticles=articles
-    .filter(item=>!item.draft)
+    .filter(isPublished)
     .sort((a,b)=>Number(b.featured)-Number(a.featured)||String(b.publishedAt||'').localeCompare(String(a.publishedAt||'')));
-  const publicProducts=products.filter(item=>!item.draft&&!item.hidden);
+  const publicProducts=products.filter(isPublished);
   const sections=editorialSections;
   const brandSocialImage='assets/images/social/closer-to-korea-social-card.png';
   validateBrandSocialImage(brandSocialImage);
@@ -562,7 +589,7 @@ if(monetization.adsense?.manualAdsEnabled===true){
     errors.push('monetization: manual ad units are enabled but no AdSense ad unit ID is configured');
   }
 
-  for(const article of articles.filter(item=>!item.draft)){
+  for(const article of articles.filter(isPublished)){
     const requiredSlots=requiredArticleManualSlots(article);
     for(const slotName of requiredSlots){
       if(!String(monetization.adsense?.slots?.[slotName]||'').trim()){

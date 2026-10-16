@@ -2,6 +2,7 @@ import {spawnSync} from 'node:child_process';
 import process from 'node:process';
 
 const steps=[
+  ['Validate public-only data boundary',['scripts/validate-public-boundary.mjs']],
   ['Build content bundles',['scripts/build-content-bundle.mjs']],
   ['Sync section indexing and sitemap',['scripts/sync-site-structure.mjs']],
   ['Sync Google Analytics head code',['scripts/sync-google-analytics-head.mjs']],

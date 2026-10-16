@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
+import {loadEditorialMaster,saveEditorialMaster} from "./editorial-source.mjs";
+import {writePublicContent} from "./export-public-content.mjs";
 
 const root = process.cwd();
 const inputPath = process.argv[2] ? path.resolve(process.argv[2]) : "";
@@ -10,7 +12,8 @@ const touchedFiles = [
   path.join(root,"data","search-aliases.json"),
   path.join(root,"sitemap.xml")
 ];
-const backupDir = path.join(root,`backup_before_S3B_html_only_${new Date().toISOString().replace(/[:.]/g,"-")}`);
+const source=loadEditorialMaster(root);
+const backupDir=path.join(path.dirname(source.path),".ctk-editorial-backups",`s3b-${Date.now()}`);
 
 function fail(message){
   console.error("\nERROR:", message);
@@ -86,15 +89,7 @@ function siteArticleFromPayload(payload,existing=null){
   }
 
   const searchHelp=normalizeSearchHelp(d);
-  if(searchHelp){
-    body.push({type:"heading",text:searchHelp.heading});
-    const items=[];
-    if(searchHelp.koreanTerms.length) items.push({term:"Korean",description:searchHelp.koreanTerms.join(", ")});
-    if(searchHelp.romanizedTerms.length) items.push({term:"Romanized",description:searchHelp.romanizedTerms.join(", ")});
-    if(searchHelp.soundAlikeTerms.length) items.push({term:"You might type",description:searchHelp.soundAlikeTerms.join(", ")});
-    if(searchHelp.descriptionSearches.length) items.push({term:"Describe it",description:searchHelp.descriptionSearches.join(" · ")});
-    if(items.length) body.push({type:"definition-list",items});
-  }
+
 
   const tags=[...(seo.tags||[])].map(String);
   const date=ymd();
@@ -366,33 +361,6 @@ function renderStatic(article){
 <script>(()=>{const s=document.querySelector('[data-share-page]'),c=document.querySelector('[data-copy-link]'),m=document.querySelector('[data-share-status]');const show=t=>{if(!m)return;m.textContent=t;setTimeout(()=>m.textContent='',2500)};s?.addEventListener('click',async()=>{try{if(navigator.share)await navigator.share({title:document.title,url:location.href});else{await navigator.clipboard.writeText(location.href);show('Link copied.')}}catch{}});c?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);show('Link copied.')}catch{show('Copy the URL from your browser.')}})})();</script>
 </body></html>`;
 }
-function updateContentData(article){
-  const file=path.join(root,"data","content-data.js");
-  const text=fs.readFileSync(file,"utf8");
-  const match=text.match(/^\s*window\.__CTK_DATA__\s*=\s*(\{[\s\S]*\})\s*;\s*$/);
-  if(!match) fail("Could not parse data/content-data.js.");
-  const data=JSON.parse(match[1]);
-  data.articles=Array.isArray(data.articles)?data.articles:[];
-  const i=data.articles.findIndex(x=>x.slug===article.slug);
-  if(i>=0)data.articles[i]=article; else data.articles.push(article);
-  fs.writeFileSync(file,`window.__CTK_DATA__ = ${JSON.stringify(data)};\n`,"utf8");
-}
-function updateSearchAliases(article){
-  const file=path.join(root,"data","search-aliases.json");
-  const data=readJson(file);
-  data.articles ||= {};
-  const s=article.searchHelp;
-  const aliases=[
-    ...(s?.koreanTerms||[]),
-    ...(s?.romanizedTerms||[]),
-    ...(s?.soundAlikeTerms||[]),
-    ...(s?.descriptionSearches||[]),
-    article.primaryKeyword,
-    ...(article.secondaryKeywords||[])
-  ].filter(Boolean);
-  data.articles[article.slug]=[...new Set(aliases)];
-  writeJson(file,data);
-}
 function updateSitemap(slug){
   const file=path.join(root,"sitemap.xml");
   let text=fs.readFileSync(file,"utf8");
@@ -406,6 +374,8 @@ function updateSitemap(slug){
 }
 
 if(!inputPath || !fs.existsSync(inputPath)) fail("Select a valid S3A publish JSON file.");
+const inputRelative=path.relative(fs.realpathSync(root),fs.realpathSync(inputPath));
+if(!inputRelative||(!inputRelative.startsWith(`..${path.sep}`)&&inputRelative!==".."&&!path.isAbsolute(inputRelative))) fail("Keep raw S3A authoring payloads outside the public repository.");
 fs.mkdirSync(backupDir,{recursive:true});
 for(const file of touchedFiles){
   if(fs.existsSync(file)){
@@ -418,24 +388,25 @@ for(const file of touchedFiles){
 
 const payload=readJson(inputPath);
 const articlesPath=path.join(root,"data","articles.json");
-const articles=readJson(articlesPath);
+const articles=structuredClone(source.data.articles);
 if(!Array.isArray(articles)) fail("data/articles.json must be an array.");
 const existing=articles.find(x=>x.slug===(payload.article_draft?.seo?.slug||payload.article_draft?.slug))||null;
-const article=siteArticleFromPayload(payload,existing);
+const article={...(existing||{}),...siteArticleFromPayload(payload,existing)};
 
 const idx=articles.findIndex(x=>x.slug===article.slug);
 if(idx>=0) articles[idx]=article; else articles.push(article);
-writeJson(articlesPath,articles);
-updateContentData(article);
-updateSearchAliases(article);
-updateSitemap(article.slug);
-{
+const next={...source.data,articles};
+saveEditorialMaster(root,next,{path:source.path,expectedDigest:source.digest});
+writePublicContent(root,next);
+const publicArticle=JSON.parse(fs.readFileSync(articlesPath,"utf8")).find(item=>item.id===article.id);
+if(publicArticle){
+updateSitemap(publicArticle.slug);
   const htmlPath=path.join(root,`${article.slug}.html`);
   if(fs.existsSync(htmlPath)){
     const target=path.join(backupDir,`${article.slug}.html`);
     fs.copyFileSync(htmlPath,target);
   }
-  fs.writeFileSync(htmlPath,renderStatic(article),"utf8");
+  fs.writeFileSync(htmlPath,renderStatic(publicArticle),"utf8");
 }
 
 
@@ -443,7 +414,7 @@ updateSitemap(article.slug);
 console.log("\nS3B HTML-only generation completed.");
 console.log("Generated files are ready for your manual review.");
 console.log("Article:",article.title);
-console.log("Static URL:",`https://closertokorea.com/${article.slug}.html`);
+console.log(publicArticle?"Static URL:":"Private record only:",publicArticle?`https://closertokorea.com/${article.slug}.html`:"No HTML or sitemap entry generated for an unpublished record.");
 console.log("\nUpdated:");
 console.log(" - data/articles.json");
 console.log(" - data/content-data.js");
