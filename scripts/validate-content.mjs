@@ -497,8 +497,8 @@ articles.forEach((article,index)=>{
     if(publicArticles.some(article=>article.sectionKey===section.key))expected.add(`https://closertokorea.com/${section.href}`);
   }
   if(productGuideCount>0)expected.add('https://closertokorea.com/product-guides.html');
-  for(const article of publicArticles)expected.add(`https://closertokorea.com/article.html?slug=${encodeURIComponent(article.slug)}`);
-  for(const product of publicProducts)expected.add(`https://closertokorea.com/product.html?slug=${encodeURIComponent(product.slug)}`);
+  for(const article of publicArticles)expected.add(`https://closertokorea.com/${encodeURIComponent(article.slug)}.html`);
+  for(const product of publicProducts)expected.add(`https://closertokorea.com/product-${encodeURIComponent(product.slug)}.html`);
   for(const page of ['about.html','contact.html','editorial-policy.html','privacy-policy.html','terms.html','affiliate-disclosure.html','advertising-disclosure.html'])expected.add(`https://closertokorea.com/${page}`);
 
   const sitemapPath=path.join(root,'sitemap.xml');
@@ -528,8 +528,11 @@ if(!mainJs.includes("visibleEditorialSections")||!mainJs.includes("showWhenEmpty
 if(!articleJs.includes("!item.draft")){
   errors.push("Runtime: article detail page does not visibly exclude draft articles");
 }
-if(!articleJs.includes('meta[property="og:url"]')||!articleJs.includes('https://closertokorea.com/article.html?slug=')){
-  errors.push("Runtime: article detail page does not visibly publish a slug-specific canonical Open Graph URL");
+if(!articleJs.includes('meta[property="og:url"]')||!articleJs.includes('https://closertokorea.com/${encodeURIComponent(article.slug)}.html')){
+  errors.push("Runtime: article detail page does not visibly publish its static canonical Open Graph URL");
+}
+if(!productJs.includes('meta[property="og:url"]')||!productJs.includes('https://closertokorea.com/product-${encodeURIComponent(product.slug)}.html')){
+  errors.push("Runtime: product detail page does not visibly publish its static canonical Open Graph URL");
 }
 if(!productJs.includes("!item.draft&&!item.hidden")){
   errors.push("Runtime: product detail page does not visibly exclude draft and hidden products");

@@ -120,12 +120,13 @@ function applySiteCopy(){
     curator.innerHTML=paragraphs.map(text=>`<p>${safe(text)}</p>`).join('');
   }
 
+  // Page-specific metadata belongs to the page or its detail renderer.
+  // Shared copy is only a fallback, regardless of which data request finishes first.
   const title=getPath(state.copy,'site.defaultTitle');
-
   const description=getPath(state.copy,'site.defaultDescription');
-  if(title)document.title=title;
+  if(title&&!document.title.trim())document.title=title;
   const metaDescription=qs('meta[name="description"]');
-  if(description&&metaDescription)metaDescription.content=description;
+  if(description&&metaDescription&&!metaDescription.content.trim())metaDescription.content=description;
 }
 
 function applyMonetizationState(){

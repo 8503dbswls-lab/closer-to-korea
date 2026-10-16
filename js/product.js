@@ -123,7 +123,7 @@ async function loadProductDetail(){
     document.title=`${product.name} | Closer to Korea`;
     const meta=document.querySelector('meta[name="description"]');
     if(meta)meta.content=product.summary;
-    const canonicalUrl=`https://closertokorea.com/product.html?slug=${encodeURIComponent(product.slug)}`;
+    const canonicalUrl=`https://closertokorea.com/product-${encodeURIComponent(product.slug)}.html`;
     let canonical=document.querySelector('link[rel="canonical"]');
     if(!canonical){canonical=document.createElement('link');canonical.rel='canonical';document.head.appendChild(canonical);}
     canonical.href=canonicalUrl;

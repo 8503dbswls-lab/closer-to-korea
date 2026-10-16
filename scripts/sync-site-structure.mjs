@@ -100,10 +100,10 @@ for(const section of sections){
 }
 if(productGuideCount>0)add(`${base}/product-guides.html`);
 for(const article of publicArticles){
-  add(`${base}/article.html?slug=${encodeURIComponent(article.slug)}`);
+  add(`${base}/${encodeURIComponent(article.slug)}.html`);
 }
 for(const product of publicProducts){
-  add(`${base}/product.html?slug=${encodeURIComponent(product.slug)}`);
+  add(`${base}/product-${encodeURIComponent(product.slug)}.html`);
 }
 for(const page of [
   'about.html','contact.html','editorial-policy.html','privacy-policy.html','terms.html',
