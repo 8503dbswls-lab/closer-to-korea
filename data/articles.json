@@ -2235,5 +2235,71 @@
     ],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "korean-convenience-store-cup-noodle-meal",
+    "slug": "korean-convenience-store-cup-noodle-meal",
+    "title": "My Korean Convenience Store Meal: Cup Noodles, Gimbap, and Favorite Combinations",
+    "seoTitle": "My Korean Convenience Store Meal: Cup Noodles, Gimbap, and Favorite Combinations",
+    "excerpt": "How I choose cup noodles, add something filling, and enjoy my favorite noodle combinations.",
+    "metaDescription": "A personal Korean convenience-store meal: choosing cup noodles, adding gimbap or rice, and favorite Buldak combinations.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-convenience-store-cup-noodle-meal/meal-guide.png",
+    "heroImageAlt": "Explanatory diagram showing a cup of noodles with optional triangle gimbap, gimbap roll, or rice.",
+    "heroImageCaption": "Original explanatory diagram, not a photograph or a depiction of specific product packaging.",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean convenience stores",
+      "cup noodles",
+      "gimbap",
+      "personal experience"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "When I’m choosing cup noodles at a Korean convenience store, I look at the promotions first. If something I want to eat is on offer, I’ll pick it. If nothing appeals to me, I just choose the noodles I’m in the mood for."
+      },
+      {
+        "type": "paragraph",
+        "text": "When one cup won’t be enough, I add a samgak-gimbap, a triangle of rice with a filling, wrapped in seaweed. Sometimes I choose a regular gimbap roll instead. With soup noodles, I might buy instant rice, such as Hetbahn, to mix into the broth. What I choose depends on how hungry I am."
+      },
+      {
+        "type": "paragraph",
+        "text": "Texture matters to me, too. I used to enjoy microwaving the microwave-compatible Yeul Ramen cups I bought. The noodles felt softer and seemed to take on more of the broth’s flavor, which I liked. Follow the cooking method and time printed on the particular package."
+      },
+      {
+        "type": "paragraph",
+        "text": "My favorite is King Ttukkeong. Of the soup noodles I’ve eaten from convenience stores, it has felt the spiciest to me."
+      },
+      {
+        "type": "paragraph",
+        "text": "Mixing different noodles is another way I enjoy them. One combination I’ve tried is Buldak Bokkeum Myeon with Ottogi’s Kok Kok Kok Spaghetti cup noodles. Together, they taste tangy and spicy."
+      },
+      {
+        "type": "paragraph",
+        "text": "I also remember adding samgak-gimbap and string cheese after eating Buldak noodles. That was a really tasty combination. I even keep Buldak sauce at home because sometimes I wish there were a little more sauce!"
+      },
+      {
+        "type": "paragraph",
+        "text": "Some noodle combinations have become products of their own. Chapaguri combines Chapagetti and Neoguri, and Nongshim has released a cup-noodle version called Angry Chapaguri. Nongshim’s official product page"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Nongshim’s official product page: Angry Chapaguri",
+        "url": "https://brand.nongshim.com/chapaguri/main/index"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]
