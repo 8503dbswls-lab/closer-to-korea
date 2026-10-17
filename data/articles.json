@@ -2173,5 +2173,67 @@
     ],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "korean-restaurant-payment",
+    "slug": "korean-restaurant-payment",
+    "title": "Where Do You Pay at Korean Restaurants?",
+    "seoTitle": "Where Do You Pay at Korean Restaurants?",
+    "excerpt": "At the counter after your meal, or on the tablet while ordering: two payment routines you may encounter.",
+    "metaDescription": "Paying at Korean restaurants: at the counter after your meal, or while ordering on a table tablet, with two useful Korean phrases.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-restaurant-payment/payment-guide.png",
+    "heroImageAlt": "Explanatory diagram of two payment routines: order, pay and eat; or order, eat and pay.",
+    "heroImageCaption": "Original explanatory illustration, not a photograph of a restaurant.",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "payment",
+      "table ordering",
+      "travel tips"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "At some Korean restaurants, you pay at the counter on your way out. You order at the table, enjoy your meal, and stop at the counter before leaving."
+      },
+      {
+        "type": "paragraph",
+        "text": "Restaurants with ordering tablets may work in either of two ways: you pay when you order, or after your meal."
+      },
+      {
+        "type": "paragraph",
+        "text": "Our contributor in Korea describes her usual routine: “If the tablet asks me to pay while ordering, I pay then. If there’s no payment step, I pay on my way out after eating.”"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you’re looking for the place to pay, you can ask “어디서 계산하면 돼요?” At the counter, “계산할게요” is a simple way to say you’d like to pay."
+      },
+      {
+        "type": "list",
+        "items": [
+          "어디서 계산하면 돼요? — Where should I pay?",
+          "계산할게요. — I’d like to pay."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Korea Tourism Organization: A Guide to Translating Korean Food, appendix page 176 (payment phrases)",
+        "url": "https://datalab.visitkorea.or.kr/common/board/Download.do?bcIdx=306156&cbIdx=1129&streFileNm=4e05d4e7-3afe-4e3d-9125-a1a6de297a52.pdf"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]
