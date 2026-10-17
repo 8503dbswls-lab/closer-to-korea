@@ -274,7 +274,7 @@ for (const product of published) {
           <dl class="record-list">
             <div><dt>Published</dt><dd>${esc(fmtDate(product.publishedAt))}</dd></div>
             <div><dt>Last checked</dt><dd>${esc(fmtDate(product.lastCheckedAt))}</dd></div>
-            <div><dt>Trend status</dt><dd>${esc(product.trendLabel||product.trendStatus||"")}</dd></div>
+            ${product.trendLabel||product.trendStatus?`<div><dt>Trend status</dt><dd>${esc(product.trendLabel||product.trendStatus)}</dd></div>`:""}
             ${affiliateHref?`<div><dt>Amazon status</dt><dd>${esc(product.amazonLabel||product.amazonAvailability||"Under review")}</dd></div>`:""}
           </dl>
         </section>

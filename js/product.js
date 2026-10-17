@@ -177,7 +177,11 @@ async function loadProductDetail(){
 
     document.querySelector('[data-product-published]').textContent=productDate(product.publishedAt);
     document.querySelector('[data-product-last-checked]').textContent=productDate(product.lastCheckedAt);
-    document.querySelector('[data-product-trend]').textContent=product.trendLabel||product.trendStatus;
+    const trend=document.querySelector('[data-product-trend]');
+    const trendText=product.trendLabel||product.trendStatus||'';
+    trend.textContent=trendText;
+    const trendRow=trend.closest?.('div');
+    if(trendRow)trendRow.hidden=!trendText;
     document.querySelector('[data-product-amazon-status]').textContent=product.amazonLabel||product.amazonAvailability||'Under review';
 
     const schema={

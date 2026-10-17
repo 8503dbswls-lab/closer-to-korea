@@ -149,6 +149,7 @@ async function loadArticle(){
   const loading=document.querySelector('[data-article-loading]');
   const container=document.querySelector('[data-article]');
   const error=document.querySelector('[data-article-error]');
+  let articleDataLoaded=false;
   try{
     let articles;
     let products;
@@ -164,6 +165,7 @@ async function loadArticle(){
       articles=window.__CTK_DATA__.articles;
       products=window.__CTK_DATA__.products;
     }
+    articleDataLoaded=true;
     const article=articles.find(item=>item.slug===articleSlug&&!item.draft);
     if(!article)throw new Error('Article not found');
     const hero=articleHero(article);
@@ -210,11 +212,14 @@ async function loadArticle(){
     image.alt=hero.alt;
     image.width=hero.width;
     image.height=hero.height;
+    const existingCaption=document.querySelector('.data-article-hero-caption');
     if(article.heroImageCaption){
-      const caption=document.createElement('p');
+      const caption=existingCaption||document.createElement('p');
       caption.className='data-article-hero-caption';
       caption.textContent=article.heroImageCaption;
-      image.insertAdjacentElement('afterend',caption);
+      if(!existingCaption)image.insertAdjacentElement('afterend',caption);
+    }else if(existingCaption){
+      existingCaption.remove();
     }
 
     renderArticleBody(document.querySelector('[data-article-body]'),article.body,article);
@@ -269,8 +274,11 @@ async function loadArticle(){
     container.hidden=false;
   }catch(loadError){
     loading.hidden=true;
-    container.hidden=true;
-    error.hidden=false;
+    // Keep an authored static fallback readable if both fetch and bundle fail.
+    // A successful response that withdraws the article must still hide it.
+    const keepPrerendered=container.dataset.prerendered==='true'&&!articleDataLoaded;
+    container.hidden=!keepPrerendered;
+    error.hidden=keepPrerendered;
   }
 }
 loadArticle();
