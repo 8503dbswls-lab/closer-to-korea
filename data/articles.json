@@ -2053,5 +2053,125 @@
     ],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "korean-restaurant-self-service-water",
+    "slug": "korean-restaurant-self-service-water",
+    "title": "How to Get Water at Korean Restaurants: What “물은 셀프” Means",
+    "seoTitle": "How to Get Water at Korean Restaurants: What “물은 셀프” Means",
+    "excerpt": "Water may arrive with staff, be waiting on your table, or be self-service. Here is what to look for and how to ask.",
+    "metaDescription": "Learn what 물은 셀프 means, where to find water and cups at Korean restaurants, and how to ask staff when the water-service arrangement is unclear.",
+    "categoryKey": "food",
+    "categoryLabel": "Food & Kitchen Culture",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-restaurant-self-service-water/water-service-guide.png",
+    "heroImageAlt": "Original schematic guide: check your table, look for a self-service water sign, and ask staff if unsure.",
+    "heroImageCaption": "Original explanatory illustration, not a photograph of a restaurant. Water-service arrangements vary by location.",
+    "publishedAt": "2026-10-17",
+    "updatedAt": "2026-10-17",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean restaurants",
+      "Korean dining",
+      "water",
+      "self-service",
+      "travel tips"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "You’ve taken your seat at a Korean restaurant, but no water has arrived. Should you keep waiting or get it yourself?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Both arrangements exist. Staff may bring water and cups, they may already be on the table, or you may need to use a self-service area."
+      },
+      {
+        "type": "heading",
+        "text": "Start with the table"
+      },
+      {
+        "type": "paragraph",
+        "text": "Our contributor in Korea describes a familiar routine: staff ask how many people are dining and show them to a table. Water and cups may then be brought over, or they may already be waiting on the table."
+      },
+      {
+        "type": "paragraph",
+        "text": "That is a familiar experience, not a rule for every restaurant. If you have waited and still have no water, check the table and nearby signs."
+      },
+      {
+        "type": "heading",
+        "text": "Look for “물은 셀프”"
+      },
+      {
+        "type": "paragraph",
+        "text": "“물은 셀프” means “Please help yourself to water.” You may also see the shorter “물 셀프.”"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you spot this sign, look for the designated water and cup area and help yourself. The Korea Tourism Organization also describes restaurants where customers serve themselves water and side dishes. VISITKOREA restaurant guide"
+      },
+      {
+        "type": "heading",
+        "text": "No sign? Ask"
+      },
+      {
+        "type": "paragraph",
+        "text": "Water not arriving does not automatically mean it is self-service. If the arrangement is unclear, ask a staff member:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "물은 셀프인가요? — Is water self-service?",
+          "물 주세요. — Water, please.",
+          "물 어디서 가져오면 돼요? — Where can I get water?",
+          "컵 주세요. — A cup, please."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "If your table has a call button or an ordering tablet with a staff-call option, you can use it to ask for help. See our guide to Korean restaurant call buttons."
+      },
+      {
+        "type": "heading",
+        "text": "At highway rest stops and cafeterias"
+      },
+      {
+        "type": "paragraph",
+        "text": "Our contributor has also encountered separate drinking-water dispensers at Korean highway rest stops and cafeterias. In these settings, diners get water themselves rather than having it brought with their food."
+      },
+      {
+        "type": "paragraph",
+        "text": "Look for a designated water area and follow the instructions there. Layouts and service arrangements can vary between facilities."
+      },
+      {
+        "type": "heading",
+        "text": "Is the water free?"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korea Tourism Organization describes requests for additional restaurant water as having no extra charge. However, do not assume that bottled water or sparkling water listed with a price is also free. Check the menu before ordering those products. VISITKOREA restaurant guide"
+      },
+      {
+        "type": "paragraph",
+        "text": "The simple routine is: check your table, look for a self-service sign, and ask if you’re unsure."
+      },
+      {
+        "type": "paragraph",
+        "text": "Need more side dishes too? Our banchan refill guide explains what to check before helping yourself or requesting more."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Korea Tourism Organization: About Korean Food, Visiting a Korean Restaurant (page states last updated March 24, 2023; checked October 17, 2026)",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=903&vcontsId=229195"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]
