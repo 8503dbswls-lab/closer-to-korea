@@ -838,7 +838,7 @@
     "heroImageAlt": "AI-generated illustration of a gray Korean kimchi cutter container filled with napa cabbage kimchi as a hand presses the white cutting tool through the guide slots",
     "heroImageCaption": "AI-generated illustration showing how a kimchi cutter container may be used to portion whole-leaf kimchi.",
     "publishedAt": "2026-08-21",
-    "updatedAt": "2026-08-23",
+    "updatedAt": "2026-10-18",
     "monetizationProfile": "default",
     "heroImageWidth": 1254,
     "heroImageHeight": 1254,
@@ -863,6 +863,14 @@
       {
         "type": "paragraph",
         "text": "That does not establish the product as a standard household item in Korea. It is more accurate to describe it as a specific product concept shown in Korean product materials."
+      },
+      {
+        "type": "heading",
+        "text": "My Experience Using the Cutter"
+      },
+      {
+        "type": "paragraph",
+        "text": "In my experience, even with the cutter aligned in the guide slots, it sometimes leaves the kimchi at the bottom uncut. Any pieces that remain connected can be snipped apart with kitchen scissors."
       },
       {
         "type": "heading",
