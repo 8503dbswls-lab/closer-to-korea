@@ -66,9 +66,13 @@ searchButton?.addEventListener('click',()=>togglePanel(searchButton,searchPanel,
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape'){
     const open=mobileMenu?.classList.contains('open')||searchPanel?.classList.contains('open');
+    const dropdowns=qsa('[data-navigation] .nav-dropdown[open]');
+    const activeDropdown=dropdowns.find(dropdown=>dropdown.contains(document.activeElement));
+    dropdowns.forEach(dropdown=>dropdown.removeAttribute('open'));
     closePanel(menuButton,mobileMenu);
     closePanel(searchButton,searchPanel);
     if(open&&previousFocus instanceof HTMLElement)previousFocus.focus();
+    else activeDropdown?.querySelector('summary')?.focus();
   }
   if(event.key==='Tab'&&mobileMenu?.classList.contains('open')){
     const items=focusable(mobileMenu);
@@ -453,10 +457,12 @@ function publishedArticles(){
 }
 function articleCard(article,{layout='guide'}={}){
   if(layout==='story'){
+    const sectionLabel=editorialSectionConfig(article.sectionKey)?.label;
+    const categoryLabel=(state.categories.categories||[]).find(item=>item.key===article.categoryKey)?.label;
     return `<article class="card">
       ${article.heroImage ? `<img src="${safe(article.cardImage || article.heroImage)}" width="1200" height="760" loading="lazy" decoding="async" alt="${safe(article.heroImageAlt)}">` : ''}
       <div class="card-body">
-        <span class="label lavender">${safe(article.sectionKey||article.categoryKey||'Closer to Korea')}</span>
+        <span class="label lavender">${safe(sectionLabel||categoryLabel||'Closer to Korea')}</span>
         <h3>${safe(article.title)}</h3>
         <p>${safe(article.excerpt)}</p>
         <a href="${encodeURIComponent(article.slug)}.html">Read story →</a>

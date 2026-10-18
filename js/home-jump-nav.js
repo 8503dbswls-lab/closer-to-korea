@@ -65,7 +65,7 @@
   });
 
   document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'){
+    if(event.key==='Escape'&&root.classList.contains('is-open')){
       setOpen(false);
       toggle.focus();
     }
