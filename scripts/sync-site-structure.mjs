@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import {contentLastmod} from './sitemap-lastmod.mjs';
 
 const root=process.cwd();
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -93,6 +94,7 @@ for(const page of [
 ]) syncSocialImage(page,brandSocialImage);
 
 const urls=[];
+const lastmods=new Map();
 const add=url=>{if(!urls.includes(url))urls.push(url)};
 add(`${base}/`);
 for(const section of sections){
@@ -100,16 +102,22 @@ for(const section of sections){
 }
 if(productGuideCount>0)add(`${base}/product-guides.html`);
 for(const article of publicArticles){
-  add(`${base}/${encodeURIComponent(article.slug)}.html`);
+  const url=`${base}/${encodeURIComponent(article.slug)}.html`;
+  add(url);
+  const lastmod=contentLastmod(article);
+  if(lastmod)lastmods.set(url,lastmod);
 }
 for(const product of publicProducts){
-  add(`${base}/product-${encodeURIComponent(product.slug)}.html`);
+  const url=`${base}/product-${encodeURIComponent(product.slug)}.html`;
+  add(url);
+  const lastmod=contentLastmod(product);
+  if(lastmod)lastmods.set(url,lastmod);
 }
 for(const page of [
   'about.html','contact.html','editorial-policy.html','privacy-policy.html','terms.html',
   'affiliate-disclosure.html','advertising-disclosure.html'
 ]) add(`${base}/${page}`);
 
-const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url=>`  <url><loc>${url.replace(/&/g,'&amp;')}</loc></url>`).join('\n')}\n</urlset>\n`;
+const xml=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url=>`  <url><loc>${url.replace(/&/g,'&amp;')}</loc>${lastmods.has(url)?`<lastmod>${lastmods.get(url)}</lastmod>`:''}</url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(root,'sitemap.xml'),xml,'utf8');
 console.log(`Synced section indexing and sitemap: ${publicArticles.length} public article(s), ${publicProducts.length} public product(s), ${urls.length} URL(s).`);
