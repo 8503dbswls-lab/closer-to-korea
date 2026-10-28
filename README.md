@@ -185,3 +185,32 @@ See:
 ```text
 CONTENT_MANAGER_GUIDE.md
 ```
+
+## Sitemap modification dates
+
+`node scripts/prepare-deploy.mjs` regenerates `sitemap.xml` on every deployment
+preparation; the local content publisher already calls this command after export.
+For manual exports, run it before committing/publishing the generated files.
+
+Published article and product detail URLs use `updatedAt` when present, otherwise
+`publishedAt`. Only real calendar dates in `YYYY-MM-DD` format, no later than the
+UTC build date, are accepted. An invalid publication date or an explicit invalid,
+future, or pre-publication modification date causes `lastmod` to be omitted.
+Pages without editorial date metadata (home, listings, policies, and contact)
+keep their URLs without a guessed date. Build times, file times, and
+`lastCheckedAt` are never used as modification dates.
+
+Maintain dates in the private editorial master and regenerate the public export.
+Set `publishedAt` to the actual first publication date; change `updatedAt` only
+when the page's substantive content changes, such as adding direct experience,
+correcting facts, or replacing important media. Do not bump it for deployment or
+routine checks. Product records currently export publication dates only; if a
+product page has materially changed, add reviewed modification metadata through
+the authoring/export schema before relying on its publication-date fallback.
+
+Regression checks:
+
+```bash
+node scripts/test-sitemap-lastmod.mjs
+node scripts/test-search-metadata.mjs
+```
