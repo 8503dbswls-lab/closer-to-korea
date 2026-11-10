@@ -2313,5 +2313,86 @@
     ],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "korean-cafe-ordering-and-tray-return",
+    "slug": "korean-cafe-ordering-and-tray-return",
+    "title": "My Korean Café Routine: Seats, Orders, and Returning Cups",
+    "seoTitle": "My Korean Café Routine: Seats, Orders, and Returning Cups",
+    "excerpt": "How I find a seat, order at the counter, wait for my food, and return the dishes before leaving.",
+    "metaDescription": "A personal guide to visiting cafés in Korea: finding a seat, ordering at the counter, waiting with or without a buzzer, and returning cups and dishes.",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/korean-cafe-ordering-and-tray-return/cafe-routine-guide.png",
+    "heroImageAlt": "Original explanatory diagram of four steps: find a seat, order at the counter, collect your order, and return cups and dishes.",
+    "heroImageCaption": "Original explanatory illustration of my café routine, not a photograph of a specific café.",
+    "publishedAt": "2026-11-10",
+    "updatedAt": "2026-11-10",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean cafés",
+      "ordering",
+      "daily life",
+      "personal experience"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "When I visit a café in Korea, I usually find a seat before going to the counter. The small steps after that are familiar to me, but they may be less obvious on a first visit. Here is how I do it."
+      },
+      {
+        "type": "heading",
+        "text": "First, I find a seat and place my order"
+      },
+      {
+        "type": "paragraph",
+        "text": "I choose a seat, put my things down, and then go to the counter to order what I want to eat or drink. This is my own routine. If a café gives different seating or ordering instructions, follow those, and keep valuables with you when you leave the table."
+      },
+      {
+        "type": "heading",
+        "text": "Where I wait depends on the buzzer"
+      },
+      {
+        "type": "paragraph",
+        "text": "If the staff give me a vibrating buzzer, called a 진동벨 in Korean, I take it back to my seat and wait there. When it alerts me, I go to collect my order."
+      },
+      {
+        "type": "paragraph",
+        "text": "If I am not given a buzzer, I wait near the counter instead. Once my order is ready, I carry it to my seat. Leave the ordering and pickup space clear while you wait, and follow any instructions from the staff."
+      },
+      {
+        "type": "heading",
+        "text": "I return the dishes before leaving"
+      },
+      {
+        "type": "paragraph",
+        "text": "After that, I spend my time in the café doing whatever I came to do. When I am finished and ready to leave, I take my used cups and dishes with me."
+      },
+      {
+        "type": "paragraph",
+        "text": "If there is a self-service return station, I put them there. If there is no return station, I take them back to the counter. I do not leave them on the table as part of my usual routine."
+      },
+      {
+        "type": "heading",
+        "text": "A useful question if you are unsure"
+      },
+      {
+        "type": "paragraph",
+        "text": "“이거 어디에 반납하면 되나요?” means “Where should I return this?” You can ask staff this while indicating your cup or tray."
+      },
+      {
+        "type": "paragraph",
+        "text": "This guide is based on my own café visits. Use it as a starting point, then follow the signs and staff instructions at the café you visit."
+      }
+    ],
+    "sources": [],
+    "draft": false,
+    "hidden": false
   }
 ]
