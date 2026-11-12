@@ -2394,5 +2394,107 @@
     "sources": [],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "tipping-in-korea",
+    "slug": "tipping-in-korea",
+    "title": "Do You Tip in Korea? A Simple Guide for Visitors",
+    "seoTitle": "Do You Tip in Korea? Restaurants, Taxis, and Service Charges",
+    "excerpt": "No percentage to calculate after an ordinary meal. Here is what official Korean tourism guidance says about tips and service charges.",
+    "metaDescription": "Do you tip in Korea? Official tourism guidance on restaurant and taxi tipping, service charges, and what to do when a payment is unclear.",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/tipping-in-korea/tipping-guide.png",
+    "heroImageAlt": "Original diagram separating three ideas: a tip is generally not expected, the bill should be checked, and a thank-you is welcome.",
+    "heroImageCaption": "Original explanatory illustration, not a photograph or an example of an actual bill.",
+    "publishedAt": "2026-11-12",
+    "updatedAt": "2026-11-12",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "tipping",
+      "Korean restaurants",
+      "travel etiquette",
+      "payment"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "If you are used to adding a percentage after a meal, paying in Korea can feel unfinished. Should you leave cash on the table, add something to the card payment, or just say thank you? For an ordinary restaurant visit, you generally do not need to add a tip."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is a research-based guide, checked against official Korean tourism information on November 12, 2026. It describes the general custom, not the terms of every business or booked service."
+      },
+      {
+        "type": "heading",
+        "text": "At restaurants, no tip is normally expected"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Korea Tourism Organization’s restaurant guidance says tipping is neither required nor expected. You can pay the amount owed without adding a restaurant-tip percentage. For the practical question of where to pay, see our guide to paying at Korean restaurants."
+      },
+      {
+        "type": "paragraph",
+        "text": "At a café, the same general no-tipping custom is a useful starting point. Follow the shop’s ordering and pickup instructions. Our café routine guide covers finding a seat, waiting for an order, and returning used dishes."
+      },
+      {
+        "type": "heading",
+        "text": "Read the bill: a service charge may already be listed"
+      },
+      {
+        "type": "paragraph",
+        "text": "Visit Seoul notes that major hotels and upscale restaurants may add a service charge to the bill. That charge is part of the amount the venue asks you to pay; it is different from a voluntary tip you choose to add."
+      },
+      {
+        "type": "paragraph",
+        "text": "Check the menu or booking terms and the final bill rather than assuming every venue handles charges the same way. If an amount is unclear, ask what it covers before paying. You do not need to calculate an extra tip just because you see a service-charge line."
+      },
+      {
+        "type": "heading",
+        "text": "What about taxis or someone who accepts a tip?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Visit Seoul also says taxi drivers do not expect tips. Letting a driver keep change is a choice, not a required extra payment."
+      },
+      {
+        "type": "paragraph",
+        "text": "The city’s etiquette guide makes another useful distinction: some people may accept an offered tip, while others may refuse. So “not customary” does not mean “everyone will be offended.” If someone declines, accept the answer rather than insisting."
+      },
+      {
+        "type": "heading",
+        "text": "A simple way to finish"
+      },
+      {
+        "type": "paragraph",
+        "text": "A polite 감사합니다 (gamsahamnida), meaning “thank you,” is a straightforward way to express appreciation. There is no need to turn an ordinary meal into a tipping calculation."
+      },
+      {
+        "type": "paragraph",
+        "text": "If someone requests an unfamiliar extra payment, ask them to identify it on the bill. For a separately booked tour or other special service, read that provider’s terms instead of treating this short dining guide as a rule for the booking."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Korea Tourism Organization: About Korean Food, visiting a Korean restaurant",
+        "url": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=460&vcontsId=140727"
+      },
+      {
+        "label": "Visit Seoul: Money, tipping and service charges",
+        "url": "https://english.visitseoul.net/money"
+      },
+      {
+        "label": "Visit Seoul: Etiquette, responses to offered tips",
+        "url": "https://english.visitseoul.net/etiquette"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]
