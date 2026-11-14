@@ -2496,5 +2496,103 @@
     ],
     "draft": false,
     "hidden": false
+  },
+  {
+    "id": "why-korean-bbq-uses-scissors",
+    "slug": "why-korean-bbq-uses-scissors",
+    "title": "Why Are There Scissors at Korean BBQ?",
+    "seoTitle": "Why Korean BBQ Uses Scissors: A Guide for First-Time Diners",
+    "excerpt": "The scissors are for the food. See how they help divide pork belly and short ribs, and what to ask before taking over at the grill.",
+    "metaDescription": "Why are scissors used at Korean BBQ? Learn their role in cutting pork belly and short ribs, how they differ from tongs, and what to ask at the table.",
+    "categoryKey": "culture",
+    "categoryLabel": "Everyday Korea",
+    "sectionKey": "everyday-korea",
+    "contentType": "culture-everyday",
+    "heroImage": "assets/images/articles/why-korean-bbq-uses-scissors/bbq-scissors-guide.png",
+    "heroImageAlt": "Original diagram: tongs hold or move food, kitchen scissors cut portions, and smaller meat pieces can go in a wrap.",
+    "heroImageCaption": "Original explanatory illustration, not a restaurant photograph or a cooking sequence.",
+    "publishedAt": "2026-11-14",
+    "updatedAt": "2026-11-14",
+    "monetizationProfile": "default",
+    "heroImageWidth": 1200,
+    "heroImageHeight": 630,
+    "featured": false,
+    "tags": [
+      "Korean BBQ",
+      "kitchen scissors",
+      "dining tools",
+      "first-time visitors"
+    ],
+    "relatedProductIds": [],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "If a pair of scissors beside a barbecue grill looks unexpected, the short answer is simple: they are a food-cutting tool. Rather than treating a long strip of meat as one person’s serving, kitchen scissors can divide it into smaller pieces for eating."
+      },
+      {
+        "type": "paragraph",
+        "text": "The useful distinction is between holding food and cutting it. Tongs grip and move; scissors cut. Seeing both does not mean there are two interchangeable tools, or that you need to start using them yourself."
+      },
+      {
+        "type": "heading",
+        "text": "Pork belly: from a strip to smaller pieces"
+      },
+      {
+        "type": "paragraph",
+        "text": "Hyosun’s Korean Bapsang pork-belly recipe describes two options: cook smaller pieces, or cook larger strips and cut the cooked meat with kitchen scissors on the grill or pan. In that second approach, the scissors make smaller portions without moving the strip to a cutting board."
+      },
+      {
+        "type": "paragraph",
+        "text": "This also answers a common first-time question: does the meat have to arrive already cut into mouthfuls? Not necessarily. A larger piece can be part of the preparation, rather than the final size you are expected to eat. The recipe is an example of a method, not a rule that every restaurant cuts meat at exactly the same moment."
+      },
+      {
+        "type": "heading",
+        "text": "Short ribs: dividing portions around the bones"
+      },
+      {
+        "type": "paragraph",
+        "text": "Irene Yoo gives another example in her Bon Appétit guide to L.A. kalbi. Tongs handle the grilling and flipping; scissors divide a rib strip into individual bone-in portions or separate meat from the bone for a wrap. The aim is to portion the meat, not to snip through the bones."
+      },
+      {
+        "type": "paragraph",
+        "text": "These examples explain the practical role of the tool. They do not establish when the custom began, and they are not evidence that scissors are compulsory for every Korean barbecue dish."
+      },
+      {
+        "type": "heading",
+        "text": "At the table, ask before taking over"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you are unsure who is handling the grill, ask the staff rather than assuming that the tools mean “do it yourself.” You can say, “Could you cut this for us?” In Korean, 잘라 주세요 (jalla juseyo) means “Please cut it.” Pointing to the meat helps make the request clear."
+      },
+      {
+        "type": "paragraph",
+        "text": "If someone is already cooking or cutting, leave them room to work. If you are invited to do it yourself and are unfamiliar with the equipment, ask for a demonstration. This is practical advice for a first visit, not a claim that every venue offers the same service."
+      },
+      {
+        "type": "heading",
+        "text": "What happens after cutting?"
+      },
+      {
+        "type": "paragraph",
+        "text": "A smaller piece can be easier to fit into ssam, a leaf wrap. Our guide to lettuce and perilla wraps explains that part of the meal. Cutting is a portioning step, not a signal that meat is ready to eat; if you are uncertain, ask the person cooking."
+      },
+      {
+        "type": "paragraph",
+        "text": "One final distinction: actual kitchen scissors have cutting blades. The scissor-style tongs in our separate guide use a similar hand motion to grip food. Similar handles do not mean the same job."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hyosun, Korean Bapsang: Samgyupsal Gui (Grilled Pork Belly)",
+        "url": "https://www.koreanbapsang.com/samgyupsal-gui-grilled-pork-belly-and/"
+      },
+      {
+        "label": "Irene Yoo, Bon Appétit: Make L.A. Kalbi the Sweet-Salty Star of Your Next BBQ",
+        "url": "https://www.bonappetit.com/story/la-kalbi-at-home"
+      }
+    ],
+    "draft": false,
+    "hidden": false
   }
 ]
